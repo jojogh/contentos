@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"E:/project/content-os/.trae-cn/skills/comet/scripts/comet-hook-router.mjs\" --platform \"trae-cn\" --project-root \"E:/project/content-os\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

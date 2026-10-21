@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"E:/project/content-os/.qwen/skills/comet/scripts/comet-hook-router.mjs\" --platform \"qwen\" --project-root \"E:/project/content-os\"",
+            "description": "Route each write to the selected Comet Native or Classic phase guard"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "ego-browser": {
+      "source": "citrolabs/ego-lite",
+      "sourceType": "github",
+      "skillPath": "skills/ego-browser/SKILL.md",
+      "computedHash": "8a5b416212cad982a6b5ae591a204b22ddb3b36f508eb9af0c6f488e8d7c0d46"
+    },
+    "x-writer": {
+      "source": "ognjengt/founder-skills",
+      "sourceType": "github",
+      "skillPath": "skills/x-writer/SKILL.md",
+      "computedHash": "5ffb046e5a8a359167fc2e068e7e6b24a77e0eb537a7112f9afcc9edb178e45a"
+    },
+    "xhs-visual-director": {
+      "source": "ziguishian/xhs-visual-director-skill",
+      "sourceType": "github",
+      "skillPath": "skill/SKILL.md",
+      "computedHash": "a1ab7cc4ffab7f572206d210e18c6fd89bd25dd36b9f4119530e1c1780363b5e"
+    },
+    "xiaohongshu-writer": {
+      "source": "Jiandong7/xiaohongshu-writer",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "50229a48b73d59ff30e57b649a060dec15fdd55edf6eba05eda5dfacb5a26259"
+    }
+  }
+}

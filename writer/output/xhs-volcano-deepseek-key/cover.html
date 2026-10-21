@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>小红书封面 — 火山官方 DeepSeek 官key</title>
+<style>
+  @font-face{
+    font-family:'NSSC';
+    src: local('Noto Sans SC'),
+         url('file:///C:/Windows/Fonts/NotoSansSC-VF.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: block;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html,body{width:1080px;height:1440px;overflow:hidden;}
+
+  body{
+    background:#0A0A0C;
+    color:#F2F2F0;
+    font-family:'Roboto','NSSC','Noto Sans SC','Microsoft YaHei',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:geometricPrecision;
+  }
+
+  .canvas{position:relative;width:1080px;height:1440px;overflow:hidden;}
+
+  /* 高级网格：1px 线，极低透明度，只做结构暗示 */
+  .grid{
+    position:absolute;inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.038) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.038) 1px, transparent 1px);
+    background-size:90px 90px;
+    background-position:-1px -1px;
+  }
+
+  /* 标题左后方一盏极弱的荧光绿环境光，不是渐变铺满 */
+  .glow{
+    position:absolute;inset:0;
+    background:radial-gradient(700px 460px at 22% 30%, rgba(198,242,78,.08), transparent 66%);
+  }
+
+  /* 四角压暗，让标题区浮起来 */
+  .vig{
+    position:absolute;inset:0;
+    background:radial-gradient(118% 88% at 50% 42%, rgba(0,0,0,0) 36%, rgba(0,0,0,.62) 100%);
+  }
+
+  .content{
+    position:relative;
+    height:100%;
+    padding:84px 72px 88px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+
+  /* ── 角标行 ───────────────────────────── */
+  .eyebrow{display:flex;align-items:center;gap:20px;height:54px;}
+  .dot{
+    width:13px;height:13px;border-radius:50%;
+    background:#C6F24E;
+    box-shadow:0 0 16px rgba(198,242,78,.8);
+    flex:none;
+  }
+  .eb-text{
+    font-size:40px;
+    font-weight:600;
+    letter-spacing:.12em;
+    color:#9A9AA1;
+  }
+
+  /* ── 主标题 ───────────────────────────── */
+  .title{
+    font-size:190px;
+    font-weight:900;
+    line-height:1.02;
+    letter-spacing:-.035em;
+  }
+  .title .l1{display:block;color:#FFFFFF;}
+  .title .l2{display:block;color:#C6F24E;}
+  .title .k{margin-left:.08em;}
+
+  /* 发丝分隔线 + 左侧荧光绿游标：一个刻意的编辑式结构，不是装饰 */
+  .divider{
+    position:relative;
+    height:1px;
+    background:rgba(255,255,255,.19);
+    margin-top:74px;
+  }
+  .divider::before{
+    content:'';
+    position:absolute;
+    left:0;top:-2.5px;
+    width:76px;height:6px;border-radius:3px;
+    background:#C6F24E;
+  }
+
+  /* ── 政策行 ───────────────────────────── */
+  .policy{
+    font-size:96px;
+    font-weight:700;
+    letter-spacing:.01em;
+    color:#EDEDEA;
+    margin-top:58px;
+  }
+
+  /* ── 底部行动条 ───────────────────────── */
+  .cta{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:34px 40px;
+    border:1.5px solid rgba(198,242,78,.34);
+    background:rgba(198,242,78,.055);
+    border-radius:20px;
+  }
+  .cta .say{
+    font-size:70px;
+    font-weight:700;
+    letter-spacing:.01em;
+    color:#F2F2F0;
+  }
+  .cta .arrow{
+    font-size:62px;
+    font-weight:700;
+    color:#C6F24E;
+    line-height:1;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="grid"></div>
+    <div class="glow"></div>
+    <div class="vig"></div>
+
+    <div class="content">
+
+      <div class="eyebrow">
+        <span class="dot"></span>
+        <span class="eb-text">火山引擎官方</span>
+      </div>
+
+      <div class="head">
+        <div class="title">
+          <span class="l1">DeepSeek</span>
+          <span class="l2">官<span class="k">Key</span></span>
+        </div>
+        <div class="divider"></div>
+        <div class="policy">好政策</div>
+      </div>
+
+      <div class="cta">
+        <span class="say">量大的看过来</span>
+        <span class="arrow">&#8594;</span>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "BeforeTool": [
+      {
+        "matcher": "write_file|edit_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"E:/project/content-os/.gemini/skills/comet/scripts/comet-hook-router.mjs\" --platform \"gemini\" --project-root \"E:/project/content-os\"",
+            "name": "Route each write to the selected Comet Native or Classic phase guard"
+          }
+        ]
+      }
+    ]
+  }
+}

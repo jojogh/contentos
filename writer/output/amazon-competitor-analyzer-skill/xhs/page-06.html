@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  h1 { margin-top:76px; font-size:74px; }
+  .limits { margin-top:66px; display:flex; flex-direction:column; }
+  .limit {
+    display:flex; gap:30px; align-items:flex-start;
+    padding:34px 0;
+    border-top:1px solid #2A2E35;
+  }
+  .limit:last-child { border-bottom:1px solid #2A2E35; }
+  .lnum {
+    font-family:Inter,monospace; font-size:22px; color:#C8F04A;
+    letter-spacing:2px; width:48px; flex-shrink:0; padding-top:8px;
+  }
+  .lbody { display:flex; flex-direction:column; gap:10px; }
+  .lt { font-size:36px; font-weight:700; line-height:1.35; }
+  .ld { font-size:27px; color:#9BA0A8; line-height:1.6; }
+  .closing {
+    margin-top:58px; font-size:29px; color:#9BA0A8; line-height:1.7;
+    border-left:3px solid #C8F04A; padding-left:22px;
+  }
+  .closing b { color:#F2F3F5; font-weight:600; }
+</style>
+</head>
+<body>
+  <div class="grid-lines"></div>
+  <div class="pad">
+    <div class="eyebrow">LIMITS · 边界</div>
+    <h1>20 条评论<br><span class="dim">不是市场调研</span></h1>
+    <div class="limits">
+      <div class="limit">
+        <div class="lnum">01</div>
+        <div class="lbody">
+          <div class="lt">样本最多 20 条</div>
+          <div class="ld">适合发现线索，不适合证明某个痛点在整个市场普遍存在。</div>
+        </div>
+      </div>
+      <div class="limit">
+        <div class="lnum">02</div>
+        <div class="lbody">
+          <div class="lt">评分是编辑判断</div>
+          <div class="ld">不是统计结论。不同人看同一批评论，仍可能给出不同分数。</div>
+        </div>
+      </div>
+      <div class="limit">
+        <div class="lnum">03</div>
+        <div class="lbody">
+          <div class="lt">「已解决得很好」≠ 没机会</div>
+          <div class="ld">功能解决了，表达、服务、配件组合或细分场景仍可能有空间。</div>
+        </div>
+      </div>
+    </div>
+    <div class="closing">它的价值，是把判断过程摊开，<b>而不是制造精确感。</b></div>
+  </div>
+  <div class="pageno">06 / 07</div>
+</body>
+</html>

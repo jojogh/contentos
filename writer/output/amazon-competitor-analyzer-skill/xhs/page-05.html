@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  h1 { margin-top:74px; font-size:72px; }
+  .cards { margin-top:58px; display:flex; flex-direction:column; gap:22px; }
+  .card-row {
+    display:flex; align-items:center; gap:26px;
+    padding:28px 30px;
+    min-height:188px;
+  }
+  .idx {
+    font-family:Inter,monospace; font-size:20px; color:#C8F04A;
+    letter-spacing:2px; width:44px; flex-shrink:0;
+  }
+  .body { flex:1; display:flex; flex-direction:column; gap:12px; }
+  .t { font-size:36px; font-weight:700; letter-spacing:0.5px; }
+  .d { font-size:26px; color:#9BA0A8; line-height:1.55; }
+  .tag { font-size:21px; color:#C8F04A; white-space:nowrap; }
+  .glyph {
+    width:112px; height:112px; flex-shrink:0;
+    display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(3,1fr);
+    gap:5px; opacity:0.8;
+  }
+  .glyph i { border:1px solid rgba(255,255,255,0.09); border-radius:3px; }
+  .glyph i.on { border-color:#C8F04A; background:rgba(200,240,74,0.14); }
+  .card-row.primary { border-color:rgba(200,240,74,0.5); background:rgba(200,240,74,0.04); }
+  .card-row.primary .t { color:#F2F3F5; }
+  .closing {
+    margin-top:46px; font-size:28px; color:#9BA0A8; line-height:1.6;
+    border-left:3px solid #C8F04A; padding-left:22px;
+  }
+  .closing b { color:#F2F3F5; font-weight:600; }
+</style>
+</head>
+<body>
+  <div class="grid-lines"></div>
+  <div class="pad">
+    <div class="eyebrow">THREE TABLES · 交付物</div>
+    <h1>三张表<br><span class="dim">对应三个决策</span></h1>
+    <div class="cards">
+      <div class="card card-row primary">
+        <div class="idx">01</div>
+        <div class="body">
+          <div class="t">痛点-竞品解决矩阵表</div>
+          <div class="d">行是用户痛点，列是竞品方案。读法不是填满。</div>
+        </div>
+        <div class="tag">找空格</div>
+        <div class="glyph">
+          <i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+      <div class="card card-row">
+        <div class="idx">02</div>
+        <div class="body">
+          <div class="t">竞品解决方案拆解表</div>
+          <div class="d">每个方案写清来源、功能、目标痛点、证据和缺口。</div>
+        </div>
+        <div class="tag">为什么没解决</div>
+        <div class="glyph">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+      <div class="card card-row">
+        <div class="idx">03</div>
+        <div class="body">
+          <div class="t">竞品解决方案分析表</div>
+          <div class="d">按评分从低到高排序，把结论收束成待办清单。</div>
+        </div>
+        <div class="tag">排优先级</div>
+        <div class="glyph">
+          <i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i>
+        </div>
+      </div>
+    </div>
+    <div class="closing">前两张表负责判断，<b>第三张表负责排序。</b></div>
+  </div>
+  <div class="pageno">05 / 07</div>
+</body>
+</html>

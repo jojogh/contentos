@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  .grid-lines { pointer-events:none; }
+  h1 { margin-top:86px; font-size:78px; }
+  .cols { margin-top:74px; display:flex; gap:60px; }
+  .col { width:438px; }
+  .col-head {
+    font-size:24px; letter-spacing:3px; color:#9BA0A8;
+    padding-bottom:18px; border-bottom:1px solid #2A2E35;
+    display:flex; align-items:center; gap:12px;
+  }
+  .col-head .dot { width:8px; height:8px; border-radius:50%; background:#4A4F57; }
+  .col.good .col-head { color:#C8F04A; border-bottom-color:rgba(200,240,74,0.4); }
+  .col.good .col-head .dot { background:#C8F04A; }
+  .step {
+    display:flex; gap:20px; align-items:baseline;
+    padding:26px 0; border-bottom:1px solid #1C2026;
+    font-size:31px; line-height:1.35;
+  }
+  .step .n {
+    font-family:Inter,monospace; font-size:20px; color:#4A4F57;
+    flex-shrink:0; width:34px;
+  }
+  .col.good .step .n { color:#C8F04A; }
+  .col.bad .step { color:#9BA0A8; }
+  .col.good .step { color:#F2F3F5; }
+  .punch {
+    margin-top:66px; font-size:34px; color:#F2F3F5;
+    border-left:3px solid #C8F04A; padding-left:24px;
+    line-height:1.5;
+  }
+  .punch b { color:#C8F04A; }
+</style>
+</head>
+<body>
+  <div class="grid-lines"></div>
+  <div class="pad">
+    <div class="eyebrow">THE WRONG ORDER · 痛点</div>
+    <h1>竞品分析最常见的错<br><span class="green">是顺序反了</span></h1>
+    <div class="cols">
+      <div class="col bad">
+        <div class="col-head"><span class="dot"></span>常见顺序</div>
+        <div class="step"><span class="n">01</span><span>销量、排名、价格</span></div>
+        <div class="step"><span class="n">02</span><span>卖点、五点描述</span></div>
+        <div class="step"><span class="n">03</span><span>猜用户可能需要什么</span></div>
+        <div class="step"><span class="n">04</span><span>得到一份竞品说明书</span></div>
+      </div>
+      <div class="col good">
+        <div class="col-head"><span class="dot"></span>有效顺序</div>
+        <div class="step"><span class="n">01</span><span>差评、中评</span></div>
+        <div class="step"><span class="n">02</span><span>聚类高频抱怨</span></div>
+        <div class="step"><span class="n">03</span><span>回 Listing 验证方案</span></div>
+        <div class="step"><span class="n">04</span><span>得到开发优先级</span></div>
+      </div>
+    </div>
+    <div class="punch">数据很多，但没有一个判断。<br><b>换个顺序，先看用户在骂什么。</b></div>
+  </div>
+  <div class="pageno">02 / 07</div>
+</body>
+</html>

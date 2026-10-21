@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  h1 { margin-top:78px; font-size:72px; }
+  .tree { margin-top:62px; display:flex; flex-direction:column; gap:20px; }
+  .node {
+    display:flex; align-items:stretch; gap:0;
+    border:1px solid #2A2E35; border-radius:8px;
+    background:rgba(255,255,255,0.012);
+    min-height:158px;
+  }
+  .q {
+    width:648px; padding:26px 30px;
+    display:flex; flex-direction:column; justify-content:center; gap:12px;
+  }
+  .q .qn {
+    font-family:Inter,monospace; font-size:19px; letter-spacing:3px; color:#C8F04A;
+  }
+  .q .qt { font-size:31px; line-height:1.45; font-weight:600; }
+  .arrow {
+    width:64px; display:flex; align-items:center; justify-content:center;
+    color:#4A4F57; font-size:30px;
+    border-left:1px solid #1C2026;
+  }
+  .out {
+    flex:1; padding:26px 24px;
+    display:flex; flex-direction:column; justify-content:center; gap:10px;
+    border-left:1px solid #1C2026;
+  }
+  .out .ol { font-size:18px; letter-spacing:2px; color:#4A4F57; }
+  .out .ov { font-size:28px; font-weight:700; color:#9BA0A8; line-height:1.35; }
+  .node.final { border-color:rgba(200,240,74,0.5); background:rgba(200,240,74,0.04); }
+  .node.final .ov { color:#C8F04A; }
+  .note {
+    margin-top:52px; font-size:29px; color:#9BA0A8; line-height:1.65;
+    border-left:3px solid #C8F04A; padding-left:22px;
+  }
+  .note b { color:#F2F3F5; font-weight:600; }
+</style>
+</head>
+<body>
+  <div class="grid-lines"></div>
+  <div class="pad">
+    <div class="eyebrow">DECISION TREE · 判断顺序</div>
+    <h1>评分不是打分<br><span class="dim">是走一棵决策树</span></h1>
+    <div class="tree">
+      <div class="node">
+        <div class="q"><div class="qn">Q1</div><div class="qt">竞品有没有明确方案？</div></div>
+        <div class="arrow">→</div>
+        <div class="out"><div class="ol">没有</div><div class="ov">基本没解决</div></div>
+      </div>
+      <div class="node">
+        <div class="q"><div class="qn">Q2</div><div class="qt">有方案，评论里是否至少有<br>2 条明确负面？</div></div>
+        <div class="arrow">→</div>
+        <div class="out"><div class="ol">有</div><div class="ov">解决了一半</div></div>
+      </div>
+      <div class="node final">
+        <div class="q"><div class="qn">Q3</div><div class="qt">没有明显负面，正面或中性<br>是否到约七成？</div></div>
+        <div class="arrow">→</div>
+        <div class="out"><div class="ol">达到</div><div class="ov">已解决得很好</div></div>
+      </div>
+    </div>
+    <div class="note">不是「没看到差评」就默认过关。<br><b>「已解决得很好」需要正面证据占主导。</b></div>
+  </div>
+  <div class="pageno">04 / 07</div>
+</body>
+</html>

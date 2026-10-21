@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "pre_write_code": [
+      {
+        "command": "node \"E:/project/content-os/.windsurf/skills/comet/scripts/comet-hook-router.mjs\" --platform \"windsurf\" --project-root \"E:/project/content-os\"",
+        "show_output": true
+      }
+    ]
+  }
+}

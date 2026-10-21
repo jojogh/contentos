@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  h1 { margin-top:72px; font-size:68px; }
+  .steps { margin-top:58px; display:flex; flex-direction:column; gap:0; }
+  .step {
+    display:flex; gap:24px; align-items:flex-start;
+    padding:28px 0; border-top:1px solid #1C2026;
+  }
+  .step:last-child { border-bottom:1px solid #1C2026; }
+  .box {
+    width:34px; height:34px; flex-shrink:0; margin-top:6px;
+    border:1.5px solid #C8F04A; border-radius:6px;
+    display:flex; align-items:center; justify-content:center;
+    color:#C8F04A; font-size:20px; font-weight:700;
+  }
+  .stext { font-size:31px; line-height:1.55; }
+  .stext b { color:#C8F04A; font-weight:700; }
+  .close {
+    margin-top:46px; font-size:27px; color:#9BA0A8; line-height:1.7;
+  }
+  .cta { margin-top:38px; display:flex; align-items:center; gap:22px; }
+  .pill {
+    border:1px solid #C8F04A; color:#C8F04A;
+    border-radius:999px; padding:13px 30px; font-size:25px;
+    white-space:nowrap;
+  }
+  .q { font-size:24px; color:#9BA0A8; line-height:1.55; }
+</style>
+</head>
+<body>
+  <div class="grid-lines"></div>
+  <div class="pad">
+    <div class="eyebrow">NEXT MOVE · 今天就做</div>
+    <h1>下次看竞品<br><span class="dim">先问差评在抱怨什么</span></h1>
+    <div class="steps">
+      <div class="step"><div class="box">✓</div><div class="stext">取最近 <b>20 条评论</b>，按星级分组</div></div>
+      <div class="step"><div class="box">✓</div><div class="stext">只聚类差评和中评里的<b>高频抱怨</b></div></div>
+      <div class="step"><div class="box">✓</div><div class="stext">收敛成 <b>4-7 个痛点</b></div></div>
+      <div class="step"><div class="box">✓</div><div class="stext">回 Listing 找对应方案，找不到就标<b>「基本没解决」</b></div></div>
+    </div>
+    <div class="close">不用跑完整个 Skill，也能在下次选品会前多一个可讨论的判断，而不是又一份参数清单。</div>
+    <div class="cta">
+      <div class="pill">收藏这套顺序</div>
+      <div class="q">你最近在看的 ASIN，差评里反复出现的是哪一句？</div>
+    </div>
+  </div>
+  <div class="pageno">07 / 07</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="base.css">
+<style>
+  h1 { margin-top:78px; font-size:74px; }
+  .sub { margin-top:26px; font-size:36px; }
+  .rows { margin-top:64px; display:flex; flex-direction:column; gap:22px; }
+  .row {
+    padding:30px 34px 26px 34px;
+    border:1px solid #2A2E35; border-radius:8px;
+    background:rgba(255,255,255,0.012);
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .row-head { display:flex; align-items:center; gap:18px; }
+  .status { width:12px; height:12px; border-radius:50%; background:#4A4F57; flex-shrink:0; }
+  .row-title { font-size:38px; font-weight:700; letter-spacing:1px; }
+  .row-desc { font-size:27px; color:#9BA0A8; line-height:1.6; padding-left:30px; }
+  .judge {
+    align-self:flex-start; margin-left:30px;
+    font-size:22px; letter-spacing:1px;
+    color:#9BA0A8; border:1px solid #2A2E35;
+    border-radius:999px; padding:7px 18px;
+  }
+  .row.hot {
+    border-color:rgba(200,240,74,0.55);
+    background:rgba(200,240,74,0.045);
+  }
+  .row.hot .status { background:#C8F04A; box-shadow:0 0 12px rgba(200,240,74,0.55); }
+  .row.hot .row-title { color:#C8F04A; }
+  .row.hot .judge { color:#C8F04A; border-color:rgba(200,240,74,0.45); }
+</style>
+</head>
+<body>
+  <div class="grid-lines"></div>
+  <div class="pad">
+    <div class="eyebrow">ONE QUESTION · 评分</div>
+    <h1>只回答一个问题</h1>
+    <div class="sub">这项痛点，竞品解决到什么程度？</div>
+    <div class="rows">
+      <div class="row">
+        <div class="row-head"><span class="status"></span><span class="row-title">已解决得很好</span></div>
+        <div class="row-desc">功能、设计、服务都到位，评论里几乎没有负面反馈。</div>
+        <div class="judge">判断：不作为核心方向</div>
+      </div>
+      <div class="row">
+        <div class="row-head"><span class="status"></span><span class="row-title">解决了一半</span></div>
+        <div class="row-desc">有对应方案，但体验有瑕疵、覆盖不全，用户还在抱怨。</div>
+        <div class="judge">判断：体验升级机会</div>
+      </div>
+      <div class="row hot">
+        <div class="row-head"><span class="status"></span><span class="row-title">基本没解决</span></div>
+        <div class="row-desc">没有对应方案，或方案效果差，用户反复抱怨。</div>
+        <div class="judge">判断：重点未满足需求机会</div>
+      </div>
+    </div>
+  </div>
+  <div class="pageno">03 / 07</div>
+</body>
+</html>
