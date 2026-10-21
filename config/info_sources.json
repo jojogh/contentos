@@ -1,0 +1,500 @@
+{
+  "meta": {
+    "description": "信息源注册表 — 本地 X 书签 + Web 信源(WebSearch/RSS 版)。",
+    "updated": "2026-09-21",
+    "usage": "daily agent 先查本地书签库(fieldtheory),再用 WebSearch 扫描 web_sources,提取匹配 topic_library 的事件。",
+    "note": "人工维护。agent 只在 daily_data.json.suggestions 里提建议,不自动修改本文件。"
+  },
+  "sources": {
+    "design_creative_trends": {
+      "track": "创意广告 / AI 设计方向",
+      "note": "2026-09-02 本人加入:设计趋势与 AI 创意方向的灵感层信源。Pinterest/Instagram 无公开抓取通道,账号类信源通过 WebSearch 间接追踪其被报道/引用的趋势;newsletter 和媒体站有网页版,可直接 WebFetch。命中「重点关注方向」(AI 设计/AI 创意/AI 生视频/AI 生图)的素材享受采集加权。",
+      "web_sources": [
+        {
+          "name": "Pinterest Predicts 官方趋势报告",
+          "type": "trend_report",
+          "search_queries": [
+            "Pinterest Predicts 2026 design trends",
+            "site:business.pinterest.com trends"
+          ],
+          "priority": "must_read",
+          "note": "官方年度/季度趋势,设计趋势的一手信号;间接覆盖 Pinterest 高排名账号的集体走向"
+        },
+        {
+          "name": "It's Nice That / Creative Boom / Design Milk",
+          "type": "design_media",
+          "search_queries": [
+            "site:itsnicethat.com AI design",
+            "site:creativeboom.com AI design trends",
+            "site:design-milk.com AI"
+          ],
+          "priority": "must_read",
+          "note": "头部设计媒体(Instagram 高排名设计账号背后的内容主站),网页可直接抓"
+        },
+        {
+          "name": "Visually AI (Heather Cooper, Substack)",
+          "type": "newsletter",
+          "search_queries": [
+            "Visually AI newsletter substack latest",
+            "Heather Cooper AI visuals"
+          ],
+          "priority": "must_read",
+          "note": "AI 生图/视觉创意方向头部 newsletter,周刊"
+        },
+        {
+          "name": "Future Tools (Matt Wolfe)",
+          "type": "newsletter",
+          "search_queries": [
+            "site:futuretools.io image video AI tools",
+            "Matt Wolfe new AI video image tool"
+          ],
+          "priority": "scan",
+          "note": "AI 生图/生视频新工具发现,每周两更"
+        },
+        {
+          "name": "The Rundown AI / Ben's Bites",
+          "type": "newsletter",
+          "search_queries": [
+            "site:therundown.ai AI image video generation",
+            "site:bensbites.com AI creative tools"
+          ],
+          "priority": "scan",
+          "note": "综合 AI 日刊,创意工具部分可作交叉验证"
+        },
+        {
+          "name": "UX Goodies / Prototypr",
+          "type": "newsletter",
+          "search_queries": [
+            "UX Goodies AI design tools",
+            "site:prototypr.io AI design"
+          ],
+          "priority": "scan",
+          "note": "AI 设计(UX/UI 方向)周刊"
+        },
+        {
+          "name": "Instagram 设计趋势账号(间接追踪)",
+          "type": "social_accounts_indirect",
+          "search_queries": [
+            "Instagram design trends 2026 viral",
+            "site:instagram.com design AI creative"
+          ],
+          "priority": "scan",
+          "note": "无公开抓取通道;通过搜索其被媒体报道的趋势间接覆盖。具体关注清单由本人在 App 内维护"
+        }
+      ],
+      "topic_queries": [
+        "AI design tool update 2026",
+        "AI 生图 模型 更新",
+        "AI 生视频 模型 商用",
+        "generative AI creative campaign case study",
+        "AI 设计 趋势"
+      ]
+    },
+    "local_x_bookmarks": {
+      "track": "全部赛道",
+      "type": "local_cli",
+      "note": "本人 X 书签本地库(fieldtheory sync 同步)。书签是人工预选信号,进 must_reads 权重最高。sync 由本人手动或定时脚本执行,briefing 工作流只读查询。",
+      "command": "fieldtheory list --json --after <2天前> --limit 100",
+      "priority": "must_read"
+    },
+    "obsidian_wechat_favorites": {
+      "track": "全部赛道",
+      "type": "local_files",
+      "note": "本人微信收藏经笔记同步助手同步到 Obsidian。笔记含 frontmatter(url/saved/author)+ 正文全文 + 发布时间。收藏是人工预选信号,权重与 X 书签同级。只读。",
+      "path": "E:\\obsidian\\Study\\笔记同步助手",
+      "priority": "must_read"
+    },
+    "ai_ecom_automation": {
+      "track": "AI 电商自动化",
+      "web_sources": [
+        {
+          "name": "Shopify Blog / Newsroom",
+          "search_queries": [
+            "site:shopify.com/news AI",
+            "site:shopify.com/blog AI ecommerce tools"
+          ],
+          "priority": "must_read"
+        },
+        {
+          "name": "Amazon Seller Central / About Amazon",
+          "search_queries": [
+            "site:aboutamazon.com AI seller tools",
+            "Amazon Rufus AI seller update"
+          ],
+          "priority": "must_read"
+        },
+        {
+          "name": "Modern Retail / Digiday 电商板块",
+          "search_queries": [
+            "site:modernretail.co AI ecommerce",
+            "site:digiday.com retail AI automation"
+          ],
+          "priority": "scan"
+        },
+        {
+          "name": "亿邦动力 / 36氪跨境电商",
+          "search_queries": [
+            "site:ebrun.com AI 电商",
+            "site:36kr.com 跨境电商 AI"
+          ],
+          "priority": "must_read"
+        },
+        {
+          "name": "中文跨境垂媒(雨果跨境 / AMZ123 / 大数跨境)",
+          "search_queries": [
+            "site:cifnews.com AI 跨境电商",
+            "site:amz123.com AI 卖家工具",
+            "site:10100.com 跨境电商 AI"
+          ],
+          "priority": "must_read",
+          "note": "2026-09-21 采纳建议,由 scan 升为 must_read,并补入 AMZ123 与大数跨境。依据:09-21 期 🛒 赛道 5 条 must_reads 中 4 条来自这批域名,且都带可核验硬数字(日预算下限 US$200、20 万美元级封号案例、MCP 技能数)。原 🛒 检索式偏英文电商媒体(Modern Retail / Digiday),近两期命中率明显低于中文跨境垂媒。"
+        },
+        {
+          "name": "TikTok Shop 官方动态",
+          "search_queries": [
+            "TikTok Shop AI tools seller update 2026",
+            "site:newsroom.tiktok.com shop AI"
+          ],
+          "priority": "must_read"
+        }
+      ],
+      "topic_queries": [
+        "AI agent ecommerce automation 2026",
+        "AI product listing generation seller tools",
+        "智能客服 AI 电商 自动化",
+        "AI virtual model product photography ecommerce"
+      ]
+    },
+    "creative_ads": {
+      "track": "创意广告",
+      "web_sources": [
+        {
+          "name": "Adweek / Ad Age",
+          "search_queries": [
+            "site:adweek.com AI advertising creative",
+            "site:adage.com AI creative"
+          ],
+          "priority": "must_read"
+        },
+        {
+          "name": "The Drum",
+          "search_queries": [
+            "site:thedrum.com AI advertising creative"
+          ],
+          "priority": "scan"
+        },
+        {
+          "name": "Meta for Business / Engineering",
+          "search_queries": [
+            "site:facebook.com/business AI ads Advantage+",
+            "Meta generative AI ads update"
+          ],
+          "priority": "must_read"
+        },
+        {
+          "name": "Google Ads & Commerce Blog",
+          "search_queries": [
+            "site:blog.google/products/ads-commerce AI",
+            "Performance Max AI creative update"
+          ],
+          "priority": "must_read"
+        },
+        {
+          "name": "广告门 / 数英 DIGITALING",
+          "search_queries": [
+            "site:adquan.com AI 广告",
+            "site:digitaling.com AI 创意"
+          ],
+          "priority": "scan"
+        },
+        {
+          "name": "视频生成模型官方博客",
+          "search_queries": [
+            "site:openai.com Sora",
+            "site:deepmind.google Veo",
+            "site:runwayml.com news",
+            "Kling AI video update"
+          ],
+          "priority": "must_read"
+        },
+        {
+          "name": "Grok Bot / xAI 营销自动化",
+          "type": "official_and_community",
+          "search_queries": [
+            "Grok bot marketing automation update",
+            "site:x.ai Grok agent",
+            "Grok Bot 营销 自动化 实测"
+          ],
+          "priority": "scan",
+          "note": "2026-09-03 本人指示加入。Grok Bot 类「全自动营销」宣称需实测验证,采集时区分官方更新与推广软文,软文只作反例素材"
+        },
+        {
+          "name": "UGC 视频生成工具官方博客",
+          "type": "vendor_blog",
+          "search_queries": [
+            "Creatify AI UGC video ads update",
+            "Arcads AI UGC actor update",
+            "MakeUGC AI video ads",
+            "site:stormy.ai blog UGC ads"
+          ],
+          "priority": "must_read",
+          "note": "2026-09-03 本人指示加入。AI UGC 带货视频工具链(08-26 UGC 流水线系列的工具层信号源)"
+        },
+        {
+          "name": "创意素材情报与效果分析",
+          "type": "analytics_blog",
+          "search_queries": [
+            "site:foreplay.co blog ad creative",
+            "Motion app creative analytics AI",
+            "VidMob AI creative performance",
+            "ad creative testing AI 2026"
+          ],
+          "priority": "scan",
+          "note": "2026-09-03 本人指示加入。素材测试/归因/疲劳监控方向,支撑「AI 创意的效果归因与测试方法」选题"
+        },
+        {
+          "name": "TikTok Creative Center / CapCut for Business",
+          "type": "platform_official",
+          "search_queries": [
+            "TikTok Creative Center AI update",
+            "CapCut for Business AI ads feature",
+            "TikTok Symphony creative update"
+          ],
+          "priority": "scan",
+          "note": "2026-09-03 本人指示加入。平台官方创意工具动态,与 TikTok Shop 卖家侧互补"
+        }
+      ],
+      "topic_queries": [
+        "AI ad creative generation platform 2026",
+        "AI UGC video ads performance data",
+        "creative automation advertising AI case study",
+        "AI 广告素材 批量生成",
+        "AI UGC 视频生成 工具 实测",
+        "创意广告视频 AI 生成 案例",
+        "Grok Bot marketing automation playbook"
+      ]
+    },
+    "ai_frontier": {
+      "track": "AI 前沿",
+      "web_sources": [
+        {
+          "name": "前沿实验室官方博客",
+          "search_queries": [
+            "site:anthropic.com/news latest",
+            "site:deepmind.google latest",
+            "site:qwen.ai blog",
+            "site:x.ai news Grok"
+          ],
+          "priority": "must_read",
+          "_deprecated_queries": [
+            {
+              "query": "site:openai.com/blog latest",
+              "removed": "2026-09-21",
+              "reason": "连续多期返回空结果(非采集失败,是搜索引擎未返回该域名当前条目)。OpenAI 官方内容改由 bestblogs RSS 池覆盖。"
+            }
+          ]
+        },
+        {
+          "name": "证券时报 / Mixed News(成本与商业化信号)",
+          "search_queries": [
+            "site:stcn.com AI 模型 成本",
+            "AI 模型 API 降价",
+            "AI 推理成本 下降"
+          ],
+          "priority": "scan",
+          "note": "2026-09-21 采纳建议新增。依据:🤖 赛道近两期最硬的成本类信号(Step 5 参数与成本口径、Qwen Omni 输入降价)分别来自证券时报与 Mixed News,而原有的 openai.com/blog、anthropic.com/engineering site: 检索已连续空返。"
+        },
+        {
+          "name": "The Batch (DeepLearning.AI)",
+          "search_queries": [
+            "site:deeplearning.ai/the-batch latest"
+          ],
+          "priority": "must_read"
+        },
+        {
+          "name": "Latent Space",
+          "search_queries": [
+            "site:latent.space latest",
+            "site:youtube.com/@LatentSpacePod latest"
+          ],
+          "priority": "must_read"
+        },
+        {
+          "name": "Stratechery",
+          "search_queries": [
+            "site:stratechery.com AI latest"
+          ],
+          "priority": "scan"
+        },
+        {
+          "name": "The Information / TechCrunch AI",
+          "search_queries": [
+            "site:theinformation.com AI latest",
+            "site:techcrunch.com/category/artificial-intelligence latest"
+          ],
+          "priority": "scan"
+        },
+        {
+          "name": "机器之心 / 量子位",
+          "search_queries": [
+            "site:jiqizhixin.com 最新",
+            "site:qbitai.com 最新"
+          ],
+          "priority": "scan"
+        },
+        {
+          "name": "Import AI",
+          "search_queries": [],
+          "priority": "disabled",
+          "_disabled": {
+            "date": "2026-09-21",
+            "reason": "site:importai.substack.com 连续多期返回空结果,与 openai.com/blog、anthropic.com/engineering 同批失效。保留条目以便日后改用官方 RSS 恢复,当前不再占用检索式配额。"
+          }
+        }
+      ],
+      "topic_queries": [
+        "AI model launch 2026",
+        "AI agent framework MCP update",
+        "multimodal AI model release",
+        "AI 大模型 发布 2026"
+      ]
+    },
+    "tech_news": {
+      "track": "AI 前沿 / 科技创业",
+      "note": "2026-09-16 本人指示加入:综合科技媒体与开发者社区信源,覆盖 AI、模型、Agent、创业产品快讯。命中 topic_library 中 AI 前沿与创意广告相关选题时权重 +1。",
+      "web_sources": [
+        {
+          "name": "TechCrunch",
+          "type": "tech_media",
+          "search_queries": [
+            "site:techcrunch.com AI agent",
+            "site:techcrunch.com artificial intelligence latest",
+            "site:techcrunch.com category/artificial-intelligence"
+          ],
+          "priority": "scan",
+          "note": "综合科技媒体,AI 与创业产品快讯"
+        },
+        {
+          "name": "Hacker News",
+          "type": "developer_community",
+          "search_queries": [
+            "site:news.ycombinator.com AI agent",
+            "site:news.ycombinator.com LLM",
+            "site:news.ycombinator.com Claude OpenAI"
+          ],
+          "priority": "scan",
+          "note": "开发者社区,模型/Agent/工具链讨论信号强,需交叉验证时效"
+        }
+      ],
+      "topic_queries": [
+        "AI startup launch 2026",
+        "LLM agent product hunt",
+        "AI 工具 创业 产品发布"
+      ]
+    },
+    "x_bookmark_authors": {
+      "track": "全部赛道(创意广告 / AI 生图生视频为主)",
+      "type": "local_cli",
+      "note": "2026-09-04 本人指示加入:从 fieldtheory viz 筛出的高信号 X 作者,已抽查内容全部对口(AI 生图/生视频 prompt、AI 设计、中文 AI 工具圈)。查询走本地书签库:`fieldtheory list --author <handle> --json --limit 20`。⚠️ 覆盖边界:只能看到本人已收藏的推文,作者新帖只有被收藏+sync 后才进库;追新帖需 WebSearch 间接(\"<handle> latest\")或提醒本人刷到就收藏。权重与 local_x_bookmarks 同级。",
+      "groups": {
+        "top_voices": {
+          "note": "fieldtheory 全库收藏数 Top 20(2026-09-04 快照),持续高频信源",
+          "priority": "must_read",
+          "authors": [
+            {"handle": "@Gdgtify", "count": 446, "focus": "AI 生图 prompt 玩法(Reve/GPT Image 网格构图)"},
+            {"handle": "@AmirMushich", "count": 82, "focus": "AI 视频工作流省 token 技巧、AI 设计指南"},
+            {"handle": "@xiaoxiaodong01", "count": 77, "focus": "中文 AI 工具/创意"},
+            {"handle": "@TechieBySA", "count": 76, "focus": "GPT Image/Seedance 商业场景 prompt"},
+            {"handle": "@VigoCreativeAI", "count": 69, "focus": "AI 创意"},
+            {"handle": "@berryxia", "count": 64, "focus": "中文 AI 圈"},
+            {"handle": "@tom_doerr", "count": 62, "focus": "AI 新闻/模型发布快讯"},
+            {"handle": "@binghe", "count": 56, "focus": "中文 AI 技术"},
+            {"handle": "@GoSailGlobal", "count": 50, "focus": "中文 AI 工具测评、自媒体工作流"},
+            {"handle": "@Mind_Boticni", "count": 50, "focus": "奢侈品/杂志风 AI 广告 prompt"},
+            {"handle": "@MrLarus", "count": 50, "focus": "海报构图/排版物理动效 AI 视觉"},
+            {"handle": "@AYi_AInotes", "count": 46, "focus": "中文 AI 笔记"},
+            {"handle": "@dotey", "count": 46, "focus": "宝玉,AI 工程/Agent 深度"},
+            {"handle": "@AdrianPunk115", "count": 44, "focus": "AI 创意"},
+            {"handle": "@QingQ77", "count": 41, "focus": "中文 AI 创意"},
+            {"handle": "@vista8", "count": 39, "focus": "AI 独立开发/工具"},
+            {"handle": "@servasyy_ai", "count": 35, "focus": "AI 生图生视频、image-to-3D 开源"},
+            {"handle": "@itsalexvacca", "count": 33, "focus": "AI 工具/增长"},
+            {"handle": "@craftian_keskin", "count": 32, "focus": "GPT Image 广告级产品摄影 prompt"},
+            {"handle": "@op7418", "count": 32, "focus": "中文 AI 设计/前端"}
+          ]
+        },
+        "hidden_gems": {
+          "note": "fieldtheory viz 标记的一次性高质量账号(各收藏 1 次),内容对口创意广告/AI 工具,值得回溯其历史推文",
+          "priority": "scan",
+          "authors": [
+            {"handle": "@nestymee", "focus": "AI influencer 生成公式"},
+            {"handle": "@RedCubix_NEO", "focus": "AI 视频氛围感 prompt"},
+            {"handle": "@rameerez", "focus": "纯 prompt 做产品发布视频(indie maker)"},
+            {"handle": "@HeyRu0by", "focus": "9:16 商业级食品广告视频 prompt"},
+            {"handle": "@Lianaalane", "focus": "GPT Image 人脸一致性 prompt"},
+            {"handle": "@mxvdxn", "focus": "视频角色表(character sheet)工作流"},
+            {"handle": "@ZabihullahAtal", "focus": "商业咨询替代 prompt"},
+            {"handle": "@dharmesh", "focus": "HubSpot 创始人,AI-native CRM/产品发布"}
+          ]
+        },
+        "latest_session": {
+          "note": "2026-09-04 最近一次 sync 新增书签的作者,时效性最强",
+          "priority": "scan",
+          "authors": [
+            {"handle": "@DeanHeoi", "count": 2},
+            {"handle": "@0xROAS", "count": 1},
+            {"handle": "@AdrianPunk115", "count": 1, "note": "同时在 top_voices"},
+            {"handle": "@app_sail", "count": 1},
+            {"handle": "@bourneliu66", "count": 1}
+          ]
+        }
+      }
+    },
+    "bestblogs_rss": {
+      "track": "全部赛道(AI/产品/技术为主,播客+公众号补强中文圈信号)",
+      "note": "2026-09-02 加入:ginobefun/BestBlogs 策展信源池(bestblogs.dev)。OPML 已落本地 ContentOS/info_sources/bestblogs/。用法:daily agent 用脚本解析 OPML 拿 xmlUrl,WebFetch 直读 RSS XML,按 topic_library 过滤。⚠️ 依赖第三方托管实例(wechat2rss/rsshub.bestblogs.dev),失效则整组降级;YouTube 直连本机不通(需代理)。与原 web_sources 的 search_queries 互补:RSS 给全量新条目,WebSearch 给定向验证。Twitters OPML(160 个)未收——fieldtheory 书签已覆盖 X 通道。",
+      "web_sources": [
+        {
+          "name": "BestBlogs 文章池(170 feeds:技术博客+厂商工程博客+115 个公众号经 wechat2rss)",
+          "type": "rss_opml_local",
+          "file": "ContentOS/info_sources/bestblogs/BestBlogs_RSS_Articles.opml",
+          "priority": "scan",
+          "feed_count": 170,
+          "note": "量子位/LangChain/HF/AWS ML 等;公众号子集走 wechat2rss.bestblogs.dev(2026-09-02 测活 200)。2026-09-21 采纳建议,由 must_read 降为 scan(补充通道,不再作主力):本期 15 个 feed 报错(公众号池仅 6 个),48h 新鲜量 119 条,仅为公众号池 894 条的 13%。⚠️ 待办:排查那 15 个报错 feed。"
+        },
+        {
+          "name": "BestBlogs 播客池(30 个小宇宙播客经 rsshub)",
+          "type": "rss_opml_local",
+          "file": "ContentOS/info_sources/bestblogs/BestBlogs_RSS_Podcasts.opml",
+          "priority": "scan",
+          "feed_count": 30,
+          "note": "科技早知道/无人知晓/硅谷101/张小珺等;商业访谈类对选题角度有用(2026-09-02 测活 200)"
+        },
+        {
+          "name": "BestBlogs 视频池(40 个 YouTube 频道原生 feed)",
+          "type": "rss_opml_local",
+          "file": "ContentOS/info_sources/bestblogs/BestBlogs_RSS_Videos.opml",
+          "priority": "scan",
+          "feed_count": 40,
+          "note": "Anthropic/OpenAI/DeepMind/AI Engineer 等;⚠️ 本机直连 YouTube 不通,需代理,当前降级为「有代理时启用」"
+        },
+        {
+          "name": "BestBlogs 公众号全量池(375 个,与文章池 115 个子集部分重叠)",
+          "type": "rss_opml_local",
+          "file": "ContentOS/info_sources/bestblogs/bestblogs_wechat2rss_all.opml",
+          "priority": "must_read",
+          "feed_count": 375,
+          "note": "2026-09-21 采纳建议,由 scan 升为 must_read,与文章池并行作为每日主采集通道(不再是「文章池信号不足时才扩展扫」)。依据:09-21 期实测 48h 新鲜 894 条,是文章池 119 条的约 7.5 倍;375 feeds 中 369 可读,失败仅 6 个(vs 文章池 15 个);且本期 🛒 与 🎨 两条线的高价值素材(卖家精灵 MCP、TikTok Shop AI 内容收紧、人大拍卖论文、阶跃实测)全部来自该池。该建议已连续三期(09-18 / 09-20 / 09-21)提出。腾讯/阿里/大淘宝技术团队号为主。"
+        },
+        {
+          "name": "BestBlogs 小宇宙播客扩展池(60 个)",
+          "type": "rss_opml_local",
+          "file": "ContentOS/info_sources/bestblogs/bestblogs_xiaoyuzhou_podcasts.opml",
+          "priority": "scan",
+          "feed_count": 60,
+          "note": "与 30 池重叠度高,扩展扫用;罗永浩十字路口/42章经/硬地骇客等"
+        }
+      ]
+    }
+  }
+}

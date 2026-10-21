@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "description": "Topic library — 常青选题库,daily agent 用它匹配每日事件。",
+    "updated": "2026-09-21",
+    "note": "人工维护。agent 只在 daily_data.json.suggestions 里提增删建议,不自动修改本文件。"
+  },
+  "tracks": [
+    {
+      "id": "ai-ecom-automation",
+      "name": "AI 电商自动化",
+      "icon": "🛒",
+      "priority": "high",
+      "performance_note": "TODO: 跑几周后补充 — 哪些格式表现好、哪些差",
+      "evergreen_topics": [
+        {
+          "title": "AI Agent 接管电商运营全流程",
+          "angle": "从选品、上架、客服到广告投流,哪些环节已经能端到端自动化,真实 ROI 数据",
+          "heat": "high",
+          "content_type": "deep-dive",
+          "keywords": ["AI agent ecommerce", "自动化运营", "AI listing", "智能客服", "ad automation", "Agent 电商"]
+        },
+        {
+          "title": "AI 生成商品图 / 详情页 / 视频素材",
+          "angle": "图像与视频生成模型在电商素材上的落地,成本对比人工拍摄的拐点",
+          "heat": "high",
+          "content_type": "tool-share",
+          "keywords": ["AI 商品图", "product image generation", "AI 视频素材", "virtual model", "AI 模特"]
+        },
+        {
+          "title": "平台 AI 功能更新(Amazon/Shopify/TikTok Shop/淘宝)",
+          "angle": "平台官方 AI 工具更新对卖家的实际影响,谁先吃到红利",
+          "heat": "high",
+          "content_type": "news-commentary",
+          "keywords": ["Amazon AI", "Shopify AI", "TikTok Shop AI", "Rufus", "电商 AI 工具", "A+ content AI"]
+        },
+        {
+          "title": "AI 选品与市场情报",
+          "angle": "用 AI 做趋势预测、竞品监控、评论分析的方法论和工具",
+          "heat": "medium",
+          "content_type": "methodology",
+          "keywords": ["AI 选品", "product research AI", "review analysis", "trend prediction", "竞品监控"]
+        },
+        {
+          "title": "跨境电商 AI 本地化",
+          "angle": "多语言 listing、本地化营销素材、跨市场合规的 AI 方案",
+          "heat": "medium",
+          "content_type": "deep-dive",
+          "keywords": ["跨境电商", "cross-border ecommerce AI", "listing 本地化", "multilingual AI"]
+        },
+        {
+          "title": "AI 素材的平台合规与判罚",
+          "angle": "各平台对 AI 生成内容的治理规则、判罚案例与可执行的合规改造流程;哪类镜头必须真人、哪类可以交给 AI。",
+          "heat": "high",
+          "content_type": "methodology",
+          "keywords": ["AI 内容合规", "TikTok Shop AI 内容", "AI listing 风险", "平台判罚", "AI 素材审查", "内容治理"],
+          "cross_track_with": "creative-ads(同一选题,跨赛道共用)",
+          "note": "2026-09-21 采纳建议新增。触发依据:同一窗口内 TikTok Shop 收紧 AI 内容、亚马逊 AI 视觉识别批量删链接、AI listing 商标词风险三条同时出现,且都指向「发布前筛查」这一可复用动作。原常青库只有正向的「AI 生成商品图/视频」,缺反向的合规位。"
+        }
+      ]
+    },
+    {
+      "id": "creative-ads",
+      "name": "创意广告",
+      "icon": "🎨",
+      "priority": "high",
+      "performance_note": "TODO: 跑几周后补充 — 哪些格式表现好、哪些差",
+      "evergreen_topics": [
+        {
+          "title": "AI 广告创意生产流水线",
+          "angle": "从 brief 到成片的 AI 工作流:文案、视觉、视频、A/B 变体批量生成",
+          "heat": "high",
+          "content_type": "tool-share",
+          "keywords": ["AI ad creative", "广告素材 AI", "UGC AI", "creative automation", "批量素材"]
+        },
+        {
+          "title": "AI 视频广告模型进展",
+          "angle": "Sora / Veo / Kling / Runway 等视频模型在广告级质量上的可用性评估",
+          "heat": "high",
+          "content_type": "news-commentary",
+          "keywords": ["AI video generation", "视频广告", "Sora", "Veo", "Kling", "Runway", "数字人广告"]
+        },
+        {
+          "title": "广告平台 AI 化(Meta/Google/TikTok Ads)",
+          "angle": "Advantage+、PMax、Smart+ 等自动化投放产品的创意侧变化,创意成为唯一杠杆",
+          "heat": "high",
+          "content_type": "deep-dive",
+          "keywords": ["Advantage+", "Performance Max", "Meta AI ads", "Google Ads AI", "creative testing", "素材测试"]
+        },
+        {
+          "title": "AI 创意的效果归因与测试方法",
+          "angle": "AI 素材 vs 人工素材的 CTR/CVR 实测数据,创意疲劳监控",
+          "heat": "medium",
+          "content_type": "methodology",
+          "keywords": ["creative testing", "广告素材测试", "CTR", "creative fatigue", "素材归因"]
+        },
+        {
+          "title": "品牌营销中的 AI 创意案例",
+          "angle": "大品牌用 AI 做 campaign 的案例拆解,什么算好创意什么算翻车",
+          "heat": "medium",
+          "content_type": "case-study",
+          "keywords": ["AI campaign", "品牌营销 AI", "AI 广告案例", "brand AI"]
+        },
+        {
+          "title": "AI 素材的平台合规与判罚",
+          "angle": "各平台对 AI 生成内容的治理规则、判罚案例与可执行的合规改造流程;哪类镜头必须真人、哪类可以交给 AI。",
+          "heat": "high",
+          "content_type": "methodology",
+          "keywords": ["AI 内容合规", "AI 广告素材 合规", "平台判罚", "AI 素材审查", "内容治理", "广告政策"],
+          "cross_track_with": "ai-ecom-automation(同一选题,跨赛道共用)",
+          "note": "2026-09-21 采纳建议新增。跨赛道常青位:广告侧对应平台的 AI 创意政策与判罚,电商侧对应商品素材合规,两侧共用同一套「发布前筛查」动作。"
+        }
+      ]
+    },
+    {
+      "id": "ai-frontier",
+      "name": "AI 前沿",
+      "icon": "🤖",
+      "priority": "high",
+      "performance_note": "TODO: 跑几周后补充 — 哪些格式表现好、哪些差",
+      "evergreen_topics": [
+        {
+          "title": "前沿模型发布与能力跃迁",
+          "angle": "新模型发布的第一时间解读,聚焦对电商/广告场景的实际影响,不做泛泛复述",
+          "heat": "high",
+          "content_type": "news-commentary",
+          "keywords": ["model launch", "GPT", "Claude", "Gemini", "新模型", "模型发布", "benchmark"]
+        },
+        {
+          "title": "AI Agent 生态与工具链",
+          "angle": "Agent 框架、MCP、多 Agent 协作的工程进展,谁能真正干活",
+          "heat": "high",
+          "content_type": "deep-dive",
+          "keywords": ["AI agent", "MCP", "agent framework", "multi-agent", "Agent 生态", "Claude Code"]
+        },
+        {
+          "title": "多模态与生成式媒体",
+          "angle": "图像/视频/音频生成模型的能力边界,商用成熟度",
+          "heat": "high",
+          "content_type": "tool-share",
+          "keywords": ["multimodal", "image generation", "video generation", "生成式 AI", "多模态"]
+        },
+        {
+          "title": "AI 公司商业化与行业格局",
+          "angle": "融资、定价、API 价格战、中美模型竞争格局",
+          "heat": "medium",
+          "content_type": "commentary",
+          "keywords": ["OpenAI", "Anthropic", "AI funding", "API 价格", "模型价格战", "中美 AI"]
+        },
+        {
+          "title": "信号辨别:怎么识别集中推广与不可核实内容",
+          "angle": "一套可复用的三步验证法(账号关联性 → 独立产出 → 可证伪断言),配具体正反案例。",
+          "heat": "medium",
+          "content_type": "methodology",
+          "keywords": ["信息辨别", "集中推广", "营销水军", "可证伪性", "媒体素养", "信源验证"],
+          "note": "2026-09-21 采纳建议新增,由一次性 topic 升为常青。依据:同一现象连续两期出现(09-20 的 Jev 集中推广洪流、09-21 集群内出现可判定编造内容——声称产品用于构建 HFT 系统,与其实为分数/标签输出的实际用途严重不符),09-20 期已指出需常设此选题位。"
+        }
+      ]
+    }
+  ],
+  "content_formats": [
+    {"name": "tool-share", "note": "工具/工作流分享 — 公众号长文 + 小红书图文 + X 短推三版"},
+    {"name": "news-commentary", "note": "新闻解读 — 突出「对你的业务意味着什么」,X/LinkedIn 短版 + 公众号长版"},
+    {"name": "deep-dive", "note": "深度分析 — 公众号主战场,LinkedIn 英文精华版"},
+    {"name": "case-study", "note": "案例拆解 — 小红书/公众号表现通常最好"},
+    {"name": "methodology", "note": "方法论 — 收藏率高,适合小红书和公众号"},
+    {"name": "commentary", "note": "观点评论 — X 和 LinkedIn 为主"}
+  ],
+  "posting_strategy": {
+    "note": "每日 briefing 产出 6 条草稿候选(2026-09-21 由 3 条上调,与 SKILL.md Step 7 定额对齐)。日均配比默认 X 3 + 小红书 1 + 公众号 1 + LinkedIn 1,由下方发布节奏折算:公众号每周 5-6 篇深度(≈0.8/日)、X 每日 5-6 条、小红书每周 6-8 条(≈1/日)、LinkedIn 每周 5-6 条英文(≈0.8/日)。素材明显偏向某赛道时可在保持 4 个平台各至少 1 条的前提下调整。"
+  }
+}
