@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Star Content OS — 每日创作指挥中心</title>
+<style>
+:root {
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --card-hover: #fafbfc;
+  --border: #e2e4e9;
+  --text: #1a1b26;
+  --text-dim: #6b7280;
+  --text-muted: #9ca3af;
+  --accent: #6366f1;
+  --accent2: #4f46e5;
+  --accent-bg: rgba(99,102,241,0.06);
+  --green: #059669;
+  --green-bg: rgba(5,150,105,0.08);
+  --red: #dc2626;
+  --red-bg: rgba(220,38,38,0.08);
+  --orange: #ea580c;
+  --orange-bg: rgba(234,88,12,0.08);
+  --blue: #2563eb;
+  --blue-bg: rgba(37,99,235,0.08);
+  --purple: #7c3aed;
+  --purple-bg: rgba(124,58,237,0.08);
+  --yellow: #d97706;
+  --yellow-bg: rgba(217,119,6,0.08);
+  --cyan: #0891b2;
+  --cyan-bg: rgba(8,145,178,0.08);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.04);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.6;
+}
+.container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 24px; flex-wrap: wrap; gap: 12px;
+}
+.header-left h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; }
+.header-left h1 span { color: var(--accent); }
+.header-left .subtitle { color: var(--text-dim); font-size: 14px; margin-top: 2px; }
+.header-left .author-handle { color: var(--text-dim); font-size: 14px; font-weight: 500; text-decoration: none; vertical-align: middle; margin-left: 6px; }
+.header-left .author-handle:hover { color: var(--accent); text-decoration: underline; }
+.header-right { display: flex; gap: 8px; align-items: center; }
+.date-display {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 8px 16px; font-size: 14px; color: var(--accent); font-weight: 600; box-shadow: var(--shadow);
+}
+.day-quality { padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+.day-quality.high { background: var(--green-bg); color: var(--green); }
+.day-quality.medium { background: var(--yellow-bg); color: var(--yellow); }
+.day-quality.low { background: var(--red-bg); color: var(--red); }
+.data-status {
+  font-size: 12px; padding: 4px 10px; border-radius: 12px; font-weight: 500;
+}
+.data-status.loaded { background: var(--green-bg); color: var(--green); }
+.data-status.empty { background: var(--yellow-bg); color: var(--yellow); }
+
+/* Nav */
+.nav-tabs {
+  display: flex; gap: 4px; background: var(--card); border-radius: var(--radius);
+  padding: 4px; margin-bottom: 24px; border: 1px solid var(--border);
+  overflow-x: auto; box-shadow: var(--shadow);
+}
+.nav-tab {
+  padding: 10px 20px; border-radius: var(--radius-sm); cursor: pointer;
+  font-size: 14px; font-weight: 500; color: var(--text-dim);
+  border: none; background: transparent; transition: all 0.2s; white-space: nowrap;
+}
+.nav-tab:hover { color: var(--text); background: rgba(0,0,0,0.03); }
+.nav-tab.active { background: var(--accent); color: #fff; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* Stats */
+.stats-row {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px; margin-bottom: 24px;
+}
+.stat-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow);
+}
+.stat-label { font-size: 12px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; }
+.stat-value { font-size: 24px; font-weight: 700; margin-top: 4px; }
+.stat-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+/* Cards */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.section-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow);
+}
+.section-card:hover { box-shadow: var(--shadow-md); }
+.section-title { font-size: 16px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.section-title .icon { font-size: 20px; }
+
+/* Topic Card */
+.topic-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 14px; margin-bottom: 10px;
+  transition: all 0.2s; cursor: pointer;
+}
+.topic-card:hover { background: var(--accent-bg); border-color: rgba(99,102,241,0.3); }
+.topic-card:last-child { margin-bottom: 0; }
+.topic-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+.topic-title { font-size: 14px; font-weight: 600; flex: 1; }
+.topic-heat { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; flex-shrink: 0; margin-left: 8px; }
+.topic-heat.high { background: var(--red-bg); color: var(--red); }
+.topic-heat.medium { background: var(--yellow-bg); color: var(--yellow); }
+.topic-heat.low { background: var(--blue-bg); color: var(--blue); }
+.topic-angle { font-size: 13px; color: var(--text-dim); margin-bottom: 6px; }
+.topic-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.tag { font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-bg); color: var(--accent); }
+.tag.format { background: var(--purple-bg); color: var(--purple); }
+.tag.track { background: var(--cyan-bg); color: var(--cyan); }
+
+/* Must-read item */
+.must-read-item {
+  display: flex; gap: 12px; padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.must-read-item:last-child { border-bottom: none; }
+.must-read-num {
+  width: 24px; height: 24px; border-radius: 50%; background: var(--accent);
+  color: #fff; font-size: 12px; font-weight: 700; display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0; margin-top: 2px;
+}
+.must-read-body { flex: 1; }
+.must-read-title { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+.must-read-title a { color: var(--accent); text-decoration: none; }
+.must-read-title a:hover { text-decoration: underline; }
+.must-read-summary { font-size: 13px; color: var(--text-dim); margin-bottom: 4px; }
+.must-read-tags { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; }
+.pub-time { font-size: 11px; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px; margin-left: 4px; }
+.age-badge { font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 8px; text-transform: uppercase; letter-spacing: 0.3px; }
+.age-badge.fresh { background: var(--green-bg); color: var(--green); }
+.age-badge.warn  { background: var(--yellow-bg); color: var(--yellow); }
+.age-badge.stale { background: var(--red-bg); color: var(--red); }
+.age-badge.stale::before { content: '⚠ '; }
+
+/* Draft Card */
+.draft-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 16px; margin-bottom: 12px; position: relative;
+}
+.draft-card:last-child { margin-bottom: 0; }
+.draft-number {
+  position: absolute; top: -8px; left: 14px;
+  background: var(--accent); color: #fff; font-size: 11px; font-weight: 700;
+  padding: 2px 8px; border-radius: 10px;
+}
+.draft-meta { display: flex; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; }
+.draft-text {
+  font-size: 14px; line-height: 1.7; color: var(--text);
+  white-space: pre-line; border-left: 3px solid var(--accent); padding-left: 12px;
+  background: rgba(99,102,241,0.03); border-radius: 0 6px 6px 0; padding: 12px;
+}
+.draft-reasoning {
+  font-size: 12px; color: var(--text-dim); margin-top: 8px;
+  padding: 8px 12px; background: var(--accent-bg); border-radius: 6px;
+}
+.draft-actions { display: flex; gap: 8px; margin-top: 10px; }
+.btn-sm {
+  padding: 6px 14px; border-radius: 6px; font-size: 12px; border: none;
+  cursor: pointer; font-weight: 500; transition: all 0.2s;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent2); }
+.btn-typefully { background: #1a8cd8; color: #fff; }
+.btn-typefully:hover { background: #1578b8; }
+.btn-ghost { background: transparent; color: var(--text-dim); border: 1px solid var(--border); }
+.btn-ghost:hover { color: var(--text); border-color: var(--text-dim); }
+
+/* Typefully Banner */
+.typefully-banner {
+  background: linear-gradient(135deg, rgba(26,140,216,0.08), rgba(99,102,241,0.08));
+  border: 1px solid rgba(26,140,216,0.2); border-radius: var(--radius);
+  padding: 16px 20px; margin-bottom: 24px; display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 12px;
+}
+.typefully-banner-text { font-size: 13px; color: var(--text-dim); }
+.typefully-banner-text strong { color: var(--text); }
+
+/* Source Item */
+.source-item {
+  display: flex; align-items: center; gap: 10px; padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+.source-item:last-child { border-bottom: none; }
+.source-priority { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.source-priority.must_read { background: var(--red); }
+.source-priority.scan { background: var(--yellow); }
+.source-name { font-size: 13px; font-weight: 500; flex: 1; }
+.source-freq { font-size: 12px; color: var(--text-muted); }
+.source-link { font-size: 12px; color: var(--accent); text-decoration: none; }
+.source-link:hover { text-decoration: underline; }
+
+/* X List Card */
+.xlist-card {
+  display: flex; align-items: center; gap: 10px; padding: 8px 12px;
+  background: var(--bg); border-radius: 6px; margin-bottom: 6px;
+  border: 1px solid var(--border);
+}
+.xlist-card:last-child { margin-bottom: 0; }
+.xlist-icon { font-size: 16px; }
+.xlist-name { font-size: 13px; font-weight: 500; flex: 1; }
+.xlist-accounts { font-size: 11px; color: var(--text-muted); }
+
+/* Signal */
+.signal-item { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; }
+.signal-dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 7px; flex-shrink: 0; background: var(--accent); }
+.signal-text { font-size: 13px; color: var(--text-dim); }
+
+/* Week Grid */
+.week-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+.day-cell {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 10px 8px; text-align: center;
+}
+.day-cell.today { border-color: var(--accent); background: var(--accent-bg); box-shadow: 0 0 0 1px var(--accent); }
+.day-cell.high-priority { border-left: 3px solid var(--green); }
+.day-cell.medium-priority { border-left: 3px solid var(--yellow); }
+.day-cell.low-priority { border-left: 3px solid var(--red); }
+.day-name { font-size: 12px; font-weight: 600; margin-bottom: 4px; }
+.day-focus { font-size: 11px; color: var(--text-dim); }
+.day-impressions { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+
+/* Rule Card */
+.rule-card {
+  background: linear-gradient(135deg, rgba(99,102,241,0.05), rgba(124,58,237,0.05));
+  border: 1px solid rgba(99,102,241,0.15); border-radius: var(--radius);
+  padding: 20px; margin-bottom: 24px;
+}
+.rule-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 12px; color: var(--accent); }
+.rule-list { list-style: none; }
+.rule-list li {
+  padding: 6px 0; font-size: 13px; color: var(--text-dim);
+  display: flex; align-items: flex-start; gap: 8px;
+}
+.rule-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+
+/* Hook */
+.hook-section { margin-bottom: 16px; }
+.hook-label { font-size: 12px; color: var(--text-dim); margin-bottom: 6px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.hook-item {
+  font-size: 13px; color: var(--text); padding: 8px 12px;
+  background: var(--bg); border-radius: 6px; margin-bottom: 4px;
+  border-left: 2px solid var(--accent); cursor: pointer; transition: all 0.15s;
+}
+.hook-item:hover { background: var(--accent-bg); }
+
+/* Cross Opportunity */
+.cross-card {
+  background: linear-gradient(135deg, rgba(8,145,178,0.04), rgba(99,102,241,0.04));
+  border: 1px solid rgba(8,145,178,0.15); border-radius: var(--radius-sm);
+  padding: 12px; margin-bottom: 8px;
+}
+.cross-card:last-child { margin-bottom: 0; }
+.cross-label { font-size: 11px; color: var(--cyan); font-weight: 600; margin-bottom: 4px; }
+.cross-text { font-size: 13px; color: var(--text-dim); }
+
+/* Track Section */
+.track-section { margin-bottom: 20px; }
+.track-header {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 12px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--border);
+}
+.track-icon { font-size: 20px; }
+.track-name { font-size: 16px; font-weight: 600; }
+.track-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: var(--accent-bg); color: var(--accent); }
+
+/* Empty State */
+.empty-state {
+  text-align: center; padding: 40px 20px; color: var(--text-dim);
+}
+.empty-state .icon { font-size: 40px; margin-bottom: 12px; }
+.empty-state h3 { font-size: 16px; color: var(--text); margin-bottom: 8px; }
+.empty-state p { font-size: 13px; max-width: 400px; margin: 0 auto; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cards-grid { grid-template-columns: 1fr; }
+  .week-grid { grid-template-columns: repeat(4, 1fr); }
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ===== Typefully Modal ===== */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+  z-index: 9999; align-items: center; justify-content: center;
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+  background: #fff; border-radius: 14px; padding: 28px; width: 560px;
+  max-width: 95vw; box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  animation: slideUp 0.2s ease;
+}
+@keyframes slideUp { from { transform: translateY(20px); opacity:0; } to { transform:translateY(0); opacity:1; } }
+.modal-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+.modal-subtitle { font-size: 13px; color: #6b7280; margin-bottom: 14px; }
+.modal-textarea {
+  width: 100%; min-height: 140px; padding: 12px; border: 1.5px solid #e2e4e9;
+  border-radius: 8px; font-size: 14px; line-height: 1.7; resize: vertical;
+  white-space: pre-wrap; font-family: inherit; outline: none;
+}
+.modal-textarea:focus { border-color: #6366f1; }
+.modal-actions { display: flex; gap: 10px; margin-top: 14px; justify-content: flex-end; }
+.modal-note {
+  font-size: 12px; color: #6b7280; background: #f4f5f7; border-radius: 8px;
+  padding: 10px 12px; margin-top: 12px; line-height: 1.6;
+}
+.modal-note strong { color: #374151; }
+.btn-close-modal { background: transparent; border: 1.5px solid #e2e4e9; color: #6b7280;
+  padding: 8px 18px; border-radius: 8px; cursor: pointer; font-size: 13px; }
+.btn-close-modal:hover { background: #f4f5f7; }
+.btn-copy-modal { background: #6366f1; color: #fff; border: none;
+  padding: 8px 18px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 600; }
+.btn-copy-modal:hover { background: #4f46e5; }
+.btn-typefully-real { background: #1a8cd8; color: #fff; border: none;
+  padding: 8px 18px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 600; }
+.btn-typefully-real:hover { background: #1570b8; }
+.copy-success { background: #059669 !important; }
+
+/* Market Snapshot Card (Day1 Global) */
+.btc-score-box {
+  background: linear-gradient(135deg, rgba(99,102,241,0.10), rgba(99,102,241,0.02));
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 16px; display: flex; flex-direction: column; justify-content: center;
+}
+.btc-score-label { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; }
+.btc-score-value { font-size: 36px; font-weight: 700; line-height: 1; color: var(--accent); margin-top: 4px; }
+.btc-score-level { font-size: 14px; font-weight: 600; margin-top: 8px; }
+.btc-score-suggestion { font-size: 12px; color: var(--text-dim); margin-top: 6px; line-height: 1.5; }
+.btc-score-sub { font-size: 11px; color: var(--text-muted); margin-top: 8px; }
+.macro-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; }
+.macro-item { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 12px; }
+.macro-label { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.3px; }
+.macro-value { font-size: 15px; font-weight: 600; margin-top: 2px; }
+.macro-change { font-size: 12px; margin-top: 2px; }
+.macro-change.positive, .ticker-change.positive { color: var(--green); }
+.macro-change.negative, .ticker-change.negative { color: var(--red); }
+.macro-change.neutral, .ticker-change.neutral { color: var(--text-dim); }
+.ticker-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
+.ticker-cell {
+  background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 8px 10px; transition: all 0.15s;
+}
+.ticker-cell:hover { border-color: var(--accent); background: var(--accent-bg); }
+.ticker-symbol { font-size: 12px; font-weight: 700; letter-spacing: 0.3px; }
+.ticker-price { font-size: 13px; font-weight: 600; margin-top: 2px; }
+.ticker-change { font-size: 11px; margin-top: 1px; }
+.btc-onchain-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; }
+.btc-onchain-cell { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+.btc-onchain-label { font-size: 11px; color: var(--text-dim); }
+.btc-onchain-value { font-size: 14px; font-weight: 600; margin-top: 2px; }
+.market-snapshot-error {
+  background: var(--red-bg); color: var(--red); padding: 12px;
+  border-radius: var(--radius-sm); font-size: 13px;
+}
+.ticker-state-pre, .ticker-state-post { opacity: 0.75; }
+.ticker-state-pre::after { content: " 盘前"; font-size: 9px; color: var(--text-muted); }
+.ticker-state-post::after { content: " 盘后"; font-size: 9px; color: var(--text-muted); }
+.ticker-state-closed::after { content: " 休市"; font-size: 9px; color: var(--text-muted); }
+
+/* Published This Week (drafts 文件夹) */
+.published-summary {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px; margin-bottom: 16px;
+}
+.published-summary .stat-card { padding: 12px 14px; }
+.published-controls {
+  display: flex; gap: 8px; align-items: center;
+  margin-bottom: 12px; font-size: 13px; color: var(--text-dim); flex-wrap: wrap;
+}
+.published-sort-btn {
+  background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 4px 10px; font-size: 12px; cursor: pointer; color: var(--text-dim);
+}
+.published-sort-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.published-sort-btn:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
+.published-post-card {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px 16px; margin-bottom: 10px; transition: all 0.15s;
+}
+.published-post-card:hover { border-color: var(--accent); box-shadow: var(--shadow-md); }
+.published-post-card.top-performer { border-left: 3px solid var(--accent); }
+.published-post-header {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 12px; color: var(--text-dim); margin-bottom: 8px; flex-wrap: wrap;
+}
+.published-post-date { font-weight: 600; }
+.published-post-impressions {
+  margin-left: auto; font-size: 14px; font-weight: 700; color: var(--accent);
+}
+.published-post-text {
+  font-size: 14px; line-height: 1.6; color: var(--text);
+  white-space: pre-wrap; word-break: break-word;
+  max-height: 7.5em; overflow: hidden; position: relative;
+}
+.published-post-text.expanded { max-height: none; }
+.published-post-text:not(.expanded)::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2em;
+  background: linear-gradient(180deg, rgba(255,255,255,0), var(--card));
+  pointer-events: none;
+}
+.published-post-metrics {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px;
+  padding-top: 10px; border-top: 1px dashed var(--border);
+}
+.metric-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 8px; border-radius: 10px; font-size: 11px; font-weight: 600;
+  background: var(--bg); border: 1px solid var(--border); color: var(--text-dim);
+}
+.metric-badge.likes { background: rgba(220,38,38,0.06); color: var(--red); border-color: rgba(220,38,38,0.15); }
+.metric-badge.saves { background: rgba(99,102,241,0.06); color: var(--accent); border-color: rgba(99,102,241,0.15); }
+.metric-badge.shares { background: rgba(5,150,105,0.06); color: var(--green); border-color: rgba(5,150,105,0.15); }
+.metric-badge.comments { background: rgba(8,145,178,0.06); color: var(--cyan); border-color: rgba(8,145,178,0.15); }
+.metric-badge.quotes { background: rgba(217,119,6,0.06); color: var(--yellow); border-color: rgba(217,119,6,0.15); }
+.metric-badge.total { background: var(--accent-bg); color: var(--accent); border-color: rgba(99,102,241,0.25); font-weight: 700; }
+.published-post-footer {
+  display: flex; align-items: center; gap: 12px;
+  margin-top: 10px; font-size: 12px;
+}
+.published-post-footer a {
+  color: var(--accent); text-decoration: none; font-weight: 500;
+}
+.published-post-footer a:hover { text-decoration: underline; }
+.published-expand-btn {
+  background: none; border: none; color: var(--accent); cursor: pointer;
+  font-size: 12px; padding: 0;
+}
+
+/* 💡 System Suggestions (Phase 3 meta-feedback) */
+.suggestion-group { margin-bottom: 12px; }
+.suggestion-group-header {
+  font-size: 13px; font-weight: 600; color: var(--text-dim);
+  margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
+}
+.suggestion-item {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 10px 14px; margin-bottom: 8px;
+  display: flex; gap: 12px; align-items: flex-start;
+}
+.suggestion-action {
+  font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 10px;
+  text-transform: uppercase; letter-spacing: 0.3px; flex-shrink: 0;
+}
+.suggestion-action.promote, .suggestion-action.add {
+  background: var(--green-bg); color: var(--green);
+}
+.suggestion-action.demote, .suggestion-action.archive {
+  background: var(--orange-bg); color: var(--orange);
+}
+.suggestion-action.drift {
+  background: var(--purple-bg); color: var(--purple);
+}
+.suggestion-body { flex: 1; }
+.suggestion-target { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+.suggestion-reason { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+.suggestion-confidence {
+  font-size: 10px; font-weight: 600; padding: 2px 6px; border-radius: 6px;
+  margin-left: 8px; text-transform: uppercase;
+}
+.suggestion-confidence.high { background: var(--green-bg); color: var(--green); }
+.suggestion-confidence.medium { background: var(--yellow-bg); color: var(--yellow); }
+.suggestion-confidence.low { background: var(--bg); color: var(--text-muted); border: 1px solid var(--border); }
+.suggestions-summary-row {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px; margin-bottom: 16px;
+}
+.suggestion-empty {
+  font-size: 12px; color: var(--text-muted); padding: 8px;
+  text-align: center; font-style: italic;
+}
+.suggestion-actions {
+  display: flex; gap: 6px; margin-left: auto; flex-shrink: 0;
+}
+.suggestion-btn {
+  font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 6px;
+  border: 1px solid var(--border); background: var(--card); cursor: pointer;
+  transition: all 0.15s;
+}
+.suggestion-btn.adopt { color: var(--green); border-color: rgba(5,150,105,0.3); }
+.suggestion-btn.adopt:hover { background: var(--green-bg); }
+.suggestion-btn.ignore { color: var(--text-muted); }
+.suggestion-btn.ignore:hover { background: var(--bg); color: var(--red); border-color: rgba(220,38,38,0.3); }
+.suggestion-item.adopted { opacity: 0.6; background: rgba(5,150,105,0.04); }
+.suggestion-item.adopted .suggestion-target::after {
+  content: ' ✓ 已采纳'; font-size: 10px; color: var(--green); font-weight: 700; margin-left: 6px;
+}
+.suggestion-item.ignored { opacity: 0.4; background: var(--bg); }
+.suggestion-item.ignored .suggestion-target::after {
+  content: ' ✕ 已忽略'; font-size: 10px; color: var(--text-muted); font-weight: 700; margin-left: 6px;
+}
+/* Adopt modal */
+.adopt-modal-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+  z-index: 9999; align-items: center; justify-content: center; padding: 20px;
+}
+.adopt-modal-overlay.show { display: flex; }
+.adopt-modal {
+  background: var(--card); border-radius: var(--radius); max-width: 640px; width: 100%;
+  max-height: 85vh; overflow-y: auto; box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+.adopt-modal-header {
+  padding: 18px 24px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 12px;
+}
+.adopt-modal-title { font-size: 18px; font-weight: 700; }
+.adopt-modal-close {
+  margin-left: auto; background: none; border: none; cursor: pointer;
+  font-size: 22px; color: var(--text-muted); padding: 0;
+}
+.adopt-modal-body { padding: 20px 24px; }
+.adopt-modal-row { margin-bottom: 14px; }
+.adopt-modal-label { font-size: 12px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 4px; }
+.adopt-modal-value { font-size: 14px; font-family: ui-monospace, 'SF Mono', Monaco, monospace; background: var(--bg); padding: 8px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border); word-break: break-all; }
+.adopt-modal-instruction { font-size: 14px; line-height: 1.6; color: var(--text); }
+.adopt-modal-snippet {
+  font-family: ui-monospace, 'SF Mono', Monaco, monospace; font-size: 12px;
+  background: var(--bg); padding: 12px; border-radius: var(--radius-sm);
+  border: 1px solid var(--border); white-space: pre; overflow-x: auto;
+  max-height: 240px; overflow-y: auto;
+}
+.adopt-modal-actions {
+  display: flex; gap: 8px; padding: 16px 24px; border-top: 1px solid var(--border);
+  background: var(--bg); border-radius: 0 0 var(--radius) var(--radius);
+}
+.adopt-modal-btn {
+  padding: 8px 16px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+  cursor: pointer; border: 1px solid var(--border);
+}
+.adopt-modal-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.adopt-modal-btn.primary:hover { background: var(--accent2); }
+.adopt-modal-btn.secondary { background: var(--card); color: var(--text); }
+.adopt-modal-btn.secondary:hover { background: var(--bg); }
+.adopt-modal-btn.success-state { background: var(--green); color: #fff; border-color: var(--green); }
+
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="header-left">
+    <h1>📡 <span>ContentOS</span></h1>
+    <div class="subtitle">每日创作指挥中心 — AI × Web3 × 美股桥梁建设者</div>
+  </div>
+  <div class="header-right">
+    <span class="data-status" id="dataStatus"></span>
+    <div class="date-display" id="dateDisplay"></div>
+    <div class="day-quality" id="dayQuality"></div>
+  </div>
+</header>
+
+<div class="nav-tabs">
+  <button class="nav-tab active" onclick="switchTab('briefing')">📋 今日简报</button>
+  <button class="nav-tab" onclick="switchTab('topics')">🎯 选题推荐</button>
+  <button class="nav-tab" onclick="switchTab('drafts')">✍️ 推文草稿</button>
+  <button class="nav-tab" onclick="switchTab('published')">📈 本周已发布</button>
+  <button class="nav-tab" onclick="switchTab('library')">📚 选题库</button>
+  <button class="nav-tab" onclick="switchTab('sources')">📡 信息源</button>
+  <button class="nav-tab" onclick="switchTab('rhythm')">📊 发布节奏</button>
+  <button class="nav-tab" onclick="switchTab('suggestions')">💡 系统建议</button>
+</div>
+
+<!-- ===== TAB 1: 今日简报 ===== -->
+<div class="tab-content active" id="tab-briefing">
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-label">今日必看</div>
+      <div class="stat-value" style="color:var(--accent)" id="mustReadCount">—</div>
+      <div class="stat-sub">24h 内关键事件</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">推荐选题</div>
+      <div class="stat-value" style="color:var(--green)" id="topicCount">—</div>
+      <div class="stat-sub">基于热点 + 定位匹配</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">待发草稿</div>
+      <div class="stat-value" style="color:var(--blue)" id="draftCount">—</div>
+      <div class="stat-sub">可直接发布或编辑</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">发布日质量</div>
+      <div class="stat-value" id="dayQualityText">—</div>
+      <div class="stat-sub" id="dayAdvice"></div>
+    </div>
+  </div>
+
+  <div class="rule-card">
+    <h3>⚡ 今日发布策略</h3>
+    <ul class="rule-list" id="todayStrategy"></ul>
+  </div>
+
+  <!-- 今日必看 20 条 -->
+  <div class="section-card" style="margin-bottom:24px">
+    <div class="section-title"><span class="icon">🔥</span> 今日必看（过去 24-48 小时 · Top 20）</div>
+    <div id="mustReadContainer">
+      <div class="empty-state">
+        <div class="icon">📡</div>
+        <h3>等待数据加载</h3>
+        <p>定时任务每天 8:00 自动运行，或在 Cowork 中手动运行 star-daily-briefing 任务来生成今日数据。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 延伸阅读 -->
+  <div class="section-card" style="margin-bottom:24px">
+    <div class="section-title">
+      <span class="icon">📖</span> 延伸阅读
+      <span id="alsoWorthCount" style="margin-left:auto;font-size:12px;color:var(--text-dim);font-weight:400"></span>
+    </div>
+    <div id="alsoWorthContainer">
+      <div class="empty-state">
+        <div class="icon">📖</div>
+        <h3>等待数据加载</h3>
+        <p>20 条必看之外，AI 认为也值得了解的内容。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- duplicate removed, using 延伸阅读 section above -->
+
+  <!-- 跨领域机会 -->
+  <div class="section-card">
+    <div class="section-title"><span class="icon">🌉</span> 跨领域机会（高转化）</div>
+    <div id="crossContainer">
+      <div class="empty-state">
+        <div class="icon">🌉</div>
+        <h3>等待数据加载</h3>
+        <p>跨领域机会由定时任务根据当天热点自动生成。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 2: 选题推荐 ===== -->
+<div class="tab-content" id="tab-topics">
+  <div class="cards-grid">
+    <div class="section-card">
+      <div class="section-title"><span class="icon">🎯</span> 今日推荐选题</div>
+      <div id="todayTopics">
+        <div class="empty-state">
+          <div class="icon">🎯</div>
+          <h3>等待数据加载</h3>
+          <p>选题由定时任务根据当天热点 + 你的选题库自动匹配生成。</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-card">
+      <div class="section-title"><span class="icon">💡</span> Hook 灵感池</div>
+      <div>
+        <div class="hook-section">
+          <div class="hook-label">🛠️ 工具分享类（赚收藏）</div>
+          <div class="hook-item">不满意现有的 XX 工具，所以用 Claude 自己造了一个，开源了</div>
+          <div class="hook-item">用了 3 天 AI 帮我做了 XX，效果比付费工具还好</div>
+          <div class="hook-item">一个人怎么做 XX？我造了一个自动化工具</div>
+        </div>
+        <div class="hook-section">
+          <div class="hook-label">🔥 辣评类（抓注意力）</div>
+          <div class="hook-item">所有人都在讨论 XX，但真正重要的是 YY</div>
+          <div class="hook-item">一个不受欢迎的观点：XX 可能是今年最被高估/低估的趋势</div>
+          <div class="hook-item">XX 的本质不是 YY，而是 ZZ</div>
+        </div>
+        <div class="hook-section">
+          <div class="hook-label">📊 框架提炼类（赚收藏）</div>
+          <div class="hook-item">看了 50 篇 XX 报告，提炼出 3 个关键框架</div>
+          <div class="hook-item">为什么 XX 注定会 YY：一个反直觉的框架</div>
+          <div class="hook-item">XX 赛道全景图：谁在领跑、谁在掉队</div>
+        </div>
+        <div class="hook-section">
+          <div class="hook-label">🌉 桥梁型（跨语境套利）</div>
+          <div class="hook-item">硅谷正在发生一件中文世界还没注意到的事</div>
+          <div class="hook-item">这个英文社区的共识，跟中文圈的理解完全相反</div>
+          <div class="hook-item">美国坐庄 XX, 东大押注 YY — 背后的逻辑是…</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB: 推文草稿 ===== -->
+<div class="tab-content" id="tab-drafts">
+  <div class="typefully-banner" id="typefullyBanner">
+    <div class="typefully-banner-text">
+      <strong>Typefully 集成</strong> — 点击草稿下方的「加入 Typefully」按钮，在 Cowork 中自动创建草稿到你的发布队列
+    </div>
+  </div>
+
+  <div class="rule-card" style="margin-bottom:16px">
+    <h3>✍️ 今日推文草稿</h3>
+    <p style="font-size:13px;color:var(--text-dim);margin-top:4px">3 条根据今日热点、Star 长期风格 + 近期有效 Hook 生成的推文候选</p>
+  </div>
+  <div id="draftsContainer">
+    <div class="empty-state">
+      <div class="icon">✍️</div>
+      <h3>等待数据加载</h3>
+      <p>推文草稿由定时任务根据当天热点 + 你的写作风格自动生成。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB: 本周已发布 (本地 drafts 文件夹) ===== -->
+<div class="tab-content" id="tab-published">
+  <div class="section-card" id="publishedCard">
+    <div class="section-title">
+      <span class="icon">📈</span> 本周已发布
+      <span style="margin-left:auto;font-size:12px;color:var(--text-dim);font-weight:400">
+        数据源: <span style="color:var(--accent)">ContentOS/drafts 文件夹</span><span id="publishedPeriod"></span>
+      </span>
+    </div>
+    <div id="publishedSummary"></div>
+    <div id="publishedContainer">
+      <div class="empty-state">
+        <div class="icon">📈</div>
+        <h3>等待数据加载</h3>
+        <p>每次生成 briefing 时扫描 ContentOS/drafts 最近 7 天的稿件（按文件时间），平台从文件名识别（X推文/小红书/公众号/长文）。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 4: 选题库 ===== -->
+<div class="tab-content" id="tab-library">
+  <div class="rule-card">
+    <h3>📚 长期选题库</h3>
+    <ul class="rule-list">
+      <li>18 个常青选题，分布在 5 个核心赛道 — 你的「内容资产」</li>
+      <li>每当有新事件，定时任务会自动匹配到对应选题，提示你「这个可以写了」</li>
+      <li>热度标签根据近期话题密度和你的发布记录动态更新</li>
+    </ul>
+  </div>
+  <div id="topicLibrary"></div>
+</div>
+
+<!-- ===== TAB 5: 信息源 ===== -->
+<div class="tab-content" id="tab-sources">
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-label">X/Twitter 关注</div>
+      <div class="stat-value" style="color:var(--blue)">90</div>
+      <div class="stat-sub">21 个列表，按赛道分类</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Must Read 订阅</div>
+      <div class="stat-value" style="color:var(--red)">18</div>
+      <div class="stat-sub">Newsletter + Blog + Podcast</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Scan 订阅</div>
+      <div class="stat-value" style="color:var(--yellow)">17</div>
+      <div class="stat-sub">Newsletter + Podcast，按需深入</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">跨领域交叉信号</div>
+      <div class="stat-value" style="color:var(--cyan)">7</div>
+      <div class="stat-sub">含 Tesla 多赛道追踪</div>
+    </div>
+  </div>
+  <div class="cards-grid" id="sourcesGrid"></div>
+</div>
+
+<!-- ===== TAB 6: 发布节奏 ===== -->
+<div class="tab-content" id="tab-rhythm">
+  <div class="stats-row">
+    <div class="stat-card"><div class="stat-label">每日目标</div><div class="stat-value" style="color:var(--accent)">3-5条</div><div class="stat-sub">深度长推 + 短评 + 转评混合</div></div>
+    <div class="stat-card"><div class="stat-label">每周必发</div><div class="stat-value" style="color:var(--green)">1条</div><div class="stat-sub">选一个格式作为你的信任货币</div></div>
+    <div class="stat-card"><div class="stat-label">黄金发布日</div><div class="stat-value" style="color:var(--yellow)">周一二三</div><div class="stat-sub">按你自己的数据填</div></div>
+    <div class="stat-card"><div class="stat-label">避开日</div><div class="stat-value" style="color:var(--red)">周四</div><div class="stat-sub">历史最低表现，只发轻内容</div></div>
+  </div>
+  <div class="section-card" style="margin-bottom:24px">
+    <div class="section-title"><span class="icon">📅</span> 本周发布节奏</div>
+    <div class="week-grid" id="weekGrid"></div>
+  </div>
+  <div class="cards-grid">
+    <div class="section-card">
+      <div class="section-title"><span class="icon">🎨</span> 内容格式表现力排行</div>
+      <div id="formatRanking"></div>
+    </div>
+    <div class="section-card">
+      <div class="section-title"><span class="icon">📏</span> 黄金法则</div>
+      <ul class="rule-list">
+        <li>每周至少 1 条「信任货币」型内容 — 收藏率最高的那个格式，按你自己的数据确定</li>
+        <li>在你数据最好的两天集中发「重磅」内容，次日发「辣评」</li>
+        <li>表现最差的那一天只发轻量互动内容，不要浪费重磅选题</li>
+        <li>每周确保 5 个赛道至少覆盖 3 个，避免内容同质化</li>
+        <li>每 2 周至少 1 条「桥梁型」跨领域内容 — 粉丝转化率最高</li>
+        <li>新模型/重大事件发布 48h 内出内容，时效性是流量入口</li>
+        <li>有料的犀利开头 + 分析支撑 = 你的内容公式</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TAB 7: 系统建议 (Phase 3 元反馈) ===== -->
+<div class="tab-content" id="tab-suggestions">
+  <div class="rule-card" style="margin-bottom:16px">
+    <h3>💡 系统建议</h3>
+    <p style="font-size:13px;color:var(--text-dim);margin-top:4px">
+      基于近期表现 + 采集结果，自动生成的信息源 / 选题库 / 定位漂移建议。
+      <strong>建议不会自动应用</strong> — 采纳时手动修改对应 json 文件。
+    </p>
+  </div>
+
+  <div id="suggestionsSummary"></div>
+
+  <div class="section-card" style="margin-bottom:16px">
+    <div class="section-title"><span class="icon">📡</span> 信息源调整建议</div>
+    <div id="suggestionsSources">
+      <div class="empty-state"><div class="icon">📡</div><h3>等待数据</h3><p>Step 9 会分析本周触发高表现推文的账号来源。</p></div>
+    </div>
+  </div>
+
+  <div class="section-card" style="margin-bottom:16px">
+    <div class="section-title"><span class="icon">📚</span> 选题库调整建议</div>
+    <div id="suggestionsTopics">
+      <div class="empty-state"><div class="icon">📚</div><h3>等待数据</h3><p>Step 9 会识别休眠选题（30+ 天未匹配）和涌现主题（高频出现未入库）。</p></div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-title"><span class="icon">🧭</span> 长期定位漂移观察</div>
+    <div id="suggestionsDrift">
+      <div class="empty-state"><div class="icon">🧭</div><h3>等待数据</h3><p>如果 profile_recent 反复提到 profile_longterm 未列的主题，Step 9 会提醒你。</p></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+// ============ DATA ============
+// Embedded by injection (Step 8) — real values replace these nulls at inject time
+const _embeddedTopicLibrary = {"meta":{"description":"Topic library — 常青选题库,daily agent 用它匹配每日事件。","updated":"2026-09-21","note":"人工维护。agent 只在 daily_data.json.suggestions 里提增删建议,不自动修改本文件。"},"tracks":[{"id":"ai-ecom-automation","name":"AI 电商自动化","icon":"🛒","priority":"high","performance_note":"TODO: 跑几周后补充 — 哪些格式表现好、哪些差","evergreen_topics":[{"title":"AI Agent 接管电商运营全流程","angle":"从选品、上架、客服到广告投流,哪些环节已经能端到端自动化,真实 ROI 数据","heat":"high","content_type":"deep-dive","keywords":["AI agent ecommerce","自动化运营","AI listing","智能客服","ad automation","Agent 电商"]},{"title":"AI 生成商品图 / 详情页 / 视频素材","angle":"图像与视频生成模型在电商素材上的落地,成本对比人工拍摄的拐点","heat":"high","content_type":"tool-share","keywords":["AI 商品图","product image generation","AI 视频素材","virtual model","AI 模特"]},{"title":"平台 AI 功能更新(Amazon/Shopify/TikTok Shop/淘宝)","angle":"平台官方 AI 工具更新对卖家的实际影响,谁先吃到红利","heat":"high","content_type":"news-commentary","keywords":["Amazon AI","Shopify AI","TikTok Shop AI","Rufus","电商 AI 工具","A+ content AI"]},{"title":"AI 选品与市场情报","angle":"用 AI 做趋势预测、竞品监控、评论分析的方法论和工具","heat":"medium","content_type":"methodology","keywords":["AI 选品","product research AI","review analysis","trend prediction","竞品监控"]},{"title":"跨境电商 AI 本地化","angle":"多语言 listing、本地化营销素材、跨市场合规的 AI 方案","heat":"medium","content_type":"deep-dive","keywords":["跨境电商","cross-border ecommerce AI","listing 本地化","multilingual AI"]},{"title":"AI 素材的平台合规与判罚","angle":"各平台对 AI 生成内容的治理规则、判罚案例与可执行的合规改造流程;哪类镜头必须真人、哪类可以交给 AI。","heat":"high","content_type":"methodology","keywords":["AI 内容合规","TikTok Shop AI 内容","AI listing 风险","平台判罚","AI 素材审查","内容治理"],"cross_track_with":"creative-ads(同一选题,跨赛道共用)","note":"2026-09-21 采纳建议新增。触发依据:同一窗口内 TikTok Shop 收紧 AI 内容、亚马逊 AI 视觉识别批量删链接、AI listing 商标词风险三条同时出现,且都指向「发布前筛查」这一可复用动作。原常青库只有正向的「AI 生成商品图/视频」,缺反向的合规位。"}]},{"id":"creative-ads","name":"创意广告","icon":"🎨","priority":"high","performance_note":"TODO: 跑几周后补充 — 哪些格式表现好、哪些差","evergreen_topics":[{"title":"AI 广告创意生产流水线","angle":"从 brief 到成片的 AI 工作流:文案、视觉、视频、A/B 变体批量生成","heat":"high","content_type":"tool-share","keywords":["AI ad creative","广告素材 AI","UGC AI","creative automation","批量素材"]},{"title":"AI 视频广告模型进展","angle":"Sora / Veo / Kling / Runway 等视频模型在广告级质量上的可用性评估","heat":"high","content_type":"news-commentary","keywords":["AI video generation","视频广告","Sora","Veo","Kling","Runway","数字人广告"]},{"title":"广告平台 AI 化(Meta/Google/TikTok Ads)","angle":"Advantage+、PMax、Smart+ 等自动化投放产品的创意侧变化,创意成为唯一杠杆","heat":"high","content_type":"deep-dive","keywords":["Advantage+","Performance Max","Meta AI ads","Google Ads AI","creative testing","素材测试"]},{"title":"AI 创意的效果归因与测试方法","angle":"AI 素材 vs 人工素材的 CTR/CVR 实测数据,创意疲劳监控","heat":"medium","content_type":"methodology","keywords":["creative testing","广告素材测试","CTR","creative fatigue","素材归因"]},{"title":"品牌营销中的 AI 创意案例","angle":"大品牌用 AI 做 campaign 的案例拆解,什么算好创意什么算翻车","heat":"medium","content_type":"case-study","keywords":["AI campaign","品牌营销 AI","AI 广告案例","brand AI"]},{"title":"AI 素材的平台合规与判罚","angle":"各平台对 AI 生成内容的治理规则、判罚案例与可执行的合规改造流程;哪类镜头必须真人、哪类可以交给 AI。","heat":"high","content_type":"methodology","keywords":["AI 内容合规","AI 广告素材 合规","平台判罚","AI 素材审查","内容治理","广告政策"],"cross_track_with":"ai-ecom-automation(同一选题,跨赛道共用)","note":"2026-09-21 采纳建议新增。跨赛道常青位:广告侧对应平台的 AI 创意政策与判罚,电商侧对应商品素材合规,两侧共用同一套「发布前筛查」动作。"}]},{"id":"ai-frontier","name":"AI 前沿","icon":"🤖","priority":"high","performance_note":"TODO: 跑几周后补充 — 哪些格式表现好、哪些差","evergreen_topics":[{"title":"前沿模型发布与能力跃迁","angle":"新模型发布的第一时间解读,聚焦对电商/广告场景的实际影响,不做泛泛复述","heat":"high","content_type":"news-commentary","keywords":["model launch","GPT","Claude","Gemini","新模型","模型发布","benchmark"]},{"title":"AI Agent 生态与工具链","angle":"Agent 框架、MCP、多 Agent 协作的工程进展,谁能真正干活","heat":"high","content_type":"deep-dive","keywords":["AI agent","MCP","agent framework","multi-agent","Agent 生态","Claude Code"]},{"title":"多模态与生成式媒体","angle":"图像/视频/音频生成模型的能力边界,商用成熟度","heat":"high","content_type":"tool-share","keywords":["multimodal","image generation","video generation","生成式 AI","多模态"]},{"title":"AI 公司商业化与行业格局","angle":"融资、定价、API 价格战、中美模型竞争格局","heat":"medium","content_type":"commentary","keywords":["OpenAI","Anthropic","AI funding","API 价格","模型价格战","中美 AI"]},{"title":"信号辨别:怎么识别集中推广与不可核实内容","angle":"一套可复用的三步验证法(账号关联性 → 独立产出 → 可证伪断言),配具体正反案例。","heat":"medium","content_type":"methodology","keywords":["信息辨别","集中推广","营销水军","可证伪性","媒体素养","信源验证"],"note":"2026-09-21 采纳建议新增,由一次性 topic 升为常青。依据:同一现象连续两期出现(09-20 的 Jev 集中推广洪流、09-21 集群内出现可判定编造内容——声称产品用于构建 HFT 系统,与其实为分数/标签输出的实际用途严重不符),09-20 期已指出需常设此选题位。"}]}],"content_formats":[{"name":"tool-share","note":"工具/工作流分享 — 公众号长文 + 小红书图文 + X 短推三版"},{"name":"news-commentary","note":"新闻解读 — 突出「对你的业务意味着什么」,X/LinkedIn 短版 + 公众号长版"},{"name":"deep-dive","note":"深度分析 — 公众号主战场,LinkedIn 英文精华版"},{"name":"case-study","note":"案例拆解 — 小红书/公众号表现通常最好"},{"name":"methodology","note":"方法论 — 收藏率高,适合小红书和公众号"},{"name":"commentary","note":"观点评论 — X 和 LinkedIn 为主"}],"posting_strategy":{"note":"每日 briefing 产出 6 条草稿候选(2026-09-21 由 3 条上调,与 SKILL.md Step 7 定额对齐)。日均配比默认 X 3 + 小红书 1 + 公众号 1 + LinkedIn 1,由下方发布节奏折算:公众号每周 5-6 篇深度(≈0.8/日)、X 每日 5-6 条、小红书每周 6-8 条(≈1/日)、LinkedIn 每周 5-6 条英文(≈0.8/日)。素材明显偏向某赛道时可在保持 4 个平台各至少 1 条的前提下调整。"}}; // injected at build time by SKILL Step 8
+const _embeddedInfoSources = {"meta":{"description":"信息源注册表 — 本地 X 书签 + Web 信源(WebSearch/RSS 版)。","updated":"2026-09-21","usage":"daily agent 先查本地书签库(fieldtheory),再用 WebSearch 扫描 web_sources,提取匹配 topic_library 的事件。","note":"人工维护。agent 只在 daily_data.json.suggestions 里提建议,不自动修改本文件。"},"sources":{"design_creative_trends":{"track":"创意广告 / AI 设计方向","note":"2026-09-02 本人加入:设计趋势与 AI 创意方向的灵感层信源。Pinterest/Instagram 无公开抓取通道,账号类信源通过 WebSearch 间接追踪其被报道/引用的趋势;newsletter 和媒体站有网页版,可直接 WebFetch。命中「重点关注方向」(AI 设计/AI 创意/AI 生视频/AI 生图)的素材享受采集加权。","web_sources":[{"name":"Pinterest Predicts 官方趋势报告","type":"trend_report","search_queries":["Pinterest Predicts 2026 design trends","site:business.pinterest.com trends"],"priority":"must_read","note":"官方年度/季度趋势,设计趋势的一手信号;间接覆盖 Pinterest 高排名账号的集体走向"},{"name":"It's Nice That / Creative Boom / Design Milk","type":"design_media","search_queries":["site:itsnicethat.com AI design","site:creativeboom.com AI design trends","site:design-milk.com AI"],"priority":"must_read","note":"头部设计媒体(Instagram 高排名设计账号背后的内容主站),网页可直接抓"},{"name":"Visually AI (Heather Cooper, Substack)","type":"newsletter","search_queries":["Visually AI newsletter substack latest","Heather Cooper AI visuals"],"priority":"must_read","note":"AI 生图/视觉创意方向头部 newsletter,周刊"},{"name":"Future Tools (Matt Wolfe)","type":"newsletter","search_queries":["site:futuretools.io image video AI tools","Matt Wolfe new AI video image tool"],"priority":"scan","note":"AI 生图/生视频新工具发现,每周两更"},{"name":"The Rundown AI / Ben's Bites","type":"newsletter","search_queries":["site:therundown.ai AI image video generation","site:bensbites.com AI creative tools"],"priority":"scan","note":"综合 AI 日刊,创意工具部分可作交叉验证"},{"name":"UX Goodies / Prototypr","type":"newsletter","search_queries":["UX Goodies AI design tools","site:prototypr.io AI design"],"priority":"scan","note":"AI 设计(UX/UI 方向)周刊"},{"name":"Instagram 设计趋势账号(间接追踪)","type":"social_accounts_indirect","search_queries":["Instagram design trends 2026 viral","site:instagram.com design AI creative"],"priority":"scan","note":"无公开抓取通道;通过搜索其被媒体报道的趋势间接覆盖。具体关注清单由本人在 App 内维护"}],"topic_queries":["AI design tool update 2026","AI 生图 模型 更新","AI 生视频 模型 商用","generative AI creative campaign case study","AI 设计 趋势"]},"local_x_bookmarks":{"track":"全部赛道","type":"local_cli","note":"本人 X 书签本地库(fieldtheory sync 同步)。书签是人工预选信号,进 must_reads 权重最高。sync 由本人手动或定时脚本执行,briefing 工作流只读查询。","command":"fieldtheory list --json --after <2天前> --limit 100","priority":"must_read"},"obsidian_wechat_favorites":{"track":"全部赛道","type":"local_files","note":"本人微信收藏经笔记同步助手同步到 Obsidian。笔记含 frontmatter(url/saved/author)+ 正文全文 + 发布时间。收藏是人工预选信号,权重与 X 书签同级。只读。","path":"E:\\obsidian\\Study\\笔记同步助手","priority":"must_read"},"ai_ecom_automation":{"track":"AI 电商自动化","web_sources":[{"name":"Shopify Blog / Newsroom","search_queries":["site:shopify.com/news AI","site:shopify.com/blog AI ecommerce tools"],"priority":"must_read"},{"name":"Amazon Seller Central / About Amazon","search_queries":["site:aboutamazon.com AI seller tools","Amazon Rufus AI seller update"],"priority":"must_read"},{"name":"Modern Retail / Digiday 电商板块","search_queries":["site:modernretail.co AI ecommerce","site:digiday.com retail AI automation"],"priority":"scan"},{"name":"亿邦动力 / 36氪跨境电商","search_queries":["site:ebrun.com AI 电商","site:36kr.com 跨境电商 AI"],"priority":"must_read"},{"name":"中文跨境垂媒(雨果跨境 / AMZ123 / 大数跨境)","search_queries":["site:cifnews.com AI 跨境电商","site:amz123.com AI 卖家工具","site:10100.com 跨境电商 AI"],"priority":"must_read","note":"2026-09-21 采纳建议,由 scan 升为 must_read,并补入 AMZ123 与大数跨境。依据:09-21 期 🛒 赛道 5 条 must_reads 中 4 条来自这批域名,且都带可核验硬数字(日预算下限 US$200、20 万美元级封号案例、MCP 技能数)。原 🛒 检索式偏英文电商媒体(Modern Retail / Digiday),近两期命中率明显低于中文跨境垂媒。"},{"name":"TikTok Shop 官方动态","search_queries":["TikTok Shop AI tools seller update 2026","site:newsroom.tiktok.com shop AI"],"priority":"must_read"}],"topic_queries":["AI agent ecommerce automation 2026","AI product listing generation seller tools","智能客服 AI 电商 自动化","AI virtual model product photography ecommerce"]},"creative_ads":{"track":"创意广告","web_sources":[{"name":"Adweek / Ad Age","search_queries":["site:adweek.com AI advertising creative","site:adage.com AI creative"],"priority":"must_read"},{"name":"The Drum","search_queries":["site:thedrum.com AI advertising creative"],"priority":"scan"},{"name":"Meta for Business / Engineering","search_queries":["site:facebook.com/business AI ads Advantage+","Meta generative AI ads update"],"priority":"must_read"},{"name":"Google Ads & Commerce Blog","search_queries":["site:blog.google/products/ads-commerce AI","Performance Max AI creative update"],"priority":"must_read"},{"name":"广告门 / 数英 DIGITALING","search_queries":["site:adquan.com AI 广告","site:digitaling.com AI 创意"],"priority":"scan"},{"name":"视频生成模型官方博客","search_queries":["site:openai.com Sora","site:deepmind.google Veo","site:runwayml.com news","Kling AI video update"],"priority":"must_read"},{"name":"Grok Bot / xAI 营销自动化","type":"official_and_community","search_queries":["Grok bot marketing automation update","site:x.ai Grok agent","Grok Bot 营销 自动化 实测"],"priority":"scan","note":"2026-09-03 本人指示加入。Grok Bot 类「全自动营销」宣称需实测验证,采集时区分官方更新与推广软文,软文只作反例素材"},{"name":"UGC 视频生成工具官方博客","type":"vendor_blog","search_queries":["Creatify AI UGC video ads update","Arcads AI UGC actor update","MakeUGC AI video ads","site:stormy.ai blog UGC ads"],"priority":"must_read","note":"2026-09-03 本人指示加入。AI UGC 带货视频工具链(08-26 UGC 流水线系列的工具层信号源)"},{"name":"创意素材情报与效果分析","type":"analytics_blog","search_queries":["site:foreplay.co blog ad creative","Motion app creative analytics AI","VidMob AI creative performance","ad creative testing AI 2026"],"priority":"scan","note":"2026-09-03 本人指示加入。素材测试/归因/疲劳监控方向,支撑「AI 创意的效果归因与测试方法」选题"},{"name":"TikTok Creative Center / CapCut for Business","type":"platform_official","search_queries":["TikTok Creative Center AI update","CapCut for Business AI ads feature","TikTok Symphony creative update"],"priority":"scan","note":"2026-09-03 本人指示加入。平台官方创意工具动态,与 TikTok Shop 卖家侧互补"}],"topic_queries":["AI ad creative generation platform 2026","AI UGC video ads performance data","creative automation advertising AI case study","AI 广告素材 批量生成","AI UGC 视频生成 工具 实测","创意广告视频 AI 生成 案例","Grok Bot marketing automation playbook"]},"ai_frontier":{"track":"AI 前沿","web_sources":[{"name":"前沿实验室官方博客","search_queries":["site:anthropic.com/news latest","site:deepmind.google latest","site:qwen.ai blog","site:x.ai news Grok"],"priority":"must_read","_deprecated_queries":[{"query":"site:openai.com/blog latest","removed":"2026-09-21","reason":"连续多期返回空结果(非采集失败,是搜索引擎未返回该域名当前条目)。OpenAI 官方内容改由 bestblogs RSS 池覆盖。"}]},{"name":"证券时报 / Mixed News(成本与商业化信号)","search_queries":["site:stcn.com AI 模型 成本","AI 模型 API 降价","AI 推理成本 下降"],"priority":"scan","note":"2026-09-21 采纳建议新增。依据:🤖 赛道近两期最硬的成本类信号(Step 5 参数与成本口径、Qwen Omni 输入降价)分别来自证券时报与 Mixed News,而原有的 openai.com/blog、anthropic.com/engineering site: 检索已连续空返。"},{"name":"The Batch (DeepLearning.AI)","search_queries":["site:deeplearning.ai/the-batch latest"],"priority":"must_read"},{"name":"Latent Space","search_queries":["site:latent.space latest","site:youtube.com/@LatentSpacePod latest"],"priority":"must_read"},{"name":"Stratechery","search_queries":["site:stratechery.com AI latest"],"priority":"scan"},{"name":"The Information / TechCrunch AI","search_queries":["site:theinformation.com AI latest","site:techcrunch.com/category/artificial-intelligence latest"],"priority":"scan"},{"name":"机器之心 / 量子位","search_queries":["site:jiqizhixin.com 最新","site:qbitai.com 最新"],"priority":"scan"},{"name":"Import AI","search_queries":[],"priority":"disabled","_disabled":{"date":"2026-09-21","reason":"site:importai.substack.com 连续多期返回空结果,与 openai.com/blog、anthropic.com/engineering 同批失效。保留条目以便日后改用官方 RSS 恢复,当前不再占用检索式配额。"}}],"topic_queries":["AI model launch 2026","AI agent framework MCP update","multimodal AI model release","AI 大模型 发布 2026"]},"tech_news":{"track":"AI 前沿 / 科技创业","note":"2026-09-16 本人指示加入:综合科技媒体与开发者社区信源,覆盖 AI、模型、Agent、创业产品快讯。命中 topic_library 中 AI 前沿与创意广告相关选题时权重 +1。","web_sources":[{"name":"TechCrunch","type":"tech_media","search_queries":["site:techcrunch.com AI agent","site:techcrunch.com artificial intelligence latest","site:techcrunch.com category/artificial-intelligence"],"priority":"scan","note":"综合科技媒体,AI 与创业产品快讯"},{"name":"Hacker News","type":"developer_community","search_queries":["site:news.ycombinator.com AI agent","site:news.ycombinator.com LLM","site:news.ycombinator.com Claude OpenAI"],"priority":"scan","note":"开发者社区,模型/Agent/工具链讨论信号强,需交叉验证时效"}],"topic_queries":["AI startup launch 2026","LLM agent product hunt","AI 工具 创业 产品发布"]},"x_bookmark_authors":{"track":"全部赛道(创意广告 / AI 生图生视频为主)","type":"local_cli","note":"2026-09-04 本人指示加入:从 fieldtheory viz 筛出的高信号 X 作者,已抽查内容全部对口(AI 生图/生视频 prompt、AI 设计、中文 AI 工具圈)。查询走本地书签库:`fieldtheory list --author <handle> --json --limit 20`。⚠️ 覆盖边界:只能看到本人已收藏的推文,作者新帖只有被收藏+sync 后才进库;追新帖需 WebSearch 间接(\"<handle> latest\")或提醒本人刷到就收藏。权重与 local_x_bookmarks 同级。","groups":{"top_voices":{"note":"fieldtheory 全库收藏数 Top 20(2026-09-04 快照),持续高频信源","priority":"must_read","authors":[{"handle":"@Gdgtify","count":446,"focus":"AI 生图 prompt 玩法(Reve/GPT Image 网格构图)"},{"handle":"@AmirMushich","count":82,"focus":"AI 视频工作流省 token 技巧、AI 设计指南"},{"handle":"@xiaoxiaodong01","count":77,"focus":"中文 AI 工具/创意"},{"handle":"@TechieBySA","count":76,"focus":"GPT Image/Seedance 商业场景 prompt"},{"handle":"@VigoCreativeAI","count":69,"focus":"AI 创意"},{"handle":"@berryxia","count":64,"focus":"中文 AI 圈"},{"handle":"@tom_doerr","count":62,"focus":"AI 新闻/模型发布快讯"},{"handle":"@binghe","count":56,"focus":"中文 AI 技术"},{"handle":"@GoSailGlobal","count":50,"focus":"中文 AI 工具测评、自媒体工作流"},{"handle":"@Mind_Boticni","count":50,"focus":"奢侈品/杂志风 AI 广告 prompt"},{"handle":"@MrLarus","count":50,"focus":"海报构图/排版物理动效 AI 视觉"},{"handle":"@AYi_AInotes","count":46,"focus":"中文 AI 笔记"},{"handle":"@dotey","count":46,"focus":"宝玉,AI 工程/Agent 深度"},{"handle":"@AdrianPunk115","count":44,"focus":"AI 创意"},{"handle":"@QingQ77","count":41,"focus":"中文 AI 创意"},{"handle":"@vista8","count":39,"focus":"AI 独立开发/工具"},{"handle":"@servasyy_ai","count":35,"focus":"AI 生图生视频、image-to-3D 开源"},{"handle":"@itsalexvacca","count":33,"focus":"AI 工具/增长"},{"handle":"@craftian_keskin","count":32,"focus":"GPT Image 广告级产品摄影 prompt"},{"handle":"@op7418","count":32,"focus":"中文 AI 设计/前端"}]},"hidden_gems":{"note":"fieldtheory viz 标记的一次性高质量账号(各收藏 1 次),内容对口创意广告/AI 工具,值得回溯其历史推文","priority":"scan","authors":[{"handle":"@nestymee","focus":"AI influencer 生成公式"},{"handle":"@RedCubix_NEO","focus":"AI 视频氛围感 prompt"},{"handle":"@rameerez","focus":"纯 prompt 做产品发布视频(indie maker)"},{"handle":"@HeyRu0by","focus":"9:16 商业级食品广告视频 prompt"},{"handle":"@Lianaalane","focus":"GPT Image 人脸一致性 prompt"},{"handle":"@mxvdxn","focus":"视频角色表(character sheet)工作流"},{"handle":"@ZabihullahAtal","focus":"商业咨询替代 prompt"},{"handle":"@dharmesh","focus":"HubSpot 创始人,AI-native CRM/产品发布"}]},"latest_session":{"note":"2026-09-04 最近一次 sync 新增书签的作者,时效性最强","priority":"scan","authors":[{"handle":"@DeanHeoi","count":2},{"handle":"@0xROAS","count":1},{"handle":"@AdrianPunk115","count":1,"note":"同时在 top_voices"},{"handle":"@app_sail","count":1},{"handle":"@bourneliu66","count":1}]}}},"bestblogs_rss":{"track":"全部赛道(AI/产品/技术为主,播客+公众号补强中文圈信号)","note":"2026-09-02 加入:ginobefun/BestBlogs 策展信源池(bestblogs.dev)。OPML 已落本地 ContentOS/info_sources/bestblogs/。用法:daily agent 用脚本解析 OPML 拿 xmlUrl,WebFetch 直读 RSS XML,按 topic_library 过滤。⚠️ 依赖第三方托管实例(wechat2rss/rsshub.bestblogs.dev),失效则整组降级;YouTube 直连本机不通(需代理)。与原 web_sources 的 search_queries 互补:RSS 给全量新条目,WebSearch 给定向验证。Twitters OPML(160 个)未收——fieldtheory 书签已覆盖 X 通道。","web_sources":[{"name":"BestBlogs 文章池(170 feeds:技术博客+厂商工程博客+115 个公众号经 wechat2rss)","type":"rss_opml_local","file":"ContentOS/info_sources/bestblogs/BestBlogs_RSS_Articles.opml","priority":"scan","feed_count":170,"note":"量子位/LangChain/HF/AWS ML 等;公众号子集走 wechat2rss.bestblogs.dev(2026-09-02 测活 200)。2026-09-21 采纳建议,由 must_read 降为 scan(补充通道,不再作主力):本期 15 个 feed 报错(公众号池仅 6 个),48h 新鲜量 119 条,仅为公众号池 894 条的 13%。⚠️ 待办:排查那 15 个报错 feed。"},{"name":"BestBlogs 播客池(30 个小宇宙播客经 rsshub)","type":"rss_opml_local","file":"ContentOS/info_sources/bestblogs/BestBlogs_RSS_Podcasts.opml","priority":"scan","feed_count":30,"note":"科技早知道/无人知晓/硅谷101/张小珺等;商业访谈类对选题角度有用(2026-09-02 测活 200)"},{"name":"BestBlogs 视频池(40 个 YouTube 频道原生 feed)","type":"rss_opml_local","file":"ContentOS/info_sources/bestblogs/BestBlogs_RSS_Videos.opml","priority":"scan","feed_count":40,"note":"Anthropic/OpenAI/DeepMind/AI Engineer 等;⚠️ 本机直连 YouTube 不通,需代理,当前降级为「有代理时启用」"},{"name":"BestBlogs 公众号全量池(375 个,与文章池 115 个子集部分重叠)","type":"rss_opml_local","file":"ContentOS/info_sources/bestblogs/bestblogs_wechat2rss_all.opml","priority":"must_read","feed_count":375,"note":"2026-09-21 采纳建议,由 scan 升为 must_read,与文章池并行作为每日主采集通道(不再是「文章池信号不足时才扩展扫」)。依据:09-21 期实测 48h 新鲜 894 条,是文章池 119 条的约 7.5 倍;375 feeds 中 369 可读,失败仅 6 个(vs 文章池 15 个);且本期 🛒 与 🎨 两条线的高价值素材(卖家精灵 MCP、TikTok Shop AI 内容收紧、人大拍卖论文、阶跃实测)全部来自该池。该建议已连续三期(09-18 / 09-20 / 09-21)提出。腾讯/阿里/大淘宝技术团队号为主。"},{"name":"BestBlogs 小宇宙播客扩展池(60 个)","type":"rss_opml_local","file":"ContentOS/info_sources/bestblogs/bestblogs_xiaoyuzhou_podcasts.opml","priority":"scan","feed_count":60,"note":"与 30 池重叠度高,扩展扫用;罗永浩十字路口/42章经/硬地骇客等"}]}}}; // injected at build time by SKILL Step 8
+
+// Fallback hardcoded values (used if JSON embedding absent — e.g., dev preview)
+const _fallbackTopicLibrary = {
+  tracks: [
+    { id:"ai-frontier", name:"AI 前沿", icon:"🤖", priority:1, performance:"<your own performance note>",
+      topics: [
+        { title:"AI Agent 生态演进", angle:"从工具到生态：Agent 如何重塑软件产业链", heat:"high", format:"深度分析", keywords:["AI Agent","MCP","Agent框架"] },
+        { title:"大模型军备竞赛", angle:"每次新模型发布的第一手体验 + 能力边界分析", heat:"high", format:"辣评", keywords:["GPT","Claude","Gemini"] },
+        { title:"具身智能 & Robotics", angle:"AI 走出屏幕：从 Figure 到 Tesla Bot", heat:"medium", format:"趋势分析", keywords:["Robotics","Tesla Bot","具身智能"] },
+        { title:"AI 编程革命", angle:"Cursor/Claude Code/Copilot 让非技术人也能建产品", heat:"high", format:"工具分享", keywords:["Cursor","Claude Code","Copilot"] },
+        { title:"AI 应用层爆发", angle:"哪些 AI 应用真正找到了 PMF", heat:"medium", format:"框架提炼", keywords:["AI App","PMF","AI SaaS"] }
+      ]
+    },
+    { id:"one-person-company", name:"一人公司方法论", icon:"🚀", priority:2, performance:"<your own performance note>",
+      topics: [
+        { title:"一人公司实战手册", angle:"从0到1：选品、MVP、分发、变现", heat:"high", format:"框架提炼", keywords:["Indie","Solo Founder","Bootstrap"] },
+        { title:"AI 原生创作者经济", angle:"AI工具如何让一个人=一个团队", heat:"high", format:"趋势分析", keywords:["Creator Economy","AI工具","杠杆"] },
+        { title:"Build in Public 实践", angle:"你自己做工具、发Github的亲身经历", heat:"high", format:"个人故事", keywords:["Build in Public","开源","Github"] }
+      ]
+    },
+    { id:"tools-frameworks", name:"工具 & 框架分享", icon:"🛠️", priority:3, performance:"<your own performance note>",
+      topics: [
+        { title:"财报分析工具", angle:"用AI自动化美股/加密财报分析，开源给社区", heat:"high", format:"工具分享", keywords:["Earnings","GitHub","自动化"] },
+        { title:"市场数据看板", angle:"自己造看板、自己用、然后分享", heat:"medium", format:"工具分享", keywords:["Dashboard","数据可视化","开源"] },
+        { title:"思维框架提炼", angle:"把复杂事物简化为可操作的决策框架", heat:"high", format:"框架提炼", keywords:["Mental Model","杠铃策略","第一性原理"] }
+      ]
+    },
+    { id:"crypto-cross-finance", name:"加密 × 美股交叉", icon:"💰", priority:4, performance:"<your own performance note>",
+      topics: [
+        { title:"链上美股", angle:"RWA、tokenized equities 的现状和前景", heat:"medium", format:"深度分析", keywords:["RWA","链上美股","Ondo"] },
+        { title:"稳定币生态", angle:"从USDT/USDC到稳定币法案", heat:"high", format:"趋势分析", keywords:["稳定币","USDC","监管"] },
+        { title:"Agentic Payment", angle:"AI Agent自主支付：加密×AI的杀手级用例", heat:"high", format:"深度分析", keywords:["Agent支付","Crypto×AI"] },
+        { title:"预测市场", angle:"Polymarket：比KOL更诚实的信息源", heat:"medium", format:"辣评", keywords:["Polymarket","预测市场"] },
+        { title:"比特币 × 宏观", angle:"BTC作为宏观资产的框架分析", heat:"medium", format:"数据驱动", keywords:["BTC","宏观","黄金","利率"] }
+      ]
+    },
+    { id:"space-economy", name:"太空经济", icon:"🌌", priority:5, performance:"<your own performance note>",
+      topics: [
+        { title:"SpaceX 生态系统", angle:"不只是火箭公司：Starlink、Starship的商业帝国", heat:"medium", format:"深度分析", keywords:["SpaceX","Starlink","Elon"] },
+        { title:"太空基础设施投资", angle:"卫星、通信、导航、遥感的投资机会", heat:"low", format:"趋势分析", keywords:["卫星","LEO","太空产业链"] }
+      ]
+    }
+  ]
+};
+
+const _fallbackInfoSources = {
+  "AI 前沿": {
+    icon: "🤖",
+    xLists: [
+      { name: "AI Frontier（合并列表）", desc: "核心建设者、研究员、Agent 生态、产品领导者", accounts: ["@sama","@ylecun","@karpathy","@joshwoodward","@kevinweil","@amasad","@rauchg","@alexalbert__","@garrytan","@nikunj","@adityaag","@claudeai","@trq212","@steipete","@thenanyu","@realmadhuguru","@AmandaAskell","@_catwu","@AnthropicAI","@OpenAI","@GoogleDeepMind","@GoogleLabs","@LangChainAI","@CrewAIInc","@levie","@ryolu_","@mattturck","@petergyang","@danshipper","@swyx","@MiniMax_AI","@Zai_org","@SemiAnalysis_","@_LuoFuli","@fi56622380","@FredaDuan","@dwarkesh_sp","@DarioAmodei","@AravSrinivas","@DrJimFan","@saranormous","@drfeifei","@altcap"] }
+    ],
+    newsletters: [
+      { name:"The Batch (Andrew Ng)", priority:"must_read", freq:"Weekly" },
+      { name:"Import AI (Jack Clark)", priority:"must_read", freq:"Weekly" },
+      { name:"AI News (Latent Space)", priority:"must_read", freq:"Weekly" },
+      { name:"Anthropic Engineering", priority:"must_read", freq:"Irregular" },
+      { name:"Claude Blog", priority:"must_read", freq:"Irregular" },
+      { name:"Robonomics", priority:"scan", freq:"Weekly" },
+      { name:"AI Valley", priority:"scan", freq:"Daily" },
+      { name:"The Neuron", priority:"scan", freq:"Daily" },
+      { name:"AI Supremacy", priority:"scan", freq:"2x/Week" }
+    ],
+    podcasts: [
+      { name:"Latent Space", priority:"must_read", freq:"Weekly" },
+      { name:"No Priors", priority:"must_read", freq:"Weekly" },
+      { name:"Training Data", priority:"scan", freq:"Weekly" },
+      { name:"Unsupervised Learning (Redpoint)", priority:"scan", freq:"Weekly" },
+      { name:"The MAD Podcast (Matt Turck)", priority:"scan", freq:"Biweekly" },
+      { name:"AI & I (Every)", priority:"scan", freq:"Weekly" },
+      { name:"Dwarkesh Podcast", priority:"must_read", freq:"Biweekly" }
+    ],
+    signals: ["新模型发布","重大benchmark突破","开源模型里程碑","Agent框架更新","AI编程工具重大更新","AI公司融资/IPO","AI监管政策","FSD/自动驾驶里程碑","Optimus/人形机器人进展"],
+    teslaNote: "Tesla 的 FSD 和 Optimus 在此赛道追踪"
+  },
+  "加密 × 美股": {
+    icon: "💰",
+    xLists: [
+      { name: "Crypto Builders", desc: "加密基础设施和应用", accounts: ["@VitalikButerin","@circle","@Tether_to","@OndoFinance"] },
+      { name: "预测市场", desc: "预测市场生态", accounts: ["@Polymarket","@ManifoldMarkets"] }
+    ],
+    newsletters: [
+      { name:"Bankless", priority:"must_read", freq:"Daily" },
+      { name:"The Defiant", priority:"scan", freq:"Daily" },
+      { name:"Milk Road", priority:"scan", freq:"Daily" }
+    ],
+    signals: ["稳定币法案进展","RWA代币化新项目","链上美股交易量","Agentic Payment产品","预测市场大事件","BTC与宏观相关性","加密ETF审批进展"]
+  },
+  "美股": {
+    icon: "📈",
+    xLists: [
+      { name: "US Market Analysts", desc: "美股分析师和宏观策略师", accounts: ["@markets","@zerohedge"] }
+    ],
+    newsletters: [
+      { name:"Stratechery (Ben Thompson)", priority:"must_read", freq:"3x/Week" },
+      { name:"The Information", priority:"must_read", freq:"Daily" },
+      { name:"Morning Brew", priority:"scan", freq:"Daily" }
+    ],
+    signals: ["科技股财报季","美联储利率决议","重大并购","IPO/SPAC","关税/贸易政策","科技反垄断","TSLA财报及交付数据"],
+    teslaNote: "Tesla 作为美股标的（$TSLA）在此追踪财报和估值"
+  },
+  "太空经济": {
+    icon: "🌌",
+    xLists: [
+      { name: "Space Industry", desc: "太空产业核心玩家", accounts: ["@SpaceX","@elonmusk","@RocketLab","@blueorigin"] }
+    ],
+    newsletters: [
+      { name:"Payload Space", priority:"scan", freq:"Daily" },
+      { name:"The Space Report", priority:"scan", freq:"Weekly" }
+    ],
+    signals: ["SpaceX发射/星舰测试","卫星互联网进展","太空公司IPO","NASA合同"]
+  },
+  "一人公司": {
+    icon: "🚀",
+    xLists: [
+      { name: "Indie Hackers & Creators", desc: "独立开发者和创作者经济", accounts: ["@levelsio","@marcaboreal","@naval"] }
+    ],
+    newsletters: [
+      { name:"Lenny's Newsletter", priority:"must_read", freq:"Weekly" },
+      { name:"Indie Hackers", priority:"scan", freq:"Weekly" }
+    ],
+    signals: ["AI工具降低创业门槛","独立开发者成功案例","Creator经济数据","新no-code/low-code工具"]
+  }
+};
+
+// ===== Adapters: transform topic_library.json / info_sources.json JSON schemas into display schemas =====
+function adaptTopicLibrary(jsonData) {
+  if (!jsonData || !Array.isArray(jsonData.tracks)) return null;
+  return {
+    tracks: jsonData.tracks.map(t => ({
+      id: t.id,
+      name: t.name,
+      icon: t.icon,
+      priority: t.priority,
+      performance: t.performance_note || t.performance || '',
+      topics: (t.evergreen_topics || t.topics || []).map(x => ({
+        title: x.title,
+        angle: x.angle,
+        heat: x.heat,
+        format: x.content_type || x.format,
+        keywords: x.keywords || []
+      }))
+    }))
+  };
+}
+
+function adaptInfoSources(jsonData) {
+  if (!jsonData || !jsonData.sources) return null;
+  const nameMap = {
+    'ai_frontier': 'AI 前沿', 'us_stocks': '美股', 'rwa': 'RWA',
+     'space_economy': '太空经济', 'one_person_company': '一人公司'
+  };
+  const iconMap = {
+    'AI 前沿': '🤖', 'RWA': '💰', '美股': '📈', '太空经济': '🌌', '一人公司': '🚀'
+  };
+  const langFlag = (p) => p.language === 'zh' ? ' 🇨🇳' : (p.language === 'en' ? '' : '');
+  const result = {};
+  for (const [key, src] of Object.entries(jsonData.sources)) {
+    const name = nameMap[key] || src.track || key;
+    result[name] = {
+      icon: iconMap[name] || '📡',
+      xLists: (src.x_lists || []).map(x => ({ name: x.name, desc: x.description || '', accounts: x.accounts || [] })),
+      newsletters: (src.newsletters || []).map(n => ({ name: n.name, priority: n.priority || 'scan', freq: n.frequency || '—' })),
+      podcasts: (src.podcasts || []).map(p => ({ name: (p.name || '') + langFlag(p), priority: p.priority || 'scan', freq: p.frequency || '—' })),
+      signals: src.key_signals || [],
+      teslaNote: src.tesla_tracking_note || null
+    };
+  }
+  return result;
+}
+
+// Resolve final values (prefer embedded JSON, fall back to hardcoded)
+let topicLibrary = adaptTopicLibrary(_embeddedTopicLibrary) || _fallbackTopicLibrary;
+let infoSources = adaptInfoSources(_embeddedInfoSources) || _fallbackInfoSources;
+
+const weekDays = [
+  { name:"周一", en:"Monday", priority:"high", focus:"工具分享 + 数据驱动", impressions:"— avg" },
+  { name:"周二", en:"Tuesday", priority:"high", focus:"深度分析 + 框架", impressions:"— avg" },
+  { name:"周三", en:"Wednesday", priority:"high", focus:"辣评 + 热点回应", impressions:"— avg" },
+  { name:"周四", en:"Thursday", priority:"low", focus:"轻内容 + 互动", impressions:"— avg" },
+  { name:"周五", en:"Friday", priority:"medium", focus:"周末预热 + 总结", impressions:"— avg" },
+  { name:"周六", en:"Saturday", priority:"medium", focus:"个人故事 + 反思", impressions:"— avg" },
+  { name:"周日", en:"Sunday", priority:"low", focus:"轻量 + 规划下周", impressions:"— avg" }
+];
+
+const formatRanking = [
+  { name:"🛠️ 工具分享", bookmarks:1268, desc:"做给人看：开源工具、代码、看板" },
+  { name:"📊 数据驱动", bookmarks:891, desc:"用数据说话，截图+分析" },
+  { name:"📐 框架提炼", bookmarks:700, desc:"把复杂事物简化为可操作的思维模型" },
+  { name:"📝 深度分析", bookmarks:600, desc:"Thread，深入拆解一个话题" },
+  { name:"👤 个人故事", bookmarks:500, desc:"Build in Public，亲身经历" },
+  { name:"🔥 辣评", bookmarks:400, desc:"有料的犀利表达，分析支撑观点" }
+];
+
+// ============ DYNAMIC DATA (loaded from daily_data.json) ============
+let dailyData = null;
+
+// ===== EMBEDDED DATA (auto-injected by daily task, no fetch needed) =====
+const _embeddedDailyData = {"date":"2026-10-18","generated_at":"2026-10-18T03:16:06Z","raw_material_count":623,"publishing_note":"今日主线是「平台的默认值」。三条必看其实在讲同一件事：亚马逊用 AI 摘要替卖家转述商品、TikTok Shop 英国默认替卖家开投放、Google 在 AI Mode 里替用户把广告放进来——平台正在把「要不要」这个决定收走。发布顺序建议：先出 X 的代理封禁那条（反常识、有明确分界线，最容易被转发），公众号同日发「平台收的是控制权」长文，小红书走亚马逊摘要的改写清单（收藏动机最强）。LinkedIn 用同一主线出英文版，讲 platform control 而非工具推荐。三处口径必须守住：① 今日必看 #1 的英文原稿由 The Verge 发布、原域在本环境不可抓取，事实依据 Infobae 同题全文核实，且文中不含任何 BrightEdge 转化数据，不得引用「3%」「+43%」这类数字；② DeepSeek V4.1-Flash 的评测只在官方页以图表图片呈现，本期不引用任何跑分；③ GPT-6 Astra 并行子代理一条为 BlockBeats 二次信源、无独立发布时间，写的时候要标来源层级。另：本期 also_worth_reading 中有 5 条来自公众号，正文在本环境不可抓取，摘要只据标题整理并已逐条标注，引用前需自行核对。","must_reads":[{"title":"AI 购物代理撞上平台闸门：Yelp 只认付费许可，达美禁订票，摩根大通与嘉信直接封","event_id":"ai-agents-blocked-by-sites","summary":"用 Muse（Meta）、Grok（xAI）、Dots（OpenAI）、Instinct 的购物与订票代理，在 Cars.com、Amtrak 等站点开始报错。Yelp 只对购买数据许可的代理放行；达美航空禁止代订；摩根大通与嘉信以安全为由拦截。亚马逊此前已封禁 Perplexity 的自主购买并提起诉讼，法院一度要求解封、8 月被上诉法院推翻，亚马逊随后提交修正诉状。平台立场分化同样明显：Meta 公开表示「拒绝一个个人代理，就是拒绝代理背后的顾客」，并称已与 Walmart、Gap、Sephora、Best Buy 签约，Shopify 开放了它的网络。文中未披露受影响用户数、拦截比例或交易损失金额。口径提示：本条英文原稿由 The Verge 发布，该域在本环境不可抓取，以下事实依据 Infobae 同题全文核实；文中不含任何 BrightEdge 的转化数据。","url":"https://www.infobae.com/tecno/2026/10/17/los-agentes-de-ia-prometian-hacer-compras-y-reservas-las-empresas-les-cierran-la-puerta/","track":"🛒 AI 电商自动化","matched_topic":"AI Agent 接管电商运营全流程","source":"Infobae Tecno（转述 The Verge 原稿）","published_at":"2026-10-17T19:18:00Z","supporting":[{"angle":"为什么封：a16z 把动机归纳为客户关系、广告收入、欺诈、退货四类，并给出 Cloudflare 403 翻倍与退货成本三倍的旁证","url":"https://www.techflowpost.com/newsletter/140282"}],"age_hours":8.0},{"title":"亚马逊美区灰度 AI 商品摘要：Alexa 读你的五点与评论回答买家追问，卖家没有配置入口","event_id":"amazon-alexa-ai-summary-grayscale","summary":"部分美国站商品详情页出现标着「Summarized from product information」的三点摘要，点开是 Alexa 对话窗。读取范围是标题、五点描述、后台结构化属性、A+ 文案、站内问答与评论；权重最高的是标题与前两条五点，其次是后台属性。同一 ASIN 在不同账号、设备、地区、浏览器看到的内容可能不同，这说明它是按人分桶的灰度而非站点级上线。卖家侧没有配置入口，也无法编辑摘要，出错只能改源头文案。背景：2026-05-13 起 Alexa for Shopping 已对美国已登录用户默认开启，不需要 Prime 或 Echo 设备。","url":"https://www.tkfff.cn/news/2144.html","track":"🛒 AI 电商自动化","matched_topic":"平台 AI 功能更新(Amazon/Shopify/TikTok Shop/淘宝)","source":"tkfff（跨境电商业内媒体）","published_at":"2026-10-17T10:26:00Z","supporting":[],"age_hours":16.8},{"title":"Sea 成为 Google AI 未来基金首个外部 AI 实验室伙伴，代理购物在 Shopee 继续测试","event_id":"sea-labs-google-ai-futures-fund","summary":"Google AI Futures Fund（隶属 Google Labs）宣布 Sea Labs 成为首个外部 AI 实验室伙伴。Sea 团队获得部分 Google 高级模型与技术支持的访问权，工作覆盖 Garena、Shopee、Monee 三条业务线，服务规模被表述为「每天数亿用户」，并计划面向东南亚与拉美做消费者与中小商家的本地化应用。这是 2026 年 2 月战略合作（游戏、代理电商、代理支付）的延伸；Monee 正与 Google 推进代理支付协议 AP2。双方未披露投资金额与财务条款。","url":"https://fintechnews.sg/139023/ai/sea-labs-google-ai-futures-fund/","track":"🛒 AI 电商自动化","matched_topic":"AI Agent 接管电商运营全流程","source":"Fintech News Singapore","published_at":"2026-10-16T12:00:00Z","supporting":[],"age_hours":39.3},{"title":"快手把商业 AI 收成一张全景图，同时给出一个数字：上半年 85 万电商商家在用免费 AI 工具","event_id":"kuaishou-commerce-ai-panorama","summary":"快手发布「商业 AI 全景图」与「快手商业 AI 应用指南」小程序，把产品、用法与行业案例收在一处，覆盖品牌营销、电商经营、内容消费、线索获客、团购交易、下载激活六大场景。官方口径：2026 年上半年超过 85 万电商商家使用快手提供的免费 AI 经营工具，任务包括选品、素材生产、经营诊断、广告投放与客服。这条的价值不在全景图本身，而在于它给出了一个平台侧的免费渗透率基准——免费工具覆盖的商家数，通常远高于任何付费 AI 服务的存量。","url":"https://www.100ec.cn/detail--6664874.html","track":"🛒 AI 电商自动化","matched_topic":"平台 AI 功能更新(Amazon/Shopify/TikTok Shop/淘宝)","source":"网经社（100ec.cn）","published_at":"2026-10-16T09:14:31Z","supporting":[],"age_hours":42.0},{"title":"TikTok Shop 英国把两件事同时推给卖家：默认加入的 GMV Max 推广位，和最高 20% 的订阅折扣","event_id":"tiktok-shop-uk-gmv-max-subscribe-save","summary":"GMV Max Net Sales Boost 本月亮相英国：为尚未投放的合格商品自动建广告并优化，素材选择、定向与出价全部由平台负责。合格店铺默认加入、除非主动退出；促销期内前 30 天不额外收费，学习期间设置锁定；期满后可改 ROI 目标或关闭。促销期内申请退出最多需要 7 个工作日处理。同期 Subscribe & Save 进入卖家中心，买家可设自动复购，折扣档位 5%/10%/15%/20%，卖家可随时编辑或暂停。两件事合起来看是同一个方向：把「是否需要投放/是否需要复购机制」的默认答案从否改成是。","url":"https://www.netinfluencer.com/tiktok-shop-rolls-out-automated-ad-tool-and-subscription-feature-for-uk-sellers/","track":"🛒 AI 电商自动化","matched_topic":"平台 AI 功能更新(Amazon/Shopify/TikTok Shop/淘宝)","source":"Netinfluencer","published_at":"2026-10-16T12:00:00Z","supporting":[],"age_hours":39.3},{"title":"Google 开始在 AI Mode 里给「连了应用」的用户投广告，三月的「暂时不会变」被推翻","event_id":"google-ai-mode-ads-personal-intelligence","summary":"面向开启 Personal Intelligence 并连接应用的美国用户，Google 开始在 AI Mode 中展示广告，并允许把连接应用产生的洞察用于个性化，与查询、AI 回答上下文、兴趣并列作为信号。Google 的边界说明有三条：广告不会直接基于 Gmail 收件箱或 Google Photos 内容；广告主无法访问所连接的应用；敏感信息不用于个性化。2026-03-17 同一功能向全美 Beta 开放时，Google 发言人的原话是「连接应用的用户目前没有广告，这一点眼下不会变」，同时预告「未来广告的运作方式会类似」。目前没有公布任何新的广告主控件或定向项，也没有披露投放规模。","url":"https://www.webpronews.com/google-tests-ads-in-ai-mode-for-users-with-personal-intelligence-enabled/","track":"🎨 创意广告","matched_topic":"广告平台 AI 化(Meta/Google/TikTok Ads)","source":"WebProNews","published_at":"2026-10-17T12:00:00Z","supporting":[],"age_hours":15.3},{"title":"TikTok 的自动化功能给英国 National Trust 生成了 AI 广告，机构把全部投放停了","event_id":"national-trust-pauses-tiktok-ai-ads","summary":"英国 National Trust 称 TikTok Ads 的一项自动化功能「错误地」生成并发布了 AI 广告，已暂停该账号的全部 TikTok 投放并配合平台排查。机构表示员工此前被告知机构内部有 AI 禁令。Ocean 的 Charlotte Anstee 指出广告与该机构的环保立场冲突；Pollard Media 的 Alex Pollard 说以该机构照片库的水准，这显然不是团队的选择。Antler Social 的 Harri Brown 给出可执行动作：关掉投放设置里的「auto-add newly generated assets during delivery」，已生成的素材在广告下拉里逐个移除。文章未给出广告条数、花费或触达，TikTok 未在文中作出回应。","url":"https://tech.yahoo.com/social-media/articles/national-trust-shuts-off-campaigns-173400610.html","track":"🎨 创意广告","matched_topic":"AI 素材的平台合规与判罚","source":"Yahoo Tech（The Cool Down 供稿）","published_at":"2026-10-17T17:34:00Z","supporting":[],"age_hours":9.7},{"title":"AI 微短剧的算式：前 8 个月 43 万部，98.7% 半年内收不回成本","event_id":"ai-microdrama-economics-98-7","summary":"投资界综合《中国微短剧发展报告（2026）》与 DataEye-ADX 数据：2026 年前 8 个月国内上线微短剧 43 万部，是去年全年的 13 倍，AI 剧占比超九成，平均每天新增 1700 部以上。抖音端上半年 22.19 万部新增 AI 剧中，播放量破亿的 1055 部、破亿率 0.48%；以 5000 万播放为盈亏平衡线，达标项目仅 1.3%；98.7% 的 AI 微短剧半年内无法回本；平均 77 部 AI 漫剧里 1 部盈利。掌阅科技 CEO 孙凯称爆款跑出率已从 10–20% 降到 0.5% 以下。另一组口径值得单独记：国内 AI Token 消耗 55% 用于短剧与视频生成、24% 用于电商广告，真正投入研发的仅 15%；一部 12 集 AI 短剧算力成本接近 20 万元。（原文标注 13:08，按中文站点惯例为北京时间，折算后仍在 48h 窗口内。）","url":"https://news.pedaily.cn/202610/570376.shtml","track":"🎨 创意广告","matched_topic":"AI 广告创意生产流水线","source":"投资界（pedaily.cn）","published_at":"2026-10-16T05:08:00Z","supporting":[],"age_hours":46.1},{"title":"2,000 人调研：43% 觉得被 AI 商品广告骗过，但只有一半人能认对真伪","event_id":"auros-ai-ads-trust-survey","summary":"Auros 委托 Talker Research 调查 2,000 名消费者。44% 经常在商品广告里看到 AI 生成内容；43% 因 AI 广告产生被误导感；超过一半不相信 AI 呈现的商品与描述一致；61% 认为品牌很可能使用误导性 AI 营销。辨识实测比自评更说明问题：看真品平均只有 52% 判断正确（31% 误判为 AI、18% 认为是真实但经 AI 增强），看赝品只有 42% 判断正确（34% 当成真的）。自评能识别的 44%，自评不能的 22%。被怀疑用 AI 营销最多的品类是服装 16%、美妆 16%、电子 14%，零售商里 Walmart 27%、Amazon 26%。另一面是需求：53% 觉得 AI 购物助手有用，54% 打算在假日购物里至少部分依赖 AI。调研仅披露样本量，未披露田野时间。","url":"https://www.mediapost.com/publications/article/418801/","track":"🎨 创意广告","matched_topic":"AI 创意的效果归因与测试方法","source":"MediaPost","published_at":"2026-10-16T12:00:00Z","supporting":[],"age_hours":39.3},{"title":"Google Ads 给 AI Max 加了一键 50/50 实验，增量终于能在单个账户里自己量","event_id":"google-ai-max-1-click-experiments","summary":"符合条件的 Search 广告系列可以从「建议」里一键创建 AI Max 实验，按 50/50 分流。对照组保持原广告系列设置；实验组可在广告组层级分别开关「Search term matching」与「Asset optimization」。设置支持一次选中多个广告系列，并带品牌设置。这对投放团队的实际意义是：AI Max 的增量第一次可以在自己账户里用一手 A/B 量化，而不是依赖平台口径。Google 未说明「符合条件」的具体标准，也未公布新的报告维度。","url":"https://ppcnewsfeed.com/ppc-news/2026-10/ai-max-experiments-1-click-setup-controls/","track":"🎨 创意广告","matched_topic":"广告平台 AI 化(Meta/Google/TikTok Ads)","source":"PPC News Feed","published_at":"2026-10-17T12:00:00Z","supporting":[],"age_hours":15.3},{"title":"DeepSeek 发布 V4.1-Flash-1017，并第一次把自家搜索做成公开 API","event_id":"deepseek-v4-1-flash-1017","summary":"官方页标注 2026-10-17。新增 Search 与 Fetch 两个接口，价格均为 5 元/千次，到北京时间 2026-11-01 00:00 前免费，之后按次计费。需要 DeepSeek Harness 0.2.1-rc.1 及以上版本。权重已在 Hugging Face 与 ModelScope 提供下载，官方页未写明许可证类型。评测数据在官方页仅以图表图片呈现，正文没有可直接引用的数字——本文因此不引用任何跑分，也不转述第三方整理的对比表。对电商团队的落点是接口而非跑分：搜索与抓取变成自家 API 之后，「查竞品价、抓页面、再生成文案」可以收进同一条调用链。","url":"https://api-docs.deepseek.com/zh-cn/news/news261017/","track":"🤖 AI 前沿","matched_topic":"前沿模型发布与能力跃迁","source":"DeepSeek 官方 API 文档（一手）","published_at":"2026-10-17T09:00:00Z","supporting":[],"age_hours":18.3},{"title":"Anthropic 公开自己的用工变化：智能体工时是员工的 6 倍，初级技术岗占比从 21% 降到 14%","event_id":"anthropic-employment-report","summary":"基于 17 名员工访谈与内部数据，Anthropic 给出四组数字：截至 8 月，交互式 AI 智能体的工时已达到员工的 6 倍；初级技术岗员工占比自 2025 年初的 21% 降到 14%，初级技术岗招聘占比从 27% 降到 9%；工程师人均提交量是半年前的 5 倍；员工在 Claude 会话里的「元工作」（写提示、审输出、搭工作流）占比从 2025 年秋季的 10% 升到 2026 年春季的 22%。页面对「Claude 写了多少比例的代码」没有给出数字，任何百分比都属于外部附会。这是少数由模型公司自己公布的内部结构性数据，比第三方预测更可对照。（时间精度：官方页只写「Oct 16, 2026」无时刻，按太平洋时间当日 00:00 折算约 44 小时，属窗口内；实际发布可能更晚。）","url":"https://www.anthropic.com/research/employment-at-anthropic","track":"🤖 AI 前沿","matched_topic":"AI 公司商业化与行业格局","source":"Anthropic Research（一手）","published_at":"2026-10-16T07:00:00Z","supporting":[],"age_hours":44.3},{"title":"Reflection 开源 Beam：501B 总参数、每次激活 23B、上下文到 100 万","event_id":"reflection-beam-open-weights","summary":"Baseten 博客 2026-10-16 宣布，Reflection 的 Beam 以开放权重发布，并在 Baseten Model APIs 与 Dedicated Inference 上提供首日支持。规格是 501B 总参数、每 token 激活 23B、上下文最长 1M。博客正文没有引用任何具体跑分，只说在编码、智能体、推理与 STEM 基准上表现「strong」，实际数字在图表里；许可证类型博客未写，只有「open-weight」这一表述，引用时不要替它补一个许可证名。稀疏大模型 + 低激活参数的组合，意味着自托管的硬件门槛主要由权重体积决定，而不是由推理算力决定。","url":"https://www.baseten.co/blog/reflection-beam-launch/","track":"🤖 AI 前沿","matched_topic":"前沿模型发布与能力跃迁","source":"Baseten Blog","published_at":"2026-10-16T14:00:00Z","supporting":[],"age_hours":37.3},{"title":"Elorian 融资 5,500 万美元后发布 Glimpse：推理过程中可以反复回去看图","event_id":"elorian-glimpse-visual-reasoning","summary":"Palo Alto 的 Elorian 在发布产品前以 3 亿美元估值拿到 5,500 万美元种子轮，投资方包括 Striker Venture Partners、Menlo Ventures、Altimeter Capital，英伟达与 Google 首席科学家 Jeff Dean 参投。Glimpse 为研究预览版，核心机制叫「视觉草稿纸」：模型在推理过程中可回看原图、裁切局部、抽取视频帧、运行代码测量比较，而不是一次编码成 token 后只用文本推理。定价 0.60 美元/百万输入 token、3 美元/百万输出 token。公司称在科学图表推理与短视频描述上超过 GPT-6 Astra，其他视觉推理任务持平；OpenAI 在 2025 年的 o 系列已有裁切放大，Elorian 的差别是把机制做进模型本体。训练用了几百块 GPU。CEO Andrew Dai 为前 Google DeepMind 研究员。上述超越结论为公司自报，无第三方复现。","url":"https://tech.yahoo.com/ai/articles/elorian-first-ai-model-wants-160137163.html","track":"🤖 AI 前沿","matched_topic":"多模态与生成式媒体","source":"TechCrunch（Yahoo Tech 转载）","published_at":"2026-10-16T16:01:00Z","supporting":[],"age_hours":35.3},{"title":"OpenAI 28 天冲刺第 12 天：GPT-6 Astra Pro 支持多代理并行拆任务","event_id":"gpt-6-astra-pro-parallel-agents","summary":"据 BlockBeats 的 AI 快讯，ChatGPT 的 GPT-6 Astra Pro 获得升级：多个代理可同时处理同一任务的不同部分，用户能查看每个代理的进度与产出；响应速度与插件、工具调用的流畅度提升；仅 Pro 用户可用。Codex 与 ChatGPT Work 通过共享子代理上下文、更长的缓存保留与更好的请求分发提升额度利用率。口径提示：该快讯未标注独立发布时间，页面「24H 重要资讯」标注 2026-10-18；OpenAI 官方站点在本环境不可抓取，本条属二次信源，功能与规格以官方为准。","url":"https://en.theblockbeats.news/flash/372314","track":"🤖 AI 前沿","matched_topic":"AI Agent 生态与工具链","source":"BlockBeats（二次信源）","published_at":"2026-10-18T00:00:00Z","supporting":[],"age_hours":3.3}],"also_worth_reading":[{"title":"a16z：平台封杀购物代理的四重动机，以及 Cloudflare 403 几乎翻倍","summary":"报告把动机拆成客户关系、广告收入、欺诈、退货四类。旁证：入夏以来 AI 代理与爬虫收到 403 的比例约为此前两倍；NRF 口径下电商退货率较 2019 年约翻倍、退货总成本约三倍；约 25% 消费者愿让 AI 处理大部分购买（奢侈品除外），42% 完全不愿让 AI 代下单。","url":"https://www.techflowpost.com/newsletter/140282","track":"🛒 AI 电商自动化","source":"TechFlow（转述 a16z 报告）","published_at":"2026-10-16T06:52:00Z","note":"与今日必看 #1 同一主题的分析侧，读它能拿到「平台为什么封」的完整动机清单。","age_hours":44.4},{"title":"阿里国际站在吉隆坡向马来西亚中小企业开放 Accio，并与 MATRADE 签 MoU","summary":"CoCreate Pitch 2026 马来西亚站与 MATRADE 合办的 B2B AI Seller Summit 同期举行，Accio 定位为企业级代理式 AI 平台，用来自动化店铺运营与出口流程。赛事收到 2,300 多份报名、10 支队进入决赛，奖金池 RM 500,000；MoU 的落地项目是 Alibaba.com 上的清真（Halal）专区。原文未提及 AccioWork。","url":"https://www.maxit.my/2026/10/alibaba-com-deepens-support-for-malaysian-smes-to-drive-innovation-and-global-expansion/","track":"🛒 AI 电商自动化","source":"MAXIT","published_at":"2026-10-16T12:00:00Z","note":"跨境 AI 本地化的东南亚样本，可作为「代理商 vs 平台自建」对照素材。","age_hours":39.3},{"title":"Microsoft Advertising 改开户流程：输入网址就生成一份 PMax 草稿","summary":"新广告主填网址，可选补品牌规范、logo、图片与创意 brief，系统生成含目标、客群画像与文案规范的「业务快照」，并直接产出带广告预览与建议预算的 Performance Max 草稿；也可以改为从 Google Ads 或 Meta Ads 导入。原文未写区域可用性与资格条件。","url":"https://ppcnewsfeed.com/ppc-news/2026-10/microsoft-builds-pmax-draft-from-business-snapshot/","track":"🎨 创意广告","source":"PPC News Feed","published_at":"2026-10-16T12:00:00Z","note":"与今日必看 AI Max 一键实验同一条线：平台的默认动作正从「给你控件」转向「替你出稿」。","age_hours":39.3},{"title":"RÆBURN 用 Nano Banana + Seedance 做整支 AI 重生影片","summary":"伦敦设计品牌 RÆBURN 的品牌重启片「RÆBURN, REBORN」由 Belief Studio 制作，使用自研 AI 工作流加 Google Nano Banana、Seedance，声音由 Forza Sound 完成。叙事取自 William Rankin 在 47,000 英尺被弹射进雷暴、在云层漂流约 40 分钟的真实经历，呼品牌首季的退役降落伞面料。低碳表述为「传统制作的一个零头」，品牌方自认测算「取最坏情况再翻倍」，无第三方核验。","url":"https://www.medianews4u.com/raeburn-teams-up-with-belief-studio-for-ai-generated-raeburn-reborn-campaign/","track":"🎨 创意广告","source":"MediaNews4U","published_at":"2026-10-17T12:00:00Z","note":"「现实里拍不到所以用 AI」的正向样本，与今日必看里的信任折价形成对照。","age_hours":15.3},{"title":"Perplexity 开源两款决策模型 pplx-decider-v1.2（27B）与 flash（4B）","summary":"基于 Qwen3.8-27B 与 Qwen3.5-4B，定位分类、打分、判定类任务而非长文生成，可用于 agent 任务路由与内容审核；一次推理可对同一份输入回答多个问题，Perplexity 称部分场景推理最高快 5 倍。Decision Index 0.3 上 27B 从 62.30 升到 68.09；官方承认部分评测训练集进入了训练数据。Apache 2.0，API 价 0.02 / 0.01 美元每百万输入 token，输出免费。","url":"https://theblockbeats.info/flash/372319","track":"🤖 AI 前沿","source":"BlockBeats（二次信源）","published_at":"2026-10-16T14:00:00Z","note":"发布时间存疑：快讯页无独立时间戳，「24H」栏标注 2026-10-18。功能与价格可参考，时间请勿引用。","age_hours":37.3},{"title":"Google Universal Cart 在美国上线（真实事件 2026-10-15）","summary":"AI 驱动的跨零售商购物车，可在 Search 与 Gemini App 里攒商品、跟踪价格与库存、提示促销，并通过商家自有网站完成多店结账，基于 Google 的 Universal Commerce Protocol，结账能力面向 Google Wallet 用户。已支持 Ulta Beauty、Walmart、Wayfair、部分 Shopify 商家与 Newegg；Google 引用 Shopping Graph 的 600 亿+ 持续刷新商品条目。","url":"https://www.digitalcommerce360.com/2026/10/16/google-universal-cart-launch-features/amp/","track":"🛒 AI 电商自动化","source":"Digital Commerce 360","published_at":"2026-10-15T00:00:00Z","note":"⚠️ 出窗条目：Google 官方博客日期为 2026-10-15，已超出 48h 硬窗口，仅作背景；它恰好解释今日必看 #1 里「平台自己也在做代理」的那一半。","age_hours":75.3},{"title":"TikTok Shop 美国跨境 POP 全量开放直播降价与拼团（真实事件 2026-10-15）","summary":"LIVE Price Cut 与 LIVE Group Deal 于 10-15 面向合格卖家全量开放，9-10 起先是邀请制测试。资格门槛包括官方/渠道账号、过观察期、AHR≥100、SES≥3.0、SFCR≤2%、CHR>150 且无严重违规。降价玩法由卖家设底价、目标人数、库存与 15 秒–20 分钟时长；拼团为固定团价、3–6 人成团。黑五网一时间为 2026-11-11 至 11-30。","url":"https://www.tkfff.cn/news/2108.html","track":"🛒 AI 电商自动化","source":"tkfff（跨境电商业内媒体）","published_at":"2026-10-15T02:20:00Z","note":"⚠️ 出窗条目（事件日 10-15，报道日 10-17 10:20 北京时间）。作玩法参考，不计入 48h 必看。","age_hours":72.9},{"title":"Meta 新商业条款：10 月 30 日起授权抓取广告主站点内容用于训练，且无退出选项","summary":"更新后的条款于 2026-10-30 生效，授权 Meta 及其代理方使用网页抓取器、机器人、爬虫与测试凭证，访问、索引、缓存、分析、收集与抓取与商家产品或服务相关的域名、页面与 URL，并把内容用于「提供、开发、改进、研究、训练与维护」其产品。条款没有退出机制：不同意即须停止一切商业访问与使用。","url":"https://gigazine.net/gsc_news/en/20261016-meta-scraping","track":"🎨 创意广告","source":"GIGAZINE","published_at":"2026-10-16T19:00:00Z","note":"生效日在 10-30，属「即将发生」而非已发生；本条是最容易在转述中丢失「无退出选项」这一关键事实的一条。","age_hours":32.3},{"title":"Kling 4.0 全球上线，官方称 Adobe 将把它带入 Firefly","summary":"本次增量不在模型参数而在分发：此前 Kling 4.0 为中国区全量/早期访问，此次宣布全球开放；官方明确 Adobe 已在 Firefly 中提供 Kling 3.0 与 3.0 Omni，并表示很快会带入 4.0，但未给时间表；同期在纽约广告周与 WPP、Adobe 同台讲企业级生产。","url":"https://news.marketersmedia.com/kling-ai-showcases-kling-40-at-advertising-week-new-york-as-generative-ai-video-moves-toward-enterprise-production/89206351","track":"🎨 创意广告","source":"MarketersMEDIA（厂商稿）","published_at":"2026-10-16T12:00:00Z","note":"⚠️ 10-16 期已覆盖 Kling 4.0 发布本身，本条只取「全球上线 + Firefly 分发」的增量；文中用户数、企业客户数均为品牌方自报，勿当第三方数据引用。","age_hours":39.3},{"title":"Anthropic 这轮融资也要付约 10% 的票息（公众号口径）","summary":"标题所述：Anthropic 的新一轮融资同样附带约 10% 的高息条件。金额、投资人构成与条款未在本环境取得一手来源。","url":"https://mp.weixin.qq.com/s?__biz=Mzg5MzEyNzEwNQ==&mid=2247862134&idx=1&sn=53093f81f55a03f1c302807fb78d95f7","track":"🤖 AI 前沿","source":"微信公众号（信源可读性受限）","published_at":"2026-10-17T23:16:00Z","note":"⚠️ 公众号信源，本环境不可抓取正文，摘要仅据标题与既有公开报道整理；金额与条款未经一手核实，引用前需自行核对。","age_hours":4.0},{"title":"Anthropic 被曝就 AI 立法秘密游说国会（公众号口径）","summary":"标题所述：Anthropic 被报道在 AI 立法议题上进行未公开的国会游说。具体主张、游说对象与时间未在本环境取得一手来源。","url":"https://mp.weixin.qq.com/s?__biz=MjM5NzAwMzU0MA==&mid=2247648680&idx=4&sn=ad1b39e0a54d904a6845e1aaa192fc5f","track":"🤖 AI 前沿","source":"微信公众号（信源可读性受限）","published_at":"2026-10-17T10:16:00Z","note":"⚠️ 公众号信源，正文不可抓取，摘要仅据标题整理；该事件的一手材料未取得，勿据此写结论性判断。","age_hours":17.0},{"title":"外媒称中国拟限制或禁止 40 项 AI 相关技术出口（公众号口径）","summary":"标题所述：中国就一批 AI 相关技术（约 40 项）的出口限制或禁止公开征求意见。清单范围、生效路径与算力芯片是否在内，均未在本环境核到一手文本。","url":"https://mp.weixin.qq.com/s?__biz=MzI2NDk5NzA0Mw==&mid=2248906296&idx=1&sn=4a818b17c93f1cf4b54235bba63ae867","track":"🤖 AI 前沿","source":"微信公众号（信源可读性受限）","published_at":"2026-10-17T01:16:00Z","note":"⚠️ 公众号信源，正文不可抓取。这类管制清单必须回到商务部原文再写，本条仅作线索。","age_hours":26.0},{"title":"黄仁勋最新长访谈：AI 营收支撑资本支出的 27 个瓶颈","summary":"标题所述：黄仁勋在一场长访谈中讨论 AI 营收能否支撑资本支出、列出 27 个瓶颈，并谈开源与闭源的分界。访谈全文未在本环境取得。","url":"https://mp.weixin.qq.com/s?__biz=MzIxODUzNTg2MA==&mid=2247492236&idx=1&sn=d2b7a3dd4da468de68482bc14bf97746","track":"🤖 AI 前沿","source":"微信公众号（信源可读性受限）","published_at":"2026-10-17T04:16:00Z","note":"⚠️ 公众号信源，正文不可抓取；适合做观点引用而非数据引用。","age_hours":23.0},{"title":"Linus 用 Claude Code 改 Linux 内核，也没兜住代码里的 Bug","summary":"标题所述：Linus Torvalds 使用 Claude Code 参与修改 Linux 内核，代码中仍出现缺陷。具体补丁、缺陷与讨论线程未在本环境取得一手材料（LKML 原帖未核实）。","url":"https://mp.weixin.qq.com/s?__biz=MzU1NDA4NjU2MA==&mid=2247668587&idx=1&sn=e60d007b5ac18b783c497d20a409cdc8","track":"🤖 AI 前沿","source":"微信公众号（信源可读性受限）","published_at":"2026-10-17T04:16:00Z","note":"⚠️ 公众号信源，正文不可抓取。这条适合做「AI 写代码仍需人类审」的案例，但需先回 LKML 核实。","age_hours":23.0},{"title":"Amazon 收购 DuckLabs，并把 DuckDB 集成进 Aurora PostgreSQL","summary":"InfoQ 报道：亚马逊收购 DuckLabs，同时在 Amazon Aurora PostgreSQL 中集成 DuckDB，指向 OLAP 与 OLTP 混合负载的场景。具体交易金额与集成可用区域需看官方发布。","url":"https://www.infoq.com/news/2026/10/amazon-acquires-ducklabs/","track":"🤖 AI 前沿","source":"InfoQ","published_at":"2026-10-17T06:16:00Z","note":"与选题主线关系较远，但对「商品数据仓库 + 分析型查询」的技术选型有参考价值。","age_hours":21.0},{"title":"腾讯研究院 AI 每周关键词 Top50","summary":"标题所述：腾讯研究院发布 AI 领域当周关键词 Top50，用于观察讨论热度的结构性变化。榜单本体未在本环境取得。","url":"https://mp.weixin.qq.com/s?__biz=MjM5OTE0ODA2MQ==&mid=2650999102&idx=1&sn=c754465d22e6a85bd5620647c24a4780","track":"🤖 AI 前沿","source":"微信公众号（信源可读性受限）","published_at":"2026-10-17T02:16:00Z","note":"⚠️ 公众号信源，正文不可抓取；只适合做「本周话题温度」的旁证，不适合作为事实来源。","age_hours":25.0}],"topics":[{"title":"平台把 AI 代理关在门外之后，卖家的自动化该往哪走","angle":"用今日必看 #1（Yelp/达美/摩根大通封禁）与 a16z 的四重动机做立论，再落到三条可执行路径：走官方 API 与授权数据源、走平台自己提供的代理（Meta 签约商家、Shopify 开放网络、Google UCP）、把自动化从「代替用户下单」降级为「替用户比价并交回决策」。明确写出哪些路径在哪些平台已被封、哪些还开着。","heat":"high","format":"deep-dive","tracks":["🛒 AI 电商自动化","🤖 AI 前沿"],"hooks":["平台不是在封 AI，是在封「不付许可费的 AI」","同一周里，Meta 说拒绝代理就是拒绝顾客，达美说你不能替我卖票"],"reasoning":"同日出现封禁（零售商/金融）与开放（Meta 签约、Shopify）两个方向的实证，是这条选题唯一成立的条件；本期两条证据链都有一手报道。"},{"title":"AI 商品摘要灰度：listing 的写法要按「能不能被摘要」重排","angle":"顺着亚马逊 Alexa 摘要的读取顺序（标题 > 前两条五点 > 后台属性 > A+ > 问答 > 评论）倒推一份改写清单：把最强卖点压进前两条五点、把可核验参数放进后台结构化属性、把常见疑问前置到 A+ 与问答。并明确一条边界——卖家无法编辑摘要，唯一杠杆是源头文案。","heat":"high","format":"methodology","tracks":["🛒 AI 电商自动化"],"hooks":["AI 摘要只读你前两条五点，其余基本不看","你不能改摘要，只能改它读的东西"],"reasoning":"这是少见的「平台功能变化 → 立刻可改的具体字段」闭环，且原文给出了权重顺序，具备方法论成稿条件。"},{"title":"AI 素材的信任折价：43% 的被骗感和 52% 的辨识正确率","angle":"把 Auros 调研（2,000 人）与 National Trust 停投事件并置：一边是消费者自评被骗、一边是平台自动化功能直接烧到品牌主头上。落点是两条用法分离——AI 优先用于不可拍摄场景（剖面、微观、极端环境），真实产品图保留可验证的一致性锚点；投放端立刻关掉 auto-add 自动素材。","heat":"high","format":"deep-dive","tracks":["🎨 创意广告","🛒 AI 电商自动化"],"hooks":["消费者认不出 AI 广告，但他们知道自己被骗了","关掉那个开关：你的广告账户可能正在自己生成素材"],"reasoning":"同一窗口内出现一手调研数据与一手事故案例，且两者都指向「发布前筛查」这一可复用动作，具备跨赛道复用价值。"},{"title":"98.7% 不回本：AI 内容工业化的算式与止损线","angle":"用 43 万部 / 13 倍 / 0.48% 破亿 / 1.3% 达保本线 / 77 部出 1 部 这组数字，说明「产能放大不等于需求放大」。落到团队考核：把 KPI 从「月产素材数」换成「单条素材的付费转化保本线」，并给出按平台拆的保本线计算方式（播放→点击→成交）。","heat":"high","format":"commentary","tracks":["🎨 创意广告"],"hooks":["把产能提升 13 倍，等于把亏损放大 13 倍","AI 短剧的爆款率从 20% 掉到 0.5%，这不是技术问题"],"reasoning":"数字密度高且全部来自同一份行业报告口径，天然适合做反常识立论；同时它与本期其他 AI 素材选题形成「成本下降 vs 回报下降」的张力。"},{"title":"开户即出稿：广告平台的默认动作从「给控件」变成「替你写」","angle":"把 Microsoft 的「业务快照 → PMax 草稿」与 Google 的「AI Max 一键实验」放在一起看：一边在开户环节替你生成投放结构，一边在存量账户里把实验成本降到一次点击。结论是品牌方需要一份机器可读的 brand guideline（语气、禁用词、视觉资产），否则 AI 会替你定一套。","heat":"medium","format":"news-commentary","tracks":["🎨 创意广告"],"hooks":["广告平台的默认值，正在变成你的 brand guideline","开户那一刻，投放结构就已经被写好了"],"reasoning":"两条同期平台更新指向同一趋势，单独写任何一条都太薄，合并后才够成观点。"},{"title":"DeepSeek 这次只改了两件小事，但都指向「调用链闭环」","angle":"不写跑分，只写接口：Search 与 Fetch 各 5 元/千次、11-01 前免费、Harness 0.2.1-rc.1、权重上 HF/ModelScope。论证一条链路——竞品价查询（Search）→ 页面抓取（Fetch）→ 文案生成（模型）——现在可以在同一家 API 内完成，省掉第三方抓取工具的合规与稳定性风险。并说明为什么不引用任何跑分：官方页只有图表图片。","heat":"medium","format":"news-commentary","tracks":["🤖 AI 前沿","🛒 AI 电商自动化"],"hooks":["DeepSeek 这次最值钱的不是模型，是那两个接口","搜一次 5 毛钱/百次：把抓取搬进模型 API 之后"],"reasoning":"官方页是少数能一手拿到条款的页面，且「不引用跑分」本身就是一个可示范的严谨动作。"},{"title":"Anthropic 交出了自己的用工数据：6 倍工时与初级岗收缩","angle":"用四组数字（6 倍工时、初级技术岗 21%→14%、初级招聘 27%→9%、元工作 10%→22%）讲一个结构变化：省下来的人力没有消失，而是转移到了审输出与搭工作流。落到读者侧的问题是：你的团队里，哪一部分工作应该被定义为「元工作」并计入产能。","heat":"high","format":"deep-dive","tracks":["🤖 AI 前沿"],"hooks":["智能体的工时是员工的 6 倍，但员工更忙了","初级岗从 21% 降到 14%：AI 最先替掉的是入门级工作"],"reasoning":"模型公司自报的内部数据极稀缺，且数字之间能互相解释（元工作上升解释了为什么工时 6 倍而人没减）。"},{"title":"开源权重正在分层：501B 稀疏与 27B 稠密是两种采购逻辑","angle":"把 Reflection Beam（501B/23B 激活/1M 上下文）与 Perplexity Decider（27B 与 4B，Apache 2.0，0.02 美元每百万输入）放在一起比较：前者是「自托管换数据边界」，后者是「极低价换任务路由」。给出选择判据——按数据敏感度、调用量、任务难度三维打分，而不是按参数量。","heat":"medium","format":"tool-share","tracks":["🤖 AI 前沿"],"hooks":["开源模型现在在两条完全不同的赛道上","一边 501B 自托管，一边 0.02 美元一百万 token"],"reasoning":"同窗口内两款开放权重发布，规格与价格都可一手引用，适合做选型对照而非单纯发布播报。"},{"title":"视觉推理作为新品类：从「看图选品」到「自动素材审核」","angle":"以 Elorian Glimpse 的「视觉草稿纸」为技术锚点（推理中回看原图、裁切、抽帧、跑代码测量），推演两个电商侧应用：一是商品图合规筛查（违规元素、图文一致性），二是素材与商品的匹配判断（模特/场景是否适配品类）。同时标注：其「超过 GPT-6 Astra」为公司自报，无第三方复现。","heat":"medium","format":"tool-share","tracks":["🤖 AI 前沿","🛒 AI 电商自动化"],"hooks":["模型第一次可以在推理途中回去看图","素材审核这件事，可能不用人眼过一遍了"],"reasoning":"技术机制解释清楚后能直接接到电商工作流，且本期有 GPT-6 Astra 的并行升级作为生态旁证。"},{"title":"默认加入：TikTok Shop 正在替卖家决定「要不要投」","angle":"把英国 GMV Max Net Sales Boost（默认加入、30 天免费、学习期锁定、退出最长 7 个工作日）与美国直播降价/拼团（资格门槛一长串）并置，讨论一个正在形成的新常态：平台的默认值就是卖家的运营策略。给出三件具体动作：查默认开关、记录学习期不可改动的窗口、把退出流程写进 SOP。","heat":"medium","format":"methodology","tracks":["🛒 AI 电商自动化"],"hooks":["你不点同意，它也已经替你开了","默认加入，才是这两年电商平台最大的产品创新"],"reasoning":"同平台两个市场同时出现默认值与门槛的组合，且条款细节可一手核对，具备成稿的确定性。"},{"title":"并行子代理的收益，换算成运营时间是多少","angle":"用 GPT-6 Astra Pro 的并行子代理（多代理同时处理同一任务的不同部分）推演真实收益边界：适合天然可并行的活（多市场 listing 改写、多语言素材批量产出、多竞品页面同时抓取），不适合强串行的活（一次只改一版的创意迭代）。给出一个自测方法：把一个任务拆成 N 条互不依赖的支线，看 N 的上限；N 小于 2 就没有收益。","heat":"medium","format":"news-commentary","tracks":["🤖 AI 前沿","🛒 AI 电商自动化"],"hooks":["并行代理不一定更快，先数你的任务有几条独立支线","把一个任务拆成十条支线，才知道并行值不值"],"reasoning":"功能升级本身信息量薄，但有明确的适用/不适用边界可以写成判断框架，避免变成功能播报。"},{"title":"这一周「更新」很多，但真正改变操作顺序的只有三条","angle":"做一次窗口内的信号筛选：把本期 15 条必看按「是否改变读者明天的工作顺序」重新排序——只有亚马逊摘要（改 listing 写法）、National Trust（关自动素材开关）、AI Max 一键实验（改变实验成本）三条真正改变了操作顺序，其余属于能力或格局信息。用这个筛选结果示范怎么从每日信息流里抽出可执行项。","heat":"medium","format":"commentary","tracks":["🛒 AI 电商自动化","🎨 创意广告","🤖 AI 前沿"],"hooks":["十五条新闻里，只有三条会让你明天改动作","信息多不等于信号多：一个可复用的筛选问题"],"reasoning":"每日简报最容易陷入「逐条播报」，这条选题把筛选方法本身做成内容，符合常青位「信号辨别」的定位。"}],"drafts":[{"text":"亚马逊给 AI 购物代理关门这件事，最容易被误读成「平台反 AI」。\n\n不是。同一周里，Meta 公开说「拒绝一个个人代理，就是拒绝代理背后的顾客」，并已经和 Walmart、Gap、Sephora、Best Buy 签约；Shopify 把自己的网络开放了。\n\n真正的分界线是许可费。Yelp 只对买了数据许可的代理放行；达美不让代理订票；摩根大通和嘉信以安全为由直接封。这三家的共同点不是讨厌 AI，是它们不愿意让第三方在不付费、不担责的前提下替用户做决定。\n\n对做自动化的人，结论很具体：\n\n1/ 「伪装成浏览器去下单」这条路正在关闭。被识别只是时间问题，不是概率问题。\n\n2/ 还开着的是三条：平台自己的代理生态（Meta 签约商家、Shopify 网络、Google UCP）、官方 API、以及把自动化降级成「比价并交回决策」。\n\n3/ 第三条最容易被低估。代理不替你下单，只替你找，风险归零而价值保留。\n\n原文：The Verge 报道，Infobae 全文可读。","platform":"x","format":"thread","tags":["AI代理","电商自动化","平台治理"],"hook_pattern":"反常识纠正：先否掉读者第一反应，再给真正分界线","reasoning":"本期最硬的一条，且天然带「不是你想的那样」结构；用三条可执行路径收尾，避免停在观点。"},{"text":"AI 微短剧这组数字，值得每个做 AI 内容的人抄在墙上。\n\n2026 年前 8 个月，国内上线微短剧 43 万部，是去年全年的 13 倍。AI 生成占比超过九成。平均每天新增 1700 部以上。\n\n然后：\n\n· 抖音端上半年 22.19 万部新增 AI 剧，播放破亿的 1055 部，破亿率 0.48%\n· 以 5000 万播放为保本线，达标项目 1.3%\n· 98.7% 的 AI 微短剧半年内收不回成本\n· 平均 77 部 AI 漫剧里，1 部能盈利\n\n掌阅 CEO 孙凯的说法更直接：爆款跑出率从 10–20%，降到 0.5% 以下。\n\n产能放大 13 倍，需求没有跟着放大 13 倍。多出来的产能不是收入，是成本。\n\n同一份数据里还有一行更值得注意：国内 AI Token 消耗 55% 用于短剧与视频生成，24% 用于电商广告，真正投研发的只有 15%。\n\n当生成成本趋近于零，稀缺的从来不是素材数量，是能验证的转化。\n\n来源：投资界综合《中国微短剧发展报告（2026）》与 DataEye-ADX。","platform":"x","format":"thread","tags":["AI内容","微短剧","内容经济学"],"hook_pattern":"数字阶梯：连续四个递减比例，把结论逼出来","reasoning":"纯数字推进，不依赖观点铺垫；最后一行的 Token 结构是这篇文章里最少被转述的一条，差异化强。"},{"text":"Anthropic 公布了一组自己公司的用工数据。四组数字，每一组都能反推出一个管理问题。\n\n截至 8 月，交互式 AI 智能体的工时，是员工的 6 倍。\n初级技术岗员工占比，从 2025 年初的 21% 降到 14%。\n初级技术岗招聘占比，从 27% 降到 9%。\n工程师人均提交量，是半年前的 5 倍。\n\n这几条拼起来，看起来像「效率革命」。但第四条才是关键：\n\n员工在 Claude 会话里的「元工作」占比——写提示、审输出、搭工作流——从 2025 年秋季的 10%，升到 2026 年春季的 22%。\n\n工时 6 倍，提交 5 倍，人没增加，但元工作翻了一倍多。省下来的时间没有变成闲暇，变成了审查。\n\n还有个细节要提醒：这份报告没有给出「Claude 写了多少比例的代码」这个数字。网上流传的百分比都是别人加的。\n\n对团队的实际问题是：你的排期里，有没有给「审 AI 的产出」留出预算？多数团队没有。","platform":"x","format":"thread","tags":["AI组织","Anthropic","工程效率"],"hook_pattern":"四组数字 + 一个反转（元工作翻倍）","reasoning":"数据来自模型公司自己，可信度高于第三方预测；结尾的口径纠正本身建立专业感。"},{"text":"亚马逊开始给部分美国站商品页加 AI 摘要了。点开是 Alexa 的对话窗，能追问。\n\n最要命的两点：\n· 卖家端没有配置入口\n· 摘要不能编辑，出错只能改源头\n\n那它到底读什么？按权重：\n\n1️⃣ 标题\n2️⃣ 前两条五点\n3️⃣ 后台结构化属性\n4️⃣ A+ 文案\n5️⃣ 站内问答\n6️⃣ 评论\n\n也就是说，如果你的核心卖点写在第 4、5 条五点里，AI 大概率不会替你讲出来。\n\n📌 可以马上做的三件事：\n\n① 把最强、最可核验的卖点压进前两条五点。别再铺垫场景。\n② 把参数类信息（尺寸、材质、兼容性、容量）填进后台结构化属性——摘要会读，买家也会问。\n③ 把重复出现的买家疑问补进 Q&A 和 A+。Alexa 的对话窗会顺着这些内容回答。\n\n⚠️ 一个提醒：同一个 ASIN，不同账号、设备、地区看到的内容可能不一样。这是灰度，不是全站。\n\n现在去翻你自己的前两条五点，看看 AI 会替你讲什么。","platform":"xhs","format":"图文清单","tags":["亚马逊运营","Listing优化","AI工具"],"hook_pattern":"痛点 + 可照抄清单（编号动作项）","reasoning":"小红书吃「立刻能做」的清单；本条把权重顺序直接转成改写动作，收藏动机强，且不含外链导流。"},{"text":"这一周有两件事同时在发生，而且方向相反。\n\n一边，零售商和金融机构开始把 AI 购物代理关在门外：Yelp 只对买了数据许可的代理放行，达美禁止代理订票，摩根大通和嘉信以安全为由拦截。另一边，亚马逊上线了 AI 商品摘要，Google 上了能跨店结账的 Universal Cart，Meta 公开说「拒绝一个个人代理，就是拒绝代理背后的顾客」。\n\n看起来矛盾，其实是同一件事的两面：平台不反对代理，平台反对「不由自己控制的代理」。\n\n这条分界线在电商侧有一个非常具体的落点，就是亚马逊的 AI 摘要。它读的是标题、五点、后台属性、A+、问答和评论，权重最高的是标题和前两条五点。卖家没有配置入口，也不能编辑摘要——你能改的只有源头。\n\n也就是说，当平台开始用 AI 转述你的商品时，你的 listing 第一次有了「被摘要友好度」这个隐藏指标。\n\n内容侧同步在发生的是另一件事。前 8 个月国内上线微短剧 43 万部，是去年全年的 13 倍，AI 占比超过九成；但 98.7% 的 AI 微短剧半年内收不回成本，破亿率 0.48%。生成成本下来了，回报没有跟着下来。\n\n把这两件事放在一起看，会得到一个不太舒服的结论：AI 降低的是生产成本，没有降低「被选择」的成本。商品要被人选中，素材要被人看完并转化，这两件事的难度没有因为生成变快而变化，反而因为供给变多而上升。\n\n所以这一周真正值得动手的，不是再接一个生成工具，而是三件小事：\n\n第一，重排前两条五点。把最能被验证的卖点放进去，别把铺垫留给 AI 去猜。\n\n第二，去广告后台关掉「投放期间自动添加新生成素材」这类开关。英国 National Trust 就是因为平台自动化功能误生成了 AI 广告，把全部 TikTok 投放停了。这类开关默认是开的。\n\n第三，给自己定一条止损线。素材数量不是 KPI，单条素材的付费转化才是。\n\n供给爆炸的时候，判断力比产能贵。","platform":"wechat","format":"长文","tags":["电商AI","平台治理","内容成本"],"hook_pattern":"对立统一：两件方向相反的事其实是同一件事","reasoning":"公众号需要主线与结构；用「平台收的是控制权」统摄本期两组素材，比逐条点评更有阅读回报。"},{"text":"Two things happened this week, and they point in opposite directions.\n\nRetailers and banks started closing the door on AI shopping agents. Yelp only lets agents through if they pay for a data license. Delta blocks agents from booking flights. JPMorgan and Charles Schwab block them outright, citing security.\n\nAt the same time, Amazon began rolling out AI-generated product summaries. Google launched a cross-retailer cart. Meta said publicly that refusing a personal agent means refusing the customer behind it, and signed Walmart, Gap, Sephora and Best Buy.\n\nThat is not a contradiction. Platforms are not against agents. They are against agents they do not control.\n\nFor commerce teams, the practical version of that line sits inside Amazon's new summary. It reads the title, the first bullets, backend attributes, A+ content, Q&A and reviews. Title and the first two bullets carry the most weight. Sellers have no configuration panel and cannot edit the summary. The only lever is the source copy.\n\nWhich means listing quality now has a hidden second audience: the model that rewrites your page for the buyer.\n\nOn the content side, the numbers are just as blunt. China put 430,000 micro-dramas online in the first eight months of 2026, 13x last year's full total, with AI-generated shows above 90% of output. But 98.7% of AI micro-dramas fail to recover cost within six months, and only 0.48% passed 100 million views.\n\nCheaper generation did not make demand cheaper. It made selection harder.\n\nThree things worth doing this week: rewrite your first two bullets around verifiable claims; audit ad accounts for auto-generated asset settings that default to on; and replace \"assets produced\" with \"cost per converting asset\" as the team metric.\n\nWhen supply explodes, judgment becomes the scarce input.","platform":"linkedin","format":"post","tags":["AI commerce","Retail media","Content economics"],"hook_pattern":"Two-direction framing, then one-line resolution","reasoning":"LinkedIn 英文读者关心平台权力结构，用「not against agents, against agents they do not control」一句立论，再落到三条动作。"}],"cross_opportunities":[{"label":"🛒 电商自动化 × 🤖 AI 前沿：模型厂商在给代理加班，平台在给代理关门","text":"同一周里，OpenAI 把 GPT-6 Astra Pro 升级成支持多代理并行拆任务，Perplexity 开源了专做判定与路由的 decider 系列，DeepSeek 把搜索与抓取做成自家 API；而零售商、航司、银行在把外部代理拦在门外。两边的加速度不一样：供给侧能力上涨按周计，需求侧准入按季度谈。这意味着未来一段时间，「代理能不能用」的瓶颈主要在许可与身份，而不是模型能力。对做电商自动化的人，优先级应该反过来：先把合规身份和数据来源谈下来，再考虑换更强的模型。"},{"label":"🎨 创意广告 × 🛒 电商自动化：生成变便宜之后，卡点在「被验证」而不是「被生产」","text":"两条同期数据指向同一结论。行业报告口径下，AI 微短剧半年内回本率只有 1.3%，98.7% 收不回成本；Auros 的 2,000 人调研里，43% 的消费者因 AI 广告产生被误导感，而识别真伪的正确率只有 52%。一边是供给端的边际成本趋零，一边是需求端的信任折价在上升。合起来的操作含义是一致的：AI 的合理用法从「替代真实产品图/真实拍摄」转向「补足拍不到的场景」，并在投放端保留可核验的一致性锚点——因为在辨识能力不足的市场里，一旦被判定为假，损失不是这一条素材的 ROI，而是这个品牌后续所有素材的可信度。"}],"recent_performance":{"period":"2026-10-11 ~ 2026-10-18","total_posts":0,"median_impressions":0,"top_posts":[],"covered_topics":[],"underserved_tracks":["🛒 AI 电商自动化","🎨 创意广告"],"winning_hooks":[],"failing_hooks":["单点复述式新闻播报（历史结论，继续回避）"],"insights":"Phase 1 无数据（连续第 31 期）。inputs/published_last_7d.md 最后录入时间为 2026-08-27，本窗口 0 条记录，按 SKILL 规则跳过 Step 2–3。本文件中的 winning_hooks 为空数组而非臆造值；underserved_tracks 依据素材供给结构的长期观察填写（🛒 / 🎨 连续多期条数偏低），不作为表现证据。本期优先级的判断依据是素材密度与信号阈值，不是曝光数据。"},"published_this_week":{"period":"2026-10-11 ~ 2026-10-18","fetched_at":"2026-10-18T03:16:06Z","source":"manual-paste","posts":[],"error":"inputs/published_last_7d.md 存在但非本期数据：最后录入时间为 2026-08-27，本窗口（2026-10-11 ~ 2026-10-18）内 0 条已录入发布记录。按 SKILL 规则跳过 Step 2-3 学习阶段。"},"market_snapshot":{"skipped":"本赛道配置不含市场行情数据"},"suggestions":{"info_sources":{"promote":[{"source":"tkfff（跨境电商业内媒体）","reason":"本窗口内两条一手可读的亚马逊/TikTok Shop 平台规则细节（AI 商品摘要灰度的读取权重、美国直播降价与拼团的门槛），均为逐条可核对的运营级事实，WebFetch 直取成功","confidence":"high"},{"source":"PPC News Feed（ppcnewsfeed.com）","reason":"本期 Google AI Max 一键实验与 Microsoft PMax 草稿两条均为可直取的平台更新原文级报道，是广告平台线目前最稳的可读源","confidence":"high"},{"source":"DeepSeek 官方 API 文档（api-docs.deepseek.com）","reason":"本环境可直取，且给出价格、免费期截止、Harness 版本与权重下载位置等条款级信息；同一事件的第三方转述均未提供这些细节","confidence":"high"},{"source":"Anthropic Research（anthropic.com/research）","reason":"内部用工报告可直取并逐条核对数字；同域 news 页历史检索常空返，但 research 路径稳定","confidence":"medium"}],"demote":[{"source":"The Verge（theverge.com）","reason":"本期关键事件的原稿域，本环境明确返回「unable to fetch」；已改用 Infobae 同题全文替代核实。建议对 theverge.com 直链不再设为主检索入口，改由可读转载源进入","confidence":"high"},{"source":"The Register / Investopedia 系的日期型 URL（theregister.com、za.investing.com 等）","reason":"本窗口内两次出现「URL 时间戳看似合理但页面 404 或指向完全无关旧文」的情况（Anthropic 安全法案、Project North Star），说明这类拼装式链接不可信；建议一律先 WebFetch 打开再采信","confidence":"high"},{"source":"GIGAZINE 英文版（gigazine.net/gsc_news/en）","reason":"Meta 商业条款一条的页面自身时段与搜索引擎给出的事件日期相差 8 天（10-08 与 10-16），存在重标风险；只适合作补充，不宜作主信源","confidence":"medium"},{"source":"聚合快讯站（theblockbeats / techflowpost / theblockbeats.news）","reason":"信息密度高但普遍缺少独立发布时间戳，且本期出现同日多版本标题；只适合作线索与二次旁证，进入必看位前必须回一手","confidence":"medium"}],"add":[{"source":"MediaPost（mediapost.com）","reason":"本期 Auros × Talker Research 消费者调研的唯一可读一手报道，给出一整套可引用的辨识率数字，是创意赛道稀缺的量化来源","confidence":"high"},{"source":"投资界（news.pedaily.cn）","reason":"本期 AI 微短剧经济学的数据总汇，且标注了报告名与数据商（《中国中国微短剧发展报告（2026）》/ DataEye-ADX），可回溯","confidence":"high"},{"source":"Baseten Blog（baseten.co/blog）","reason":"开源权重模型首发规格的可读一手页面；虽然只有图表没有数字，但参数量、上下文与部署方式明确，适合作规格引用","confidence":"medium"}]},"topic_library":{"archive":[],"add":[{"topic":"AI 购物代理与平台准入","track":"🛒 AI 电商自动化","reason":"平台对第三方 AI 代理的许可、封禁与自建生态：谁付许可费谁被放行、哪些入口还开着、卖家侧的适应路径。2026-10-16/17 窗口内同一主题同时出现封禁（Yelp、达美、摩根大通、嘉信）与开放（Meta 签约商家、Shopify 网络、Google UCP）两侧证据，与既有「AI Agent 接管电商运营全流程」是正反两面，原库缺「准入」这一反向位","confidence":"high"},{"topic":"AI 素材的信任成本与辨识度","track":"🎨 创意广告","reason":"消费者识别 AI 广告的实测正确率、被误导感对品牌的连带损失，以及「哪类镜头该用 AI、哪类必须真实」的可操作分界。本期同时出现一手调研（2,000 人，识别正确率 52%/42%）与一手事故（National Trust 因平台自动化误生成素材全面停投），共同指向「发布前筛查」这一可复用动作；与既有「AI 素材的平台合规与判罚」互补，后者讲规则，此位讲消费者感知","confidence":"high"}]},"positioning_drift":[{"observation":"连续多期内「平台规则默认值」类事件密度上升：本期 15 条必看里至少有 4 条（亚马逊摘要、TikTok Shop 英国默认加入、Google AI Mode 广告、National Trust 自动素材）本质是平台替用户做了默认选择","suggestion":"建议把「平台默认值」提为常设观察角度，而非逐条当作独立新闻；写作时优先回答「这个默认值让我少了哪个决定、又多了哪个动作」","confidence":"high"},{"observation":"本期 15 条必看中，能直接落到「明天改哪个字段/关哪个开关」的只有 6 条，其余属能力或格局信息；而摘要层对这两类未作区分","suggestion":"建议在摘要末尾加一行固定标记（可执行 / 供判断），让读者一眼分辨 actionable 与 context","confidence":"medium"},{"observation":"本期有 2 条必看依赖二次信源（DeepSeek 跑分、GPT-6 Astra 快讯），另有 3 条候选因 URL 404 或指向无关旧文被剔除；子代理曾对不可读链接报告「opened」","suggestion":"维持现有「必看位准入复核」为阻断项：任何 must_read 的 URL 必须由主 agent 亲自 WebFetch 成功并核到所引数字，子代理的 verification 字段仅作线索","confidence":"high"}]}}; // injected at build time by SKILL Step 8
+
+async function loadDailyData() {
+  // First try embedded data (always works regardless of browser security)
+  if (_embeddedDailyData && _embeddedDailyData.date) {
+    dailyData = _embeddedDailyData;
+    document.getElementById('dataStatus').textContent = '✅ 数据已加载 (' + (dailyData.date || '今日') + ')';
+    document.getElementById('dataStatus').className = 'data-status loaded';
+    renderDynamicContent();
+    return;
+  }
+  // Fallback: fetch from file
+  try {
+    const resp = await fetch('daily_data.json?t=' + Date.now());
+    if (resp.ok) {
+      dailyData = await resp.json();
+      document.getElementById('dataStatus').textContent = '✅ 数据已加载 (' + (dailyData.date || '今日') + ')';
+      document.getElementById('dataStatus').className = 'data-status loaded';
+      renderDynamicContent();
+    } else { throw new Error('not found'); }
+  } catch(e) {
+    document.getElementById('dataStatus').textContent = '⏳ 等待任务运行';
+    document.getElementById('dataStatus').className = 'data-status empty';
+  }
+}
+
+let _publishedSortBy = 'impressions';
+
+// localStorage key namespace for suggestion adoption state
+const SUGGESTION_STATE_KEY = 'star_suggestion_state_v1';
+function _loadSuggestionState() {
+  try { return JSON.parse(localStorage.getItem(SUGGESTION_STATE_KEY) || '{}'); }
+  catch(e) { return {}; }
+}
+function _saveSuggestionState(s) {
+  try { localStorage.setItem(SUGGESTION_STATE_KEY, JSON.stringify(s)); }
+  catch(e) {}
+}
+function _suggestionHash(obj) {
+  // Stable hash: action:target (good enough for dedupe)
+  return `${obj.action}:${obj.target}`;
+}
+
+let _pendingAdopt = null; // staging area for current modal
+
+function renderSuggestions() {
+  const s = dailyData && dailyData.suggestions;
+  const summaryEl = document.getElementById('suggestionsSummary');
+  const sourcesEl = document.getElementById('suggestionsSources');
+  const topicsEl = document.getElementById('suggestionsTopics');
+  const driftEl = document.getElementById('suggestionsDrift');
+  if (!sourcesEl || !topicsEl || !driftEl) return;
+  if (!s) return; // keep empty state
+
+  const state = _loadSuggestionState();
+  const confClass = (c) => c === 'high' ? 'high' : c === 'medium' ? 'medium' : 'low';
+  const confLabel = (c) => c === 'high' ? '高置信' : c === 'medium' ? '中置信' : '低置信';
+
+  const renderItem = (category, action, actionLabel, target, reason, confidence, rawData) => {
+    const hash = _suggestionHash({ action: `${category}.${action}`, target });
+    const stateVal = state[hash]; // 'adopted' | 'ignored' | undefined
+    const itemClass = stateVal === 'adopted' ? 'adopted' : stateVal === 'ignored' ? 'ignored' : '';
+    // Stash raw for modal lookup via data-attr (encoded)
+    const dataAttr = encodeURIComponent(JSON.stringify({ category, action, target, reason, confidence, raw: rawData }));
+    return `
+      <div class="suggestion-item ${itemClass}" data-hash="${hash}">
+        <span class="suggestion-action ${action}">${actionLabel}</span>
+        <div class="suggestion-body">
+          <div class="suggestion-target">${target}<span class="suggestion-confidence ${confClass(confidence)}">${confLabel(confidence)}</span></div>
+          <div class="suggestion-reason">${reason}</div>
+        </div>
+        <div class="suggestion-actions">
+          <button class="suggestion-btn adopt" onclick="openAdoptModal('${dataAttr}')">✓ 采纳</button>
+          <button class="suggestion-btn ignore" onclick="ignoreSuggestion('${hash}')">✕ 忽略</button>
+        </div>
+      </div>`;
+  };
+
+  // Summary counters
+  const src = s.info_sources || {};
+  const topic = s.topic_library || {};
+  const drift = s.positioning_drift || [];
+  const totalSources = (src.promote || []).length + (src.demote || []).length + (src.add || []).length;
+  const totalTopics = (topic.archive || []).length + (topic.add || []).length;
+  if (summaryEl) {
+    summaryEl.innerHTML = totalSources + totalTopics + drift.length === 0 ? '' : `
+      <div class="suggestions-summary-row">
+        <div class="stat-card"><div class="stat-label">信息源建议</div><div class="stat-value" style="color:var(--green)">${totalSources}</div><div class="stat-sub">提升/降级/新增</div></div>
+        <div class="stat-card"><div class="stat-label">选题库建议</div><div class="stat-value" style="color:var(--blue)">${totalTopics}</div><div class="stat-sub">归档/新增</div></div>
+        <div class="stat-card"><div class="stat-label">定位漂移</div><div class="stat-value" style="color:var(--purple)">${drift.length}</div><div class="stat-sub">观察条</div></div>
+      </div>
+    `;
+  }
+
+  // Info sources
+  const sourceParts = [];
+  const renderSrcGroup = (list, action, actionLabel, icon) => {
+    if (!list || !list.length) return '';
+    return `<div class="suggestion-group">
+      <div class="suggestion-group-header">${icon} ${actionLabel}（${list.length}）</div>
+      ${list.map(x => renderItem('info_sources', action, actionLabel, x.account || x.name || '—', x.reason || '', x.confidence || 'low', x)).join('')}
+    </div>`;
+  };
+  sourceParts.push(renderSrcGroup(src.promote, 'promote', '提升', '⬆️'));
+  sourceParts.push(renderSrcGroup(src.add, 'add', '新增', '➕'));
+  sourceParts.push(renderSrcGroup(src.demote, 'demote', '降级', '⬇️'));
+  const sourcesHtml = sourceParts.join('');
+  sourcesEl.innerHTML = sourcesHtml || '<div class="suggestion-empty">本周无信息源调整建议</div>';
+
+  // Topics
+  const topicParts = [];
+  const renderTopicGroup = (list, action, actionLabel, icon) => {
+    if (!list || !list.length) return '';
+    return `<div class="suggestion-group">
+      <div class="suggestion-group-header">${icon} ${actionLabel}（${list.length}）</div>
+      ${list.map(x => renderItem('topic_library', action, actionLabel, x.topic || x.title || '—', x.reason || '', x.confidence || 'low', x)).join('')}
+    </div>`;
+  };
+  topicParts.push(renderTopicGroup(topic.add, 'add', '新增选题', '➕'));
+  topicParts.push(renderTopicGroup(topic.archive, 'archive', '归档（休眠）', '🗄️'));
+  topicsEl.innerHTML = topicParts.join('') || '<div class="suggestion-empty">本周无选题库调整建议</div>';
+
+  // Positioning drift
+  if (!drift.length) {
+    driftEl.innerHTML = '<div class="suggestion-empty">本周长期定位无明显漂移</div>';
+  } else {
+    driftEl.innerHTML = drift.map(d => renderItem('positioning_drift', 'drift', '漂移观察', d.observation || '—', d.suggestion || '', d.confidence || 'low', d)).join('');
+  }
+}
+
+// ===== Adopt / Ignore flow =====
+function ignoreSuggestion(hash) {
+  const state = _loadSuggestionState();
+  state[hash] = state[hash] === 'ignored' ? undefined : 'ignored';
+  if (state[hash] === undefined) delete state[hash];
+  _saveSuggestionState(state);
+  renderSuggestions();
+}
+
+function openAdoptModal(dataAttr) {
+  let parsed;
+  try { parsed = JSON.parse(decodeURIComponent(dataAttr)); }
+  catch(e) { alert('建议数据解析失败'); return; }
+  _pendingAdopt = parsed;
+
+  const title = document.getElementById('adoptModalTitle');
+  const body = document.getElementById('adoptModalBody');
+
+  const { category, action, target, reason, raw } = parsed;
+  const { file, instruction, snippet } = buildAdoptionGuidance(category, action, target, reason, raw);
+
+  title.textContent = `采纳建议：${actionLabelCN(action)} ${target}`;
+  body.innerHTML = `
+    <div class="adopt-modal-row">
+      <div class="adopt-modal-label">🎯 目标文件</div>
+      <div class="adopt-modal-value">${file}</div>
+    </div>
+    <div class="adopt-modal-row">
+      <div class="adopt-modal-label">📝 操作说明</div>
+      <div class="adopt-modal-instruction">${instruction}</div>
+    </div>
+    ${snippet ? `
+      <div class="adopt-modal-row">
+        <div class="adopt-modal-label">📦 JSON 片段</div>
+        <pre class="adopt-modal-snippet" id="adoptSnippetContent">${snippet.replace(/</g, '&lt;')}</pre>
+      </div>` : ''}
+    <div class="adopt-modal-row">
+      <div class="adopt-modal-label">💬 理由</div>
+      <div class="adopt-modal-instruction" style="font-size:13px;color:var(--text-dim)">${reason}</div>
+    </div>
+  `;
+
+  // Hide snippet copy button if no snippet
+  const copyBtn = document.getElementById('adoptCopySnippetBtn');
+  copyBtn.style.display = snippet ? '' : 'none';
+
+  document.getElementById('adoptModal').classList.add('show');
+}
+
+function closeAdoptModal() {
+  document.getElementById('adoptModal').classList.remove('show');
+  _pendingAdopt = null;
+  // Reset any transient button states
+  const copyBtn = document.getElementById('adoptCopySnippetBtn');
+  if (copyBtn) copyBtn.textContent = '📋 复制 JSON 片段';
+}
+
+function actionLabelCN(a) {
+  return { promote:'提升', demote:'降级', add:'新增', archive:'归档', drift:'漂移观察' }[a] || a;
+}
+
+function buildAdoptionGuidance(category, action, target, reason, raw) {
+  // Returns {file, instruction, snippet}
+  if (category === 'info_sources') {
+    const file = 'ContentOS/info_sources.json';
+    if (action === 'add') {
+      return {
+        file,
+        instruction: `在对应赛道的 x_lists 或 podcasts 中新增该信息源。如果是 X 账号，加到 x_lists[].accounts 数组；如果是播客/newsletter，加到对应数组。`,
+        snippet: JSON.stringify({
+          name: target,
+          url: raw.url || "(补充 URL)",
+          frequency: "weekly",
+          priority: "scan",
+          added: new Date().toISOString().slice(0,10),
+          note: reason
+        }, null, 2)
+      };
+    }
+    if (action === 'promote') {
+      return {
+        file,
+        instruction: `找到 ${target} 所在的 x_lists / podcasts / newsletters 条目，把 priority 从 "scan" 改为 "must_read"，或把账号移到更前面。`,
+        snippet: null
+      };
+    }
+    if (action === 'demote') {
+      return {
+        file,
+        instruction: `找到 ${target} 所在条目，把 priority 从 "must_read" 改为 "scan"，或从 accounts 数组中移除（如果连续 30+ 天无贡献）。`,
+        snippet: null
+      };
+    }
+  }
+  if (category === 'topic_library') {
+    const file = 'ContentOS/topic_library.json';
+    if (action === 'add') {
+      const id = (target || 'new-topic').toLowerCase().replace(/[^\w\u4e00-\u9fa5]+/g, '-').slice(0,40);
+      return {
+        file,
+        instruction: `选择合适的赛道（tracks），在其 evergreen_topics[] 数组中追加以下条目：`,
+        snippet: JSON.stringify({
+          id: id,
+          title: target,
+          angle: "(补充角度)",
+          keywords: [],
+          content_type: "trend_analysis",
+          status: "active",
+          heat: "high",
+          last_posted: null,
+          added: new Date().toISOString().slice(0,10),
+          notes: reason
+        }, null, 2)
+      };
+    }
+    if (action === 'archive') {
+      return {
+        file,
+        instruction: `找到 title === "${target}" 的条目，把 "status": "active" 改为 "status": "dormant"（不要删除，保留历史）。`,
+        snippet: null
+      };
+    }
+  }
+  if (category === 'positioning_drift') {
+    return {
+      file: 'profile_longterm.md',
+      instruction: `考虑手动编辑长期定位：<br><br><strong>观察：</strong>${target}<br><strong>建议：</strong>${reason}<br><br>编辑时注意不要覆盖已有的红线和锚点，只做增量。`,
+      snippet: null
+    };
+  }
+  return { file: '(未知)', instruction: '请手动处理', snippet: null };
+}
+
+function copyAdoptSnippet() {
+  if (!_pendingAdopt) return;
+  const el = document.getElementById('adoptSnippetContent');
+  if (!el) return;
+  const text = el.textContent;
+  robustCopy(text);
+  const btn = document.getElementById('adoptCopySnippetBtn');
+  btn.textContent = '✅ 已复制';
+  setTimeout(() => { btn.textContent = '📋 复制 JSON 片段'; }, 2000);
+}
+
+function copyAdoptClaudePrompt() {
+  if (!_pendingAdopt) return;
+  const { category, action, target, reason, raw } = _pendingAdopt;
+  const { file, instruction, snippet } = buildAdoptionGuidance(category, action, target, reason, raw);
+  const prompt = `请帮我把以下 Dashboard 系统建议应用到 ${file}：
+
+操作：${actionLabelCN(action)}
+目标：${target}
+理由：${reason}
+
+具体操作说明：${instruction.replace(/<br>/g, '\n')}
+
+${snippet ? `建议的 JSON 片段：\n\`\`\`json\n${snippet}\n\`\`\`\n` : ''}
+请读取当前 ${file}，找到合适位置插入/修改，然后用 Edit 工具写回。改完确认。`;
+  robustCopy(prompt);
+  alert('Claude Prompt 已复制，在 Claude Code 中粘贴即可让 Claude 应用该建议。');
+}
+
+function markAdoptConfirmed() {
+  if (!_pendingAdopt) return;
+  const { category, action, target } = _pendingAdopt;
+  const hash = _suggestionHash({ action: `${category}.${action}`, target });
+  const state = _loadSuggestionState();
+  state[hash] = 'adopted';
+  _saveSuggestionState(state);
+  closeAdoptModal();
+  renderSuggestions();
+}
+
+function renderPublishedThisWeek() {
+  const pub = dailyData && dailyData.published_this_week;
+  const container = document.getElementById('publishedContainer');
+  const summaryEl = document.getElementById('publishedSummary');
+  const periodEl = document.getElementById('publishedPeriod');
+  if (!container) return;
+  if (!pub) return; // keep empty state
+  if (pub.error) {
+    container.innerHTML = `<div class="market-snapshot-error">⚠️ drafts 文件夹扫描失败: ${pub.error}${pub.reason ? ' — ' + pub.reason : ''}</div>`;
+    return;
+  }
+  const posts = Array.isArray(pub.posts) ? pub.posts.slice() : [];
+  if (periodEl && pub.period) periodEl.textContent = ` · ${pub.period}`;
+
+  if (!posts.length) {
+    container.innerHTML = `<div class="empty-state"><div class="icon">📭</div><h3>本周无稿件</h3><p>ContentOS/drafts 在最近 7 天窗口内没有 .md 稿件。</p></div>`;
+    summaryEl.innerHTML = '';
+    return;
+  }
+
+  // Summary aggregates
+  const totalImpressions = posts.reduce((a, p) => a + (p.metrics?.impressions || 0), 0);
+  const totalEngagement = posts.reduce((a, p) => a + (p.metrics?.total_engagement ?? p.metrics?.engagement?.total ?? 0), 0);
+  const totalSaves = posts.reduce((a, p) => a + (p.metrics?.saves ?? p.metrics?.engagement?.saves ?? 0), 0);
+  const totalLikes = posts.reduce((a, p) => a + (p.metrics?.likes ?? p.metrics?.engagement?.likes ?? 0), 0);
+  const avgImpressions = Math.round(totalImpressions / posts.length);
+  const topByImp = posts.reduce((best, p) => (p.metrics?.impressions || 0) > (best.metrics?.impressions || 0) ? p : best, posts[0]);
+  const topImpValue = topByImp.metrics?.impressions || 0;
+
+  const fmtN = (n) => n == null ? '—' : Number(n).toLocaleString('en-US');
+  const hasMetrics = posts.some(p => p.metrics && p.metrics.impressions != null);
+  const metricCards = hasMetrics ? `
+      <div class="stat-card"><div class="stat-label">总曝光</div><div class="stat-value" style="color:var(--green)">${fmtN(totalImpressions)}</div><div class="stat-sub">平均 ${fmtN(avgImpressions)}/条</div></div>
+      <div class="stat-card"><div class="stat-label">总互动</div><div class="stat-value" style="color:var(--blue)">${fmtN(totalEngagement)}</div><div class="stat-sub">❤️ ${fmtN(totalLikes)} · 🔖 ${fmtN(totalSaves)}</div></div>
+      <div class="stat-card"><div class="stat-label">单条最高曝光</div><div class="stat-value" style="color:var(--orange)">${fmtN(topImpValue)}</div><div class="stat-sub">${topByImp.preview_text ? topByImp.preview_text.slice(0, 24).replace(/\n/g, ' ') + '…' : ''}</div></div>`
+    : `
+      <div class="stat-card" style="grid-column:span 3"><div class="stat-label">互动指标</div><div class="stat-value" style="color:var(--text-dim);font-size:16px">待回填</div><div class="stat-sub">草稿库不含曝光/互动数据,回填后此处自动恢复统计</div></div>`;
+  summaryEl.innerHTML = `
+    <div class="published-summary">
+      <div class="stat-card"><div class="stat-label">稿件数</div><div class="stat-value" style="color:var(--accent)">${posts.length}</div><div class="stat-sub">过去 7 天 · drafts 文件夹</div></div>${metricCards}
+    </div>
+    <div class="published-controls">
+      <span>排序：</span>
+      <button class="published-sort-btn ${_publishedSortBy==='impressions'?'active':''}" onclick="setPublishedSort('impressions')">👁 曝光</button>
+      <button class="published-sort-btn ${_publishedSortBy==='engagement'?'active':''}" onclick="setPublishedSort('engagement')">💥 互动</button>
+      <button class="published-sort-btn ${_publishedSortBy==='saves'?'active':''}" onclick="setPublishedSort('saves')">🔖 收藏</button>
+      <button class="published-sort-btn ${_publishedSortBy==='date'?'active':''}" onclick="setPublishedSort('date')">🕒 时间</button>
+    </div>
+  `;
+
+  // Sort
+  const getVal = (p, key) => {
+    if (key === 'date') return new Date(p.created_at || 0).getTime();
+    const m = p.metrics || {};
+    if (key === 'impressions') return m.impressions || 0;
+    if (key === 'engagement') return m.total_engagement ?? m.engagement?.total ?? 0;
+    if (key === 'saves') return m.saves ?? m.engagement?.saves ?? 0;
+    return 0;
+  };
+  posts.sort((a, b) => getVal(b, _publishedSortBy) - getVal(a, _publishedSortBy));
+
+  // Top performer threshold: avgImpressions * 3 or top 1 min
+  const topThreshold = Math.max(avgImpressions * 3, topImpValue);
+  const fmtDate = (iso) => {
+    if (!iso) return '—';
+    try {
+      const d = new Date(iso);
+      return d.toLocaleString('zh-CN', { hour12: false, month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+    } catch(e) { return iso; }
+  };
+  const relTime = (iso) => {
+    if (!iso) return '';
+    const ms = Date.now() - new Date(iso).getTime();
+    const hours = ms / 3600000;
+    if (hours < 1) return `${Math.max(1, Math.round(ms/60000))} 分钟前`;
+    if (hours < 24) return `${Math.round(hours)} 小时前`;
+    return `${Math.round(hours/24)} 天前`;
+  };
+  // preview_text 来自本地稿件首行,先做实体解码再转义,保证安全显示
+  const decodeEntities = (s) => String(s == null ? '' : s)
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&');
+  const esc = (s) => decodeEntities(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const PLATFORM_LABEL = { x: '𝕏 推文', xhs: '小红书', wechat: '公众号', article: '📄 长文' };
+
+  container.innerHTML = posts.map((p, i) => {
+    const m = p.metrics || {};
+    const eng = m.engagement || {};
+    const impressions = m.impressions || 0;
+    const likes = m.likes ?? eng.likes ?? 0;
+    const saves = m.saves ?? eng.saves ?? 0;
+    const shares = m.shares ?? eng.shares ?? 0;
+    const comments = m.comments ?? eng.comments ?? 0;
+    const quotes = m.quotes ?? eng.quotes ?? 0;
+    const total = m.total_engagement ?? eng.total ?? 0;
+    const isTop = impressions >= topThreshold && i < 3;
+    return `
+      <div class="published-post-card ${isTop ? 'top-performer' : ''}">
+        <div class="published-post-header">
+          <span style="background:var(--accent-bg);color:var(--accent);padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700">${PLATFORM_LABEL[p.platform] || '📄 稿件'}</span>
+          <span class="published-post-date">${fmtDate(p.created_at)}</span>
+          <span>· ${relTime(p.created_at)}</span>
+          ${isTop ? '<span style="background:var(--accent-bg);color:var(--accent);padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700">🔥 高表现</span>' : ''}
+          <span class="published-post-impressions">👁 ${fmtN(impressions)}</span>
+        </div>
+        <div class="published-post-text" id="pub-text-${i}">${esc(p.preview_text || '').replace(/\n/g, '<br>')}</div>
+        <div class="published-post-metrics">
+          <span class="metric-badge likes">❤️ ${fmtN(likes)}</span>
+          <span class="metric-badge saves">🔖 ${fmtN(saves)}</span>
+          <span class="metric-badge shares">🔁 ${fmtN(shares)}</span>
+          <span class="metric-badge comments">💬 ${fmtN(comments)}</span>
+          <span class="metric-badge quotes">❝ ${fmtN(quotes)}</span>
+          <span class="metric-badge total">Σ ${fmtN(total)}</span>
+        </div>
+        <div class="published-post-footer">
+          ${p.url ? `<a href="${p.url}" target="_blank">打开 X ↗</a>` : ''}
+          <button class="published-expand-btn" onclick="togglePublishedExpand(${i})">展开全文 ▾</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function setPublishedSort(key) {
+  _publishedSortBy = key;
+  renderPublishedThisWeek();
+}
+
+function togglePublishedExpand(i) {
+  const el = document.getElementById('pub-text-' + i);
+  if (!el) return;
+  el.classList.toggle('expanded');
+  const btn = el.parentElement.querySelector('.published-expand-btn');
+  if (btn) btn.textContent = el.classList.contains('expanded') ? '收起 ▴' : '展开全文 ▾';
+}
+
+function renderDynamicContent() {
+  if (!dailyData) return;
+
+  // Published this week (ContentOS/drafts 文件夹)
+  renderPublishedThisWeek();
+
+  // System suggestions (Phase 3 meta-feedback)
+  renderSuggestions();
+
+  // Must-read items
+  const fmtPublished = (iso, ageHours) => {
+    if (!iso && ageHours == null) return '';
+    let when = '', ageBadge = '';
+    if (iso) {
+      try {
+        const d = new Date(iso);
+        when = d.toLocaleString('zh-CN', { hour12: false, month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+      } catch(e) { when = iso; }
+    }
+    let age = ageHours;
+    if (age == null && iso) age = Math.round((Date.now() - new Date(iso).getTime()) / 3600000);
+    if (age != null) {
+      const relLabel = age < 1 ? '<1h 前' : age < 24 ? `${Math.round(age)}h 前` : age < 48 ? `${Math.round(age)}h 前` : `${Math.round(age/24)}天前`;
+      const staleClass = age > 48 ? 'stale' : age > 24 ? 'warn' : 'fresh';
+      ageBadge = `<span class="age-badge ${staleClass}">${relLabel}</span>`;
+    }
+    return `<span class="pub-time">${when}${ageBadge}</span>`;
+  };
+
+  if (dailyData.must_reads && dailyData.must_reads.length) {
+    document.getElementById('mustReadCount').textContent = dailyData.must_reads.length;
+    document.getElementById('mustReadContainer').innerHTML = dailyData.must_reads.map((item, i) => `
+      <div class="must-read-item">
+        <div class="must-read-num">${i+1}</div>
+        <div class="must-read-body">
+          <div class="must-read-title">${item.url ? `<a href="${item.url}" target="_blank">${item.title}</a>` : item.title}</div>
+          <div class="must-read-summary">${item.summary}</div>
+          <div class="must-read-tags">
+            ${item.track ? `<span class="tag track">${item.track}</span>` : ''}
+            ${item.matched_topic ? `<span class="tag">${item.matched_topic}</span>` : ''}
+            ${fmtPublished(item.published_at, item.age_hours)}
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Also worth reading
+  if (dailyData.also_worth_reading && dailyData.also_worth_reading.length) {
+    const awr = dailyData.also_worth_reading;
+    document.getElementById('alsoWorthCount').textContent = `${awr.length} 条`;
+    document.getElementById('alsoWorthContainer').innerHTML = awr.map((item, i) => `
+      <div class="must-read-item">
+        <div class="must-read-num" style="background:var(--bg);color:var(--text-dim);border:1px solid var(--border)">${i+1}</div>
+        <div class="must-read-body">
+          <div class="must-read-title">${item.url ? `<a href="${item.url}" target="_blank">${item.title}</a>` : item.title}</div>
+          <div class="must-read-summary">${item.summary}${item.note ? ` <em style="color:var(--text-muted);font-size:11px">（${item.note}）</em>` : ''}</div>
+          <div class="must-read-tags">
+            ${item.track ? `<span class="tag track">${item.track}</span>` : ''}
+            ${fmtPublished(item.published_at, item.age_hours)}
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Topics
+  if (dailyData.topics && dailyData.topics.length) {
+    document.getElementById('topicCount').textContent = dailyData.topics.length;
+    document.getElementById('todayTopics').innerHTML = dailyData.topics.map(t => `
+      <div class="topic-card">
+        <div class="topic-header">
+          <div class="topic-title">${t.title}</div>
+          <div class="topic-heat ${t.heat || 'medium'}">${t.heat === 'high' ? '🔥 高热度' : '⚡ 中热度'}</div>
+        </div>
+        <div class="topic-angle">切入角度：${t.angle}</div>
+        <div class="topic-tags">
+          ${(t.tracks || []).map(tr => `<span class="tag track">${tr}</span>`).join('')}
+          ${t.format ? `<span class="tag format">${t.format}</span>` : ''}
+        </div>
+        ${t.hooks ? `<div class="draft-reasoning">💡 Hook 建议：${t.hooks.join(' / ')}</div>` : ''}
+        ${t.reasoning ? `<div class="draft-reasoning">${t.reasoning}</div>` : ''}
+      </div>
+    `).join('');
+  }
+
+  // Drafts
+  if (dailyData.drafts && dailyData.drafts.length) {
+    document.getElementById('draftCount').textContent = dailyData.drafts.length;
+    document.getElementById('draftsContainer').innerHTML = dailyData.drafts.map((d, i) => `
+      <div class="draft-card" data-draft-index="${i}">
+        <div class="draft-number">草稿 ${i+1} — ${d.format || ''}</div>
+        <div class="draft-meta">
+          ${(d.tags || []).map(t => `<span class="tag track">${t}</span>`).join('')}
+          ${d.format ? `<span class="tag format">${d.format}</span>` : ''}
+        </div>
+        <div class="draft-text">${d.text}</div>
+        ${d.reasoning ? `<div class="draft-reasoning">💡 ${d.reasoning}</div>` : ''}
+        <div class="draft-actions">
+          <button class="btn-sm btn-primary" onclick="copyDraft(${i})">📋 复制</button>
+          <button class="btn-sm btn-typefully" onclick="sendToTypefully(${i})">🐦 加入 Typefully</button>
+          <button class="btn-sm btn-ghost" onclick="editDraft(this)">✏️ 编辑</button>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Also Worth Reading
+  if (dailyData.also_worth_reading && dailyData.also_worth_reading.length) {
+    document.getElementById('alsoWorthContainer').innerHTML = dailyData.also_worth_reading.map((item, i) => `
+      <div class="must-read-item">
+        <div class="must-read-num" style="background:var(--blue)">${i+1}</div>
+        <div class="must-read-body">
+          <div class="must-read-title">${item.url ? `<a href="${item.url}" target="_blank">${item.title}</a>` : item.title}</div>
+          <div class="must-read-summary">${item.summary}</div>
+          <div class="must-read-tags">
+            ${item.track ? `<span class="tag track">${item.track}</span>` : ''}
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Cross-domain opportunities
+  if (dailyData.cross_opportunities && dailyData.cross_opportunities.length) {
+    document.getElementById('crossContainer').innerHTML = dailyData.cross_opportunities.map(c => `
+      <div class="cross-card">
+        <div class="cross-label">${c.label}</div>
+        <div class="cross-text">${c.text}</div>
+      </div>
+    `).join('');
+  }
+}
+
+// ============ TYPEFULLY INTEGRATION ============
+let _currentDraftIndex = -1;
+
+function sendToTypefully(draftIndex) {
+  if (!dailyData || !dailyData.drafts[draftIndex]) return;
+  _currentDraftIndex = draftIndex;
+  const draft = dailyData.drafts[draftIndex];
+  document.getElementById('modalTextarea').value = draft.text;
+  document.getElementById('modalSubtitle').textContent =
+    `草稿 ${draftIndex + 1}（${draft.format || ''}）— 选择发送方式：`;
+  document.getElementById('typefullyModal').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('typefullyModal').classList.remove('open');
+  document.getElementById('btnCopyModal').textContent = '📋 复制文本';
+  document.getElementById('btnCopyModal').classList.remove('copy-success');
+}
+
+function robustCopy(text) {
+  // Works on file:// protocol unlike navigator.clipboard
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.cssText = 'position:fixed;top:-9999px;left:-9999px;opacity:0';
+  document.body.appendChild(ta);
+  ta.focus(); ta.select();
+  let ok = false;
+  try { ok = document.execCommand('copy'); } catch(e) {}
+  document.body.removeChild(ta);
+  if (!ok && navigator.clipboard) {
+    navigator.clipboard.writeText(text).catch(() => {});
+  }
+  return ok;
+}
+
+function copyModalText() {
+  const text = document.getElementById('modalTextarea').value;
+  robustCopy(text);
+  const btn = document.getElementById('btnCopyModal');
+  btn.textContent = '✅ 已复制！';
+  btn.classList.add('copy-success');
+  setTimeout(() => {
+    btn.textContent = '📋 复制文本';
+    btn.classList.remove('copy-success');
+  }, 2500);
+}
+
+function sendViaCowork() {
+  if (_currentDraftIndex < 0 || !dailyData) return;
+  const draft = dailyData.drafts[_currentDraftIndex];
+  const msg = `请帮我把以下推文加入 Typefully 草稿队列（不需要调度时间，保存为草稿即可）：\n\n${draft.text}`;
+  robustCopy(msg);
+  const btn = event.target;
+  btn.textContent = '✅ 已复制！切换到 Cowork 粘贴';
+  btn.style.background = '#059669';
+  setTimeout(() => {
+    btn.textContent = '🚀 发送到 Cowork';
+    btn.style.background = '#1a8cd8';
+    closeModal();
+  }, 3000);
+}
+
+function copyDraft(draftIndex) {
+  if (!dailyData || !dailyData.drafts[draftIndex]) return;
+  const text = dailyData.drafts[draftIndex].text;
+  robustCopy(text);
+  const btn = event.target;
+  btn.textContent = '✅ 已复制';
+  setTimeout(() => { btn.textContent = '📋 复制'; }, 2000);
+}
+
+function editDraft(btn) {
+  const draftEl = btn.closest('.draft-card').querySelector('.draft-text');
+  draftEl.contentEditable = draftEl.contentEditable === 'true' ? 'false' : 'true';
+  draftEl.focus();
+  btn.textContent = draftEl.contentEditable === 'true' ? '💾 保存' : '✏️ 编辑';
+  if (draftEl.contentEditable === 'true') {
+    draftEl.style.outline = '2px solid var(--accent)'; draftEl.style.outlineOffset = '2px';
+  } else { draftEl.style.outline = 'none'; }
+}
+
+// ============ STATIC RENDERS ============
+function getToday() {
+  const d = new Date();
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const daysCN = ['周日','周一','周二','周三','周四','周五','周六'];
+  return { dayEN: days[d.getDay()], dayCN: daysCN[d.getDay()], dayIndex: d.getDay() };
+}
+
+function initHeader() {
+  const now = new Date();
+  document.getElementById('dateDisplay').textContent = now.toLocaleDateString('zh-CN', { year:'numeric', month:'long', day:'numeric', weekday:'long' });
+  const { dayEN } = getToday();
+  const dc = weekDays.find(d => d.en === dayEN);
+  const qEl = document.getElementById('dayQuality');
+  if (dc) {
+    qEl.textContent = dc.priority === 'high' ? '🟢 黄金发布日' : dc.priority === 'medium' ? '🟡 中等发布日' : '🔴 轻内容日';
+    qEl.className = 'day-quality ' + dc.priority;
+    document.getElementById('dayQualityText').textContent = dc.priority === 'high' ? '⭐ 黄金' : dc.priority === 'medium' ? '🔸 中等' : '⚪ 轻量';
+    document.getElementById('dayQualityText').style.color = dc.priority === 'high' ? 'var(--green)' : dc.priority === 'medium' ? 'var(--yellow)' : 'var(--red)';
+    document.getElementById('dayAdvice').textContent = dc.focus;
+  }
+}
+
+function initTodayStrategy() {
+  const { dayEN } = getToday();
+  const dc = weekDays.find(d => d.en === dayEN);
+  const s = [];
+  if (dc) s.push(`今天是${dc.name}，推荐重点：<strong>${dc.focus}</strong>（历史表现：${dc.impressions}）`);
+  s.push('每条推文开头用「有料的犀利表达」抓注意力，后面用数据/框架支撑深度');
+  s.push('今日 3-5 条目标：至少 1 条来自「选题推荐」，其余可以是转评或短评');
+  s.push('发布前检查：这条内容是否在你的「桥梁建设者」定位上？是否在填补信息差？');
+  document.getElementById('todayStrategy').innerHTML = s.map(x => `<li>${x}</li>`).join('');
+}
+
+function renderTopicLibrary() {
+  let html = '';
+  topicLibrary.tracks.forEach(track => {
+    html += `<div class="track-section"><div class="track-header">
+      <span class="track-icon">${track.icon}</span><span class="track-name">${track.name}</span>
+      <span class="track-badge">${track.topics.length} 个选题</span>
+      <span style="font-size:12px;color:var(--text-dim);margin-left:auto">${track.performance}</span>
+    </div>`;
+    track.topics.forEach(t => {
+      html += `<div class="topic-card"><div class="topic-header">
+        <div class="topic-title">${t.title}</div>
+        <div class="topic-heat ${t.heat}">${t.heat==='high'?'🔥 高热度':t.heat==='medium'?'⚡ 中热度':'💤 低热度'}</div>
+      </div><div class="topic-angle">${t.angle}</div>
+      <div class="topic-tags"><span class="tag format">${t.format}</span>${t.keywords.map(k=>`<span class="tag">${k}</span>`).join('')}</div></div>`;
+    });
+    html += '</div>';
+  });
+  document.getElementById('topicLibrary').innerHTML = html;
+}
+
+function renderSources() {
+  let html = '';
+  for (const [trackName, data] of Object.entries(infoSources)) {
+    html += `<div class="section-card"><div class="section-title"><span class="icon">${data.icon}</span> ${trackName}</div>`;
+
+    // X Lists section
+    html += `<div style="margin-bottom:14px"><div style="font-size:12px;color:var(--text-dim);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.5px;font-weight:600">𝕏 Twitter Lists</div>`;
+    data.xLists.forEach(xl => {
+      html += `<div class="xlist-card">
+        <div class="xlist-icon">📋</div>
+        <div><div class="xlist-name">${xl.name}</div><div style="font-size:11px;color:var(--text-muted)">${xl.desc}</div></div>
+        <div class="xlist-accounts">${xl.accounts.join(' ')}</div>
+      </div>`;
+    });
+    html += '</div>';
+
+    // Newsletters
+    html += `<div style="margin-bottom:14px"><div style="font-size:12px;color:var(--text-dim);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.5px;font-weight:600">📧 Newsletters</div>`;
+    data.newsletters.forEach(nl => {
+      html += `<div class="source-item"><div class="source-priority ${nl.priority}"></div><div class="source-name">${nl.name}</div><div class="source-freq">${nl.freq}</div></div>`;
+    });
+    html += '</div>';
+
+    // Podcasts (if any)
+    if (data.podcasts && data.podcasts.length) {
+      html += `<div style="margin-bottom:14px"><div style="font-size:12px;color:var(--text-dim);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.5px;font-weight:600">🎙️ Podcasts</div>`;
+      data.podcasts.forEach(pc => {
+        html += `<div class="source-item"><div class="source-priority ${pc.priority}"></div><div class="source-name">${pc.name}</div><div class="source-freq">${pc.freq}</div></div>`;
+      });
+      html += '</div>';
+    }
+
+    // Signals
+    html += `<div><div style="font-size:12px;color:var(--text-dim);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.5px;font-weight:600">🎯 关键监控信号</div>`;
+    data.signals.forEach(sig => {
+      html += `<div class="signal-item"><div class="signal-dot"></div><div class="signal-text">${sig}</div></div>`;
+    });
+
+    // Tesla note (if any)
+    if (data.teslaNote) {
+      html += `<div style="margin-top:10px;padding:8px 12px;background:var(--accent-bg);border-radius:6px;font-size:12px;color:var(--accent)">🚗 ${data.teslaNote}</div>`;
+    }
+
+    html += '</div></div>';
+  }
+  document.getElementById('sourcesGrid').innerHTML = html;
+}
+
+function renderWeekGrid() {
+  const { dayEN } = getToday();
+  document.getElementById('weekGrid').innerHTML = weekDays.map(d => {
+    const isToday = d.en === dayEN;
+    return `<div class="day-cell ${isToday?'today':''} ${d.priority}-priority">
+      <div class="day-name">${d.name}${isToday?' ✦':''}</div><div class="day-focus">${d.focus}</div><div class="day-impressions">${d.impressions}</div>
+    </div>`;
+  }).join('');
+}
+
+function renderFormatRanking() {
+  const max = formatRanking[0].bookmarks;
+  document.getElementById('formatRanking').innerHTML = formatRanking.map(f => {
+    const pct = (f.bookmarks/max*100).toFixed(0);
+    return `<div style="margin-bottom:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+        <span style="font-size:13px;font-weight:500">${f.name}</span>
+        <span style="font-size:12px;color:var(--accent);font-weight:600">${f.bookmarks} avg bookmarks</span>
+      </div>
+      <div style="height:6px;background:var(--border);border-radius:3px;overflow:hidden">
+        <div style="height:100%;width:${pct}%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:3px"></div>
+      </div>
+      <div style="font-size:11px;color:var(--text-muted);margin-top:2px">${f.desc}</div>
+    </div>`;
+  }).join('');
+}
+
+function switchTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-'+tabId).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// ============ INIT ============
+initHeader();
+initTodayStrategy();
+renderTopicLibrary();
+renderSources();
+renderWeekGrid();
+renderFormatRanking();
+loadDailyData();
+</script>
+
+<!-- ===== Adopt Suggestion Modal ===== -->
+<div class="adopt-modal-overlay" id="adoptModal" onclick="if(event.target===this)closeAdoptModal()">
+  <div class="adopt-modal">
+    <div class="adopt-modal-header">
+      <div class="adopt-modal-title" id="adoptModalTitle">采纳建议</div>
+      <button class="adopt-modal-close" onclick="closeAdoptModal()">×</button>
+    </div>
+    <div class="adopt-modal-body" id="adoptModalBody"></div>
+    <div class="adopt-modal-actions">
+      <button class="adopt-modal-btn primary" id="adoptCopySnippetBtn" onclick="copyAdoptSnippet()">📋 复制 JSON 片段</button>
+      <button class="adopt-modal-btn secondary" onclick="copyAdoptClaudePrompt()">🤖 复制 Claude Prompt</button>
+      <button class="adopt-modal-btn secondary" onclick="markAdoptConfirmed()" style="margin-left:auto">✓ 标记为已采纳</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Typefully Modal ===== -->
+<div class="modal-overlay" id="typefullyModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <div class="modal-title">🐦 发送到 Typefully</div>
+    <div class="modal-subtitle" id="modalSubtitle">草稿内容已就绪，选择发送方式：</div>
+    <textarea class="modal-textarea" id="modalTextarea" readonly></textarea>
+    <div class="modal-note">
+      <strong>方式一（自动）：</strong>点击「发送到 Cowork」按钮，切换到 Cowork 窗口，Claude 会自动调用 Typefully API 创建草稿。<br>
+      <strong>方式二（手动）：</strong>点击「复制文本」后，去 Typefully 手动粘贴。
+    </div>
+    <div class="modal-actions">
+      <button class="btn-close-modal" onclick="closeModal()">取消</button>
+      <button class="btn-copy-modal" id="btnCopyModal" onclick="copyModalText()">📋 复制文本</button>
+      <button class="btn-typefully-real" onclick="sendViaCowork()">🚀 发送到 Cowork</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
