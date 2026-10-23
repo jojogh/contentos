@@ -119,7 +119,7 @@ recent_performance = {
   "total_posts": N,
   "median_impressions": N,
   "top_posts": [{"text":"前 50 字","impressions":N,"total_engagement":N,"format":"..."}],
-  "covered_topics": ["话题1","话题2"],
+  "covered_topics": ["theme-slug-1","theme-slug-2"],  // kebab-case 主题 slug，不只写产品名；见 Step 6 ③
   "underserved_tracks": ["🚀 太空经济","🚀 一人公司"],
   "winning_hooks": ["本周有效 Hook 模式 1","..."],
   "failing_hooks": ["本周失灵 Hook 模式 1","..."],
@@ -323,16 +323,68 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=2) as ex:
 
 ---
 
-## ===== Step 6: 选题库匹配 =====
+## ===== Step 6: 选题库匹配 + Topic Scope 打分清单 =====
 
-读取 `ContentOS/topic_library.json`，将 must_reads 中的事件匹配到长期选题库中的对应选题。
+读取 `ContentOS/topic_library.json`，将 must_reads 中的事件匹配到长期选题库中的对应选题。**候选进入 `topics[]` 前必须过下方打分清单**（Admission → Quotas → Cross-day dedupe → Source bias → Hard reject）。未过 Admission 的素材只留 must_reads / also_worth_reading，不占 topic 席位。
 
 ### 优先级调整规则（使用 Phase 1 输出）
 
-- **去重**：选题核心话题在 `recent_performance.covered_topics` 中已存在 → 降级或跳过（除非有重大新进展）
+- **去重**：选题 `theme_slug` 已在昨日/本周 `recent_performance.covered_topics` → 降级或跳过（除非 angle 属新 class：成本账 / 合规 / 失败实测，见下方「跨日去重」）
 - **补位**：选题赛道在 `recent_performance.underserved_tracks` 中 → 优先级 +1
-- **延续**：延续本周高表现话题的选题 → 优先级 +1（在 reasoning 里注明「延续 YYYY-MM-DD 高表现推文」）
+- **延续**：延续本周高表现话题的选题 → 优先级 +1（在 reasoning 里注明「延续 YYYY-MM-DD 高曝光推文」）
 - **涌现**：选题涉及 `recent_performance.emerging_themes` 中的新主题 → 优先级 +1
+
+### ① Admission gate（硬门槛，过不了 → 不进 topics[]）
+
+候选进入 `topics[]` **仅当**满足 ≥1 条：
+
+| 代号 | 条件 | 示例信号 |
+|---|---|---|
+| (a) | **30 分钟卖家可执行动作**，落在选品 / listing / 素材 / 客服 / 投放之一 | 「先改主图 CTA」「把退货话术写入客服脚本」「关停低 ROAS 广告组」 |
+| (b) | **成本结构主张 + 可归因数字** | CPA / ACOS / 毛利 / API 单价 / 履约费，数字可指向来源或自家账本 |
+| (c) | **平台规则变更，会改某个字段/开关** | 新必填属性、广告出价开关、类目禁限、审核字段 |
+
+其余信号（产品发布稿、融资新闻、纯工具目录）→ **只进 must_reads / also_worth_reading**，不占今日 topic 席位。`reasoning` 里写明命中的 (a)/(b)/(c)。
+
+### ② Daily quotas（每日配额）
+
+写入 `topics[]`（3–5 条）时强制：
+
+- **≤1** 条 MCP / infra-stack 选题 / 日（Agent 鉴权矩阵、发布流水线、Skills 编排等算此类）
+- **≤1** 条 multi-vendor 产品联看 / 游行式选题 / 日（「A×B×C 连起来看」形态）
+- **≥1** 条带标签 `商家数字` **或** `平台可改字段`（可写在 topic 的 `tags[]` 或 `reasoning` 显式标注）
+- 若当日已有 **≥2** 条「工具分享」形态 → **优先**方法论 / 案例拆解 / 带 SOP 的新闻评论，不再加纯工具安利
+
+### ③ Cross-day dedupe（跨日主题去重）
+
+- `recent_performance.covered_topics` **必须记录 `theme_slug`**（kebab-case），**不只写产品名**。例：`agent-auth-matrix`、`pixel-vector-lp-pipeline`、`ugc-test-sop`、`zero-margin-api-cost`。产品名可作 slug 后缀，但不能单独顶替主题。
+- 每条 `topics[]` 必填 `theme_slug`；Step 2 汇总本周/昨日 topics 时把 slug 写入 `covered_topics`。
+- 若某 `theme_slug` **已出现在昨日 `topics[]`**：今日草稿可引用该素材，但 **不得再用同一 slug 做选题标题脊柱**，除非 angle 属于新 class：
+  - `cost-math`（成本账 / 单价拆解）
+  - `compliance`（合规 / 平台政策）
+  - `failed-test`（失败实测 / 反例）
+  新 class 时在 `reasoning` 写明 `reuse_ok: <class>`。
+
+### ④ Source / Reddit 打分偏向（软规则）
+
+| 方向 | 规则 |
+|---|---|
+| Soft-demote | Framer MCP / AAIF Skills / 同类 **作为 topic 主燃料** 降权（仍可进 must_reads 做 awareness） |
+| Soft-promote | 卖家运营源（雨果跨境 / AMZ123 / 亿邦动力等）与 **广告 CPA 案例** → topic 打分加权 |
+| Reddit | 一律先放 `also_worth_reading`，直至 **age_hours ≤ 48 且发布时间戳可核验**；**禁止**把 `must_reads=0` 的 Reddit 热帖吹成「窗内实测」级 topic |
+
+### ⑤ Hard reject shapes（形态硬拒，直接不进 topics[]）
+
+以下形态 **一律拒绝** 作为当日 topic spine（可降为 must_reads 一句带过）：
+
+1. **MCP / Skills / Auto 发布** 但没有卖家 JTBD（缺选品/listing/素材/客服/投放任一落地动作）
+2. **A×B×C 连看**，且 A 或 B 已是昨日 topic spine（产品换皮续写）
+3. **融资 / 估值** 当选题脊柱（可作 must_reads，不作 topics[] 主线）
+4. **纯设计工具游行**（Canva / Ideogram / Framer 等堆叠）且 **没有广告或 listing 测试闭环**
+
+### Topic 打分输出约定（写入 topics[] 时）
+
+每条 topic 建议字段：`title`, `theme_slug`, `angle`, `heat`, `format`, `tracks`, `hooks`, `tags`（含 `商家数字` / `平台可改字段` 等）, `admission`（`"a"|"b"|"c"` 或组合如 `"a+b"`）, `reasoning`（含配额占用说明 + Phase 1 优先级调整）。
 
 ---
 
@@ -345,7 +397,7 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=2) as ex:
 - `raw_material_count`: 记录总共收集了多少条原始素材（目标 80-100）
 - `must_reads`: **最多 20 条**，5 个赛道每个至少 3 条，推文原文和新闻报道混合，每条必须有 url + **published_at + age_hours + event_id**，**硬过滤 age_hours ≤ 48**，**同一 event_id 只准 1 条**（重复角度进 `supporting[]`）。合规素材不足时宁可少于 20 条
 - `also_worth_reading`: **10-20 条**，每条必须有 url + published_at + age_hours（此处允许 age_hours > 48，用于延伸参考）
-- `topics`: **3-5 条**
+- `topics`: **3-5 条**，**必须通过 Step 6 Topic Scope 打分清单**（Admission / Quotas / Cross-day dedupe / Source bias / Hard reject）；每条必填 `theme_slug` + `admission`；未过 gate 的不占席
 - `market_snapshot`: **必须填充**（来自 Step 4 通道 C），失败时 `{"error":"..."}`
 - `published_this_week`: **必须填充**（来自 Step 1），失败时 `{"error":"...","posts":[]}`
 - `recent_performance`: **必须填充**（来自 Step 2），Step 1 失败时可省略
@@ -385,7 +437,7 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=2) as ex:
   ],
 
   "topics": [
-    {"title":"选题标题","angle":"推荐切入角度","heat":"high","format":"工具分享","tracks":["🤖 AI 前沿","🚀 一人公司"],"hooks":["Hook 候选 1"],"reasoning":"推荐理由 + Phase 1 优先级调整说明"}
+    {"title":"选题标题","theme_slug":"agent-auth-matrix","angle":"推荐切入角度","heat":"high","format":"方法论","tracks":["🛒 AI 电商自动化"],"hooks":["Hook 候选 1"],"tags":["商家数字"],"admission":"a+b","reasoning":"命中 Admission (a)(b)；配额：非 MCP；未与昨日 theme_slug 冲突；+ Phase 1 说明"}
   ],
 
   "drafts": [
@@ -401,7 +453,7 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=2) as ex:
     "total_posts": 0,
     "median_impressions": 0,
     "top_posts":[{"text":"前 50 字","impressions":0,"total_engagement":0}],
-    "covered_topics":["话题1"],
+    "covered_topics":["agent-auth-matrix","ugc-test-sop"],
     "underserved_tracks":["🚀 太空经济"],
     "winning_hooks":["..."],
     "failing_hooks":["..."],
