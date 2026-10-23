@@ -1,0 +1,766 @@
+{
+  "date": "2026-10-22",
+  "generated_at": "2026-10-23T01:45:00Z",
+  "pass": 3,
+  "raw_material_count": 62,
+  "publishing_note": "Drafts only in daily_data.json; no Typefully auto-post; no teammate/Alex notify per run instructions.",
+  "must_reads": [
+    {
+      "title": "沃尔玛上线Agent Gateway + Agent Profiles：MCP开门，下月可设支出限额与逐笔审批",
+      "event_id": "walmart-agent-gateway-profiles-1021",
+      "summary": "Walmart官方10/21：Agent Gateway（MCP，面向公司/开发者beta）+ Agent Profiles（约一个月内上线）+ AI Agent专用条款。顾客可为每个Agent单独授权、单独看账单、设$50/$100/$200限额或要求每笔审批；Agent拿不到卡号、不能改支付方式，违约可封禁。对比Amazon持续封锁第三方购物Agent——分界线不是「会不会挑货」，是「谁敢给Agent开户头」。卖家动作：检查商品结构化字段/库存/退货政策是否可被Agent可靠读取。",
+      "url": "https://corporate.walmart.com/news/2026/10/Making-It-Possible-for-Agents-to-Shop-on-Behalf-of-Customers",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "平台 AI 功能更新(Amazon/Shopify/TikTok Shop/淘宝)",
+      "source": "Walmart Corporate",
+      "published_at": "2026-10-21T16:00:00Z",
+      "supporting": [
+        {
+          "angle": "TechCrunch对照：Amazon封锁 vs Walmart MCP Gateway",
+          "url": "https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/"
+        },
+        {
+          "angle": "AMZ123中文转述（10/22）：权限/限额/独立档案口径对齐官方",
+          "url": "https://www.amz123.com/t/es393tFv"
+        },
+        {
+          "angle": "X Trending：Agent Gateway vs Amazon封锁叙事持续发酵",
+          "url": "https://x.com/i/trending/2113059266378793184"
+        }
+      ],
+      "age_hours": 33.8
+    },
+    {
+      "title": "Meta财报：Muse破1000万用户，购物是第一用途，客单>$200",
+      "event_id": "meta-muse-10m-shopping-earnings-1021",
+      "summary": "Meta Q3电话会：Muse在美加约6周破1000万账户；>25%活跃用户通过其购物，平均客单>$200。购物已从「聊天玩具」变成Agent消费主场景。对广告主：listing/素材要同时服务人读与Agent读；客单结构提示高客单类目更易被Agent路径捕获。",
+      "url": "https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "AI 购物助手对转化漏斗的影响",
+      "source": "TechCrunch / Meta Earnings",
+      "published_at": "2026-10-21T20:00:00Z",
+      "supporting": [
+        {
+          "angle": "Meta IR官方Q3新闻稿",
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx"
+        },
+        {
+          "angle": "AP：Zuckerberg确认Muse 10M+",
+          "url": "https://apnews.com/article/meta-earnings-facebook-instagram-muse-capex-13ecd6c459e39a3602f302bcc2412fe9"
+        }
+      ],
+      "age_hours": 29.8
+    },
+    {
+      "title": "亚马逊前台灰度「AI摘要」：listing旁出现模型生成要点，新流量入口成型",
+      "event_id": "amazon-ai-listing-summary-gray-1021",
+      "summary": "跨境媒体（雨果/AMZ123，10/21–22）观察到亚马逊前台部分类目出现「AI摘要」模块——把标题/卖点/评价压缩成可读要点。对卖家：结构化属性与前三屏信息密度直接决定摘要质量；关键词堆砌更易被摘要「洗白」成空话。动作清单：自查A+与要点句是否可被模型忠实复述，补规格表与差异化声明。",
+      "url": "https://www.cifnews.com/article/189594",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "平台 AI 功能更新(Amazon/Shopify/TikTok Shop/淘宝)",
+      "source": "雨果跨境 / AMZ123",
+      "published_at": "2026-10-21T08:00:00Z",
+      "supporting": [
+        {
+          "angle": "AMZ123：新流量入口正在形成",
+          "url": "https://www.amz123.com/t/ddqjpBUw"
+        }
+      ],
+      "age_hours": 41.8
+    },
+    {
+      "title": "天猫双11：「Token」类目热度暴涨 + AIPC带货叙事升温",
+      "event_id": "tmall-double11-token-aipc-1021",
+      "summary": "21经济网等10/22报道：天猫双11首次把AI Token列为独立品类（月/季/年卡），阿里云百炼、MiniMax、月之暗面、智谱等厂商上架；同时「Q AIPC」新品类约70+预装千问办公的AI PC。对卖家：算力/订阅SKU进入大促货架，「Token包」文案要写清额度与可用模型，而非只堆参数。",
+      "url": "https://www.21jingji.com/article/20261022/herald/ec58eb26306ca996217441d1ffcc452f.html",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "大促节点与 AI 选品信号",
+      "source": "21经济网",
+      "published_at": "2026-10-22T08:00:00Z",
+      "supporting": [
+        {
+          "angle": "东方财富转述：算力服务首次摆上货架",
+          "url": "https://finance.eastmoney.com/a/202610203901374447.html"
+        }
+      ],
+      "age_hours": 17.8
+    },
+    {
+      "title": "Alta服装AI完成$20M A轮：衣橱上传→虚拟试穿，品牌可用同一套视觉资产",
+      "event_id": "alta-ai-fashion-20m-1022",
+      "summary": "Alta（Forerunner领投A轮$20M）主打上传衣橱生成个性化穿搭与自定义avatar；披露累计约2000万avatar、7亿套穿搭，月上传衣橱货值约$10亿。Rent the Runway等品牌侧engagement +35%。对创意广告：虚拟试穿/衣橱数据可回流UGC与详情页，缩短「模特拍摄→投放素材」链路。",
+      "url": "https://x.com/i/trending/2113384933112897865",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "虚拟试穿与商品视觉生成",
+      "source": "X News / company announce window",
+      "published_at": "2026-10-22T18:00:00Z",
+      "supporting": [],
+      "age_hours": 7.8
+    },
+    {
+      "title": "Canva发布自研图像模型Craft：DesignArena全球#4，Products#4，可进Dream Lab与公开API",
+      "event_id": "canva-craft-image-model-1022",
+      "summary": "Canva Research首发Craft（10/22）：两阶段先规划版式/构图/文字再出图，最高2K、30+画幅；DesignArena Elo 1340全球第四，人物肖像与风景类目领先，Products第四。全量用户Dream Lab可用，开发者公开API。对广告团队：Canva从「模板编辑器」变成「自有生成模型+可编辑图层」——适合快速出商品主图变体，再进人工精修，而不是一次性黑盒出图。",
+      "url": "https://www.canva.com/newsroom/news/canva-craft/",
+      "track": "🎨 创意广告",
+      "matched_topic": "AI 生图与商品视觉",
+      "source": "Canva Newsroom",
+      "published_at": "2026-10-22T14:00:00Z",
+      "supporting": [
+        {
+          "angle": "X Trending：Craft登顶类目叙事",
+          "url": "https://x.com/i/trending/2113353723548250549"
+        }
+      ],
+      "age_hours": 11.8
+    },
+    {
+      "title": "Framer上线官方MCP：Claude/Codex/Cursor/Grok可直接改站点，人审后再发布",
+      "event_id": "framer-mcp-connector-1022",
+      "summary": "Framer 10/22发布官方MCP connector（远程OAuth）：Agent可读写画布、CMS、布局并触发发布前预览，变更需在Framer内人工确认。落地站/活动页团队可把「改文案、换图、加section」交给Agent，保留发布闸门。与Canva Craft同日出现——创意生产与落地页编辑都在往「Agent可写、人可审」收敛。",
+      "url": "https://www.framer.com/help/articles/getting-started-with-framer-mcp/",
+      "track": "🎨 创意广告",
+      "matched_topic": "AI 设计工具链 / 落地页自动化",
+      "source": "Framer Help / Updates",
+      "published_at": "2026-10-22T16:00:00Z",
+      "supporting": [
+        {
+          "angle": "What you can do with Framer MCP",
+          "url": "https://www.framer.com/help/articles/what-you-can-do-with-framer-mcp/"
+        },
+        {
+          "angle": "X Trending：沙发上对着手机改站点",
+          "url": "https://x.com/i/trending/2113341164963426491"
+        }
+      ],
+      "age_hours": 9.8
+    },
+    {
+      "title": "HeyGen Voice Turbo登顶Controlled Voice Arena；开发者向有免费窗",
+      "event_id": "heygen-voice-turbo-arena-1022",
+      "summary": "HeyGen Voice Turbo（heygen-voice-1-turbo）在Artificial Analysis Controlled Voice Arena以约1202 Elo登顶；支持公共声线与即时克隆，专业克隆仍走heygen-voice-1。官方博客披露开发者向免费试用窗（至约11/30口径）。对UGC口播广告：TTS成本与质量同时改善，可把「脚本→口播→成片」压到半小时内自测。",
+      "url": "https://www.heygen.com/blog/heygen-voice-turbo",
+      "track": "🎨 创意广告",
+      "matched_topic": "UGC口播与 TTS 成本拐点",
+      "source": "HeyGen Blog / Arena",
+      "published_at": "2026-10-22T12:00:00Z",
+      "supporting": [],
+      "age_hours": 13.8
+    },
+    {
+      "title": "Vyb（Coco Labs）私测：从官网抽真logo/色板/字体，对抗「AI平均脸」广告图",
+      "event_id": "vyb-brand-identity-ai-1021",
+      "summary": "前Google AI方向创始人Anusha Ramesh推出Vyb：抓取品牌站真实视觉资产，分层生成可编辑设计，强调保留产品照片锐度与品牌识别。窗口内设计师吐槽「AI slop flyer」加剧——品牌一致性成为创意广告差异化。适合中小品牌把「品牌套装」自动化，而不是每次从零prompt。",
+      "url": "https://x.com/i/trending/2112592173413900290",
+      "track": "🎨 创意广告",
+      "matched_topic": "AI 品牌视觉系统",
+      "source": "X News",
+      "published_at": "2026-10-21T04:00:00Z",
+      "supporting": [],
+      "age_hours": 45.8
+    },
+    {
+      "title": "Anthropic发布Claude Duet：可连Shopify/Canva/Shop Pay的主动式个人Agent（美区研究预览）",
+      "event_id": "anthropic-claude-duet-1021",
+      "summary": "Claude Duet（10/21，iOS/Android/Web研究预览）：自带云端电脑，监控已连接App、推送晨间简报，敏感动作需批准；可接Shopify/Canva/Shop Pay等。与Muse/Dots同场——竞争点从「模型智商」转「谁成为日常默认运营搭档」。卖家试用边界：发帖/改价/付款必须留人工闸；可先让它做竞品监控与素材草稿。",
+      "url": "https://www.anthropic.com/news/claude-duet",
+      "track": "🤖 AI 前沿",
+      "matched_topic": "个人/运营 Agent 产品化",
+      "source": "Anthropic / X News",
+      "published_at": "2026-10-21T17:00:00Z",
+      "supporting": [
+        {
+          "angle": "X Trending：Duet主动式Agent叙事",
+          "url": "https://x.com/i/trending/2113387774753784022"
+        },
+        {
+          "angle": "Agents race：Duet vs Muse vs Dots",
+          "url": "https://x.com/i/trending/2113050908607275108"
+        }
+      ],
+      "age_hours": 32.8
+    },
+    {
+      "title": "OpenAI模型进入Google Cloud Model Garden/Marketplace（私有预览）",
+      "event_id": "openai-models-google-cloud-1021",
+      "summary": "OpenAI与Google Cloud 10/21宣布：GPT-6 Astra / Sol / Luna及Codex等将进入Model Garden与Marketplace，可用既有GCP承诺消费、单发票结算；现为私有预览。对企业卖家/代运营：多云采购降低「绑死一家」风险，合规行业可把Agent工作负载放在已有GCP控制面。",
+      "url": "https://openai.com/index/openai-models-google-cloud/",
+      "track": "🤖 AI 前沿",
+      "matched_topic": "模型分发与企业采购",
+      "source": "OpenAI",
+      "published_at": "2026-10-21T15:00:00Z",
+      "supporting": [
+        {
+          "angle": "Google Cloud官方博客",
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers"
+        }
+      ],
+      "age_hours": 34.8
+    },
+    {
+      "title": "Anthropic把Agent Skills捐给Agentic AI Foundation：SKILL.md成跨平台开放标准",
+      "event_id": "anthropic-agent-skills-aaif-1022",
+      "summary": "10/22 Anthropic将Agent Skills（SKILL.md文件夹格式）捐给Linux Foundation旗下AAIF；同期AAIF还接收OpenAI Open Responses、HF OpenEnv、阿里OpenSandbox。官方口径：70+平台支持、约100万skills/2.8亿安装。对实战派：把「选品/listing/客服」SOP写成可版本化Skill，比散落prompt更可迁移——现在是标准窗口期。",
+      "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+      "track": "🤖 AI 前沿",
+      "matched_topic": "Agent 工作流标准化",
+      "source": "Anthropic",
+      "published_at": "2026-10-22T15:00:00Z",
+      "supporting": [
+        {
+          "angle": "AAIF/Linux Foundation新闻稿",
+          "url": "https://www.linuxfoundation.org/press/agentic-ai-foundation-announces-four-new-projects-agent-skills-open-responses-openenv-and-opensandbox"
+        }
+      ],
+      "age_hours": 10.8
+    },
+    {
+      "title": "Claude Code将Auto mode设为默认：长程自治 + 分类器挡危险命令（Pro/Max/Team）",
+      "event_id": "anthropic-auto-mode-default-1022",
+      "summary": "Anthropic 10/22更新：Pro/Max/Team新会话将默认Auto mode——安全动作自动放行，高风险由分类器拦截并改道；Enterprise暂opt-in。内部对照显示分类器拦危险命令显著高于人类点批准。对电商自动化脚本：适合过夜跑竞品抓取/报表，但生产改价/批量上架仍建议手动模式或硬拒绝规则。",
+      "url": "https://claude.com/resources/articles/auto-mode-default-in-claude-code",
+      "track": "🤖 AI 前沿",
+      "matched_topic": "Agent 安全与自治默认值",
+      "source": "Claude by Anthropic",
+      "published_at": "2026-10-22T16:00:00Z",
+      "supporting": [],
+      "age_hours": 9.8
+    },
+    {
+      "title": "OpenAI Decisions API正式GA：有界选择题最高约10x更快，适合Agent热路径路由",
+      "event_id": "openai-decisions-api-ga-1022",
+      "summary": "OpenAI 10/22宣布Decisions API GA（GPT-6 Luna）：面向分类/路由/打分等有界问题，官方称较Responses路径最高约10x更快；支持text/image/JSON，单请求最多400问；输入$0.10/MTok、无输出费。用例：客服下一跳、广告素材风险分、订单异常分流。电商自动化可把「贵模型只做生成，热路径用Decisions」写成成本结构。",
+      "url": "https://openai.com/index/decisions-api/",
+      "track": "🤖 AI 前沿",
+      "matched_topic": "推理成本与 Agent 编排",
+      "source": "OpenAI",
+      "published_at": "2026-10-22T14:00:00Z",
+      "supporting": [
+        {
+          "angle": "X Trending：Hot Dog demo与GA叙事",
+          "url": "https://x.com/i/trending/2113381901587411361"
+        }
+      ],
+      "age_hours": 11.8
+    }
+  ],
+  "also_worth_reading": [
+    {
+      "title": "Mastercard Agent Pay（x402）演示：营销Agent可在预算内自付费买研究/生图",
+      "event_id": "mastercard-agent-pay-x402-1020",
+      "summary": "Cloudflare Connect（10/20）演示Agent Pay for Machines；超出48h硬窗口，作支付层延伸参考。",
+      "url": "https://x.com/i/trending/2112801173669327122",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "Agent 支付与预算凭证",
+      "source": "X News",
+      "published_at": "2026-10-20T18:00:00Z",
+      "note": "硬窗口外延伸参考",
+      "supporting": [],
+      "age_hours": 55.8
+    },
+    {
+      "title": "Muse GhostShares：分享链接曾可被DNS被动发现，Meta已暂停相关能力",
+      "event_id": "muse-ghostshares-pause-1020",
+      "summary": "Claroc等研究披露分享标题可进DNS被动发现面；Meta暂停。与Walmart Profiles同周对照：入口与外泄面要一起管。",
+      "url": "https://blog.claroc.io/",
+      "track": "🤖 AI 前沿",
+      "matched_topic": "Agent 对话外泄治理",
+      "source": "Claroc / 媒体",
+      "published_at": "2026-10-20T12:00:00Z",
+      "note": "硬窗口外延伸参考",
+      "supporting": [],
+      "age_hours": 61.8
+    },
+    {
+      "title": "Krea 3 Ultra / FastH3 Omni / Bria Fibo：上周创意模型窗口（已>48h）",
+      "event_id": "creative-models-wave-1020",
+      "summary": "编辑向生图/视频与开源栈上轮已讨论；本轮以Canva Craft+HeyGen为主增量，旧条不进必看。",
+      "url": "https://www.krea.ai/",
+      "track": "🎨 创意广告",
+      "matched_topic": "AI 生图生视频工具链",
+      "source": "产品站聚合",
+      "published_at": "2026-10-20T10:00:00Z",
+      "note": "硬窗口外延伸参考",
+      "supporting": [],
+      "age_hours": 63.8
+    },
+    {
+      "title": "Google Universal Cart（美区，10/15）：跨站加购统一结账——已出窗",
+      "event_id": "google-universal-cart-1015",
+      "summary": "10/15美区上线；对购物Agent生态仍重要，但不进今日must_reads。",
+      "url": "https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "平台结账与购物图",
+      "source": "Google Blog",
+      "published_at": "2026-10-15T16:00:00Z",
+      "note": "硬窗口外延伸参考",
+      "supporting": [],
+      "age_hours": 177.8
+    },
+    {
+      "title": "银行侧开始拦截Agent自动支付：信任与风控摩擦升温",
+      "event_id": "banks-blocking-agent-payments-radar",
+      "summary": "窗口内讨论增多但一手源分散；作雷达项，不升必看。",
+      "url": "https://x.com/",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "Agent 支付风控",
+      "source": "X 讨论聚合",
+      "published_at": "2026-10-21T12:00:00Z",
+      "note": "证据链不足，雷达观察",
+      "supporting": [],
+      "age_hours": 37.8
+    },
+    {
+      "title": "Whop $200M D轮估值$5.1B：数字生意平台加AI运营工具",
+      "event_id": "whop-series-d-200m-1022",
+      "summary": "Sequoia/Shopify Ventures领投；与核心三赛道弱相关，作资本面延伸。",
+      "url": "https://x.com/i/trending/2112930901235810599",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "数字商品与运营平台",
+      "source": "X News",
+      "published_at": "2026-10-22T05:00:00Z",
+      "note": "弱相关资本新闻",
+      "supporting": [],
+      "age_hours": 20.8
+    },
+    {
+      "title": "Sume「零加价视频API」声称需复核：官网价目仍含margin/agent fee",
+      "event_id": "sume-zero-markup-claim-unverified",
+      "summary": "X侧有零加价说法，但sume.com公开价目显示provider价×margin+agent fee；不作必看，避免误导成本结构。",
+      "url": "https://www.sume.com/pricing/api",
+      "track": "🎨 创意广告",
+      "matched_topic": "视频API定价",
+      "source": "Sume Pricing",
+      "published_at": "2026-10-22T12:00:00Z",
+      "note": "声称未核实，仅作警惕项",
+      "supporting": [],
+      "age_hours": 13.8
+    },
+    {
+      "title": "Daymaker用AI送蛋糕约会议：销售Agent营销噱头（偏题）",
+      "event_id": "daymaker-ai-cake-gifts-1022",
+      "summary": "热度高但偏离电商自动化主线，作文化旁注。",
+      "url": "https://x.com/i/trending/2113274910621548620",
+      "track": "🤖 AI 前沿",
+      "matched_topic": "Agent GTM 实验",
+      "source": "X News",
+      "published_at": "2026-10-22T14:00:00Z",
+      "note": "偏题热搜",
+      "supporting": [],
+      "age_hours": 11.8
+    }
+  ],
+  "topics": [
+    {
+      "title": "沃尔玛开门 + Muse客单>$200 + 亚马逊AI摘要：购物Agent缺的是可读listing与权限模型",
+      "angle": "三件同窗：Walmart给Agent开Profiles，Muse证明购物是第一用途，Amazon前台开始用模型摘要listing——卖家SOP要从「给人看」升级到「给人+Agent同时可读」",
+      "heat": "high",
+      "format": "深度拆解",
+      "tracks": [
+        "🛒 AI 电商自动化",
+        "🤖 AI 前沿"
+      ],
+      "hooks": [
+        "大部分人还在问Agent聪不聪明，平台已经在问listing能不能被摘要",
+        "把沃尔玛Agent Profiles和亚马逊AI摘要连起来看"
+      ],
+      "reasoning": "≥3独立一手信号（Walmart官方/Meta财报/跨境媒体灰度）触发元模式4；相对上轮增量=Amazon AI摘要灰度进窗，GhostShares降为延伸。"
+    },
+    {
+      "title": "Canva Craft + Framer MCP：创意生产与落地页同一天变成「Agent可写、人可审」",
+      "angle": "Craft解决商品主图/版式生成可控性，Framer MCP把改站交给Claude/Cursor——一人团队可串「出图→上页→人审发布」，瓶颈转验证与品牌一致性（对照Vyb）",
+      "heat": "high",
+      "format": "工作流清单",
+      "tracks": [
+        "🎨 创意广告",
+        "🤖 AI 前沿"
+      ],
+      "hooks": [
+        "Canva刚发布Craft，对你意味着三件事",
+        "把Canva Craft和Framer MCP连起来看"
+      ],
+      "reasoning": "双官方同日发布+DesignArena排名，命中长期加权「AI设计/生图」；可30分钟跑通Dream Lab+MCP改文案。"
+    },
+    {
+      "title": "Agent Skills进AAIF + Claude Auto默认 + Duet接Shopify：运营Agent从聊天变成可版本化资产",
+      "angle": "把选品/客服SOP写成SKILL.md，用Auto mode过夜跑，用Duet盯店——但发帖付款留闸。标准捐赠降低「换模型就重写prompt」成本",
+      "heat": "high",
+      "format": "新闻翻译",
+      "tracks": [
+        "🤖 AI 前沿",
+        "🛒 AI 电商自动化"
+      ],
+      "hooks": [
+        "大部分人用Agent Skills的方式是错的",
+        "Agent Skills刚捐给AAIF，对你意味着三件事"
+      ],
+      "reasoning": "Anthropic三条同窗（Skills/Auto/Duet）形成栈叙事；直接翻译成跨境运营可交付物。"
+    },
+    {
+      "title": "Decisions API GA：把广告审核/订单分流从「每次喊大模型」改成热路径路由",
+      "angle": "有界选择题10x更快+低价输入——素材风险分、客服下一跳、库存异常分流可下沉到Decisions，贵模型只做生成与解释",
+      "heat": "medium",
+      "format": "成本结构短文",
+      "tracks": [
+        "🤖 AI 前沿",
+        "🎨 创意广告"
+      ],
+      "hooks": [
+        "OpenAI Decisions刚GA，对你意味着三件事",
+        "大部分人用大模型做路由的方式是错的"
+      ],
+      "reasoning": "官方GA+定价清晰，符合成本结构锚点；与创意审核/客服自动化交叉。"
+    }
+  ],
+  "drafts": [
+    {
+      "text": "Canva刚发布自研图像模型Craft。\n\n对做电商素材的人，意味着三件事：\n1）版式先规划再出图——主图文字不再「糊成装饰」；\n2）Products类目DesignArena第4，适合先批量出变体再人工挑；\n3）Dream Lab+API都开了，一人团队可以30分钟跑通「5张主图A/B」。\n\n同日Framer还开了MCP：改完图可以直接让Agent改落地页，人审再发布。",
+      "format": "新闻翻译",
+      "tags": [
+        "🎨 创意广告"
+      ],
+      "hook_pattern": "X 刚发布/更新了，对你意味着三件事",
+      "reasoning": "元模式2；Canva官方+Framer官方同日，可执行。"
+    },
+    {
+      "text": "大部分人把Agent Skills当成「更长的prompt」。\n\n错了。Anthropic刚把Skills捐给AAIF——它是可版本化的文件夹：SKILL.md+脚本+参考资料，ChatGPT/Copilot等70+平台在用。\n\n跨境场景正确用法：把「竞品周报」「listing自检」「退货话术」各写成一个Skill，换模型不重写。\n\n再配Claude Code默认Auto mode过夜跑，发帖和改价仍手动。",
+      "format": "反常识",
+      "tags": [
+        "🤖 AI 前沿",
+        "🛒 AI 电商自动化"
+      ],
+      "hook_pattern": "大部分人用 X 的方式是错的",
+      "reasoning": "元模式3；Skills AAIF官方+Auto默认。"
+    },
+    {
+      "text": "把两件看似无关的事连起来看：\n\n1）沃尔玛给购物Agent开Profiles——限额、审批、可撤销；\n2）亚马逊前台灰度AI摘要——模型帮买家读你的listing。\n\n入口在开，摘要在洗。\n\n卖家动作不是再写一句「AI友好」，而是：规格表可被忠实复述、差异化放前三屏、团队规定什么对话不能share。\n\nMuse客单>$200只是结果，可读性才是门票。",
+      "format": "跨领域连接",
+      "tags": [
+        "🛒 AI 电商自动化"
+      ],
+      "hook_pattern": "把 X 和 Y 连起来看",
+      "reasoning": "元模式4；Walmart官方+Amazon灰度+Muse财报。"
+    }
+  ],
+  "cross_opportunities": [
+    {
+      "label": "AI × 电商可读性/权限",
+      "text": "Walmart Profiles（授权模型）+ Muse购物占比/客单 + Amazon AI摘要：同周说明Agent经济瓶颈在「谁能读你的货、谁被授权下单」，不是再做一个购物聊天框。"
+    },
+    {
+      "label": "AI 前沿 × 创意广告",
+      "text": "Canva Craft与Framer MCP同日把「出图」和「改站」交给Agent；HeyGen Voice Turbo压口播成本；Decisions API可做素材风险热路径——一人团队闭环更短，品牌一致性（Vyb）变成新瓶颈。"
+    }
+  ],
+  "recent_performance": {
+    "period": "2026-10-15 ~ 2026-10-22",
+    "total_posts": 0,
+    "median_impressions": 0,
+    "top_posts": [],
+    "covered_topics": [
+      "购物Agent权限",
+      "Canva Craft",
+      "Agent Skills AAIF",
+      "Decisions API"
+    ],
+    "underserved_tracks": [
+      "🛒 商家侧实操复盘（连续多期）"
+    ],
+    "winning_hooks": [
+      "把 X 和 Y 连起来看",
+      "X 刚更新了，对你意味着 N 件事",
+      "大部分人用 X 的方式是错的"
+    ],
+    "failing_hooks": [
+      "单点复述式新闻播报"
+    ],
+    "insights": "Typefully跳过，无曝光实证。第三遍增量：Canva Craft+Framer MCP同日、Skills捐AAIF、Decisions GA、Amazon AI摘要进必看；Oct20支付/GhostShares迁延伸。"
+  },
+  "published_this_week": {
+    "period": "2026-10-15 ~ 2026-10-22",
+    "fetched_at": "2026-10-23T01:45:00Z",
+    "source": "typefully",
+    "error": "Typefully skipped per run instructions",
+    "social_set_id": null,
+    "platform": "x",
+    "posts": []
+  },
+  "market_snapshot": {
+    "timestamp": "2026-10-23T01:33:45.405Z",
+    "source": "brief.day1global.xyz",
+    "stocks": {
+      "VOO": {
+        "price": 702.3,
+        "changePercent": -1.1847,
+        "marketState": "closed"
+      },
+      "QQQ": {
+        "price": 704.47,
+        "changePercent": -2.8585,
+        "marketState": "closed"
+      },
+      "QQQM": {
+        "price": 290.13,
+        "changePercent": -2.8496,
+        "marketState": "closed"
+      },
+      "NVDA": {
+        "price": 212.21,
+        "changePercent": -4.397,
+        "marketState": "closed"
+      },
+      "TSLA": {
+        "price": 374.58,
+        "changePercent": -3.0766,
+        "marketState": "closed"
+      },
+      "GOOG": {
+        "price": 320.76,
+        "changePercent": -3.079,
+        "marketState": "closed"
+      },
+      "RKLB": {
+        "price": 51.22,
+        "changePercent": -4.5649,
+        "marketState": "closed"
+      },
+      "CRCL": {
+        "price": 86.62,
+        "changePercent": -3.4444,
+        "marketState": "closed"
+      },
+      "HOOD": {
+        "price": 96.58,
+        "changePercent": -5.2487,
+        "marketState": "closed"
+      },
+      "COIN": {
+        "price": 169.09,
+        "changePercent": -4.5121,
+        "marketState": "closed"
+      },
+      "TEM": {
+        "price": 63.81,
+        "changePercent": -5.8294,
+        "marketState": "closed"
+      },
+      "GLD": {
+        "price": 369,
+        "changePercent": -2.6257,
+        "marketState": "closed"
+      },
+      "SMH": {
+        "price": 523.35,
+        "changePercent": -5.9907,
+        "marketState": "closed"
+      },
+      "DRAM": {
+        "price": 45.68,
+        "changePercent": -7.0789,
+        "marketState": "closed"
+      },
+      "MRVL": {
+        "price": 223.47,
+        "changePercent": -8.6983,
+        "marketState": "closed"
+      },
+      "NBIS": {
+        "price": 159.17,
+        "changePercent": -7.2274,
+        "marketState": "closed"
+      },
+      "INTC": {
+        "price": 85.49,
+        "changePercent": -8.0357,
+        "marketState": "closed"
+      },
+      "AMD": {
+        "price": 507.93,
+        "changePercent": -8.1036,
+        "marketState": "closed"
+      },
+      "TSM": {
+        "price": 412.35,
+        "changePercent": -4.5243,
+        "marketState": "closed"
+      },
+      "QCOM": {
+        "price": 172.83,
+        "changePercent": -2.8827,
+        "marketState": "closed"
+      },
+      "RVI": {
+        "price": 23.84,
+        "changePercent": -3.7351,
+        "marketState": "closed"
+      },
+      "VCX": {
+        "price": 23.68,
+        "changePercent": -2.9508,
+        "marketState": "closed"
+      },
+      "DXYZ": {
+        "price": 26.88,
+        "changePercent": -7.3103,
+        "marketState": "closed"
+      }
+    },
+    "crypto": {
+      "HYPE": {
+        "price": 77.648,
+        "change24h": -3.632640397145525
+      },
+      "BTC": {
+        "price": 81397.6,
+        "change24h": -3.292201604874027
+      },
+      "ETH": {
+        "price": 2388.89,
+        "change24h": -3.3819883438287546
+      },
+      "BNB": {
+        "price": 732.3,
+        "change24h": -2.0858403529883702
+      },
+      "SOL": {
+        "price": 103.91,
+        "change24h": -2.869695270143959
+      },
+      "XAUT": {
+        "price": 4023.2,
+        "change24h": -2.266488521802507
+      },
+      "VIRTUAL": {
+        "price": 0.6537,
+        "change24h": -4.9440162861713
+      },
+      "TAO": {
+        "price": 258.8,
+        "change24h": -4.887908857037857
+      }
+    },
+    "indices": {
+      "sp500": {
+        "price": 7663.43,
+        "changePercent": -1.2084303940741246
+      },
+      "vix": {
+        "price": 19.03,
+        "changePercent": 14.08872901678658
+      },
+      "gold": {
+        "price": 4023.2,
+        "changePercent": -2.266488521802507
+      },
+      "crudeOil": {
+        "price": 99.91,
+        "changePercent": 0.44234442545490876
+      },
+      "dxy": {
+        "price": 101.552,
+        "changePercent": -0.05413012882969934
+      }
+    },
+    "sentiment": {
+      "cryptoFearGreed": 48,
+      "cryptoFearGreedLabel": "Neutral",
+      "cryptoFearGreedPrev": 54,
+      "cryptoFearGreedChange": -6,
+      "cnnFearGreed": 20,
+      "cnnFearGreedLabel": "extreme fear"
+    },
+    "btcMetrics": {
+      "weeklyRsi": 60.6,
+      "nupl": 0.335,
+      "lthMvrv": 1.71,
+      "lthSopr": 1.188,
+      "sthSopr": 1.015,
+      "ma365Ratio": 1.06,
+      "wma200Multiplier": 1.21,
+      "etfFlowUsd": -381500000,
+      "etfFlowDays": [
+        -381500000,
+        524800000,
+        23200000,
+        526700000,
+        -82400000,
+        5100000
+      ],
+      "fundingRate": 0.006299,
+      "longShortRatio": 2.11,
+      "lthSupplyPercent": 82.5,
+      "volume24h": 105223622.47801827,
+      "volumeChangePercent": -76.3,
+      "ahr999": 0.5049
+    },
+    "btcScore": {
+      "score": 37.7,
+      "level": "偏恐慌",
+      "suggestion": "市场偏冷，可适度布局",
+      "dailyScore": 11.8,
+      "weeklyScore": 25.9
+    }
+  },
+  "suggestions": {
+    "info_sources": {
+      "promote": [
+        {
+          "account": "corporate.walmart.com",
+          "reason": "Agent Gateway官方稿连续两遍为🛒主条目一手源",
+          "confidence": "high"
+        },
+        {
+          "account": "canva.com/newsroom",
+          "reason": "Craft首发官方稿进入🎨主条目",
+          "confidence": "high"
+        },
+        {
+          "account": "anthropic.com/news",
+          "reason": "Skills捐AAIF+Duet同窗提供🤖主叙事",
+          "confidence": "high"
+        }
+      ],
+      "demote": [],
+      "add": [
+        {
+          "account": "framer.com/help (MCP docs)",
+          "reason": "官方MCP文档成为落地页自动化一手源",
+          "confidence": "high"
+        },
+        {
+          "account": "openai.com/index/decisions-api",
+          "reason": "Decisions GA对Agent热路径成本结构直接可用",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "topic_library": {
+      "archive": [],
+      "add": [
+        {
+          "topic": "Listing可读性与平台AI摘要",
+          "reason": "Amazon AI摘要灰度+Muse购物+Walmart Profiles≥3独立信号",
+          "confidence": "high"
+        },
+        {
+          "topic": "Agent Skills / SKILL.md 运营资产化",
+          "reason": "AAIF捐赠+多平台支持，可写成可交付SOP",
+          "confidence": "high"
+        },
+        {
+          "topic": "创意工具MCP化（Framer/Canva API）",
+          "reason": "Framer MCP与Craft API同日，工具链叙事成型",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "positioning_drift": [
+      {
+        "observation": "必看仍偏平台/标准/模型发布；商家侧带步骤复盘连续多期不足。",
+        "suggestion": "下一期至少1条带自测清单的listing可读性或Craft出图SOP，避免账号滑向纯平台评论。",
+        "confidence": "medium"
+      }
+    ]
+  },
+  "collection_notes": "Pass3 fresh overwrite 2026-10-22. Typefully skipped. Hard window vs generated_at 2026-10-23T01:45Z. Tools: X MCP search_news + WebSearch/WebFetch + Python urllib market. Focus tracks ecom/creative/frontier only. profile_longterm/info_sources/topic_library not rewritten."
+}
