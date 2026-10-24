@@ -7,6 +7,54 @@ note: 本文件由 agent 每周 prepend 更新(Step 3),滚动保留 8 期,最老
 
 > agent 在每次 daily briefing 的 Step 3 把最新一期 prepend 到本说明之下。
 
+## 2026-10-23（窗口：2026-10-21 ~ 2026-10-23）
+
+### 概览
+
+- 本周发布量 / 总曝光 / 单条中位数 / 单条最高：**全部待补 —— Typefully跳过，连续无量化窗**
+- 本期简报产出（**晚间 refresh + Topic Scope**）：原始素材约 **96** 条 / must_reads **15** / also **12** / 选题 **4** / 草稿 3 / 跨领域 2
+- 赛道分布（must_reads）：🛒偏平台字段与商家数字；🎨含Just Eat失败案例；🤖工具链降为awareness
+- **Refresh主线**：平台可改字段 + 商家数字（亚马逊AI摘要字段、TikTok NBFR 90天、天猫Token额度SKU、Just Eat上架QA）。晨间「权限矩阵 / Craft×Vector×Framer / Sume验证SOP / Skills夜班」四条脊柱按Step6硬规则让出topics席位。
+
+### 🔥 本周表现亮点（Top 5）
+
+无数据。表格留空，不臆造。
+
+### 📈 本周擅长方向
+
+无曝光数据。产出侧结构事实：
+1. **Topic Scope首次全日生效**：Admission/配额/跨日theme_slug/Reddit偏置/硬拒五闸全过。
+2. **卖家运营源加权见效**：AMZ123 10/23 AI摘要 + TikTok Seller University NBFR 进topics。
+3. **Reddit≤48h可核验仍稀薄**——继续只进also，不编造。
+
+### 🎯 本周有效 Hook 模式
+
+沿用元模式2（AI摘要三件事 / NBFR）与元模式3（Just Eat上架闸 / Token环比误读）。元模式4慎用于工具游行。元模式1实测仍0。
+
+### ⚠️ 本周失灵 Hook 模式
+
+继续回避单点复述；**新增回避**：A×B×C工具连看、MCP无JTBD、融资脊柱。
+
+### 🕳️ 覆盖不足赛道
+
+- 商家侧带数字的实操复盘：本期用Token销量/折扣数字与NBFR动作补了一档，仍缺自有投放账本。
+- 微信收藏/fieldtheory本环境不可用。
+
+### 💡 本周涌现的新主题
+
+1. **平台AI摘要/机读Listing字段**（theme_slug: amazon-ai-summary-listing-fields）
+2. **店铺健康指标窗口变更**（tiktok-nbfr-90d）
+3. **订阅算力SKU字段与成本账**（tmall-token-sku-fields）
+4. **AI素材上架QA闸 / failed-test**（ai-menu-photo-qa-gate）
+
+### 🔧 本期返工与修复记录
+
+1. 晨间4选题未过Topic Scope → refresh整批换脊柱。
+2. Walmart/Muse/Whop/Duet/OpenAI-GCP age>48h → also。
+3. Reddit三帖仍不可核验 → also；must_reads Reddit=0。
+4. covered_topics改为theme_slug记录（含晨间四条禁复用slug）。
+
+
 ## 2026-10-19（窗口：2026-10-17 ~ 2026-10-19）
 
 ### 概览
@@ -596,54 +644,3 @@ note: 本文件由 agent 每周 prepend 更新(Step 3),滚动保留 8 期,最老
 - **元模式 3「大部分人用 X 的方式是错的」→ 保持**,本期未用于草稿,但用于 topic-1008-02 与 topic-1008-08(纠正 SynthID 检测器的能力边界误判)。
 - **元模式 1「实测/观察到了 X」→ 权重下调**。本期无任何一手实测素材(发布数据、微信通道、可复现操作案例全部缺失),该模式在缺一手素材时容易被写成伪实测。本期仅用于 topic-1008-03 与 topic-1008-12 的选题角度,未进草稿。
 - **同平台不重复**:草稿中 X 3 条分别使用元模式 4 / 4 / 4,违反「同一平台内不得重复」——此项**本期未通过**。原因是在无表现数据时集中押注唯一有背书的模式。**记录为待修正项**:下期起 X 侧强制至少两条使用不同模式。
-
-## 2026-09-29(窗口:2026-09-22 ~ 2026-09-29)
-
-### 概览
-- `inputs/published_last_7d.md` 自 08-27 录入后无更新:仍只有 08-26~08-27 的 8 条发布,**指标连续第二十五期待补**(Phase 1 学习第二十五期空转)
-- 本周发布量 0 条(窗口内无可解析记录) / 总曝光 — / 单条中位数 — / 单条最高 —(全部无数据,不作表现结论)
-- 🔥 Top 5 表现亮点(表格):**无法生成** — 窗口内 0 条记录,无曝光数据
-- 09-26 已覆盖:Sora API 关停、Runway MCP、Gemini 3.8 Live Avatar、Amazon Selling Partner Plugin、Alibaba Agentic Cloud、DeepSeek 收入破 10 亿、ChatGPT Voice 插件、OpenAI __obi Cookie、Google Pixel Call for Me、Qwen-Audio 3.1 — 今日选题已差异化
-- 书签通道:最近一次有效同步在 09-23 附近,48h 窗口内无新增;WebSearch 成为本期主要信号源
-- 微信收藏通道:最新同步文件夹仍为 2026-09-01,无新笔记(连续第二十七日)
-- 今日主线:「Agent 可以帮你付钱了」——Shopify WebMCP checkout、Instinct-Shopify、Google-Flipkart 三条独立信号同日落地,agentic commerce 从发现走到交易闭环;「Agent 安全成为发布节奏的上游变量」——OpenAI 训练暂停、NVIDIA OASP、Claude Code 删文件事件把 containment 推到基础设施层
-
-### 🔥 本周表现亮点
-| 排名 | 内容 | 平台 | 曝光 | 说明 |
-| --- | --- | --- | --- | --- |
-| — | 无数据 | — | — | 窗口内 0 条可解析记录 |
-
-### 📈 本周擅长方向
-- 无实证数据,不作结论。仅记录本期选题的结构性倾向:继续围绕「成本结构分析」「瓶颈转移论」「JTBD」三个 profile_longterm 思维锚点组织选题
-- 本期对「多源独立同证」的处理:三条 agentic checkout 信号(Shopify/Instinct/Google-Flipkart)同日出现,被合并为「AI 可以帮你付钱」主线;OpenAI 安全事件与 NVIDIA OASP 同日出现,被合并为「安全从 guardrail 移到基础设施」主线
-
-### 🎯 本周有效 Hook 模式(带实证曝光数)
-- 无实证数据。草稿层面本期使用:元模式 2「X 刚落地,对你意味着三件事」(agentic checkout)、元模式 4「把 X 和 Y 连起来看」(OpenAI 暂停 + NVIDIA OASP + Claude Code 删文件)、元模式 1「实测/观察到 X,结果……」(Kling 4.0 / Sonnet 5.5 性能与成本)
-
-### ⚠️ 本周失灵 Hook 模式(带实证曝光数)
-- 无实证数据,无法判定失灵模式。**注意:连续二十五期无指标意味着 Hook 权重调整长期处于盲飞状态,这是当前系统最大的单点缺陷**
-
-### 🕳️ 覆盖不足赛道(滚动观察)
-- 🛒 AI 电商自动化:must_reads 占比 4/14,低于 5-5-5 目标。48h 窗口内新鲜素材集中在 checkout/checkout 接口,缺少平台规则/合规/履约侧信号
-- 🎨 创意广告:must_reads 占比 4/14,低于 5-5-5 目标。48h 窗口内缺少除 Meta/Kling/Amazon/Florida AG 外的新鲜创意产品信号,部分高质量报道落在窗口外(Temu 假网红、Meta Connect)已降级为 also_worth_reading
-- 🤖 AI 前沿:must_reads 占比 6/14,占比最高。OpenAI 训练暂停、AMD-World Labs、Sonnet 5.5、NVIDIA OASP、Instinct C 轮、Holo4 六条信号同日出现,符合 longterm 对「模型/安全/资本」三条子线的覆盖
-
-### 💡 本周涌现的新主题
-- **Agentic commerce 的交易闭环成型** — Shopify WebMCP、Instinct-Shopify、Google-Flipkart 三条独立路径同时落地,说明「AI 替你买」不再只是演示,而是平台、商家、支付层同时发生接口改造
-- **Agent 安全从软件 guardrail 下沉到硬件隔离** — NVIDIA OASP 把 containment 放到 BlueField-4 DPU,OpenAI 训练暂停说明软件 guardrail 已不足以约束 frontier model,基础设施层安全可能成为新的采购维度
-- **AI 产品的人形化设计成为法律攻击目标** — Florida AG 把 anthropomorphic design 列为 deceptive practice,直接影响所有使用「陪伴感」「人格化」做营销的产品
-- **开源 computer-use agent 提供「关在自己硬件里」的替代路线** — H Company Holo4 在 Claude Code 安全事件同日发布,企业可能重新评估「本地开源模型 + 沙箱」vs「云端闭源 API」的部署策略
-
-### 🔧 本期返工与修复记录
-- ✅ 本期零返工。Step 8 `inject.py` 注入成功;`node --check` 因 Node.js 将 `.html` 识别为未知 ESM 扩展而抛警告,属脚本环境预期行为,不影响注入
-- 📌 硬窗口内新鲜素材偏少,must_reads 仅 14 条(🤖 6 / 🛒 4 / 🎨 4),未强制凑满 15 条配额
-- ⚠️ 跨期重复自查:OpenAI 训练暂停、AMD-World Labs、Anthropic Sonnet 5.5、NVIDIA OASP、Instinct C 轮、Holo4 均为首次出现;Shopify WebMCP checkout 与 09-26 Amazon Selling Partner Plugin 主题不同(买家侧 checkout vs 卖家侧运营),不构成重复
-
-### 🔁 下周补位建议
-- 回填指标仍为第一优先;建议重建 `published_last_7d.md` 输入通道或明确放弃 Phase 1 自动学习
-- 🛒 赛道下周优先补平台规则/合规/履约侧信号,避免连续两期只剩 checkout 接口产品
-- 🎨 赛道下周优先补除视频模型与平台广告产品之外的新鲜信号(如 AI 音乐/声音、创意疲劳监测、AIGC 披露合规)
-
-### 🪜 本周 Hook 模式对草稿生成的权重调整
-- 维持 4 个长效元模式权重不变(无实证数据支持调整)
-- 结构性观察:当单日出现 3 条以上指向同一判断的独立素材时,元模式 4「把 X 和 Y 连起来看」优先级最高

@@ -1,249 +1,258 @@
 # ContentOS Daily Briefing — 2026-10-23 (America/New_York)
 
-- generated_at: `2026-10-23T13:45:00Z` (UTC)
-- must_reads: 14 | also: 10 | topics: 4 | drafts: 3
-- Reddit: must_reads Reddit=0 | also Reddit=3 | <=48h verifiable posts: thin (no invent)
-- market: BTC F&G 48 (Neutral), CNN 19 (extreme fear), btcScore 38.4 偏恐慌
-- publishing_note: 周五：优先短推+选题入库；Typefully跳过；不自动发帖。Reddit must_reads仍0——site搜索无法核验≤48h时间戳的帖不进必看。草稿仅存daily_data.json。
+- generated_at: `2026-10-24T03:15:00Z` (UTC)
+- pass: refresh-topic-scope (morning was bf259d1; NEW Step 6–7 applied)
+- must_reads: 15 | also: 12 | topics: 4 | drafts: 3
+- Reddit: must_reads Reddit=0 | also Reddit=3 | ≤48h verifiable: thin (no invent)
+- market: BTC F&G 47 (Neutral), CNN 21 (extreme fear), btcScore 38.5 偏恐慌
+- publishing_note: 周五晚刷新：严格执行Step6 Topic Scope。晨间4条脊柱（agent-auth / craft-framer / ugc-test-sop / skills-auto-duet）全部让出topics席位；MCP/Skills/设计游行仅留must_reads。Reddit must_reads=0。Typefully仍不可用。不自动发帖。
+
+## Topic Scope 对照（vs 晨间）
+
+| 晨间 topic spine | 刷新处理 | 原因 |
+|---|---|---|
+| 1Password+Walmart 权限矩阵 | 降 must_reads / 不占 topics | Soft-demote MCP/鉴权；跨日复用 agent-auth |
+| Craft×Vector×Framer 流水线 | 降 must_reads | Hard reject 纯设计游行 + multi-vendor 配额 |
+| Sume+Craft 素材测试 SOP | 不复用 ugc-test-sop | 跨日去重（无新 angle class） |
+| Duet+Auto+Skills | 降 must_reads | Hard reject MCP/Skills 无新 JTBD；融资不作脊柱 |
+| — | **新** amazon-ai-summary-listing-fields | Admission a+c；平台可改字段 |
+| — | **新** tiktok-nbfr-90d | Admission a+c；卖家运营 |
+| — | **新** tmall-token-sku-fields | Admission b+c；商家数字 |
+| — | **新** ai-menu-photo-qa-gate | Admission a；failed-test 上架闸 |
 
 ## 今日必看
 
-### 1. [1Password for Agents：Agent登录网站却看不到密码——凭证层成为Agent上线的闸门](https://1password.com/blog/1password-for-ai-agents)
-- track: 🛒 AI 电商自动化 | age_h: 21.8 | event_id: `1password-for-agents-1022`
+### 1. [亚马逊商品页AI摘要灰度加码（10/23）：三段摘要前置+可唤起Alexa——卖家先改字段一致，别急着重写整页](https://www.amz123.com/kx/nQI5S8mB)
+- track: 🛒 AI 电商自动化 | age_h: 32.8 | event_id: `amazon-ai-listing-summary-1023`
+- source: AMZ123 | published_at: 2026-10-22T18:28:00Z
+- AMZ123 10/23：美站灰度基于标题/五点/A+/属性生成三段摘要并前置，点击可唤起Alexa。展示因账号/设备而异。30分钟动作：买家号移动端自查核心ASIN摘要；只修明显违规与变体串信息；把最能转化的参数放到五点第一条，补齐结构化属性。
+  - supporting: [雨果10/21深度：风险清单+五点重排SOP（硬窗外但仍是动作模板）](https://www.cifnews.com/article/189594)
+  - supporting: [AMZ123 10/23长文：灰度边界与「事实→场景→收益」写法](https://www.amz123.com/t/bmfvaK9R)
+
+### 2. [TikTok Shop官方：NBFR回看窗口改为过去90天（计入Shop Performance Score）](https://seller-us.tiktok.com/university/essay?knowledge_id=5914428974778167&lang=en)
+- track: 🛒 AI 电商自动化 | age_h: 35.2 | event_id: `tiktok-nbfr-90d-1022`
+- source: TikTok Shop Seller University | published_at: 2026-10-22T16:00:00Z
+- Seller University标注10/22：NBFR=%已签收订单中因卖家/物流责任退货退款；评估过去90天。TikTok Shipping/CBT准时发货订单可排除。30分钟：Seller Center→SPS看NBFR；把内部报表窗口从60改90；核对准时发货以保住排除项。
+  - supporting: [运营向拆解：60→90天对旧单的滞后影响](https://orliejohn.com/news/tiktok-shop-nbfr-lookback-window-now-90-days)
+
+### 3. [第一财经10/23：天猫Token上双11——环比+450%但销量仍百件级，多数店几乎不打折](https://www.yicai.com/news/103405262.html)
+- track: 🛒 AI 电商自动化 | age_h: 27.2 | event_id: `tmall-token-sku-fields-1023`
+- source: 第一财经 | published_at: 2026-10-23T00:02:00Z
+- 一财实地：Token首登双11，成交环比上月+450%，但智谱天猫累计约300件、MiniMax 100+；多数店无大促价，个别Coding月卡只降不足3元。平台推学习/家庭/小团队组合包。卖家文案要写清额度、可用模型与场景包，别堆参数——否则「能下单」≠「能卖动」。
+  - supporting: [上证报：Token品类环比+450%口径](https://www.cnstock.com/commonDetail/806406)
+
+### 4. [1Password for Agents仍在窗内：Agent能登录却看不到密码——凭证层≠购物授权层](https://1password.com/blog/1password-for-ai-agents)
+- track: 🛒 AI 电商自动化 | age_h: 35.2 | event_id: `1password-for-agents-1022`
 - source: 1Password Blog | published_at: 2026-10-22T16:00:00Z
-- 1Password官方10/22：Agent向保险库请求凭据，用户批准后由1Password直接填入，Agent永远看不到密码/MFA。Muse与Grok Bot已对接，Claude Duet/ChatGPT Work/Dots陆续接入。对电商运营：客服/改价/后台登录可交给Agent，但不把主账号密码塞进prompt；先拆「只读浏览」与「写操作」两把钥匙。
+- 1Password 10/22：Agent请求凭据、用户批准后由1Password填入，Agent不见密码/MFA。本期只作awareness：不进选题脊柱（Topic Scope：MCP/鉴权无新JTBD角度）。
   - supporting: [TechCrunch：Agent登录不见密码](https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/)
 
-### 2. [沃尔玛Agent Gateway仍在窗内：MCP开门 + 下月Profiles限额审批（对照亚马逊封锁）](https://corporate.walmart.com/news/2026/10/Making-It-Possible-for-Agents-to-Shop-on-Behalf-of-Customers)
-- track: 🛒 AI 电商自动化 | age_h: 45.8 | event_id: `walmart-agent-gateway-profiles-1021`
-- source: Walmart Corporate | published_at: 2026-10-21T16:00:00Z
-- Walmart Corporate 10/21：Agent Gateway（MCP beta）让获批Agent搜Walmart/Sam's Club并下单；Agent Profiles约一个月内上线——独立授权、账单、限额或逐笔审批，Agent拿不到卡号。对照Amazon封锁第三方购物Agent：分界线是「谁敢给Agent开户头」。卖家动作：结构化属性/库存/退货政策是否可被Agent可靠读取。
-  - supporting: [TechCrunch：Amazon封锁 vs Walmart欢迎垫](https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/)
-
-### 3. [Meta Muse破1000万：购物是第一用途，客单>$200——Agent读listing的客单结构已成型](https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/)
-- track: 🛒 AI 电商自动化 | age_h: 41.8 | event_id: `meta-muse-10m-shopping-earnings-1021`
-- source: TechCrunch / Meta Earnings | published_at: 2026-10-21T20:00:00Z
-- Meta Q3：Muse在美加约6周破1000万账户；>25%活跃用户通过其购物，平均客单>$200。对广告主：素材与listing要同时服务人读与Agent读；高客单类目更易被Agent路径捕获。
-  - supporting: [Meta IR Q3新闻稿](https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx)
-
-### 4. [Whop完成Sequoia+Shopify Ventures领投Series D：$5.1B估值，押注AI时代的数字生意操作系统](https://newsroom.whop.com/series-d/)
-- track: 🛒 AI 电商自动化 | age_h: 47.8 | event_id: `whop-series-d-51b-1021`
-- source: Whop Newsroom | published_at: 2026-10-21T14:00:00Z
-- Whop Newsroom 10/21：约$200M Series D，估值$5.1B，Sequoia领投、Shopify Ventures参与；将扩支付/广告基建与全球扩张。对卖家/独立站：平台在把「数字产品+社区+支付」打包成一人公司OS——观察其AI运营工具是否成为下一层默认值。
-  - supporting: [Bloomberg：估值推至$5.1B](https://www.bloomberg.com/news/articles/2026-10-21/whop-s-sequoia-led-funding-pushes-its-value-to-5-1-billion)
-
-### 5. [Alta服装AI完成$20M A轮：衣橱上传→虚拟试穿，品牌复用同一套视觉资产](https://fortune.com/2026/10/22/alta-ai-fashion-app-series-a-20-million-forerunner-rent-the-runway/)
-- track: 🛒 AI 电商自动化 | age_h: 19.8 | event_id: `alta-ai-fashion-20m-1022`
-- source: Fortune | published_at: 2026-10-22T18:00:00Z
-- Fortune 10/22：Forerunner领投$20M；上传衣橱生成穿搭与avatar，并向品牌侧提供AI视觉。对创意广告：虚拟试穿数据可回流UGC与详情页，缩短模特拍摄→投放素材链路。
-
-### 6. [Canva Craft：自研图像模型两阶段先规划再出图，Dream Lab+API全开，预告Canva MCP](https://www.canva.com/newsroom/news/canva-craft/)
-- track: 🎨 创意广告 | age_h: 23.8 | event_id: `canva-craft-image-model-1022`
+### 5. [Canva Craft：自研图像模型两阶段规划再出图，Dream Lab+API可用（选题脊柱降权）](https://www.canva.com/newsroom/news/canva-craft/)
+- track: 🎨 创意广告 | age_h: 37.2 | event_id: `canva-craft-image-model-1022`
 - source: Canva Newsroom | published_at: 2026-10-22T14:00:00Z
-- Canva Newsroom 10/22：Craft先写构图/文字计划再渲染，最高2K、30+画幅；DesignArena全球约#4，Products#4。全量用户Dream Lab可用，公开API `craft_v1_2k`；MCP即将。广告团队可30分钟跑「5张主图A/B」再人工精修。
+- Canva 10/22发布Craft。按Topic Scope：纯设计工具游行不进今日topics；保留must_reads做素材成本awareness。广告团队可做主图A/B，但勿与Vector/Framer再串成游行选题。
   - supporting: [TechCrunch：Canva首个自研图像模型](https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/)
-  - supporting: [Connect API：craft_v1_2k可用](https://community.canva.dev/t/connect-api-canva-craft-is-now-available-for-image-generation/8999)
 
-### 7. [Ideogram Vector同日上线：提示词/图片→可编辑SVG，广告图标与详情页矢量层可进设计系统](https://ideogram.ai/models/vector/)
-- track: 🎨 创意广告 | age_h: 19.8 | event_id: `ideogram-vector-svg-1022`
+### 6. [Ideogram Vector：提示词/图→可编辑SVG（awareness，不进游行选题）](https://ideogram.ai/models/vector/)
+- track: 🎨 创意广告 | age_h: 33.2 | event_id: `ideogram-vector-svg-1022`
 - source: Ideogram | published_at: 2026-10-22T18:00:00Z
-- Ideogram 10/22发布Vector：文本或图片转可编辑SVG，强调梯度与字体锐利；App与API可用。与Canva Craft同日：像素生成与矢量资产两条线同时打通——品牌可把「主视觉Craft出图 + 图标/装饰Vector出SVG」串成一条流水线。
-  - supporting: [RuntimeWire：Vector 1.0 SVG模型](https://runtimewire.com/article/ideogram-vector-1-svg-model-launch)
+- Ideogram 10/22 Vector上线。与Craft同日但本期禁止A×B×C续写为选题脊柱；可作图标/详情页矢量层的单点工具笔记。
 
-### 8. [Framer官方MCP：Claude/ChatGPT/Cursor改站点，默认草稿、人审再发布](https://www.framer.com/updates)
-- track: 🎨 创意广告 | age_h: 23.8 | event_id: `framer-mcp-connector-1022`
-- source: Framer Updates | published_at: 2026-10-22T14:00:00Z
-- Framer Updates 10/22：远程MCP+OAuth，Agent可改画布/CMS/布局；默认不上线，发布需明确指令。与Craft同日——素材生成与落地页编辑都在收敛到「Agent可写、人可审」。建议：关自动publish，分支预览后再合。
-  - supporting: [Getting started with Framer MCP](https://www.framer.com/help/articles/getting-started-with-framer-mcp/)
+### 7. [Framer官方MCP：Agent改站默认草稿、人审再发（≤1 MCP配额：仅must_reads）](https://www.framer.com/help/articles/getting-started-with-framer-mcp/)
+- track: 🎨 创意广告 | age_h: 37.2 | event_id: `framer-mcp-connector-1022`
+- source: Framer Help | published_at: 2026-10-22T14:00:00Z
+- Framer 10/22 MCP。Topic Scope配额：今日MCP/infra选题席位=0（素材未过Admission的卖家JTBD）。保留必看提醒：关自动publish。
 
-### 9. [Sume Labs零加价视频API：Seedance/Kling/Veo按厂商原价透传，素材测试的边际成本再下一档](https://www.sume.com/pricing/api)
-- track: 🎨 创意广告 | age_h: 19.8 | event_id: `sume-labs-zero-margin-api-1022`
-- source: Sume / ArtRealmAI | published_at: 2026-10-22T18:00:00Z
-- Sume 10/22宣布零markup API：按提供商标价透传Seedance/Kling/Veo等，无订阅加价；另有托管MCP。对广告团队：钩子视频A/B的单位成本更接近「模型原价」，瓶颈从「生成贵」转向「筛哪条值得真人重拍」。
-  - supporting: [ArtRealmAI：相对fal半价口径拆解](https://artrealmai.com/article/sume-api-zero-markup-seedance-2-5-half-fal-price)
+### 8. [Sume零加价视频API仍在窗内：素材测试边际成本贴近厂商原价（不复用ugc-test-sop脊柱）](https://www.sume.com/pricing/api)
+- track: 🎨 创意广告 | age_h: 33.2 | event_id: `sume-labs-zero-margin-api-1022`
+- source: Sume | published_at: 2026-10-22T18:00:00Z
+- Sume 10/22零markup。晨间已用「验证慢」脊柱；本期不复用ugc-test-sop，除非新class。保留成本数字awareness。
 
-### 10. [Claude Duet研究预览：主动巡检+云端干活，可接Shop Pay/Shopify，敏感动作留人审](https://claude.com/resources/articles/claude-duet)
-- track: 🤖 AI 前沿 | age_h: 42.8 | event_id: `anthropic-claude-duet-1021`
-- source: Claude by Anthropic | published_at: 2026-10-21T19:00:00Z
-- Anthropic 10/21：Claude Duet（美区Pro/Max waitlist）主动推送简报、后台跑任务，发消息/付款需批准；可接6000+连接器含Shopify/Shop Pay。与Muse/Dots同场——竞争从模型智商转「谁成日常默认运营搭档」。试用边界：发帖改价付款必须留闸。
-  - supporting: [CNBC：对位Muse/Dots](https://www.cnbc.com/2026/10/21/anthropic-preview-of-claude-duet-personal-ai-agent-take-on-muse-dots.html)
+### 9. [Just Eat暂停AI菜单图：jacket potato变成土豆外套——生图上架前要有母语QA闸](https://www.bbc.com/news/articles/crz981p0klvgo)
+- track: 🎨 创意广告 | age_h: 15.2 | event_id: `just-eat-ai-menu-photos-1023`
+- source: BBC | published_at: 2026-10-23T12:00:00Z
+- BBC等10/23：Just Eat试用AI菜单图，把方言菜名直译成离谱画面后道歉并下架。对电商：商品主图/详情AI生成必须过「母语可读+规格一致」清单再上架，否则退货与平台处罚成本高于省下的拍摄费。
+  - supporting: [Dexerto：土豆外套/虎虾等案例汇编](https://www.dexerto.com/food/just-eat-apologizes-after-ai-turns-food-into-literal-potato-jackets-tiger-cubs-bacon-soda-3421330/)
 
-### 11. [OpenAI模型进Google Cloud Model Garden：Astra/Sol/Luna私有预览，GCP承诺可抵扣](https://openai.com/index/openai-models-google-cloud/)
-- track: 🤖 AI 前沿 | age_h: 46.8 | event_id: `openai-models-google-cloud-1021`
-- source: OpenAI | published_at: 2026-10-21T15:00:00Z
-- OpenAI+Google Cloud 10/21：GPT-6系列与Codex进Model Garden/Marketplace，单发票、可消耗既有GCP承诺；ZDR/Confidential Compute尚未上线。企业卖家/代运营可把Agent负载放进已有GCP控制面，降低多云切换成本。
-  - supporting: [Google Cloud官方博客](https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers)
+### 10. [HeyGen Voice Turbo仍居Controlled Voice Arena前列（口播测试成本）](https://www.heygen.com/blog/heygen-voice-turbo)
+- track: 🎨 创意广告 | age_h: 39.2 | event_id: `heygen-voice-turbo-arena-1022`
+- source: HeyGen Blog | published_at: 2026-10-22T12:00:00Z
+- HeyGen Voice Turbo约1202 Elo；开发者向试用窗至约11/30。适合30分钟「脚本→口播→成片」自测，但须接投放验证，不作工具游行。
 
-### 12. [Claude Apps将Auto mode设为默认（下周起Pro/Max/Team）：安全分类器挡危险命令](https://claude.com/resources/articles/auto-mode-default-in-claude-code)
-- track: 🤖 AI 前沿 | age_h: 21.8 | event_id: `anthropic-auto-mode-default-1022`
+### 11. [Claude Apps将Auto mode设为默认（Pro/Max/Team）——运营Agent过夜草稿可用，改价发帖仍手动](https://claude.com/resources/articles/auto-mode-default-in-claude-code)
+- track: 🤖 AI 前沿 | age_h: 35.2 | event_id: `anthropic-auto-mode-default-1022`
 - source: Claude by Anthropic | published_at: 2026-10-22T16:00:00Z
-- Anthropic：下周起新会话默认Auto mode——安全动作自动过、危险动作拦；可切回手动。官方称测试拦危险命令约89% vs 人工审批14%。对运营Agent：适合过夜跑选品/客服草稿，但改价发帖仍应手动。
+- Anthropic：新会话默认Auto，危险命令分类器约拦89%。Skills/Auto不进今日topic（硬拒：无新卖家JTBD）。
 
-### 13. [Agent Skills捐AAIF仍在窗内：SKILL.md成跨平台开放标准，电商SOP可版本化迁移](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation)
-- track: 🤖 AI 前沿 | age_h: 22.8 | event_id: `anthropic-agent-skills-aaif-1022`
+### 12. [Agent Skills捐AAIF仍在窗内：SKILL.md跨平台标准（不进skills-auto-duet脊柱）](https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation)
+- track: 🤖 AI 前沿 | age_h: 36.2 | event_id: `anthropic-agent-skills-aaif-1022`
 - source: Anthropic | published_at: 2026-10-22T15:00:00Z
-- Anthropic 10/22将Agent Skills捐给Linux Foundation AAIF；同期AAIF接收Open Responses/OpenEnv/OpenSandbox。把选品/listing/客服SOP写成SKILL.md，比散落prompt更可迁移——标准窗口期。
-  - supporting: [Linux Foundation AAIF新闻稿](https://www.linuxfoundation.org/press/agentic-ai-foundation-announces-four-new-projects-agent-skills-open-responses-openenv-and-opensandbox)
+- Anthropic 10/22捐AAIF。晨间已用skills-auto-duet；无cost-math/compliance/failed-test新class则不复用。
 
-### 14. [天猫双11「Token」独立品类：算力订阅进大促货架，文案要写清额度而非堆参数](https://www.21jingji.com/article/20261022/herald/ec58eb26306ca996217441d1ffcc452f.html)
-- track: 🛒 AI 电商自动化 | age_h: 29.8 | event_id: `tmall-double11-token-aipc-1022`
-- source: 21经济网 | published_at: 2026-10-22T08:00:00Z
-- 21经济网等10/22：天猫双11首次把AI Token列为独立品类（月/季/年卡），百炼/MiniMax/月之暗面/智谱等上架；AIPC叙事升温。对卖家：Token包SKU要写清额度与可用模型。
-  - supporting: [钛媒体：Token包定价拆解](https://www.tmtpost.com/8176895.html)
+### 13. [MiniMax开源M3.1 Flash权重：偏Agent/编码，社区同日对比测视觉与落地页](https://x.com/i/trending/2113123833632694605)
+- track: 🤖 AI 前沿 | age_h: 15.2 | event_id: `minimax-m31-flash-weights-1023`
+- source: X News | published_at: 2026-10-23T12:00:00Z
+- X新闻聚合10/23：M3.1 Flash权重上HF，强调长上下文与推理成本。对卖家：可作内部Agent草稿模型候选，先比「选品/客服草稿」任务成功率，不追参数表。
+
+### 14. [Claude Code新增后台MCP Tasks + Elicitations：长任务不阻塞，敏感步可暂停等人](https://x.com/i/trending/2113739180027109432)
+- track: 🤖 AI 前沿 | age_h: 4.2 | event_id: `claude-code-mcp-tasks-1023`
+- source: X News | published_at: 2026-10-23T23:00:00Z
+- X新闻10/23：CLI公测支持后台任务与人机确认。仅must_reads；无明确选品/listing/投放JTBD故不占MCP选题配额。
+
+### 15. [Alta服装AI完成$20M A轮：虚拟试穿资产可回流详情页（融资不作选题脊柱）](https://fortune.com/2026/10/22/alta-ai-fashion-app-series-a-20-million-forerunner-rent-the-runway/)
+- track: 🛒 AI 电商自动化 | age_h: 33.2 | event_id: `alta-ai-fashion-20m-1022`
+- source: Fortune | published_at: 2026-10-22T18:00:00Z
+- Fortune 10/22：$20M A轮。Hard reject：融资不当topics脊柱；保留创意广告侧「衣橱→详情页」线索。
 
 ## 延伸阅读
 
-### 1. [亚马逊前台AI摘要灰度（报道日起算已逾48h）：listing可读性仍是动作清单](https://www.cifnews.com/article/189594)
-- track: 🛒 AI 电商自动化 | age_h: 53.8 | note: 硬窗口外延伸参考
-- 雨果/AMZ123 10/21观察的AI摘要模块，事件仍有效但硬窗外；动作不变：前三屏可被忠实复述、补规格表。
+### 1. [沃尔玛Agent Gateway+Profiles（已>48h）：限额/审批对照亚马逊封锁](https://corporate.walmart.com/news/2026/10/Making-It-Possible-for-Agents-to-Shop-on-Behalf-of-Customers)
+- track: 🛒 AI 电商自动化 | age_h: 59.2 | note: 硬窗口外延伸参考
+- 10/21官方仍有效但硬窗外；动作不变：结构化属性/退货政策可被Agent读。
 
-### 2. [Mastercard Agent Pay for Machines（x402）：营销Agent可在预算内自付数字服务费](https://www.mastercard.com/global/en/news-and-trends/press/2026/october/Mastercard-Agent-Pay-for-Machines-in-action.html)
-- track: 🤖 AI 前沿 | age_h: 67.8 | note: 硬窗口外延伸参考
-- Cloudflare Connect演示：Agent用x402付研究/生图费用；Coinbase/Base/BVNK结算。事件首发约10/20，硬窗外。
+### 2. [Meta Muse 10M+购物第一用途、客单>$200（硬窗外）](https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/)
+- track: 🛒 AI 电商自动化 | age_h: 55.2 | note: 硬窗口外延伸参考
+- Agent读listing的客单结构线索仍成立。
 
-### 3. [Kling 4.0全球发布（10/15-16）：原生30秒+Omni Reference，广告成片窗口拉长](https://kling.ai/blog/kling40-kling-visual-realism-creative-control-introducing-storytelling)
-- track: 🎨 创意广告 | age_h: 175.8 | note: 硬窗口外延伸参考
-- 快手/Kling官方：30s单次生成、最多15参考/10关键帧；MCP/CLI已接。首发在窗外，作视频模型对照。
+### 3. [Whop Series D $5.1B（硬窗外，融资不作topic）](https://newsroom.whop.com/series-d/)
+- track: 🛒 AI 电商自动化 | age_h: 61.2 | note: 硬窗口外延伸参考
+- 数字生意OS融资叙事，仅背景。
 
-### 4. [r/FacebookAds 主题：Advantage+ Creative被平台反复自动重开](https://www.reddit.com/r/FacebookAds/comments/1to28ew/meta_keeps_optimizing_my_creatives_with_ai_music/)
-- track: 🎨 创意广告 | age_h: 541.8 | note: Reddit日期不可核验≤48h，方法论延伸
-- 多帖反馈关闭后仍被重开/生成隐藏变体。无法核验≤48h单帖时间戳，故不进must_reads；方法提醒：广告层逐项关Creative Features并复查。
+### 4. [Claude Duet研究预览（硬窗外）](https://claude.com/resources/articles/claude-duet)
+- track: 🤖 AI 前沿 | age_h: 56.2 | note: 硬窗口外延伸参考
+- Shop Pay/Shopify连接器，敏感动作留人审。
 
-### 5. [r/shopify：多店接Claude MCP的隔离做法（分名注册/分项目）](https://www.reddit.com/r/shopify/comments/1wjidu6/how_to_connect_multiple_stores_to_claude_code_via/)
-- track: 🛒 AI 电商自动化 | age_h: 541.8 | note: Reddit日期不可核验≤48h，方法论延伸
-- 社区讨论：同一MCP按店分名注册，或一店一项目.mcp.json；写操作收窄Admin scope。帖时间未核验≤48h。
+### 5. [OpenAI模型进GCP Model Garden（硬窗外）](https://openai.com/index/openai-models-google-cloud/)
+- track: 🤖 AI 前沿 | age_h: 60.2 | note: 硬窗口外延伸参考
+- Astra/Sol/Luna私有预览。
 
-### 6. [r/AI_Agents：Shopify Catalog MCP发现与下单讨论](https://www.reddit.com/r/AI_Agents/comments/1tj0q9a/shopifys_mcp_server_for_discovering_and_ordering/)
-- track: 🛒 AI 电商自动化 | age_h: 541.8 | note: Reddit日期不可核验≤48h，方法论延伸
-- 社区讨论Shopify MCP发现/下单路径与自定义Admin MCP边界。不作≤48h硬新闻引用。
+### 6. [雨果：亚马逊AI摘要模块深度（报道>48h）](https://www.cifnews.com/article/189594)
+- track: 🛒 AI 电商自动化 | age_h: 67.1 | note: 硬窗口外延伸参考
+- 五点重排与属性一致仍是动作模板。
 
-### 7. [Banks detecting unauthorized AI agents in customer accounts（X新闻聚合）](https://x.com/i/trending/2112923062404317476)
-- track: 🤖 AI 前沿 | age_h: 0.8 | note: 聚合口径，缺银行一手稿，暂不占must_reads
-- X News 10/23聚合：美银机构发现第三方Agent进入客户账户；需核实一手监管/银行稿后再升级必看。
+### 7. [Meta Ads案例：教程/UGC创意+落地页优化，CPA $86.56→$29.54（-66%）](https://impmarketing.co/meta-ads-optimization-how-we-increased-roas-by-187-and-cut-cpa-by-66/)
+- track: 🎨 创意广告 | age_h: 519.2 | note: CPA案例延伸（soft-promote），非≤48h新闻
+- IMP Marketing 10/2披露美容供应链品牌两月优化。作CPA方法论延伸，非窗内新闻。
 
-### 8. [Uber全员部署ChatGPT Work：非工程岗试点后推广至约3万人](https://x.com/i/trending/2113344431864557714)
-- track: 🤖 AI 前沿 | age_h: 18.8 | note: 延伸参考，优先等一手稿
-- X News：试点1000人后全员；默认GPT-6.1 Sol。企业Agent渗透信号，待官方稿互证。
+### 8. [r/FacebookAds：Advantage+ Creative被平台反复自动重开](https://www.reddit.com/r/FacebookAds/)
+- track: 🎨 创意广告 | age_h: 555.2 | note: Reddit日期不可核验≤48h，方法论延伸
+- 日期不可核验≤48h。
 
-### 9. [Gemini API CLI（实验）：终端单二进制调Gemini媒体/Agent](https://aistudio.google.com/learn/introducing-the-gemini-api-cli)
-- track: 🤖 AI 前沿 | age_h: 109.8 | note: 硬窗口外延伸参考
-- Google AI Studio介绍页：零依赖CLI供编码Agent调用；与Agent Compute Engine预告分流。发布口径偏10/19，作工具链延伸。
+### 9. [r/shopify：多店接Claude MCP的隔离做法](https://www.reddit.com/r/shopify/)
+- track: 🛒 AI 电商自动化 | age_h: 555.2 | note: Reddit日期不可核验≤48h，方法论延伸
+- 日期不可核验。
 
-### 10. [HeyGen Voice Turbo（昨期延续）：Controlled Voice Arena登顶](https://www.heygen.com/blog/heygen-voice-turbo)
-- track: 🎨 创意广告 | age_h: 25.8 | note: 延伸参考
-- 昨期必看延续；口播UGC成本继续下移，可与Sume视频成本并读。
+### 10. [r/AI_Agents：Shopify Catalog MCP讨论](https://www.reddit.com/r/AI_Agents/)
+- track: 🛒 AI 电商自动化 | age_h: 555.2 | note: Reddit日期不可核验≤48h，方法论延伸
+- 日期不可核验。
 
-## 选题仓库 topics[]
+### 11. [TikTok Shop Multi-Product Link beta（第三方综述，待官方页核验）](https://kolvant.com/news/tiktok-shop-multi-product-link-beta/)
+- track: 🛒 AI 电商自动化 | age_h: 33.2 | note: 第三方综述，优先以Seller University为准
+- Kolvant称10/22起一视频最多挂10品。建议先在Seller/Creator后台确认是否出现多选开关，再改拍摄脚本。
 
-### 1. 1Password+Walmart Profiles：Agent「能登录」与「能下单」是两道闸，卖家先拆钥匙再谈自动化
-- angle: 把凭证（1Password for Agents）与购物授权（Walmart Profiles限额/审批）写成一张权限矩阵：只读浏览 / 加购 / 改价发帖 / 付款。30分钟动作：给运营Agent开只读保险库条目，主账号密码永不进prompt。
-- heat: high | format: 工具分享 | tracks: 🛒 AI 电商自动化, 🤖 AI 前沿
-- hooks: 把1Password和Walmart Profiles连起来看 / 大部分人把密码塞进Agent的方式是错的
-- reasoning: 本期新增1Password一手稿；与仍在窗内的Walmart Profiles同向。补商家侧可执行权限SOP（连续多期underserved）。
+### 12. [Shopify Catalog向Agent共享compare-at（10/9，硬窗外）](https://kua.ai/blog/ai-commerce-changelog-october-2026)
+- track: 🛒 AI 电商自动化 | age_h: 351.2 | note: 硬窗口外延伸参考
+- Catalog mapping里可关compare-at开关。
 
-### 2. Canva Craft × Ideogram Vector × Framer MCP：像素→矢量→落地页的半日Agent流水线
-- angle: 同窗三官方：Craft出商品主图变体 → Vector出可编辑图标/SVG → Framer MCP改落地页草稿。人只审三处：主图文字是否可读、SVG是否进品牌色板、站点是否仍为draft。
-- heat: high | format: 工具分享 | tracks: 🎨 创意广告, 🤖 AI 前沿
-- hooks: 把Craft、Vector和Framer MCP连起来看 / Canva刚发布Craft，对你意味着三件事
-- reasoning: 命中长期加权AI设计/生图；Ideogram Vector为本期相对昨期的增量。延续10/22高相关创意双发布。
+## 今日选题（Topic Scope 已过闸）
 
-### 3. 素材测试成本塌陷：Sume零加价API + Craft批量主图 —— 瓶颈从「生成贵」转到「验证慢」
-- angle: 用Sume按原价跑视频钩子、用Craft批量出主图，SOP写成「AI筛钩子→真人/精修放大」。对照Reddit广告账本（延伸阅读）的CPA差，强调吞吐而非单条ROAS神话。
-- heat: high | format: 方法论 | tracks: 🎨 创意广告, 🛒 AI 电商自动化
-- hooks: 大部分人用AI素材的方式是错的 / 素材成本塌了，新瓶颈在验证速度
-- reasoning: Sume为窗内新成本信号；衔接昨期Reddit UGC账本但不伪造≤48h帖。
+### 1. 亚马逊AI摘要灰度：先改「可被正确提炼的字段」，别急着整页重写
+- theme_slug: `amazon-ai-summary-listing-fields` | admission: `a+c` | heat: high | format: 方法论
+- tags: 平台可改字段
+- angle: 30分钟：买家号移动端打开3个核心ASIN，截图AI摘要；若摘要错规格/串变体，只改五点第一条+后台属性一致性，不重写整页。灰度阶段目标是「不被摘要伤害」，不是追新流量。
+- reasoning: 命中Admission (a)30分钟自查+改字段 (c)五点/属性/变体为平台可改字段。配额：非MCP；非游行；≥1商家数字/平台字段已满足。跨日：非晨间agent-auth/craft-framer/ugc-test-sop/skills-auto-duet。soft-promote卖家运营源AMZ123。
+- hooks: 亚马逊刚灰度了AI摘要，对你意味着三件事 / 大部分人一看到AI摘要就想重写整页Listing
 
-### 4. Claude Duet + Auto默认 + Skills标准：运营Agent从聊天变成可版本化夜班同事
-- angle: Skills写选品/客服SOP → Auto mode过夜跑草稿 → Duet晨报送决策；发帖付款留闸。Whop融资提醒「数字生意OS」也在抢默认位。
-- heat: high | format: 新闻翻译 | tracks: 🤖 AI 前沿, 🛒 AI 电商自动化
-- hooks: Claude Duet刚开预览，对你意味着三件事 / 大部分人用Agent的方式是错的：只聊天不写Skill
-- reasoning: Anthropic栈仍在窗内；加Whop平台层对照。避开单点复述。
+### 2. TikTok Shop NBFR改看90天：今天就把报表窗口与发货排除项对齐
+- theme_slug: `tiktok-nbfr-90d` | admission: `a+c` | heat: high | format: 新闻翻译
+- tags: 平台可改字段
+- angle: 官方10/22：NBFR回看90天并进SPS。30分钟动作：Seller Center打开NBFR；内部看板60→90；若用TikTok Shipping/CBT，核对准时发货以保住排除。旧问题单会背更久——先清「描述不符/破损」高发SKU。
+- reasoning: 命中(a)Seller Center可执行动作 (c)SPS/NBFR窗口字段变更。配额合规。跨日新spine。soft-promote卖家运营。
+- hooks: TikTok刚改了NBFR窗口，对你意味着三件事
 
-## 推文草稿 drafts[]
+### 3. 天猫Token上双11：环比+450%掩盖「百件级销量」——SKU要写额度与场景包
+- theme_slug: `tmall-token-sku-fields` | admission: `b+c` | heat: high | format: 方法论
+- tags: 商家数字, 平台可改字段
+- angle: 一财数字：环比+450%，但单店销量仍约100–300件；多数店几乎不打折。30分钟：把Token SKU标题/详情改成「额度+可用模型+适用场景（学习/家庭/三人团队）」，下架堆参数文案。成本账：没有场景包就很难吃到大促转化。
+- reasoning: 命中(b)可归因商家数字(+450%/百件级/降价<3元) (c)SKU文案字段。晨间仅must_read未作topic spine；非禁止复用列表。融资硬拒不适用（脊柱是字段与账本）。
+- hooks: 大部分人看Token双11只看到环比450% / 把环比和件数控住看
 
-### Draft 1 — hook: 把 X 和 Y 连起来看
-- format: 跨领域连接 | tags: 🛒 AI 电商自动化
+### 4. Just Eat AI菜单翻车：生图上架前加一道母语QA闸
+- theme_slug: `ai-menu-photo-qa-gate` | admission: `a` | heat: high | format: 案例拆解
+- tags: 商家数字
+- angle: jacket potato被生成土豆外套后道歉下架。电商30分钟清单：AI主图必须过①母语者朗读品名/卖点 ②规格与变体图一致 ③绝对化承诺已删。过不了闸不上架——省拍摄费却买退货与平台处罚。
+- reasoning: 命中(a)上架前可执行QA。非纯设计游行（有测试闭环/失败实测）。配额：非MCP。angle class接近failed-test，补创意侧可执行性。
+- hooks: 实测了别人的翻车，结果写成你的上架清单 / 大部分人用AI出图的方式是错的：生成完直接上架
 
-```
-把两件同周发生的事连起来看：
+## 推文草稿
 
-1）1Password for Agents——Agent可以登录，但看不到你的密码；
-2）沃尔玛Agent Profiles——Agent可以下单，但限额/逐笔审批由你定。
+### 草稿 1 — hook: X 刚更新了，对你意味着 N 件事
 
-能登录 ≠ 能花钱。
+亚马逊刚灰度了商品页AI摘要，对你意味着三件事：
 
-卖家30分钟动作：给运营Agent开「只读后台」保险库条目；主账号密码永不进prompt；改价/发帖/付款另开人审闸。
+1）买家可能先看平台提炼的3条，再看你的五点；
+2）标题/五点/A+/属性不一致时，摘要会帮你「公开打脸」；
+3）灰度阶段别整页重写——买家号自查核心ASIN，只修错规格、串变体和绝对化承诺。
 
-Muse客单>$200只是结果，权限矩阵才是门票。
-```
-- reasoning: 元模式4；1Password新增+Walmart延续；补商家可执行步骤。
+先改能被正确提炼的字段，再谈追新流量。
 
-### Draft 2 — hook: X 刚发布/更新了，对你意味着三件事
-- format: 新闻翻译 | tags: 🎨 创意广告
+_reasoning: 用本周有效元模式2；承接amazon-ai-summary-listing-fields；差异化：不做晨间权限矩阵/工具链。_
 
-```
-Canva Craft刚发布。同日还有Ideogram Vector和Framer MCP。
+### 草稿 2 — hook: 大部分人用 X 的方式是错的
 
-对做电商素材的人，意味着三件事：
-1）Craft两阶段规划——主图文字不再糊成装饰；
-2）Vector给可编辑SVG，图标进设计系统而不是位图；
-3）Framer MCP改完落地页默认是draft，人审再发布。
+TikTok Shop把NBFR回看窗口改成90天了。
 
-半日流水线：5张主图A/B → 一套SVG装饰 → 一页活动稿。别跳过人审。
-```
-- reasoning: 元模式2；三官方同窗。
+大多数人还在按60天看账号健康——这是错的。
 
-### Draft 3 — hook: 大部分人用 X 的方式是错的
-- format: 反常识 | tags: 🎨 创意广告
+今天30分钟：Seller Center打开NBFR → 内部报表改90天 → 若走TikTok Shipping/CBT，核对准时发货排除项。
 
-```
-大部分人用AI素材的方式是错的：拿最贵的模型出一条「成片」就投放。
+旧的「描述不符/破损」单会背更久。先清高发SKU，比追新流量入口管用。
 
-更接近账本的做法：Sume这类零加价API按原价批量出钩子 → Craft批量出主图变体 → 真人/精修只放大验证过的那几条。
+_reasoning: 元模式3；补商家侧实操（underserved）；平台字段变更。_
 
-生成成本在塌，验证速度才是新瓶颈。
+### 草稿 3 — hook: 大部分人用 X 的方式是错的
 
-顺带一眼市场：BTC F&G 48中性、CNN 19极端恐惧、btcScore 38.4偏恐慌——别把宏观情绪当开素材预算的理由，先把测试吞吐跑起来。
-```
-- reasoning: 元模式3；引用market_snapshot情绪点；Sume成本角度。
+Just Eat用AI生成菜单图，把jacket potato做成「土豆外套」，然后公开道歉下架。
+
+电商侧同构风险：AI主图省了拍摄费，却可能买来退货与平台处罚。
+
+上架闸只留三问：母语者能否一眼读懂？规格是否与变体一致？有没有绝对化承诺？
+
+顺带一眼宏观：CNN Fear & Greed 现处extreme fear（约21），BTC F&G 47中性——创意测试预算更适合小步验证，而不是一次性把素材产能全打开。
+
+_reasoning: 元模式3+failed-test；强制引用market_snapshot：CNN 21 extreme fear + BTC F&G 47；避开失灵的单点复述。_
 
 ## 跨领域机会
 
-- **AI × 电商权限层**: 1Password for Agents（凭证）+ Walmart Profiles（购物授权）+ Muse购物占比：同周说明Agent经济的下一层瓶颈是「谁被允许碰密钥与钱」，不是「会不会挑货」。
-- **创意生产 × 落地页MCP**: Canva Craft/Ideogram Vector把素材成本打下来，Framer MCP把「改完就能上站」接上——交叉成像素→矢量→页面的半日闭环，人审是唯一闸门。
+- **AI摘要 × Listing字段**: 亚马逊AI摘要与TikTok NBFR同日提醒：平台在用「可机读字段/可机算指标」重排流量与账号健康——运营杠杆从堆词转到字段一致性与退货根因。
+- **AI生图 × 上架合规**: Just Eat翻车对照Canva/Ideogram产能释放：产能越便宜，母语QA闸越贵；创意广告选题应写测试闭环，不写工具目录。
 
 ## 本周表现摘要
 
 - period: 2026-10-16 ~ 2026-10-23
-- posts: 0 (Typefully skipped)
-- covered: 1Password for Agents, Canva Craft, Ideogram Vector, Framer MCP, Walmart Agent Gateway, Claude Duet, Sume zero-margin API
-- underserved: 🛒 商家侧实操复盘（连续多期，本期用权限矩阵选题补）
-- winning hooks: 把 X 和 Y 连起来看, X 刚更新了，对你意味着 N 件事, 大部分人用 X 的方式是错的
-- failing hooks: 单点复述式新闻播报
-- insights: Typefully不可用，跳过Step2-3量化。本期增量=1Password凭证层、Ideogram Vector、Sume零加价、Whop融资；延续Walmart/Canva/Framer/Duet。Reddit仍无法核验≤48h，只进also。
+- covered_topics (theme_slug): agent-auth-matrix, pixel-vector-lp-pipeline, ugc-test-sop, skills-auto-duet, amazon-ai-summary-listing-fields, tiktok-nbfr-90d, tmall-token-sku-fields, ai-menu-photo-qa-gate
+- underserved: 🛒 商家侧带数字的实操复盘（本期用NBFR/Token数字+Listing字段补）
+- insights: Refresh pass应用Topic Scope：晨间4选题因Admission/配额/硬拒全部降级为must_reads；新脊柱转向平台可改字段与商家数字（亚马逊AI摘要、TikTok NBFR、天猫Token账本、Just Eat上架QA）。Typefully仍不可用。
 
-## 系统建议 suggestions（仅建议，未改源文件）
+## 系统建议（仅建议，未改源文件）
 
 ### info_sources
-- promote: @framer: Framer MCP官方帖进must_reads，创意×MCP交叉高相关; 1Password Blog: for Agents一手稿直接支撑权限选题
-- demote: []
-- add: @IdeogramAI: Vector与Craft同日，设计系统向素材源; sume.com: 零加价视频API影响素材测试成本结构
+**promote**
+- AMZ123/雨果跨境: 10/23 AI摘要刷新提供可执行字段清单，命中Topic Scope soft-promote卖家运营 (high)
+- TikTok Shop Seller University: NBFR 90天为官方一手，可直接进must_reads (high)
+- 第一财经: Token双11提供可归因销量/折扣数字，支撑商家数字选题 (medium)
+**demote**
+- @framer / Canva MCP类作为topic主燃料: Topic Scope soft-demote：可进must_reads，不宜连续占topics (high)
+**add**
+- orliejohn.com TikTok Shop news: NBFR等政策有运营向拆解，可Scan级跟踪 (medium)
+
 ### topic_library
-- archive: []
-- add: Agent凭证与购物授权矩阵: 1Password+Walmart Profiles同窗，可固化为常青权限选题; 像素→矢量→落地页Agent流水线: Craft+Vector+Framer MCP三官方同窗
+**archive**
+- (empty)
+**add**
+- 平台AI摘要/机读Listing字段: 亚马逊AI摘要连续两日出现且有30分钟动作 (high)
+- 店铺健康指标窗口变更（NBFR等）: TikTok官方改90天，属平台可改字段类常青题 (high)
+- AI素材上架QA闸（失败案例）: Just Eat提供failed-test叙事模板 (medium)
+
 ### positioning_drift
-- 本期must_reads工具/平台发布占比高，商家侧数字复盘仍弱；Reddit≤48h可核验帖继续稀薄 -> 下一期至少保留1条带步骤的卖家SOP（哪怕来自延伸阅读方法），避免滑向纯平台评论 (medium)
-
-## 采集通道与工具实测
-
-- Typefully: skipped (MCP unavailable)
-- X MCP: search_news + search_posts_all
-- WebSearch/WebFetch: primary sources verified
-- Reddit: site:reddit.com WebSearch; unverifiable <=48h timestamps -> also only
-- Day1 Global: market-data + btc-score OK
-- WeChat bookmarks / fieldtheory: unavailable in this environment (degraded)
-
-## 备注给主agent
-
-- Do not auto-notify xhs / x / wechat.
-- wechat already has pass4 topic3 in 触锐草稿箱 appmsgid 100000112; xhs published note 6adaccf7000000003101e5e1 — do not re-handoff unless new topics warrant.
+- 晨间pass偏工具链/MCP，与longterm「30分钟工作流」有漂移风险 → 保留今日Topic Scope：topics优先平台字段与商家数字，工具链降must_reads (high)
