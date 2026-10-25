@@ -1,0 +1,779 @@
+{
+  "date": "2026-10-25",
+  "generated_at": "2026-10-25T10:40:00Z",
+  "pass": "topic-scope-day",
+  "raw_material_count": 88,
+  "publishing_note": "周日早间：严格执行Step6 Topic Scope。脊柱=Meta Product Browsing 10/28 opt-out、TikTok退款SLA自动批准、黑五SKU价档、ChatGPT Ads创意增强opt-out。MCP/Duet/NanoBanana/设计工具仅must_reads。Reddit must_reads=0（also-only）。无10/24归档故跨日对照10/22–10/23 spines。Typefully仍不可用。不自动发帖。",
+  "must_reads": [
+    {
+      "title": "Meta 10/28默认打开Product Browsing：现有广告点后可能进站内商品页——黑五前先Opt out或逐条关掉",
+      "event_id": "meta-product-browsing-optout-1028",
+      "summary": "媒体买家通知+10/24广告平台汇总：10/28起现有FB/IG广告默认加入Advantage+ product browsing（点后可能先看站内商品信息/推荐）；Meta自称8月试验约11.7万广告主平均转化+3%。30分钟：Ads Manager通知点Opt out，或Advantage+ Creative→Destination逐条关闭；单品/线索表单广告优先关。",
+      "url": "https://miaidigitallab.com/ad-platform-update-2026-10-24/",
+      "track": "🎨 创意广告",
+      "matched_topic": "广告平台默认开关/可改字段",
+      "source": "Mia Digital Lab (Oct 24 roundup)",
+      "published_at": "2026-10-24T12:00:00Z",
+      "age_hours": 22.7,
+      "supporting": [
+        {
+          "angle": "PPC Land深挖：通知约10/14发出、3%口径与计量缺口、代理吐槽归因串创意",
+          "url": "https://ppc.land/meta-will-turn-on-product-browsing-in-existing-ads-on-october-28/"
+        },
+        {
+          "angle": "Relevant Audience：Opt out路径与事后仍可改",
+          "url": "https://www.relevantaudience.com/meta/meta-product-browsing-existing-ads-october-28/"
+        }
+      ]
+    },
+    {
+      "title": "熊猫出海10/25：TikTok Shop美站退款SLA——≤$100仅退款2工作日、>$100为4日，逾期可能自动批准",
+      "event_id": "tiktok-us-refund-sla-1021",
+      "summary": "据美站10/21版取消/退货/退款政策整理：取消/未发货退款24h；仅退款≤$100→2工作日、>$100→4工作日；运输中预计送达+6自然日未达按金额/是否电子产品自动或人工审批。黑五前客服按三档设提醒；物流盯「ETA+6」风险线。与昨日NBFR 90天脊柱不同——本条是处理时效与自动批准。",
+      "url": "https://www.pandawm.com/blog/tiktok-shop-policy-updates-october-2026-week4.html",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "平台可改字段/售后SLA",
+      "source": "熊猫出海 pandawm",
+      "published_at": "2026-10-24T21:27:00Z",
+      "age_hours": 13.2,
+      "supporting": [
+        {
+          "angle": "Seller University Returns/Refunds FAQ入口（核对原文措辞）",
+          "url": "https://seller-us.tiktok.com/university/essay?knowledge_id=2959182467729153&lang=en"
+        }
+      ]
+    },
+    {
+      "title": "TikTok Shop黑五Better Price Rewards：一次报名按价自动分档——同PID下SKU档不同按最低档生效",
+      "event_id": "tiktok-bfcm-price-tier-1023",
+      "summary": "熊猫出海引用Seller University 10/23报名指南：每SKU填一价报名一次，系统自动分档；同商品(PID)多SKU分到不同档时整品按最低权益档。30分钟：报名前把同PID各SKU调到同一价档，再Register；不要指望「一个低价SKU蹭高档曝光」。",
+      "url": "https://www.pandawm.com/blog/tiktok-shop-policy-updates-october-2026-week4.html",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "商家数字/大促报名字段",
+      "source": "熊猫出海 pandawm",
+      "published_at": "2026-10-24T21:27:00Z",
+      "age_hours": 13.2,
+      "supporting": []
+    },
+    {
+      "title": "OpenAI Help更新：ChatGPT Ads创意增强将默认开启（Help写10/31；早前邮件写10/30）——合规广告主先Opt out",
+      "event_id": "chatgpt-ads-enhance-optout-1031",
+      "summary": "OpenAI Help（约2小时前更新）：创意增强可改标题/描述、缩放图、优化落地页URL、翻译；启用后变体可自动跑且无需逐条审批。官方写Starting Thursday Oct 31自动开启；Search Engine Land转述邮件为Oct 30。30分钟：Ads Manager→Manage settings，账户/活动级关掉；活动设置优先于账户默认。",
+      "url": "https://help.openai.com/en/articles/20001614-creative-enhancements-for-chatgpt-ads",
+      "track": "🎨 创意广告",
+      "matched_topic": "广告平台默认开关/可改字段",
+      "source": "OpenAI Help Center",
+      "published_at": "2026-10-25T08:30:00Z",
+      "age_hours": 2.2,
+      "supporting": [
+        {
+          "angle": "Search Engine Land 10/21：邮件原文写Oct 30（与Help Oct 31不一致，以账户内通知为准）",
+          "url": "https://searchengineland.com/chatgpt-ads-to-enable-creative-enhancements-on-october-30-497608"
+        }
+      ]
+    },
+    {
+      "title": "Meta允许每条创意自带年龄/性别受众（Creative Audience Pairing）——同ad set共享学习、少拆组",
+      "event_id": "meta-creative-audience-pairing-1024",
+      "summary": "Ad Test Bench 10/24报道（功能10/19上线、Marketing API同日开放）：可在同一ad set内给每张图/视频标年龄段与性别。银行例：养老视频打50–65、储蓄广告打全年龄。注意：ad set需对全性别开放等约束；拆组学习成本下降（约50结果/周共享）。本期作投放结构字段awareness，不另开MCP/工具脊柱。",
+      "url": "https://adtestbench.com/news/meta-lets-advertisers-pick-an-audience-for-each-ad-creative/",
+      "track": "🎨 创意广告",
+      "matched_topic": "广告平台可改字段",
+      "source": "Ad Test Bench",
+      "published_at": "2026-10-24T04:30:00Z",
+      "age_hours": 30.2,
+      "supporting": [
+        {
+          "angle": "Meta Developers 10/19原文（事件日>48h，作官方锚点）",
+          "url": "https://developers.facebook.com/blog/post/2026/10/19/choose-an-audience-for-each-ad-creative/"
+        }
+      ]
+    },
+    {
+      "title": "TikTok美站电动自行车/滑板车：按商品交UL等证明，Listing写清等级/功率/最高助力速度",
+      "event_id": "tiktok-ebike-ul-docs-1023",
+      "summary": "熊猫出海引Seller University 10/23：电动出行需按品提交UL 2849/UL 2271等；仅锂电芯；Listing披露1/2/3级、电机功率、最高助力速度。广告素材速度/续航须与Listing一致，防拒审。",
+      "url": "https://www.pandawm.com/blog/tiktok-shop-policy-updates-october-2026-week4.html",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "Listing合规字段",
+      "source": "熊猫出海 pandawm",
+      "published_at": "2026-10-24T21:27:00Z",
+      "age_hours": 13.2,
+      "supporting": [
+        {
+          "angle": "Kolvant：per-product documents要点",
+          "url": "https://kolvant.com/news/tiktok-shop-electric-bikes-per-product-documents/"
+        }
+      ]
+    },
+    {
+      "title": "Google广告侧：High Value模式进Shopping、Customer Retention目标扩开——黑五前先传客户名单",
+      "event_id": "google-ads-high-value-retention-1024",
+      "summary": "10/24广告平台汇总：High Value mode进Shopping；Customer Retention目标在PMax/Search/Shopping更广可用；百分比出价乘数出beta。动作：上传客户名单、用Break-even ROAS拆新客/老客目标。另提醒：自10/12起Google可从网站自动拉促销资产——检查Assets报表清掉过期促销。",
+      "url": "https://miaidigitallab.com/ad-platform-update-2026-10-24/",
+      "track": "🎨 创意广告",
+      "matched_topic": "广告平台可改字段",
+      "source": "Mia Digital Lab",
+      "published_at": "2026-10-24T12:00:00Z",
+      "age_hours": 22.7,
+      "supporting": []
+    },
+    {
+      "title": "AI Max新增「Search terms and ad combinations」报告——每周导出查浪费词",
+      "event_id": "google-ai-max-search-terms-1024",
+      "summary": "10/24汇总：AI Max可看查询与所用标题/描述/落地页组合。动作：每周导出，跑n-gram找烧钱词。Ad Grants账户另有「AI Max被自动打开」传闻——先核账户设置与5% CTR门槛，不作未证实全量 rollout。",
+      "url": "https://miaidigitallab.com/ad-platform-update-2026-10-24/",
+      "track": "🎨 创意广告",
+      "matched_topic": "广告平台可改字段",
+      "source": "Mia Digital Lab",
+      "published_at": "2026-10-24T12:00:00Z",
+      "age_hours": 22.7,
+      "supporting": [
+        {
+          "angle": "Search Engine Land：部分Ad Grants见AI Max自动开启（未证实全量）",
+          "url": "https://searchengineland.com/google-ads-ai-max-spotted-automatically-enabled-in-some-ad-grants-accounts-497261"
+        }
+      ]
+    },
+    {
+      "title": "TikTok LIVE Price Cut上线：SPS≥3.5且达人CHR>150；底价按真实毛利设",
+      "event_id": "tiktok-live-price-cut-1021",
+      "summary": "观众预授权，人越多价越低，结束按最终价扣款；时长15秒–20分钟，有人参与后不可提前结束。门槛SPS≥3.5、合作达人CHR>150。库存不超过可售。本期作直播玩法字段提醒，不占大促脊柱。",
+      "url": "https://www.pandawm.com/blog/tiktok-shop-policy-updates-october-2026-week4.html",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "平台可改字段/直播工具",
+      "source": "熊猫出海 pandawm",
+      "published_at": "2026-10-24T21:27:00Z",
+      "age_hours": 13.2,
+      "supporting": []
+    },
+    {
+      "title": "@OpenAI on X：红队发现Brotli未认证RCE——影响Node.js/Bun/Envoy等广泛部署压缩库",
+      "event_id": "openai-brotli-rce-1023",
+      "summary": "@OpenAI on X：红队演练中发现Brotli漏洞可未认证远程代码执行，波及Node/Bun/Envoy等。对卖家工具链：检查依赖Brotli的网关/边缘组件补丁节奏；不进MCP选题。",
+      "url": "https://x.com/OpenAI/status/2113766354386084338",
+      "track": "🤖 AI 前沿",
+      "matched_topic": null,
+      "source": "@OpenAI via X",
+      "published_at": "2026-10-23T22:55:45Z",
+      "age_hours": 35.7,
+      "supporting": [
+        {
+          "angle": "同日：训练环境去活网、改用离线缓存网页",
+          "url": "https://x.com/OpenAI/status/2113718797505036665"
+        }
+      ]
+    },
+    {
+      "title": "@AnthropicAI on X：就AISI报告的Claude Mythos未授权上网事件发布进一步对齐分析",
+      "event_id": "anthropic-aisi-mythos-analysis-1023",
+      "summary": "@AnthropicAI on X：回应AISI 8月测试中Mythos未授权网络动作，发布对齐属性再分析；并链AISI自有报告。对Agent运营：高权限工具默认人审，不把「实验室红队故事」写成卖家工具游行。",
+      "url": "https://x.com/AnthropicAI/status/2113626655902126442",
+      "track": "🤖 AI 前沿",
+      "matched_topic": null,
+      "source": "@AnthropicAI via X",
+      "published_at": "2026-10-23T13:40:38Z",
+      "age_hours": 45.0,
+      "supporting": [
+        {
+          "angle": "跟帖：AISI报告链接",
+          "url": "https://x.com/AnthropicAI/status/2113626657508516348"
+        }
+      ]
+    },
+    {
+      "title": "@claudeai on X：Claude Duet安全/隐私/安全机制深拆（购物连接器仍属awareness）",
+      "event_id": "claude-duet-safety-1023",
+      "summary": "@claudeai on X：补充Duet在安全、隐私与安全边界的说明。Topic Scope：Shop连接器/Agent鉴权无新卖家JTBD角度→不占topics；保留必看以免误开自动结账。",
+      "url": "https://x.com/claudeai/status/2113736176737845353",
+      "track": "🤖 AI 前沿",
+      "matched_topic": null,
+      "source": "@claudeai via X",
+      "published_at": "2026-10-23T20:55:50Z",
+      "age_hours": 37.7,
+      "supporting": []
+    },
+    {
+      "title": "@GoogleDeepMind on X：单张Nano Banana图+Blender MCP在Antigravity建哥特教堂（MCP仅must_reads）",
+      "event_id": "deepmind-nano-banana-blender-mcp-1023",
+      "summary": "@GoogleDeepMind on X：演示图像→3D场景迭代。配额：MCP/工具演示不进今日topics；创意侧可作「提示词→可编辑3D资产」单点笔记，禁止与Craft/Vector再串游行。",
+      "url": "https://x.com/GoogleDeepMind/status/2113645959762575623",
+      "track": "🤖 AI 前沿",
+      "matched_topic": null,
+      "source": "@GoogleDeepMind via X",
+      "published_at": "2026-10-23T14:57:21Z",
+      "age_hours": 43.7,
+      "supporting": []
+    },
+    {
+      "title": "TikTok达人定向邀约改周配额：按卖家/达人等级，每日最多200次邀约",
+      "event_id": "tiktok-collab-weekly-quota-1022",
+      "summary": "熊猫出海引10/22 Targeted Collaboration Playbook：自10/9逐步按等级分配周配额、周日刷新；每天最多200次、每次最多50达人。动作：先用历史出单筛名单，配额留给高转化达人。",
+      "url": "https://www.pandawm.com/blog/tiktok-shop-policy-updates-october-2026-week4.html",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "平台可改字段/达人运营",
+      "source": "熊猫出海 pandawm",
+      "published_at": "2026-10-24T21:27:00Z",
+      "age_hours": 13.2,
+      "supporting": []
+    },
+    {
+      "title": "TikTok API for Business 10/23：Smart+ App支持O2O目录；is_business_account语义变更",
+      "event_id": "tiktok-api-o2o-catalog-1023",
+      "summary": "catalog_type=ONLINE_TO_OFFLINE；/ad/get/新增TopView禁用字段。技术债：若代码用is_business_account判断「企业账号」需改——现仅表示已认证企业账号。仅must_reads（偏API，未过卖家30分钟Admission作topic）。",
+      "url": "https://www.pandawm.com/blog/tiktok-shop-policy-updates-october-2026-week4.html",
+      "track": "🎨 创意广告",
+      "matched_topic": null,
+      "source": "熊猫出海 pandawm",
+      "published_at": "2026-10-24T21:27:00Z",
+      "age_hours": 13.2,
+      "supporting": []
+    }
+  ],
+  "also_worth_reading": [
+    {
+      "title": "亚马逊Review Requests付费邀评：评论<1000可投，CPC按点击扣、单评成本或>$5（硬窗外）",
+      "summary": "AMZ123 10/12：美站下旬公测；满1000条自动暂停；花钱买的是触达已购买家的机会不是好评本身。成本闸：先算max $/rating再开。",
+      "url": "https://www.amz123.com/t/aVLtB7I1",
+      "track": "🛒 AI 电商自动化",
+      "published_at": "2026-10-12T00:00:00Z",
+      "age_hours": 322.7,
+      "note": "硬窗口外延伸参考；商家数字候选"
+    },
+    {
+      "title": "Amazon Ads官方：Review Requests加速真实评价（硬窗外公告）",
+      "summary": "官方资源页仍有效；与AMZ123成本测算对照读。",
+      "url": "https://advertising.amazon.com/resources/whats-new/get-product-reviews-faster-with-review-requests",
+      "track": "🛒 AI 电商自动化",
+      "published_at": "2026-10-01T12:00:00Z",
+      "age_hours": 574.7,
+      "note": "硬窗口外延伸参考"
+    },
+    {
+      "title": "Gemini小型企业落地页+连接Google Ads/Shopify等（10/20，硬窗外）",
+      "summary": "品牌视觉/财务洞察/连接应用。工具发布不作topic。",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/new-tools-small-business-owners/",
+      "track": "🤖 AI 前沿",
+      "published_at": "2026-10-20T16:00:00Z",
+      "age_hours": 114.7,
+      "note": "硬窗口外延伸参考"
+    },
+    {
+      "title": "Meta Developers：Choose an Audience for Each Ad Creative（10/19原文，硬窗外）",
+      "summary": "功能日>48h；窗内以Ad Test Bench 10/24报道作must_reads。",
+      "url": "https://developers.facebook.com/blog/post/2026/10/19/choose-an-audience-for-each-ad-creative/",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-19T16:00:00Z",
+      "age_hours": 138.7,
+      "note": "硬窗口外延伸参考"
+    },
+    {
+      "title": "PPC Land：Meta Product Browsing默认开深挖（约10/15，硬窗外）",
+      "summary": "3%实验口径与代理归因吐槽的完整时间线；动作仍以10/28 deadline为准。",
+      "url": "https://ppc.land/meta-will-turn-on-product-browsing-in-existing-ads-on-october-28/",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-15T12:00:00Z",
+      "age_hours": 238.7,
+      "note": "硬窗口外延伸参考"
+    },
+    {
+      "title": "印尼TikTok Shop 10/27起售后申诉7天窗+开箱/打包视频要求",
+      "summary": "熊猫出海周报：平台首轮批准后退款申诉仅7自然日；特定理由需连续开箱/打包视频。印尼卖家先备视频SOP。",
+      "url": "https://www.pandawm.com/blog/tiktok-shop-policy-updates-october-2026-week4.html",
+      "track": "🛒 AI 电商自动化",
+      "published_at": "2026-10-24T21:27:00Z",
+      "age_hours": 13.2,
+      "note": "生效日临近；区域卖家清单"
+    },
+    {
+      "title": "亚马逊AI摘要灰度（10/23脊柱，跨日不复用topic）",
+      "summary": "昨日theme_slug amazon-ai-summary-listing-fields已占席；今日仅延伸。",
+      "url": "https://www.amz123.com/kx/nQI5S8mB",
+      "track": "🛒 AI 电商自动化",
+      "published_at": "2026-10-22T18:28:00Z",
+      "age_hours": 64.2,
+      "note": "跨日去重：不复用theme_slug"
+    },
+    {
+      "title": "TikTok NBFR 90天（10/23脊柱，跨日不复用）",
+      "summary": "昨日tiktok-nbfr-90d；今日退款SLA为新角度。",
+      "url": "https://seller-us.tiktok.com/university/essay?knowledge_id=5914428974778167&lang=en",
+      "track": "🛒 AI 电商自动化",
+      "published_at": "2026-10-22T16:00:00Z",
+      "age_hours": 66.7,
+      "note": "跨日去重：不复用theme_slug"
+    },
+    {
+      "title": "r/FacebookAds：Product Browsing/Show Products被自动打开讨论",
+      "summary": "时间戳不可核验≤48h；作Advantage+默认开关方法论延伸。",
+      "url": "https://www.reddit.com/r/FacebookAds/comments/1wgbxz6/options_turned_on_automatically_how_to_disable/",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-01T00:00:00Z",
+      "age_hours": 586.7,
+      "note": "Reddit also-only；日期不可核验≤48h"
+    },
+    {
+      "title": "r/PPC：Advantage+设置被平台擅自打开PSA",
+      "summary": "时间戳不可核验。",
+      "url": "https://www.reddit.com/r/PPC/comments/1sifjck/psa_check_your_meta_routinely_adv_settings/",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-01T00:00:00Z",
+      "age_hours": 586.7,
+      "note": "Reddit also-only；日期不可核验≤48h"
+    },
+    {
+      "title": "r/FacebookAds：有人实测Product Browsing/Reveal Details效果吗",
+      "summary": "时间戳不可核验。",
+      "url": "https://www.reddit.com/r/FacebookAds/comments/1wh5ah0/anyone_actually_tested_reveal_details_over_time/",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-01T00:00:00Z",
+      "age_hours": 586.7,
+      "note": "Reddit also-only；日期不可核验≤48h"
+    },
+    {
+      "title": "Just Eat AI菜单翻车（昨日脊柱延伸）",
+      "summary": "ai-menu-photo-qa-gate不复用；母语QA闸仍有效。",
+      "url": "https://www.bbc.com/news/articles/crz981p0klvgo",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-23T12:00:00Z",
+      "age_hours": 46.7,
+      "note": "跨日去重延伸"
+    }
+  ],
+  "topics": [
+    {
+      "title": "Meta Product Browsing 10/28默认开：黑五前先Opt out，单品广告别让站内推荐抢走落地页",
+      "theme_slug": "meta-product-browsing-optout-1028",
+      "angle": "30分钟：打开Ads Manager通知→Opt out；再扫主力Sales广告的Advantage+ Creative→Destination，关掉product browsing。单品/线索/品牌故事广告优先关；目录广告可留一组做对照。目标是「默认值不替你改转化路径」，不是争论3%均值。",
+      "heat": "high",
+      "format": "方法论",
+      "tracks": [
+        "🎨 创意广告"
+      ],
+      "hooks": [
+        "Meta刚要把Product Browsing默认打开，对你意味着三件事",
+        "大部分人还在等黑五素材，却忘了先关平台默认开关"
+      ],
+      "tags": [
+        "平台可改字段"
+      ],
+      "admission": "a+c",
+      "reasoning": "命中(a)30分钟Opt out/逐条开关 (c)Advantage+ Destination可改字段。配额：非MCP；非multi-vendor游行；≥1平台字段已满足。跨日：非10/22–10/23 spines。10/24无归档briefing。"
+    },
+    {
+      "title": "TikTok美站退款SLA：按24h/2日/4日设客服提醒，逾期可能被自动批准",
+      "theme_slug": "tiktok-refund-sla-auto-approve",
+      "angle": "与昨日NBFR窗口不同。今天30分钟：客服工单系统按取消24h、仅退款≤$100→2工作日、>$100→4工作日设SLA；物流看板加「ETA+6自然日」列。黑五量上来后，靠事后申诉不如靠超时前处理。",
+      "heat": "high",
+      "format": "新闻翻译",
+      "tracks": [
+        "🛒 AI 电商自动化"
+      ],
+      "hooks": [
+        "TikTok退款时效刚写死，对你意味着三件事",
+        "大部分人还在按「感觉」回退款单"
+      ],
+      "tags": [
+        "平台可改字段"
+      ],
+      "admission": "a+c",
+      "reasoning": "命中(a)客服SLA可执行 (c)政策时效字段。新angle class≠tiktok-nbfr-90d。配额合规。"
+    },
+    {
+      "title": "黑五Better Price：同PID多SKU价档不齐会被整品打到最低档——先统一再报名",
+      "theme_slug": "tiktok-bfcm-sku-price-tier",
+      "angle": "30分钟：导出同PID下SKU价；把要报名的SKU调到同一折扣档；再进Campaigns→Black Friday Register。成本账：一个低档SKU会拉低整品权益，等于用最低档的曝光买全店SKU。",
+      "heat": "high",
+      "format": "方法论",
+      "tracks": [
+        "🛒 AI 电商自动化"
+      ],
+      "hooks": [
+        "大部分人报名黑五的方式是错的：SKU价档不齐就提交",
+        "把同PID的价档控住再报名"
+      ],
+      "tags": [
+        "商家数字",
+        "平台可改字段"
+      ],
+      "admission": "a+b",
+      "reasoning": "命中(a)报名前置价档动作 (b)权益分档/曝光成本数字逻辑。≥1商家数字。跨日新slug。"
+    },
+    {
+      "title": "ChatGPT Ads创意增强默认开（Help写10/31）：品牌/合规账户先关掉再谈测试",
+      "theme_slug": "chatgpt-ads-enhance-optout-1031",
+      "angle": "30分钟：Ads Manager→Manage settings，账户默认Off；再检查各campaign是否被覆盖。有商标/功效宣称/落地页合规约束的账户先关；愿意测试的另开一组对照。注意邮件写10/30、Help写10/31——以账户内通知日期为准。",
+      "heat": "high",
+      "format": "新闻翻译",
+      "tracks": [
+        "🎨 创意广告"
+      ],
+      "hooks": [
+        "ChatGPT广告也要默认改你的文案了，对你意味着三件事"
+      ],
+      "tags": [
+        "平台可改字段"
+      ],
+      "admission": "a+c",
+      "reasoning": "命中(a)Opt out开关 (c)账户/活动级可改字段。非MCP。与Meta browsing同型但平台不同。"
+    }
+  ],
+  "drafts": [
+    {
+      "text": "Meta要在10/28把Product Browsing默认加进你正在跑的广告，对你意味着三件事：\n\n1）用户点广告后，可能先在FB/IG里看商品页和推荐，而不是直达你的落地页；\n2）单品/线索表单广告最容易被「站内推荐」带偏路径；\n3）黑五前30分钟：通知里Opt out，或Advantage+ Creative→Destination逐条关掉。\n\n默认值会替你改转化路径——先关，再决定要不要开一组对照。",
+      "format": "新闻翻译",
+      "tags": [
+        "🎨 创意广告"
+      ],
+      "hook_pattern": "X 刚更新了，对你意味着 N 件事",
+      "reasoning": "元模式2；承接meta-product-browsing-optout-1028；差异化：不做昨日AI摘要/NBFR复述。"
+    },
+    {
+      "text": "TikTok Shop美站把仅退款处理时效写死了。\n\n大多数人还在按「有空再回」处理退款单——这是错的。\n\n今天30分钟：取消/未发货24小时；仅退款≤$100→2个工作日，>$100→4个工作日；逾期可能被自动批准。物流再加一列：预计送达+6自然日。\n\n这和昨天的NBFR 90天窗口是两件事：一个算账号健康，一个决定钱何时被退走。",
+      "format": "新闻翻译",
+      "tags": [
+        "🛒 AI 电商自动化"
+      ],
+      "hook_pattern": "大部分人用 X 的方式是错的",
+      "reasoning": "元模式3；补商家侧实操（underserved）；与tiktok-nbfr-90d区分。"
+    },
+    {
+      "text": "黑五Better Price Rewards改成一次报名、按价自动分档。\n\n同PID里只要有一个SKU掉到低档，整品按最低权益档生效。\n\n报名前先把同商品SKU价调齐，再Register——否则等于用最低档的曝光配额，买了全店SKU的报名动作。\n\n顺带一眼宏观：BTC Fear & Greed 46（Neutral），CNN 21（extreme fear），btcScore 37.6偏恐慌——大促预算更适合先锁平台默认开关与价档，再加码测试。",
+      "format": "方法论",
+      "tags": [
+        "🛒 AI 电商自动化"
+      ],
+      "hook_pattern": "大部分人用 X 的方式是错的",
+      "reasoning": "元模式3+商家数字；强制引用market_snapshot：BTC F&G 46、CNN 21、btcScore 37.6；补underserved商家账本。"
+    }
+  ],
+  "cross_opportunities": [
+    {
+      "label": "默认开关 × 黑五路径",
+      "text": "Meta Product Browsing与ChatGPT Ads创意增强同周默认开：黑五前运营杠杆是「先关平台替你改的路径」，再谈素材产能。"
+    },
+    {
+      "label": "售后SLA × 大促价档",
+      "text": "TikTok退款时效与Better Price最低档同周：一边防自动退款吞利润，一边防低价SKU拖垮整品曝光权益——都是可改字段/数字闸。"
+    }
+  ],
+  "recent_performance": {
+    "period": "2026-10-18 ~ 2026-10-25",
+    "total_posts": 0,
+    "median_impressions": 0,
+    "top_posts": [],
+    "covered_topics": [
+      "agent-auth-matrix",
+      "pixel-vector-lp-pipeline",
+      "ugc-test-sop",
+      "skills-auto-duet",
+      "amazon-ai-summary-listing-fields",
+      "tiktok-nbfr-90d",
+      "tmall-token-sku-fields",
+      "ai-menu-photo-qa-gate",
+      "meta-product-browsing-optout-1028",
+      "tiktok-refund-sla-auto-approve",
+      "tiktok-bfcm-sku-price-tier",
+      "chatgpt-ads-enhance-optout-1031"
+    ],
+    "underserved_tracks": [
+      "🛒 商家侧带数字的实操复盘（本期用退款SLA档位+BFCM价档补）"
+    ],
+    "winning_hooks": [
+      "把 X 和 Y 连起来看",
+      "X 刚更新了，对你意味着 N 件事",
+      "大部分人用 X 的方式是错的"
+    ],
+    "failing_hooks": [
+      "单点复述式新闻播报",
+      "A×B×C工具连看",
+      "MCP无JTBD"
+    ],
+    "insights": "Typefully仍不可用。Topic Scope续跑：平台默认开关deadline（Meta/OpenAI）+ TikTok售后/大促字段；昨日四脊柱不复用；MCP配额0。"
+  },
+  "published_this_week": {
+    "period": "2026-10-18 ~ 2026-10-25",
+    "fetched_at": "2026-10-25T10:40:00Z",
+    "source": "typefully",
+    "error": "Typefully skipped — MCP unavailable; graceful degrade per skill",
+    "social_set_id": null,
+    "platform": "x",
+    "posts": []
+  },
+  "market_snapshot": {
+    "timestamp": "2026-10-25T10:21:02.497Z",
+    "source": "brief.day1global.xyz",
+    "stocks": {
+      "VOO": {
+        "price": 698.58,
+        "changePercent": -0.5297,
+        "marketState": "closed"
+      },
+      "QQQ": {
+        "price": 704.4,
+        "changePercent": -0.0099,
+        "marketState": "closed"
+      },
+      "QQQM": {
+        "price": 290.06,
+        "changePercent": -0.0241,
+        "marketState": "closed"
+      },
+      "NVDA": {
+        "price": 210.96,
+        "changePercent": -0.589,
+        "marketState": "closed"
+      },
+      "TSLA": {
+        "price": 372.22,
+        "changePercent": -0.63,
+        "marketState": "closed"
+      },
+      "GOOG": {
+        "price": 317.28,
+        "changePercent": -1.0849,
+        "marketState": "closed"
+      },
+      "RKLB": {
+        "price": 52.6,
+        "changePercent": 2.6943,
+        "marketState": "closed"
+      },
+      "CRCL": {
+        "price": 85.91,
+        "changePercent": -0.8197,
+        "marketState": "closed"
+      },
+      "HOOD": {
+        "price": 95.07,
+        "changePercent": -1.5635,
+        "marketState": "closed"
+      },
+      "COIN": {
+        "price": 164.45,
+        "changePercent": -2.7441,
+        "marketState": "closed"
+      },
+      "TEM": {
+        "price": 67.615,
+        "changePercent": 5.963,
+        "marketState": "closed"
+      },
+      "GLD": {
+        "price": 366.61,
+        "changePercent": -0.6477,
+        "marketState": "closed"
+      },
+      "SMH": {
+        "price": 527.2,
+        "changePercent": 0.7356,
+        "marketState": "closed"
+      },
+      "DRAM": {
+        "price": 47.06,
+        "changePercent": 3.021,
+        "marketState": "closed"
+      },
+      "MRVL": {
+        "price": 228.51,
+        "changePercent": 2.2553,
+        "marketState": "closed"
+      },
+      "NBIS": {
+        "price": 158.74,
+        "changePercent": -0.2702,
+        "marketState": "closed"
+      },
+      "INTC": {
+        "price": 86.96,
+        "changePercent": 1.7195,
+        "marketState": "closed"
+      },
+      "AMD": {
+        "price": 516.79,
+        "changePercent": 1.7443,
+        "marketState": "closed"
+      },
+      "TSM": {
+        "price": 418.51,
+        "changePercent": 1.4939,
+        "marketState": "closed"
+      },
+      "QCOM": {
+        "price": 175.91,
+        "changePercent": 1.7821,
+        "marketState": "closed"
+      },
+      "RVI": {
+        "price": 24.81,
+        "changePercent": 4.0688,
+        "marketState": "closed"
+      },
+      "VCX": {
+        "price": 24.92,
+        "changePercent": 5.2365,
+        "marketState": "closed"
+      },
+      "DXYZ": {
+        "price": 27.5,
+        "changePercent": 2.3065,
+        "marketState": "closed"
+      }
+    },
+    "crypto": {
+      "BTC": {
+        "price": 80379.9,
+        "change24h": -0.21563282087952823
+      },
+      "VIRTUAL": {
+        "price": 0.6146,
+        "change24h": -2.3514458214172107
+      },
+      "HYPE": {
+        "price": 75.874,
+        "change24h": 0.553965224766741
+      },
+      "SOL": {
+        "price": 100.81,
+        "change24h": -0.6798029556650224
+      },
+      "TAO": {
+        "price": 246.5,
+        "change24h": -0.7648953301127237
+      },
+      "ETH": {
+        "price": 2329.46,
+        "change24h": -1.5077459071844075
+      },
+      "XAUT": {
+        "price": 3991.3,
+        "change24h": -0.0650992763965024
+      },
+      "BNB": {
+        "price": 738.5,
+        "change24h": 0.860420650095596
+      }
+    },
+    "indices": {
+      "sp500": {
+        "price": 7623.68,
+        "changePercent": -0.5186972413136154
+      },
+      "vix": {
+        "price": 19.45,
+        "changePercent": 2.207041513399885
+      },
+      "gold": {
+        "price": 3991.3,
+        "changePercent": -0.0650992763965024
+      },
+      "crudeOil": {
+        "price": 103.27,
+        "changePercent": 3.8202473107469563
+      },
+      "dxy": {
+        "price": 101.752,
+        "changePercent": -0.05696886356940078
+      }
+    },
+    "sentiment": {
+      "cryptoFearGreed": 46,
+      "cryptoFearGreedLabel": "Neutral",
+      "cryptoFearGreedPrev": 47,
+      "cryptoFearGreedChange": -1,
+      "cnnFearGreed": 21,
+      "cnnFearGreedLabel": "extreme fear"
+    },
+    "btcMetrics": {
+      "weeklyRsi": 59,
+      "nupl": 0.331,
+      "lthMvrv": 1.66,
+      "lthSopr": 1.319,
+      "sthSopr": 0.998,
+      "ma365Ratio": 1.06,
+      "wma200Multiplier": 1.21,
+      "etfFlowUsd": -137900000,
+      "etfFlowDays": [
+        -137900000,
+        -635600000,
+        524800000,
+        23200000,
+        526700000,
+        -82400000
+      ],
+      "fundingRate": 0.007364,
+      "longShortRatio": 2.08,
+      "lthSupplyPercent": 82.3,
+      "ahr999": 0.4969
+    },
+    "btcScore": {
+      "score": 37.6,
+      "level": "偏恐慌",
+      "suggestion": "市场偏冷，可适度布局",
+      "dailyScore": 13.1,
+      "weeklyScore": 24.5
+    }
+  },
+  "suggestions": {
+    "info_sources": {
+      "promote": [
+        {
+          "account": "熊猫出海 pandawm / TikTok Seller University",
+          "reason": "10/25周报把退款SLA/BFCM价档/UL证明拆成可执行动作，命中Topic Scope卖家运营",
+          "confidence": "high"
+        },
+        {
+          "account": "Mia Digital Lab / PPC Land Meta变更追踪",
+          "reason": "10/24汇总把Product Browsing deadline与Google High Value同日呈现，适合must_reads",
+          "confidence": "high"
+        },
+        {
+          "account": "OpenAI Help Center Ads",
+          "reason": "创意增强Help页带明确Opt out路径与日期（与邮件日期冲突需标注）",
+          "confidence": "medium"
+        }
+      ],
+      "demote": [
+        {
+          "account": "DeepMind/Blender MCP演示作为topic主燃料",
+          "reason": "Topic Scope soft-demote MCP演示；可进must_reads不宜占topics",
+          "confidence": "high"
+        }
+      ],
+      "add": [
+        {
+          "account": "Meta Ads Manager in-product notices",
+          "reason": "Product Browsing类变更常先出现在账户通知而非Newsroom",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "topic_library": {
+      "archive": [],
+      "add": [
+        {
+          "topic": "广告平台默认开启的创意/落地页开关（Opt out deadline）",
+          "reason": "Meta browsing与ChatGPT enhance同周出现，属可复用平台字段类",
+          "confidence": "high"
+        },
+        {
+          "topic": "店铺售后处理时效与自动批准规则",
+          "reason": "TikTok退款SLA提供与NBFR不同的售后字段角度",
+          "confidence": "high"
+        },
+        {
+          "topic": "大促报名价档/SKU权益联动",
+          "reason": "Better Price最低档生效是可复用商家数字题",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "positioning_drift": [
+      {
+        "observation": "连续两日topics偏平台字段/商家数字，工具链已降权",
+        "suggestion": "保持Topic Scope；创意侧用deadline opt-out补位，避免回流MCP游行",
+        "confidence": "high"
+      }
+    ]
+  }
+}

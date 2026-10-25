@@ -7,6 +7,53 @@ note: 本文件由 agent 每周 prepend 更新(Step 3),滚动保留 8 期,最老
 
 > agent 在每次 daily briefing 的 Step 3 把最新一期 prepend 到本说明之下。
 
+## 2026-10-25（窗口：2026-10-23 ~ 2026-10-25）
+
+### 概览
+
+- 本周发布量 / 总曝光 / 单条中位数 / 单条最高：**全部待补 —— Typefully跳过，连续无量化窗**
+- 本期简报产出：原始素材约 **88** 条 / must_reads **15** / also **12** / 选题 **4** / 草稿 3 / 跨领域 2
+- 赛道分布（must_reads）：🛒售后SLA+大促价档；🎨Meta/OpenAI/Google默认开关；🤖红队/对齐awareness
+- **主线**：平台默认开关deadline（Meta Product Browsing 10/28、ChatGPT Ads enhance ~10/30–31）+ TikTok售后时效/黑五SKU价档。10/22–10/23八条spine全部不复用topics。10/24无归档briefing。
+
+### 🔥 本周表现亮点（Top 5）
+
+无数据。表格留空，不臆造。
+
+### 📈 本周擅长方向
+
+无曝光数据。产出侧结构事实：
+1. **Deadline opt-out选题成型**：Meta browsing + ChatGPT enhance同周，Admission a+c可复用。
+2. **TikTok售后字段与NBFR拆开**：退款SLA自动批准≠90天窗口。
+3. **Reddit≤48h可核验仍稀薄**——继续只进also。
+
+### 🎯 本周有效 Hook 模式
+
+沿用元模式2（对你意味着N件事）与元模式3（大部分人用X的方式是错的）。元模式4慎用于工具游行。
+
+### ⚠️ 本周失灵 Hook 模式
+
+继续回避单点复述、A×B×C工具连看、MCP无JTBD、融资脊柱。
+
+### 🕳️ 覆盖不足赛道
+
+- 商家侧自有投放账本仍缺；本期用退款SLA档位与BFCM价档数字补一档。
+- 微信收藏/fieldtheory本环境不可用。
+
+### 💡 本周涌现的新主题
+
+1. **广告平台默认开启的创意/落地页开关**（meta-product-browsing-optout-1028 / chatgpt-ads-enhance-optout-1031）
+2. **店铺售后处理时效与自动批准**（tiktok-refund-sla-auto-approve）
+3. **大促报名价档/SKU权益联动**（tiktok-bfcm-sku-price-tier）
+
+### 🔧 本期返工与修复记录
+
+1. Typefully/Exa MCP不可用 → published_this_week error降级。
+2. Meta creative audience官方日10/19>48h → 用Ad Test Bench 10/24作must_reads主链。
+3. Amazon Review Requests 10/12>48h → also；不占topic。
+4. Reddit三帖不可核验≤48h → also；must_reads Reddit=0。
+5. 未改 profile_longterm / info_sources / topic_library。
+
 ## 2026-10-23（窗口：2026-10-21 ~ 2026-10-23）
 
 ### 概览
