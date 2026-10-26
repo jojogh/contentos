@@ -1,9 +1,9 @@
 {
   "meta": {
     "description": "信息源注册表 — 本地 X 书签 + Web 信源(WebSearch/RSS 版)。",
-    "updated": "2026-09-21",
+    "updated": "2026-10-26",
     "usage": "daily agent 先查本地书签库(fieldtheory),再用 WebSearch 扫描 web_sources,提取匹配 topic_library 的事件。",
-    "note": "人工维护。agent 只在 daily_data.json.suggestions 里提建议,不自动修改本文件。"
+    "note": "人工维护。agent 只在 daily_data.json.suggestions 里提建议,不自动修改本文件。 2026-10-22: 首批 Reddit 子版写入各赛道 web_sources + reddit_cross_scan；采集用 site:reddit.com WebSearch（直连常 403）。 2026-10-26: Alex 批准将互联网/newsletter 调研的 must_read+scan 信源全量写入 ai_ecom_automation / creative_ads / design_creative_trends。"
   },
   "sources": {
     "design_creative_trends": {
@@ -80,6 +80,102 @@
           ],
           "priority": "scan",
           "note": "无公开抓取通道;通过搜索其被媒体报道的趋势间接覆盖。具体关注清单由本人在 App 内维护"
+        },
+        {
+          "name": "gen-ai.news",
+          "type": "newsletter",
+          "url": "https://gen-ai.news/",
+          "search_queries": [
+            "gen-ai.news generative image video",
+            "gen-ai.news Kling FLUX Canva Craft",
+            "generative image video AI newsletter"
+          ],
+          "priority": "must_read",
+          "note": "2026-10-26 Alex 批准加入. 生成式图像/视频工具 newsletter（Kling/FLUX/Canva Craft）。"
+        },
+        {
+          "name": "Canva Newsroom / Design Trends",
+          "type": "vendor_blog",
+          "url": "https://www.canva.com/newsroom/",
+          "search_queries": [
+            "Canva Design Trends 2026 Imperfect by Design",
+            "Canva Craft image model",
+            "Canva Newsroom AI design"
+          ],
+          "priority": "must_read",
+          "note": "2026-10-26 Alex 批准加入. Canva 官方趋势与 Craft 图像模型/AI 设计动态。"
+        },
+        {
+          "name": "Black Forest Labs Blog（FLUX）",
+          "type": "vendor_blog",
+          "url": "https://bfl.ai/blog",
+          "search_queries": [
+            "Black Forest Labs FLUX 3 blog",
+            "FLUX 3 Image Klein",
+            "BFL FLUX video upscale"
+          ],
+          "priority": "must_read",
+          "note": "2026-10-26 Alex 批准加入. FLUX 官方博客，生图/视频模型一手更新。"
+        },
+        {
+          "name": "Adobe Creative Trends 2026 / Adobe Blog",
+          "type": "report",
+          "url": "https://business.adobe.com/resources/creative-trends-report.html",
+          "search_queries": [
+            "Adobe Creative Trends 2026",
+            "Adobe Firefly AI Assistant creative",
+            "Adobe All the Feels Surreal Silliness"
+          ],
+          "priority": "must_read",
+          "note": "2026-10-26 Alex 批准加入. Adobe 年度创意趋势报告与 Firefly/创意 AI 动态（兼 blog.adobe.com）。"
+        },
+        {
+          "name": "优设网 UISDC",
+          "type": "media",
+          "url": "https://www.uisdc.com/",
+          "search_queries": [
+            "优设网 2026 AI 设计趋势",
+            "UISDC GenUI AI 设计师",
+            "优设 AI 智能体 设计 Skills"
+          ],
+          "priority": "must_read",
+          "note": "2026-10-26 Alex 批准加入. 中文设计媒体，AI 设计趋势/GenUI/智能体 Skills。"
+        },
+        {
+          "name": "站酷 ZCOOL · AI 工具",
+          "type": "community",
+          "url": "https://www.zcool.com.cn/ai/tools",
+          "search_queries": [
+            "站酷 AI 工具 设计师",
+            "ZCOOL 超级AI设计师",
+            "站酷 Google Stitch Claude Design"
+          ],
+          "priority": "scan",
+          "note": "2026-10-26 Alex 批准加入. 站酷 AI 工具社区页，设计师工具与 Stitch/Claude Design 信号。"
+        },
+        {
+          "name": "Jakob Nielsen on UX",
+          "type": "newsletter",
+          "url": "https://jakobnielsenphd.substack.com/",
+          "search_queries": [
+            "Jakob Nielsen UX Roundup AI",
+            "Jakob Nielsen Nano Banana UX",
+            "AI UX trends Substack Nielsen"
+          ],
+          "priority": "scan",
+          "note": "2026-10-26 Alex 批准加入. Nielsen UX Roundup Substack，AI UX 趋势交叉验证。"
+        },
+        {
+          "name": "Krea Blog",
+          "type": "vendor_blog",
+          "url": "https://www.krea.ai/blog/",
+          "search_queries": [
+            "Krea 3 image model blog",
+            "Krea Multiplayer Nodes workflow",
+            "Krea realtime edit AI design"
+          ],
+          "priority": "scan",
+          "note": "2026-10-26 Alex 批准加入. Krea 官方博客，实时编辑/工作流与生图模型更新。"
         }
       ],
       "topic_queries": [
@@ -87,7 +183,11 @@
         "AI 生图 模型 更新",
         "AI 生视频 模型 商用",
         "generative AI creative campaign case study",
-        "AI 设计 趋势"
+        "AI 设计 趋势",
+        "Canva Design Trends 2026 Imperfect by Design",
+        "Black Forest Labs FLUX 3 blog",
+        "Adobe Creative Trends 2026",
+        "优设网 2026 AI 设计趋势"
       ]
     },
     "local_x_bookmarks": {
@@ -156,13 +256,156 @@
             "site:newsroom.tiktok.com shop AI"
           ],
           "priority": "must_read"
+        },
+        {
+          "name": "r/shopify",
+          "type": "reddit",
+          "url": "https://www.reddit.com/r/shopify/",
+          "priority": "must_read",
+          "note": "2026-10-22 加入. Shopify merchants/ops; AI Flow/support/listing. Query: new + AI|automation|Flow|Gorgias|n8n|agent. Strict anti-promo."
+        },
+        {
+          "name": "r/FulfillmentByAmazon",
+          "type": "reddit",
+          "url": "https://www.reddit.com/r/FulfillmentByAmazon/",
+          "priority": "must_read",
+          "note": "2026-10-22 加入. FBA listing/PPC/MCP agent threads with ACOS-style detail. Filter agency soft-sell."
+        },
+        {
+          "name": "r/n8n",
+          "type": "reddit",
+          "url": "https://www.reddit.com/r/n8n/",
+          "priority": "must_read",
+          "note": "2026-10-22 加入. Production agent workflows; prefer Workflow+GitHub. Shared signal with ai_frontier."
+        },
+        {
+          "name": "r/ecommerce",
+          "type": "reddit",
+          "url": "https://www.reddit.com/r/ecommerce/",
+          "priority": "scan",
+          "note": "2026-10-22 加入. Cross-platform ops; prefer cost/time savings threads."
+        },
+        {
+          "name": "The Automated Operator",
+          "type": "newsletter",
+          "url": "https://theautomatedoperator.substack.com/",
+          "search_queries": [
+            "The Automated Operator Alex Willen",
+            "AI replace ecommerce operator Claude Amazon",
+            "automated Amazon seller AI workflow"
+          ],
+          "priority": "must_read",
+          "note": "2026-10-26 Alex 批准加入. Substack 专写 AI 替代电商运营者与 Amazon seller 自动化工作流。"
+        },
+        {
+          "name": "Kinga | Claude AI for Ecommerce",
+          "type": "newsletter",
+          "url": "https://kinga168.substack.com/",
+          "search_queries": [
+            "Kinga Claude ecommerce Klaviyo",
+            "Claude AI for ecommerce email retention",
+            "ecommerce Claude agent email design"
+          ],
+          "priority": "must_read",
+          "note": "2026-10-26 Alex 批准加入. Claude 做电商邮件/留存与 agent 工作流的实操 newsletter。"
+        },
+        {
+          "name": "Marketplace Pulse",
+          "type": "media",
+          "url": "https://www.marketplacepulse.com/",
+          "search_queries": [
+            "Marketplace Pulse TikTok Shop Amazon",
+            "Marketplace Pulse seller trends report",
+            "marketplace intelligence ecommerce"
+          ],
+          "priority": "must_read",
+          "note": "2026-10-26 Alex 批准加入. 亚马逊/TikTok Shop 卖家趋势与 marketplace 情报媒体。"
+        },
+        {
+          "name": "跨境Ai视界（amzalysis）",
+          "type": "media",
+          "url": "https://amzalysis.com/",
+          "search_queries": [
+            "跨境Ai视界 AMZ Helper Agent",
+            "跨境电商 MCP SellerSprite Sorftime",
+            "Amazon Agent 选品 Listing PPC"
+          ],
+          "priority": "must_read",
+          "note": "2026-10-26 Alex 批准加入. 中文跨境 AI/Agent 选品 Listing PPC 与 MCP 工具实践。"
+        },
+        {
+          "name": "StokisAI / 跨境AI小田田",
+          "type": "media",
+          "url": "https://stokisai.com/",
+          "search_queries": [
+            "跨境AI小田田 StokisAI ERP",
+            "亚马逊 SP-API n8n 自动化",
+            "ComfyUI eBay 铺货图"
+          ],
+          "priority": "must_read",
+          "note": "2026-10-26 Alex 批准加入. 跨境 AI ERP、SP-API/n8n 自动化与铺货图实践（blog: stokisai.com/blog）。"
+        },
+        {
+          "name": "品牌方舟 BrandArk",
+          "type": "media",
+          "url": "https://www.brandark.com/",
+          "search_queries": [
+            "品牌方舟 BrandArk 出海",
+            "BrandArk TikTok Shop DTC",
+            "品牌方舟 AI 全球化"
+          ],
+          "priority": "scan",
+          "note": "2026-10-26 Alex 批准加入. 品牌出海/TikTok Shop DTC 与 AI 全球化媒体，作 scan 交叉。"
+        },
+        {
+          "name": "Retail Brew",
+          "type": "newsletter",
+          "url": "https://www.retailbrew.com/",
+          "search_queries": [
+            "Retail Brew AI personalization retail",
+            "Retail Brew TikTok Shop",
+            "Morning Brew Retail Brew ecommerce"
+          ],
+          "priority": "scan",
+          "note": "2026-10-26 Alex 批准加入. Morning Brew 零售日刊，覆盖 AI 个性化与 TikTok Shop。"
+        },
+        {
+          "name": "Jungle Scout Blog",
+          "type": "vendor_blog",
+          "url": "https://www.junglescout.com/resources/articles/",
+          "search_queries": [
+            "Jungle Scout MCP Cobalt Amazon",
+            "Jungle Scout AI Amazon insights",
+            "Amazon marketplace MCP Jungle Scout"
+          ],
+          "priority": "scan",
+          "note": "2026-10-26 Alex 批准加入. 卖家工具商博客，MCP/Cobalt 与 AI Amazon insights 信号。"
+        },
+        {
+          "name": "AI与鱼（yuaigo）",
+          "type": "media",
+          "url": "https://yuaigo.com/",
+          "search_queries": [
+            "AI与鱼 跨境电商 Claude",
+            "yuaigo Solo AI 跨境",
+            "一个人 AI 跨境电商"
+          ],
+          "priority": "scan",
+          "note": "2026-10-26 Alex 批准加入. Solo AI 跨境实践媒体，Claude 一人电商视角。"
         }
       ],
       "topic_queries": [
         "AI agent ecommerce automation 2026",
         "AI product listing generation seller tools",
         "智能客服 AI 电商 自动化",
-        "AI virtual model product photography ecommerce"
+        "AI virtual model product photography ecommerce",
+        "site:reddit.com/r/shopify AI automation Flow",
+        "site:reddit.com/r/FulfillmentByAmazon AI PPC listing",
+        "site:reddit.com/r/n8n Shopify AI agent",
+        "AI replace ecommerce operator Claude Amazon",
+        "Marketplace Pulse seller trends report",
+        "跨境电商 MCP SellerSprite Sorftime",
+        "亚马逊 SP-API n8n 自动化"
       ]
     },
     "creative_ads": {
@@ -262,6 +505,106 @@
           ],
           "priority": "scan",
           "note": "2026-09-03 本人指示加入。平台官方创意工具动态,与 TikTok Shop 卖家侧互补"
+        },
+        {
+          "name": "r/FacebookAds",
+          "type": "reddit",
+          "url": "https://www.reddit.com/r/FacebookAds/",
+          "priority": "must_read",
+          "note": "2026-10-22 加入. Meta creative ops; AI static/UGC/video with CPA talk."
+        },
+        {
+          "name": "r/PPC",
+          "type": "reddit",
+          "url": "https://www.reddit.com/r/PPC/",
+          "priority": "must_read",
+          "note": "2026-10-22 加入. Multi-channel paid; AI RSA/PMax/Meta creative + video tests."
+        },
+        {
+          "name": "r/AI_UGC_Marketing",
+          "type": "reddit",
+          "url": "https://www.reddit.com/r/AI_UGC_Marketing/",
+          "priority": "must_read",
+          "note": "2026-10-22 加入. AI video ads / UGC tools (Creatify, Arcads, HeyGen, Veo) head-to-head + CPA. Prefer numbered tests."
+        },
+        {
+          "name": "r/TikTokAds",
+          "type": "reddit",
+          "url": "https://www.reddit.com/r/TikTokAds/",
+          "priority": "must_read",
+          "note": "2026-10-22 加入. TikTok AI avatar vs filmed UGC; cold traffic performance."
+        },
+        {
+          "name": "Marketing Brew",
+          "type": "newsletter",
+          "url": "https://www.marketingbrew.com/",
+          "search_queries": [
+            "Marketing Brew Meta Muse ads",
+            "Marketing Brew AI brand advertising",
+            "Morning Brew Marketing Brew creative"
+          ],
+          "priority": "must_read",
+          "note": "2026-10-26 Alex 批准加入. Morning Brew 营销日刊，Meta Muse/AI 品牌广告与创意动态。"
+        },
+        {
+          "name": "TLDR Marketing",
+          "type": "newsletter",
+          "url": "https://tldr.tech/marketing",
+          "search_queries": [
+            "TLDR Marketing AI ads",
+            "TLDR Marketing creative tactics",
+            "TLDR Marketing performance marketing"
+          ],
+          "priority": "must_read",
+          "note": "2026-10-26 Alex 批准加入. 营销简报，AI ads/创意战术与效果营销速览。"
+        },
+        {
+          "name": "SocialBeta",
+          "type": "media",
+          "url": "https://socialbeta.com/",
+          "search_queries": [
+            "SocialBeta 人文营销 2026",
+            "SocialBeta 品牌案例 创意",
+            "SocialBeta AI 内容营销"
+          ],
+          "priority": "must_read",
+          "note": "2026-10-26 Alex 批准加入. 中文营销创意案例与 AI 内容营销媒体。"
+        },
+        {
+          "name": "梅花网",
+          "type": "media",
+          "url": "https://www.meihua.info/",
+          "search_queries": [
+            "梅花网 创意案例 广告片",
+            "梅花网 营销热榜 2026",
+            "梅花网 AI 营销"
+          ],
+          "priority": "must_read",
+          "note": "2026-10-26 Alex 批准加入. 中文创意案例/广告片与营销热榜媒体。"
+        },
+        {
+          "name": "The creative engineer（Videotok）",
+          "type": "newsletter",
+          "url": "https://videotok.substack.com/",
+          "search_queries": [
+            "creative engineer Videotok AI ads",
+            "Videotok recreate AI ads UGC",
+            "AI short film ads Seedance"
+          ],
+          "priority": "scan",
+          "note": "2026-10-26 Alex 批准加入. Videotok Substack，AI 广告复刻/UGC/短片广告工作流。"
+        },
+        {
+          "name": "HeyGen Blog",
+          "type": "vendor_blog",
+          "url": "https://www.heygen.com/blog",
+          "search_queries": [
+            "HeyGen Avatar AI ads",
+            "HeyGen Seedance video ads",
+            "HeyGen AI UGC avatar marketing"
+          ],
+          "priority": "scan",
+          "note": "2026-10-26 Alex 批准加入. Avatar/UGC 视频广告工具商博客，产品与案例信号。"
         }
       ],
       "topic_queries": [
@@ -271,7 +614,15 @@
         "AI 广告素材 批量生成",
         "AI UGC 视频生成 工具 实测",
         "创意广告视频 AI 生成 案例",
-        "Grok Bot marketing automation playbook"
+        "Grok Bot marketing automation playbook",
+        "site:reddit.com/r/AI_UGC_Marketing Creatify OR Arcads CPA",
+        "site:reddit.com/r/TikTokAds AI UGC avatar",
+        "site:reddit.com/r/FacebookAds AI video UGC",
+        "AI video ads Meta TikTok UGC 2026",
+        "Marketing Brew Meta Muse ads",
+        "TLDR Marketing AI ads",
+        "SocialBeta AI 内容营销",
+        "Videotok recreate AI ads UGC"
       ]
     },
     "ai_frontier": {
@@ -350,13 +701,43 @@
             "date": "2026-09-21",
             "reason": "site:importai.substack.com 连续多期返回空结果,与 openai.com/blog、anthropic.com/engineering 同批失效。保留条目以便日后改用官方 RSS 恢复,当前不再占用检索式配额。"
           }
+        },
+        {
+          "name": "r/AI_Agents",
+          "type": "reddit",
+          "url": "https://www.reddit.com/r/AI_Agents/",
+          "priority": "must_read",
+          "note": "2026-10-22 加入. Largest agent hub; keep production/MCP posts, filter launch spam."
+        },
+        {
+          "name": "r/mcp",
+          "type": "reddit",
+          "url": "https://www.reddit.com/r/mcp/",
+          "priority": "must_read",
+          "note": "2026-10-22 加入. MCP servers/clients — ContentOS toolchain relevance."
+        },
+        {
+          "name": "r/LLMDevs",
+          "type": "reddit",
+          "url": "https://www.reddit.com/r/LLMDevs/",
+          "priority": "scan",
+          "note": "2026-10-22 加入. Evals/tool-calling/MCP eng signal."
+        },
+        {
+          "name": "r/LocalLLaMA",
+          "type": "reddit",
+          "url": "https://www.reddit.com/r/LocalLLaMA/",
+          "priority": "scan",
+          "note": "2026-10-22 加入. Local/open agents + MCP; filter hardware shopping."
         }
       ],
       "topic_queries": [
         "AI model launch 2026",
         "AI agent framework MCP update",
         "multimodal AI model release",
-        "AI 大模型 发布 2026"
+        "AI 大模型 发布 2026",
+        "site:reddit.com/r/AI_Agents MCP production",
+        "site:reddit.com/r/mcp Shopify OR browser server"
       ]
     },
     "tech_news": {
@@ -401,51 +782,171 @@
           "note": "fieldtheory 全库收藏数 Top 20(2026-09-04 快照),持续高频信源",
           "priority": "must_read",
           "authors": [
-            {"handle": "@Gdgtify", "count": 446, "focus": "AI 生图 prompt 玩法(Reve/GPT Image 网格构图)"},
-            {"handle": "@AmirMushich", "count": 82, "focus": "AI 视频工作流省 token 技巧、AI 设计指南"},
-            {"handle": "@xiaoxiaodong01", "count": 77, "focus": "中文 AI 工具/创意"},
-            {"handle": "@TechieBySA", "count": 76, "focus": "GPT Image/Seedance 商业场景 prompt"},
-            {"handle": "@VigoCreativeAI", "count": 69, "focus": "AI 创意"},
-            {"handle": "@berryxia", "count": 64, "focus": "中文 AI 圈"},
-            {"handle": "@tom_doerr", "count": 62, "focus": "AI 新闻/模型发布快讯"},
-            {"handle": "@binghe", "count": 56, "focus": "中文 AI 技术"},
-            {"handle": "@GoSailGlobal", "count": 50, "focus": "中文 AI 工具测评、自媒体工作流"},
-            {"handle": "@Mind_Boticni", "count": 50, "focus": "奢侈品/杂志风 AI 广告 prompt"},
-            {"handle": "@MrLarus", "count": 50, "focus": "海报构图/排版物理动效 AI 视觉"},
-            {"handle": "@AYi_AInotes", "count": 46, "focus": "中文 AI 笔记"},
-            {"handle": "@dotey", "count": 46, "focus": "宝玉,AI 工程/Agent 深度"},
-            {"handle": "@AdrianPunk115", "count": 44, "focus": "AI 创意"},
-            {"handle": "@QingQ77", "count": 41, "focus": "中文 AI 创意"},
-            {"handle": "@vista8", "count": 39, "focus": "AI 独立开发/工具"},
-            {"handle": "@servasyy_ai", "count": 35, "focus": "AI 生图生视频、image-to-3D 开源"},
-            {"handle": "@itsalexvacca", "count": 33, "focus": "AI 工具/增长"},
-            {"handle": "@craftian_keskin", "count": 32, "focus": "GPT Image 广告级产品摄影 prompt"},
-            {"handle": "@op7418", "count": 32, "focus": "中文 AI 设计/前端"}
+            {
+              "handle": "@Gdgtify",
+              "count": 446,
+              "focus": "AI 生图 prompt 玩法(Reve/GPT Image 网格构图)"
+            },
+            {
+              "handle": "@AmirMushich",
+              "count": 82,
+              "focus": "AI 视频工作流省 token 技巧、AI 设计指南"
+            },
+            {
+              "handle": "@xiaoxiaodong01",
+              "count": 77,
+              "focus": "中文 AI 工具/创意"
+            },
+            {
+              "handle": "@TechieBySA",
+              "count": 76,
+              "focus": "GPT Image/Seedance 商业场景 prompt"
+            },
+            {
+              "handle": "@VigoCreativeAI",
+              "count": 69,
+              "focus": "AI 创意"
+            },
+            {
+              "handle": "@berryxia",
+              "count": 64,
+              "focus": "中文 AI 圈"
+            },
+            {
+              "handle": "@tom_doerr",
+              "count": 62,
+              "focus": "AI 新闻/模型发布快讯"
+            },
+            {
+              "handle": "@binghe",
+              "count": 56,
+              "focus": "中文 AI 技术"
+            },
+            {
+              "handle": "@GoSailGlobal",
+              "count": 50,
+              "focus": "中文 AI 工具测评、自媒体工作流"
+            },
+            {
+              "handle": "@Mind_Boticni",
+              "count": 50,
+              "focus": "奢侈品/杂志风 AI 广告 prompt"
+            },
+            {
+              "handle": "@MrLarus",
+              "count": 50,
+              "focus": "海报构图/排版物理动效 AI 视觉"
+            },
+            {
+              "handle": "@AYi_AInotes",
+              "count": 46,
+              "focus": "中文 AI 笔记"
+            },
+            {
+              "handle": "@dotey",
+              "count": 46,
+              "focus": "宝玉,AI 工程/Agent 深度"
+            },
+            {
+              "handle": "@AdrianPunk115",
+              "count": 44,
+              "focus": "AI 创意"
+            },
+            {
+              "handle": "@QingQ77",
+              "count": 41,
+              "focus": "中文 AI 创意"
+            },
+            {
+              "handle": "@vista8",
+              "count": 39,
+              "focus": "AI 独立开发/工具"
+            },
+            {
+              "handle": "@servasyy_ai",
+              "count": 35,
+              "focus": "AI 生图生视频、image-to-3D 开源"
+            },
+            {
+              "handle": "@itsalexvacca",
+              "count": 33,
+              "focus": "AI 工具/增长"
+            },
+            {
+              "handle": "@craftian_keskin",
+              "count": 32,
+              "focus": "GPT Image 广告级产品摄影 prompt"
+            },
+            {
+              "handle": "@op7418",
+              "count": 32,
+              "focus": "中文 AI 设计/前端"
+            }
           ]
         },
         "hidden_gems": {
           "note": "fieldtheory viz 标记的一次性高质量账号(各收藏 1 次),内容对口创意广告/AI 工具,值得回溯其历史推文",
           "priority": "scan",
           "authors": [
-            {"handle": "@nestymee", "focus": "AI influencer 生成公式"},
-            {"handle": "@RedCubix_NEO", "focus": "AI 视频氛围感 prompt"},
-            {"handle": "@rameerez", "focus": "纯 prompt 做产品发布视频(indie maker)"},
-            {"handle": "@HeyRu0by", "focus": "9:16 商业级食品广告视频 prompt"},
-            {"handle": "@Lianaalane", "focus": "GPT Image 人脸一致性 prompt"},
-            {"handle": "@mxvdxn", "focus": "视频角色表(character sheet)工作流"},
-            {"handle": "@ZabihullahAtal", "focus": "商业咨询替代 prompt"},
-            {"handle": "@dharmesh", "focus": "HubSpot 创始人,AI-native CRM/产品发布"}
+            {
+              "handle": "@nestymee",
+              "focus": "AI influencer 生成公式"
+            },
+            {
+              "handle": "@RedCubix_NEO",
+              "focus": "AI 视频氛围感 prompt"
+            },
+            {
+              "handle": "@rameerez",
+              "focus": "纯 prompt 做产品发布视频(indie maker)"
+            },
+            {
+              "handle": "@HeyRu0by",
+              "focus": "9:16 商业级食品广告视频 prompt"
+            },
+            {
+              "handle": "@Lianaalane",
+              "focus": "GPT Image 人脸一致性 prompt"
+            },
+            {
+              "handle": "@mxvdxn",
+              "focus": "视频角色表(character sheet)工作流"
+            },
+            {
+              "handle": "@ZabihullahAtal",
+              "focus": "商业咨询替代 prompt"
+            },
+            {
+              "handle": "@dharmesh",
+              "focus": "HubSpot 创始人,AI-native CRM/产品发布"
+            }
           ]
         },
         "latest_session": {
           "note": "2026-09-04 最近一次 sync 新增书签的作者,时效性最强",
           "priority": "scan",
           "authors": [
-            {"handle": "@DeanHeoi", "count": 2},
-            {"handle": "@0xROAS", "count": 1},
-            {"handle": "@AdrianPunk115", "count": 1, "note": "同时在 top_voices"},
-            {"handle": "@app_sail", "count": 1},
-            {"handle": "@bourneliu66", "count": 1}
+            {
+              "handle": "@DeanHeoi",
+              "count": 2
+            },
+            {
+              "handle": "@0xROAS",
+              "count": 1
+            },
+            {
+              "handle": "@AdrianPunk115",
+              "count": 1,
+              "note": "同时在 top_voices"
+            },
+            {
+              "handle": "@app_sail",
+              "count": 1
+            },
+            {
+              "handle": "@bourneliu66",
+              "count": 1
+            }
           ]
         }
       }
@@ -494,6 +995,44 @@
           "feed_count": 60,
           "note": "与 30 池重叠度高,扩展扫用;罗永浩十字路口/42章经/硬地骇客等"
         }
+      ]
+    },
+    "reddit_cross_scan": {
+      "track": "全部赛道(Reddit 轻扫)",
+      "note": "2026-10-22 加入. Mega Reddit light scan only; do not promote to must_read. Direct reddit.com fetch may 403 — use site:reddit.com WebSearch.",
+      "web_sources": [
+        {
+          "name": "r/ChatGPT",
+          "type": "reddit",
+          "url": "https://www.reddit.com/r/ChatGPT/",
+          "priority": "scan",
+          "note": "Mainstream feature adoption; high spam."
+        },
+        {
+          "name": "r/ClaudeAI",
+          "type": "reddit",
+          "url": "https://www.reddit.com/r/ClaudeAI/",
+          "priority": "scan",
+          "note": "Claude Code / MCP / agent experiments."
+        },
+        {
+          "name": "r/runwayml",
+          "type": "reddit",
+          "url": "https://www.reddit.com/r/runwayml/",
+          "priority": "scan",
+          "note": "AI video model layer for product b-roll; filter non-ad showcase."
+        },
+        {
+          "name": "r/aivideo",
+          "type": "reddit",
+          "url": "https://www.reddit.com/r/aivideo/",
+          "priority": "scan",
+          "note": "General AI video; keyword-filter product/ad."
+        }
+      ],
+      "topic_queries": [
+        "site:reddit.com/r/runwayml product advertising video",
+        "site:reddit.com/r/aivideo ad OR ecommerce"
       ]
     }
   }
