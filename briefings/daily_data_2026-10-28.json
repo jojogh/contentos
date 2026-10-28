@@ -1,0 +1,912 @@
+{
+  "date": "2026-10-28",
+  "generated_at": "2026-10-28T12:30:00Z",
+  "pass": "topic-scope-day",
+  "raw_material_count": 86,
+  "publishing_note": "周三定稿：脊柱=Amazon VMP编辑闸、Meta创意Breakdown杀弱素材、Meta版位改Account controls按目标、PMax组内素材A/B（长测）。Product Browsing今天生效但theme已占10/25→must_reads day-of不进topics。禁复用Oct27五spine+Oct26三slug。Typefully/Exa跳过。不自动发帖。",
+  "must_reads": [
+    {
+      "title": "今天生效：Meta Product Browsing 默认开——立刻核 Destination + LPV/Outbound 缺口（不复用10/25 topic spine）",
+      "event_id": "meta-product-browsing-1028-dayof",
+      "summary": "10/28起存量广告默认加站内商品浏览。theme_slug已占10/25，今日不作选题脊柱。30分钟：①Ads tab批量查Advantage+「Add product browsing」与Destination→Personalized destinations；②对照近14天 LPV÷outbound clicks；③复制广告后重核（报复制会重新打开）。",
+      "url": "https://x.com/athenaadsops/status/2115206338305474650",
+      "track": "🎨 创意广告",
+      "matched_topic": null,
+      "source": "@athenaadsops via X (+ Meta Help)",
+      "published_at": "2026-10-27T22:17:44Z",
+      "supporting": [
+        {
+          "angle": "Meta Help：Personalized destinations（含 product browsing）",
+          "url": "https://www.facebook.com/business/help/1842103166667481"
+        },
+        {
+          "angle": "X日切提醒 @NesterMB",
+          "url": "https://x.com/NesterMB/status/2115239962924769655"
+        },
+        {
+          "angle": "Selzee清单（页龄>48h延伸）",
+          "url": "https://selzee.com/blog/meta-product-browsing"
+        }
+      ],
+      "age_hours": 14.2
+    },
+    {
+      "title": "Amazon美站 Virtual Multipacks：10/28前最新一批自动建 listing，11/11开卖——只能走 Edit Virtual Multipack",
+      "event_id": "amazon-vmp-dc-multipack-1111",
+      "summary": "Niceggie 10/28 + aNavigator 10/27：品牌FBA ASIN自动生成2/3包等虚拟多件；SKU前缀VMP_DC_；默认单价×件数无折扣；2包装仍收两件履约费。30分钟：Manage All Inventory筛VMP_DC_；只在Edit Virtual Multipack改价/图/删；11/10前决定删除（试点期删除不可恢复）。",
+      "url": "https://www.niceggie.com/en/news/amazon-us-pilots-virtual-multipacks-listings-2026-6ae14f181bc406cba43f87cb",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "商家数字/平台可改字段",
+      "source": "Niceggie (+ aNavigator)",
+      "published_at": "2026-10-28T01:25:00Z",
+      "supporting": [
+        {
+          "angle": "aNavigator：11/10前改价/MAP/Business价差与永久删除警告",
+          "url": "https://anavigator.co/blog/amazon-is-creating-multipack-listings-from-your-fba-inventory-without-asking-here-is-what-to-do-before-november-11/"
+        }
+      ],
+      "age_hours": 11.1
+    },
+    {
+      "title": "Meta Ads Manager Breakdown：同一条广告里单张图/视频/文案变体可拆效果——先杀拖后腿素材",
+      "event_id": "meta-creative-breakdown-1027",
+      "summary": "Social Media Today 10/27：Breakdown→Media看单素材交付；文案走Dynamic creative element。坑：Show as collection/carousel不进表；Donate/Subscribe自定义转化无洞察。30分钟：打开主力Sales广告Breakdown，标出CTR/结果垫底的图视频并停用或替换。",
+      "url": "https://www.socialmediatoday.com/news/meta-adds-individual-performance-data-for-ad-creative/872981/",
+      "track": "🎨 创意广告",
+      "matched_topic": "创意测试/商家数字",
+      "source": "Social Media Today",
+      "published_at": "2026-10-27T16:00:00Z",
+      "supporting": [
+        {
+          "angle": "@shaoxiao_si 中文拆解 Help 路径",
+          "url": "https://x.com/shaoxiao_si/status/2115335607127802209"
+        }
+      ],
+      "age_hours": 20.5
+    },
+    {
+      "title": "Meta确认：Sales/Leads/App/Engagement 不再在ad set选手动版位——改用Account controls按目标排除",
+      "event_id": "meta-placement-manual-gone-4obj",
+      "summary": "Meta Help「What's new in placement settings」：四目标取消ad set级手动版位；Awareness/Traffic保留。替代：①版位素材定制(最多10媒体)；②Placement value rules调出价；③Account controls按objective排除（AN/Marketplace/右栏等有限列表）。30分钟：Advertising settings→Placement controls按Sales目标关掉不该出的位；高价值版位用value rules+1而不是幻想关Reels。",
+      "url": "https://www.facebook.com/business/help/1546753450586085",
+      "track": "🎨 创意广告",
+      "matched_topic": "平台可改字段",
+      "source": "Meta Business Help",
+      "published_at": "2026-10-27T12:00:00Z",
+      "supporting": [
+        {
+          "angle": "@shaoxiao_si：按objective的Account Controls要点",
+          "url": "https://x.com/shaoxiao_si/status/2115289761619325106"
+        }
+      ],
+      "age_hours": 24.5
+    },
+    {
+      "title": "Google PMax beta：同一asset group内可A/B两套素材（control/treatment）——黑五前别当快测",
+      "event_id": "google-pmax-asset-ab-intragroup",
+      "summary": "Adriaan Dekker 10/27：实验可选流量切分与成功指标（转化/价值/点击）；官方建议至少4–6周达显著。≠昨日Sourced videos spine。30分钟：若账户见开关，只对「已过学习、素材差已验证」的主力组开一组长测；BF短窗勿当日内胜负。",
+      "url": "https://adriaan-dekker.nl/you-can-now-a-b-test-two-sets-of-assets-inside-one-pmax-asset-group/",
+      "track": "🎨 创意广告",
+      "matched_topic": "创意测试SOP",
+      "source": "Adriaan Dekker (spotted Thomas Eccel)",
+      "published_at": "2026-10-27T08:21:00Z",
+      "supporting": [
+        {
+          "angle": "@VikasAnandHS 转载开关截图线索",
+          "url": "https://x.com/VikasAnandHS/status/2115335451762704679"
+        }
+      ],
+      "age_hours": 28.1
+    },
+    {
+      "title": "ChatGPT Ads创意增强：Help确认10/30自动开——Manage settings先关（10/25 spine仅提醒）",
+      "event_id": "chatgpt-ads-enhance-1030-reminder",
+      "summary": "OpenAI Help更新：10/30起新/旧活动自动开增强（改标题描述、缩放图、优化落地URL、翻译）；无逐条预览。theme_slug已占10/25。30分钟：Ads Manager→Manage settings确认账户/活动级仍为Off；落地页价格库存与广告一致。",
+      "url": "https://help.openai.com/en/articles/20001614-creative-enhancements-for-chatgpt-ads",
+      "track": "🎨 创意广告",
+      "matched_topic": null,
+      "source": "OpenAI Help (updated ~9h ago)",
+      "published_at": "2026-10-28T03:00:00Z",
+      "supporting": [],
+      "age_hours": 9.5
+    },
+    {
+      "title": "Meta Pixel设备侧补转化11/12默认开——对账窗仍在（昨spine提醒，不复用topic）",
+      "event_id": "meta-pixel-device-1112-follow",
+      "summary": "延续10/27 PPC Land：11/12前完成Meta归因购买vs订单表。今日不占topic。",
+      "url": "https://ppc.land/meta-pixel-will-count-more-conversions-from-nov-12-unless-advertisers-opt-out/",
+      "track": "🎨 创意广告",
+      "matched_topic": null,
+      "source": "PPC Land",
+      "published_at": "2026-10-27T08:00:00Z",
+      "supporting": [],
+      "age_hours": 28.5
+    },
+    {
+      "title": "Google DeepMind Genie 4：实时可交互世界模型+原生音频——广告级可用性仍早期",
+      "event_id": "deepmind-genie-4-launch",
+      "summary": "Google 10/27：Genie 4可自然语言改场景并实时出环境音/对白；先Trusted tester，随后Google AI Ultra/Project Genie与API伙伴。电商落地：尚无30分钟可跑通素材流水线——只做AI前沿awareness。",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-genie-4/",
+      "track": "🤖 AI 前沿",
+      "matched_topic": null,
+      "source": "Google / DeepMind",
+      "published_at": "2026-10-27T16:00:00Z",
+      "supporting": [
+        {
+          "angle": "DeepMind博客镜像入口",
+          "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+        }
+      ],
+      "age_hours": 20.5
+    },
+    {
+      "title": "Google Ads Goals下新增 All Conversions 子菜单——一眼看清主/次转化与点击窗",
+      "event_id": "google-ads-all-conversions-submenu",
+      "summary": "Adriaan 10/26：Goals→Conversions→All conversions直达动作总表（账户目标纳入、CTR窗、primary/secondary、repeat rate、last seen）。30分钟：打开核对黑五前主转化是否仍唯一；次转化别误标Primary喂Smart Bidding。",
+      "url": "https://adriaan-dekker.nl/google-ads-now-has-an-all-conversions-submenu-under-goals-conversions/",
+      "track": "🎨 创意广告",
+      "matched_topic": "商家数字/转化口径",
+      "source": "Adriaan Dekker",
+      "published_at": "2026-10-26T15:21:00Z",
+      "supporting": [],
+      "age_hours": 45.1
+    },
+    {
+      "title": "雨果跨境：买达人「Agent」还是套壳Workflow——吞吐给机器，选人/Brief/核心关系留给人",
+      "event_id": "cifnews-influencer-agent-vs-workflow",
+      "summary": "cifnews近窗：平台侧Agent可覆盖搜达人/邀约/议价吞吐，但策略与调性闸必须人审。30分钟画三层：机器筛→人定名单→人发Brief。不占MCP topic。",
+      "url": "https://www.cifnews.com/article/189597",
+      "track": "🎨 创意广告",
+      "matched_topic": "创意生产SOP",
+      "source": "雨果跨境",
+      "published_at": "2026-10-27T06:00:00Z",
+      "supporting": [],
+      "age_hours": 30.5
+    },
+    {
+      "title": "OpenAI GPT-6.1 Terra仍在窗内：更快计算机使用+视觉，API价约半——办公Agent候选",
+      "event_id": "openai-gpt61-terra-follow",
+      "summary": "延续昨awareness；今日不占topic/MCP席。",
+      "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+      "track": "🤖 AI 前沿",
+      "matched_topic": null,
+      "source": "OpenAI",
+      "published_at": "2026-10-27T00:00:00Z",
+      "supporting": [],
+      "age_hours": 36.5
+    },
+    {
+      "title": "TikTok美区黑五POP报名仍只到10/31——未报名SKU今天推进（昨spine仅deadline提醒）",
+      "event_id": "tiktok-us-bf-register-1031-follow",
+      "summary": "theme_slug已占10/27。今日不复用topic。Seller University：SPS≥3.5、LDR≤20%等门槛。",
+      "url": "https://seller-us.tiktok.com/university/essay?knowledge_id=7823403742840619&lang=en",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": null,
+      "source": "TikTok Seller University US",
+      "published_at": "2026-10-27T12:00:00Z",
+      "supporting": [],
+      "age_hours": 24.5
+    }
+  ],
+  "also_worth_reading": [
+    {
+      "title": "印尼Dual Listing 10/29促销预算共享（昨spine，页龄将出窗）",
+      "summary": "不复用topic；明天生效前再核TTS-only例外清单。",
+      "url": "https://supersellerid.com/dual-listing-tiktok-shop/",
+      "track": "🛒 AI 电商自动化",
+      "published_at": "2026-10-26T08:00:00Z",
+      "note": "昨spine；硬窗外延伸参考",
+      "age_hours": 52.5
+    },
+    {
+      "title": "PMax Sourced videos默认开（昨spine）",
+      "summary": "继续关或白名单源；不复用topic。",
+      "url": "https://ppc.land/google-can-add-up-to-10-crawled-videos-to-pmax-asset-groups-by-default/",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-25T16:00:00Z",
+      "note": "昨spine；硬窗外",
+      "age_hours": 68.5
+    },
+    {
+      "title": "Meta 50转化/周公式（昨spine）",
+      "summary": "周预算÷(CPA×50)；不复用。",
+      "url": "https://ppc.land/meta-says-ad-sets-under-50-weekly-conversions-cost-28-more-per-purchase/",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-25T16:00:00Z",
+      "note": "昨spine；硬窗外",
+      "age_hours": 68.5
+    },
+    {
+      "title": "Researchy#3：12/4新建PMax默认落地页抽图",
+      "summary": "GENERATE_IMAGE_EXTRACTION新活动默认；模板预写OPTED_OUT。",
+      "url": "https://ppc.land/google-turns-on-pmax-image-extraction-by-default-from-december-4/",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-21T16:00:00Z",
+      "note": "硬窗外延伸；与今日PMax A/B不同轴",
+      "age_hours": 164.5
+    },
+    {
+      "title": "Researchy#5：Shopping/PMax tROAS Exploration 5%–30%",
+      "summary": "商家数字高价值；让位今日VMP+Breakdown席。",
+      "url": "https://ppc.land/google-lets-shopping-and-pmax-campaigns-lower-roas-targets-by-up-to-30/",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-25T16:00:00Z",
+      "note": "硬窗外；下期可升格",
+      "age_hours": 68.5
+    },
+    {
+      "title": "Shopify Shop MCP（mcp.shop.com）",
+      "summary": "MCP配额≤1；awareness不占topic。",
+      "url": "https://shopify.dev/changelog/posts/add-shopping-and-shop-pay-checkout-to-any-agent-with-shop-mcp",
+      "track": "🛒 AI 电商自动化",
+      "published_at": "2026-10-13T12:00:00Z",
+      "note": "MCP；页龄旧",
+      "age_hours": 360.5
+    },
+    {
+      "title": "Meta AI责任条款延至11/20（10/26 spine）",
+      "summary": "延期≠免审计Advantage+。",
+      "url": "https://ppc.land/meta-delays-its-ai-terms-to-november-20-the-trust-problem-does-not-move/",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-23T18:00:00Z",
+      "note": "跨日去重",
+      "age_hours": 114.5
+    },
+    {
+      "title": "Resemble AI：Meta合成素材披露稀缺",
+      "summary": "黑五前自查AIGC披露闸。",
+      "url": "https://ppc.land/only-2-of-3-379-ai-flagged-meta-ad-files-disclosed-ai-use-resemble-ai-finds/",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-27T10:00:00Z",
+      "note": "昨must_reads延续；合规awareness",
+      "age_hours": 26.5
+    },
+    {
+      "title": "Kling 4.0 / Seedance 2.5（设计趋势）",
+      "summary": "生视频商用候选；页龄偏旧，仅灵感层。",
+      "url": "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-officially-launches-next-generation-kling-40-raising/",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-16T12:00:00Z",
+      "note": "设计趋势；硬窗外",
+      "age_hours": 288.5
+    },
+    {
+      "title": "Reddit r/FBA Virtual Multipack讨论",
+      "summary": "履约费按件收等卖家吐槽；时间戳难核验→also-only。",
+      "url": "https://www.reddit.com/r/FulfillmentByAmazon/comments/1nnrsom/amazons_new_virtual_multi_pack_will_you_use_it_is/",
+      "track": "🛒 AI 电商自动化",
+      "published_at": "2026-10-20T12:00:00Z",
+      "note": "Reddit also-only",
+      "age_hours": 192.5
+    },
+    {
+      "title": "Meta Muse新加坡上线（Agent购物）",
+      "summary": "X新闻：可比价Shopee/Lazada等；无卖家字段闸，awareness。",
+      "url": "https://x.com/i/trending/2115291381774340377",
+      "track": "🤖 AI 前沿",
+      "published_at": "2026-10-28T06:00:00Z",
+      "note": "Agent awareness；非JTBD",
+      "age_hours": 6.5
+    },
+    {
+      "title": "Oct26 spines提醒：tiktok-ebike-ul / google-ai-max-search-terms / assets-auto-promo-purge",
+      "summary": "禁止复用为今日topic。",
+      "url": "https://ppc.land/",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-26T12:00:00Z",
+      "note": "禁spine清单",
+      "age_hours": 48.5
+    }
+  ],
+  "topics": [
+    {
+      "title": "Amazon Virtual Multipacks：筛VMP_DC_→只走Edit页改价——11/10前决定删，别让默认「单价×件数」上黑五",
+      "theme_slug": "amazon-vmp-dc-multipack-edit-1111",
+      "angle": "30分钟：①Manage All Inventory过滤VMP_DC_；②Edit Virtual Multipack核定价（MAP/Business价差/折扣%）；③算2包装=两件FBA费后的毛利；④不需要的11/10前删除（试点不可恢复）。模板/API改会坏listing。",
+      "heat": "high",
+      "format": "方法论",
+      "tracks": [
+        "🛒 AI 电商自动化"
+      ],
+      "hooks": [
+        "Amazon替你开了多件listing，默认价可能先伤MAP",
+        "大部分人会去模板里改VMP——那会把listing改坏"
+      ],
+      "tags": [
+        "商家数字",
+        "平台可改字段"
+      ],
+      "admission": "a+b+c",
+      "reasoning": "Niceggie 10/28窗内+aNavigator 10/27。Admission a+b+c。≠任何昨spine。非MCP。配额：商家数字+平台字段。",
+      "status": "final"
+    },
+    {
+      "title": "Meta Breakdown上线：同一条广告拆单图/单视频效果——30分钟杀拖后腿素材，别再只看广告级均值",
+      "theme_slug": "meta-ads-creative-breakdown-kill-losers",
+      "angle": "30分钟：Ads Manager→Breakdown→Media；导出主力CBO下垫底素材；停用或替换。跳过collection/carousel格式。与Product Browsing/50转化/Pixel不同轴。",
+      "heat": "high",
+      "format": "方法论",
+      "tracks": [
+        "🎨 创意广告"
+      ],
+      "hooks": [
+        "你的「爆款广告」里可能埋着拖后腿的那一张图",
+        "Meta终于肯把素材级数据给你——今天就用来砍量"
+      ],
+      "tags": [
+        "商家数字"
+      ],
+      "admission": "a+b",
+      "reasoning": "SMT 10/27窗内。a+b。非MCP。≠昨Meta spines。创意广告补位。",
+      "status": "final"
+    },
+    {
+      "title": "Meta四目标取消ad set版位勾选：今天把排除挪到Account controls按Sales目标——value rules只调价不关位",
+      "theme_slug": "meta-placement-account-controls-by-objective",
+      "angle": "30分钟：Advertising settings→Placement controls，按Sales关掉AN/Marketplace/右栏等允许项；需要「偏爱」某版位用value rules加减价+版位定制素材，而不是幻想关Reels。Awareness/Traffic仍可手动。",
+      "heat": "high",
+      "format": "方法论",
+      "tracks": [
+        "🎨 创意广告"
+      ],
+      "hooks": [
+        "版位勾选没了，不等于你没闸——闸在账户级按目标",
+        "value rules不是排除键，别拿来当关闭Reels"
+      ],
+      "tags": [
+        "平台可改字段"
+      ],
+      "admission": "a+c",
+      "reasoning": "Meta Help确认页。a+c。≠Browsing≠Pixel≠50-conv。非MCP。",
+      "status": "final"
+    },
+    {
+      "title": "PMax同组素材A/B beta：能开就开长测——黑五两周窗别拿它当日内胜负器（≠Sourced videos）",
+      "theme_slug": "google-pmax-intragroup-asset-ab-beta",
+      "angle": "30分钟：若见开关，选已稳定消耗的asset group，control=现网、treatment=黑五主视觉；成功指标用转化价值；记下4–6周建议——短期用素材轮换+Sourced videos白名单，不靠此beta判BF胜负。",
+      "heat": "medium",
+      "format": "方法论",
+      "tracks": [
+        "🎨 创意广告"
+      ],
+      "hooks": [
+        "Google给了组内A/B，但统计要4–6周——别拿来赌黑五周末",
+        "和Sourced videos是两件事：一个管爬取，一个管实验"
+      ],
+      "tags": [
+        "创意测试"
+      ],
+      "admission": "a",
+      "reasoning": "Adriaan 10/27。Admission a。明确≠google-pmax-sourced-videos-optout。非MCP。≤1工具分享形态内的测试方法论。",
+      "status": "final"
+    }
+  ],
+  "drafts": [
+    {
+      "text": "Amazon正在给你的FBA单品自动开Virtual Multipack（VMP_DC_前缀），最新一批约10/28建完，11/11开卖。\n\n对你意味着三件事：\n1）默认价=单价×件数，可能撞MAP；\n2）2包装仍收两件履约费；\n3）只能在Edit Virtual Multipack改——模板/API会改坏。\n\n今天30分钟：筛VMP_DC_，改价或11/10前删除。",
+      "format": "新闻翻译",
+      "tags": [
+        "🛒 AI 电商自动化"
+      ],
+      "hook_pattern": "X 刚更新了，对你意味着 N 件事",
+      "reasoning": "元模式2；VMP final topic"
+    },
+    {
+      "text": "两件今天就能改的Meta字段：\n\n① Breakdown→Media：同一条广告里单张图/视频终于能拆效果——先停CTR垫底的那张。\n② Sales目标已无ad set版位勾选：排除改去Account controls按目标；value rules只调价。\n\n顺手：Product Browsing今天默认开——再核Destination，看LPV/outbound缺口。\n\n宏观：BTC F&G 45（Neutral），CNN 33（fear），btcScore 38.8偏恐慌——先锁闸再加黑五预算。",
+      "format": "方法论",
+      "tags": [
+        "🎨 创意广告"
+      ],
+      "hook_pattern": "把 X 和 Y 连起来看",
+      "reasoning": "元模式连看；Breakdown+placement；强制market点"
+    },
+    {
+      "text": "大部分人会把PMax新A/B开关当成「黑五两周测出胜者」。方式是错的。\n\n官方建议4–6周才谈显著。BF短窗：用已验证素材轮换，并继续管Sourced videos白名单。\n\n若账户已出同组A/B：只对稳定消耗组开一组长测，成功指标用转化价值，别用点击。",
+      "format": "方法论",
+      "tags": [
+        "🎨 创意广告"
+      ],
+      "hook_pattern": "大部分人用 X 的方式是错的",
+      "reasoning": "元模式3；PMax A/B topic；回避失灵单点复述"
+    }
+  ],
+  "cross_opportunities": [
+    {
+      "label": "默认开字段日历 × 素材级数据",
+      "text": "Product Browsing(今)/Pixel 11/12/ChatGPT Enhance 10/30 与 Breakdown同周——先锁目的地与口径，再用素材级数据砍量。"
+    },
+    {
+      "label": "Amazon自动listing × 履约成本账",
+      "text": "VMP默认开多件页但按件收FBA费——和「平台替你改货架」同一母题：自动不等于更赚。"
+    }
+  ],
+  "recent_performance": {
+    "period": "2026-10-21 ~ 2026-10-28",
+    "total_posts": 0,
+    "median_impressions": 0,
+    "top_posts": [],
+    "covered_topics": [
+      "meta-product-browsing-optout-1028",
+      "tiktok-refund-sla-auto-approve",
+      "tiktok-bfcm-sku-price-tier",
+      "chatgpt-ads-enhance-optout-1031",
+      "tiktok-id-appeal-7d-unbox-1027",
+      "meta-ai-liability-nov20-advplus-audit",
+      "google-retention-break-even-roas",
+      "tiktok-live-price-cut-margin-floor",
+      "tiktok-id-dual-listing-1029-promo-margin",
+      "meta-50-conv-adset-budget-formula",
+      "google-pmax-sourced-videos-optout",
+      "meta-pixel-device-conversions-optout-1112",
+      "tiktok-us-bf-register-1031",
+      "tiktok-ebike-ul",
+      "google-ai-max-search-terms",
+      "google-assets-auto-promo-purge",
+      "amazon-vmp-dc-multipack-edit-1111",
+      "meta-ads-creative-breakdown-kill-losers",
+      "meta-placement-account-controls-by-objective",
+      "google-pmax-intragroup-asset-ab-beta"
+    ],
+    "underserved_tracks": [
+      "tROAS Exploration升格 / Shopify MCP若有卖家JTBD再议"
+    ],
+    "winning_hooks": [
+      "把 X 和 Y 连起来看",
+      "X 刚更新了，对你意味着 N 件事",
+      "大部分人用 X 的方式是错的"
+    ],
+    "failing_hooks": [
+      "单点复述",
+      "A×B×C工具连看",
+      "MCP无JTBD",
+      "融资脊柱"
+    ],
+    "insights": "Typefully仍不可用。产出侧转向Amazon自动货架字段+Meta素材/版位可改项；Product Browsing仅day-of提醒不占topic。"
+  },
+  "published_this_week": {
+    "period": "2026-10-21 ~ 2026-10-28",
+    "fetched_at": "2026-10-28T12:30:00Z",
+    "source": "typefully",
+    "error": "Typefully skipped — MCP unavailable; graceful degrade per skill",
+    "social_set_id": null,
+    "platform": "x",
+    "posts": []
+  },
+  "market_snapshot": {
+    "timestamp": "2026-10-28T12:11:10.640Z",
+    "stocks": {
+      "VOO": {
+        "price": 707.52,
+        "changePercent": 0.5843,
+        "marketState": "closed"
+      },
+      "QQQ": {
+        "price": 721.25,
+        "changePercent": 1.2707,
+        "marketState": "closed"
+      },
+      "QQQM": {
+        "price": 296.96,
+        "changePercent": 1.2617,
+        "marketState": "closed"
+      },
+      "NVDA": {
+        "price": 217.94,
+        "changePercent": 0.8981,
+        "marketState": "closed"
+      },
+      "TSLA": {
+        "price": 407.46,
+        "changePercent": 4.0447,
+        "marketState": "closed"
+      },
+      "GOOG": {
+        "price": 316.83,
+        "changePercent": 0.8403,
+        "marketState": "closed"
+      },
+      "RKLB": {
+        "price": 58.31,
+        "changePercent": 8.3426,
+        "marketState": "closed"
+      },
+      "CRCL": {
+        "price": 81.58,
+        "changePercent": 2.1794,
+        "marketState": "closed"
+      },
+      "HOOD": {
+        "price": 94.56,
+        "changePercent": 1.8526,
+        "marketState": "closed"
+      },
+      "COIN": {
+        "price": 161.09,
+        "changePercent": 0.9336,
+        "marketState": "closed"
+      },
+      "TEM": {
+        "price": 72.15,
+        "changePercent": 7.43,
+        "marketState": "closed"
+      },
+      "GLD": {
+        "price": 372.28,
+        "changePercent": 1.2125,
+        "marketState": "closed"
+      },
+      "SMH": {
+        "price": 557.98,
+        "changePercent": 3.0206,
+        "marketState": "closed"
+      },
+      "DRAM": {
+        "price": 50.52,
+        "changePercent": 4.5313,
+        "marketState": "closed"
+      },
+      "MRVL": {
+        "price": 243.57,
+        "changePercent": 4.1877,
+        "marketState": "closed"
+      },
+      "NBIS": {
+        "price": 170.47,
+        "changePercent": 11.222,
+        "marketState": "closed"
+      },
+      "INTC": {
+        "price": 93.74,
+        "changePercent": 3.6145,
+        "marketState": "closed"
+      },
+      "AMD": {
+        "price": 560.26,
+        "changePercent": 5.4548,
+        "marketState": "closed"
+      },
+      "TSM": {
+        "price": 436.87,
+        "changePercent": 2.9455,
+        "marketState": "closed"
+      },
+      "QCOM": {
+        "price": 184.17,
+        "changePercent": 2.5445,
+        "marketState": "closed"
+      },
+      "RVI": {
+        "price": 24.77,
+        "changePercent": -0.92,
+        "marketState": "closed"
+      },
+      "VCX": {
+        "price": 24.83,
+        "changePercent": -0.8387,
+        "marketState": "closed"
+      },
+      "DXYZ": {
+        "price": 28.1,
+        "changePercent": -0.0356,
+        "marketState": "closed"
+      }
+    },
+    "crypto": {
+      "HYPE": {
+        "price": 81.347,
+        "change24h": 4.44099219391946
+      },
+      "TAO": {
+        "price": 254.27,
+        "change24h": 2.673127397536848
+      },
+      "ETH": {
+        "price": 2353.39,
+        "change24h": 1.6763228044707583
+      },
+      "BNB": {
+        "price": 759.57,
+        "change24h": 2.6917773030852126
+      },
+      "SOL": {
+        "price": 102.31,
+        "change24h": 2.269092363054774
+      },
+      "XAUT": {
+        "price": 4047,
+        "change24h": 0.7719123505976095
+      },
+      "BTC": {
+        "price": 81160,
+        "change24h": 1.5759541831871484
+      },
+      "VIRTUAL": {
+        "price": 0.6273,
+        "change24h": 2.3661879895561286
+      }
+    },
+    "indices": {
+      "sp500": {
+        "price": 7722.6,
+        "changePercent": 0.5969958719617746
+      },
+      "vix": {
+        "price": 17.5,
+        "changePercent": -0.11415525114155008
+      },
+      "gold": {
+        "price": 4047,
+        "changePercent": 0.7719123505976095
+      },
+      "crudeOil": {
+        "price": 101.82,
+        "changePercent": 1.9219219219219092
+      },
+      "dxy": {
+        "price": 102.346,
+        "changePercent": 0.0263880608684614
+      }
+    },
+    "sentiment": {
+      "cryptoFearGreed": 45,
+      "cryptoFearGreedLabel": "Neutral",
+      "cryptoFearGreedPrev": 43,
+      "cryptoFearGreedChange": 2,
+      "cnnFearGreed": 33,
+      "cnnFearGreedLabel": "fear"
+    },
+    "btcMetrics": {
+      "weeklyRsi": 58.2,
+      "volume24h": 259780664.5465376,
+      "volumeChangePercent": -38,
+      "ahr999": 0.495,
+      "sthSopr": 1.001,
+      "lthSopr": 1.01,
+      "lthSupplyPercent": 82.2,
+      "wma200Price": 67162,
+      "wma200Multiplier": 1.2,
+      "nupl": 0.33,
+      "lthMvrv": 1.65,
+      "ma365Price": 76981,
+      "ma365Ratio": 1.06,
+      "etfFlowUsd": 176000000,
+      "etfFlowDays": [
+        176000000,
+        110300000,
+        -137900000,
+        -635600000,
+        524800000,
+        23200000
+      ],
+      "fundingRate": 0.007137,
+      "longShortRatio": 1.82
+    },
+    "btcScore": {
+      "timestamp": "2026-10-28T12:11:06.176Z",
+      "btcPrice": 81160,
+      "score": 38.8,
+      "dailyScore": 14.6,
+      "weeklyScore": 24.2,
+      "level": "偏恐慌",
+      "suggestion": "市场偏冷，可适度布局",
+      "indicators": [
+        {
+          "name": "AHR999",
+          "value": 0.495,
+          "score": 17,
+          "weight": 10,
+          "group": "daily",
+          "category": "BTC估值"
+        },
+        {
+          "name": "ETF 每日净流入",
+          "value": 176000000,
+          "score": 62,
+          "weight": 9,
+          "group": "daily",
+          "category": "机构资金流/衍生品"
+        },
+        {
+          "name": "Funding Rate",
+          "value": 0.007137,
+          "score": 49,
+          "weight": 5,
+          "group": "daily",
+          "category": "机构资金流/衍生品"
+        },
+        {
+          "name": "多空比",
+          "value": 1.82,
+          "score": 88,
+          "weight": 3,
+          "group": "daily",
+          "category": "机构资金流/衍生品"
+        },
+        {
+          "name": "恐惧贪婪指数",
+          "value": 45,
+          "score": 45,
+          "weight": 5,
+          "group": "daily",
+          "category": "宏观情绪"
+        },
+        {
+          "name": "LTH-MVRV",
+          "value": 1.65,
+          "score": 38,
+          "weight": 12,
+          "group": "weekly",
+          "category": "链上基本面"
+        },
+        {
+          "name": "NUPL",
+          "value": 0.33,
+          "score": 58,
+          "weight": 11,
+          "group": "weekly",
+          "category": "链上基本面"
+        },
+        {
+          "name": "LTH-SOPR",
+          "value": 1.01,
+          "score": 11,
+          "weight": 9,
+          "group": "weekly",
+          "category": "链上基本面"
+        },
+        {
+          "name": "STH-SOPR",
+          "value": 1.001,
+          "score": 51,
+          "weight": 8,
+          "group": "weekly",
+          "category": "链上基本面"
+        },
+        {
+          "name": "LTH 持有者占比",
+          "value": 82.2,
+          "score": 0,
+          "weight": 7,
+          "group": "weekly",
+          "category": "链上基本面"
+        },
+        {
+          "name": "365日均线倍数",
+          "value": 1.06,
+          "score": 37,
+          "weight": 6,
+          "group": "weekly",
+          "category": "技术动能"
+        },
+        {
+          "name": "200周均线倍数",
+          "value": 1.2,
+          "score": 23,
+          "weight": 6,
+          "group": "weekly",
+          "category": "技术动能"
+        },
+        {
+          "name": "周线 RSI",
+          "value": 58.2,
+          "score": 64,
+          "weight": 5,
+          "group": "weekly",
+          "category": "技术动能"
+        },
+        {
+          "name": "成交量变化",
+          "value": -38,
+          "score": 35,
+          "weight": 4,
+          "group": "weekly",
+          "category": "技术动能"
+        }
+      ],
+      "btcMetrics": {
+        "weeklyRsi": 58.2,
+        "volume24h": 259780258.4503036,
+        "volumeChangePercent": -38,
+        "ahr999": 0.495,
+        "sthSopr": 1.001,
+        "lthSopr": 1.01,
+        "lthSupplyPercent": 82.2,
+        "wma200Price": 67162,
+        "wma200Multiplier": 1.2,
+        "nupl": 0.33,
+        "lthMvrv": 1.65,
+        "ma365Price": 76981,
+        "ma365Ratio": 1.06,
+        "etfFlowUsd": 176000000,
+        "etfFlowDays": [
+          176000000,
+          110300000,
+          -137900000,
+          -635600000,
+          524800000,
+          23200000
+        ],
+        "fundingRate": 0.007137,
+        "longShortRatio": 1.82
+      },
+      "fearGreed": 45
+    },
+    "source": "brief.day1global.xyz"
+  },
+  "suggestions": {
+    "profile_longterm": [
+      "可把「平台自动改货架/目的地」（Amazon VMP、Meta Product Browsing、PMax sourced）收成长期母题。仅建议。"
+    ],
+    "info_sources": {
+      "promote": [
+        {
+          "account": "Niceggie / aNavigator",
+          "reason": "Amazon VMP窗内主链进must_reads+topic",
+          "confidence": "high"
+        },
+        {
+          "account": "@shaoxiao_si",
+          "reason": "Breakdown与placement中文拆解进supporting",
+          "confidence": "medium"
+        },
+        {
+          "account": "Adriaan Dekker",
+          "reason": "PMax A/B + All Conversions两则窗内",
+          "confidence": "high"
+        }
+      ],
+      "demote": [],
+      "add": [
+        {
+          "account": "@athenaadsops",
+          "reason": "Product Browsing日切测量清单被引用",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "topic_library": {
+      "archive": [],
+      "add": [
+        {
+          "topic": "amazon-virtual-multipack-margin-gate",
+          "reason": "VMP成本账+编辑路径成今日#1",
+          "confidence": "high"
+        },
+        {
+          "topic": "meta-creative-breakdown-ops",
+          "reason": "素材级数据首次可操作",
+          "confidence": "high"
+        },
+        {
+          "topic": "meta-placement-account-controls",
+          "reason": "四目标取消ad set版位",
+          "confidence": "high"
+        }
+      ]
+    },
+    "positioning_drift": []
+  },
+  "blockers": [
+    "Typefully MCP unavailable — Phase1 analytics skipped",
+    "Exa unavailable — WebSearch/WebFetch + X MCP fallback",
+    "fieldtheory / Obsidian微信收藏本环境不可用",
+    "Reddit direct often 403 — also-only",
+    "Product Browsing早期长文(Selzee 10/19等)>48h — 仅supporting/also；day-of主链用X+Help"
+  ],
+  "topics_status": "final",
+  "spine_ban_check": {
+    "oct27": [
+      "tiktok-id-dual-listing-1029-promo-margin",
+      "meta-50-conv-adset-budget-formula",
+      "google-pmax-sourced-videos-optout",
+      "meta-pixel-device-conversions-optout-1112",
+      "tiktok-us-bf-register-1031"
+    ],
+    "oct26_extra": [
+      "tiktok-ebike-ul",
+      "google-ai-max-search-terms",
+      "google-assets-auto-promo-purge"
+    ],
+    "product_browsing": "must_reads day-of only — theme occupied 10/25; not in topics[]"
+  }
+}
