@@ -1,9 +1,9 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29T11:50:00Z",
-  "pass": "topic-scope-day FINAL",
-  "raw_material_count": 92,
-  "publishing_note": "周四定稿：脊柱=Shopify Fall'26 Agentic KB/PII/Catalog、tROAS Exploration升格（PMax/Shopping）、ChatGPT Ads增强前夜源卫生（≠optout spine）。Dual Listing/VMP/Product Browsing/BF报名仅must_reads跟进。禁复用Oct28四spine+Oct27五spine+既占enhance-optout。Typefully/Exa跳过。不自动发帖。",
+  "generated_at": "2026-10-29T15:10:00Z",
+  "pass": "topic-scope-day FINAL + batch2 append",
+  "raw_material_count": 120,
+  "publishing_note": "周四定稿+第二批追加：batch1脊柱保持（Shopify Fall'26 Agentic KB/PII/Catalog、tROAS Exploration、ChatGPT Ads源卫生）。batch2新增：Amazon BHDR 10/30 FBM三件套、Shopify Campaign Autopilot护栏、Google AI Mode multiturn美区feed/落地页卫生。Dual Listing/VMP/Browsing/Enhance-optout仍禁复用。Typefully/Exa跳过。不自动发帖。",
   "must_reads": [
     {
       "title": "Shopify Fall '26 Edition：Shop Pay进AI Agent + Agentic通道默认开——今天先审 Knowledge Base 与 Catalog 资格",
@@ -28,7 +28,7 @@
           "url": "https://x.com/Shopify/status/2115484200715641212"
         }
       ],
-      "age_hours": 19.8
+      "age_hours": 23.2
     },
     {
       "title": "紧急：Shopify Agentic Knowledge Base 默认公开店主个人电话——Sales channels→Agentic→Knowledge Base 立刻清",
@@ -49,7 +49,7 @@
           "url": "https://www.shopify.com/news/fall-26-edition-merchant"
         }
       ],
-      "age_hours": 40.6
+      "age_hours": 43.9
     },
     {
       "title": "Google Smart Bidding Exploration：PMax/Shopping 可把有效 tROAS 下调最多30%——先核资格再开，别拿封顶预算试",
@@ -70,7 +70,7 @@
           "url": "https://searchengineland.com/google-ads-expands-smart-bidding-exploration-to-performance-max-and-shopping-campaigns-498529"
         }
       ],
-      "age_hours": 14.6
+      "age_hours": 18.0
     },
     {
       "title": "明天生效：ChatGPT Ads 创意增强10/30默认开——今天Manage settings二选一：关，或把落地页价格/促销洗干净",
@@ -87,7 +87,7 @@
           "url": "https://x.com/ppcadeditor/status/2115115375193203003"
         }
       ],
-      "age_hours": 15.0
+      "age_hours": 18.3
     },
     {
       "title": "今天：TikTok印尼 Dual Listing 10/29自动上Tokopedia——共享促销预算/限购，今早核价与库存（不复用10/27 topic spine）",
@@ -104,7 +104,7 @@
           "url": "https://partner.tokopedia.com/docv2/changelog"
         }
       ],
-      "age_hours": 27.8
+      "age_hours": 31.2
     },
     {
       "title": "Amazon Virtual Multipacks 跟进：最新一批已建，11/10前仍可Edit/删——今天复扫VMP_毛利（昨spine仅跟进）",
@@ -121,7 +121,7 @@
           "url": "https://www.linkedin.com/posts/mughalfaizan_amazonseller-amazonfba-q4planning-activity-7516868728706424832-u2Wg"
         }
       ],
-      "age_hours": 23.8
+      "age_hours": 27.2
     },
     {
       "title": "Google DeepMind Gemini 4 Carbon：网络安全+长程Agent前沿模型，先给防御方——电商落地仍等开发者开放",
@@ -133,7 +133,7 @@
       "source": "Google DeepMind / blog.google",
       "published_at": "2026-10-28T17:00:00Z",
       "supporting": [],
-      "age_hours": 18.8
+      "age_hours": 22.2
     },
     {
       "title": "Genie 4 仍在窗内：实时世界模型+原生音频——广告级素材流水线未就绪（awareness）",
@@ -150,7 +150,7 @@
           "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-genie-4/"
         }
       ],
-      "age_hours": 43.5
+      "age_hours": 46.9
     },
     {
       "title": "亚马逊拦未授权AI Agent下单 vs Shopify把Shop Pay塞进Agent——独立站目录数据本周要洗干净",
@@ -167,7 +167,7 @@
           "url": "https://x.com/themacrosift/status/2115636367267074152"
         }
       ],
-      "age_hours": 8.2
+      "age_hours": 11.6
     },
     {
       "title": "Meta Product Browsing 生效次日：复扫 Destination + LPV/Outbound（theme已占10/25，不进topics）",
@@ -184,7 +184,7 @@
           "url": "https://www.facebook.com/business/help/1842103166667481"
         }
       ],
-      "age_hours": 28.9
+      "age_hours": 32.2
     },
     {
       "title": "TikTok美区黑五POP报名仍只到10/31——未报名SKU倒计时2天（昨/前spine仅deadline）",
@@ -201,7 +201,7 @@
           "url": "https://www.globenewswire.com/news-release/2026/10/19/3383528/0/en/tiktok-shop-announces-black-friday-and-cyber-monday-campaign-running-november-11-30.html"
         }
       ],
-      "age_hours": 21.8
+      "age_hours": 25.2
     },
     {
       "title": "OpenAI GPT-6.1 Terra 仍在讨论窗：更便宜的计算机使用模型——办公Agent成本账候选（非topic）",
@@ -213,7 +213,96 @@
       "source": "AI Brief Oct 28",
       "published_at": "2026-10-28T05:21:00Z",
       "supporting": [],
-      "age_hours": 30.5
+      "age_hours": 33.8
+    },
+    {
+      "title": "明天截止：Amazon Business Hour Delivery Rate≥90%——FBM未达标或对B2B买家下架（开齐Handling Time三件套可保证）",
+      "event_id": "amazon-bhdr-90-oct30",
+      "summary": "Seller Central规则：美区卖家自配送至Amazon Business客户，滚动14天BHDR须≥90%。9/30已通知未达标者；10/30复审，未改善则seller-fulfilled报价可能对Business买家停用（普通买家与FBA不受影响）。30分钟：Account Health→Eligibilities查率；下载承运商报告；开Automated Handling Time+Shipping Settings Automation+Buy Shipping。",
+      "url": "https://amazonbrandguide.com/",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "amazon-bhdr-90-oct30-fbm-settings",
+      "source": "Amazon Brand Guide (Seller Central News)",
+      "published_at": "2026-10-28T11:00:00Z",
+      "age_hours": 28.2,
+      "supporting": [
+        {
+          "angle": "Seller Forums讨论串：BHDR要求与业务时段送达定义",
+          "url": "https://sellercentral.amazon.com/seller-forums/discussions/t/57222b70-40df-4574-aa0f-9f815c197987"
+        }
+      ]
+    },
+    {
+      "title": "Shopify Campaign Autopilot对全量商家开放：Meta/Microsoft/Snap/Shop/Messaging+SEO建议——先设月预算与Approve权限",
+      "event_id": "shopify-campaign-autopilot-ga",
+      "summary": "Shopify Changelog 10/28：Campaign Autopilot全面可用，可跨Meta Ads、Microsoft、Snapchat、Shop、Messaging（即将含X Ads）自动分配预算，并建议SEO改写。Help：Growth→Autopilot设monthly budget、target ROAS/地区/语言护栏、Permissions控制是否先批准。30分钟动作并入今日batch2选题。",
+      "url": "https://changelog.shopify.com/posts/more-channels-and-features-now-available-in-campaign-autopilot",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "shopify-campaign-autopilot-ga-guardrails",
+      "source": "Shopify Changelog",
+      "published_at": "2026-10-28T16:00:00Z",
+      "age_hours": 23.2,
+      "supporting": [
+        {
+          "angle": "Help：Setting up Autopilot（Growth路径/护栏/权限）",
+          "url": "https://help.shopify.com/en/manual/promoting-marketing/autopilot/setting-up-autopilot"
+        }
+      ]
+    },
+    {
+      "title": "Google AI Mode广告扩至10国 + 美区multiturn：追问轮次也可出赞助结果——沿用Search/Shopping/PMax资格",
+      "event_id": "google-ai-mode-ads-10markets-multiturn",
+      "summary": "Google Ads/Commerce博客10/28：AI Mode广告扩至澳加印等10国，Q4还将扩巴西/墨西哥/英国；美区上线multiturn ads，对话跟进问题也可出Sponsored。官方称赞助与有机商品列表CTR已接近。无单独新预算类型——动作是feed/落地页卫生与多市场语言。≠tROAS Exploration。",
+      "url": "https://blog.google/products/ads-commerce/ads-in-ai-mode-global/",
+      "track": "🎨 创意广告",
+      "matched_topic": "google-ai-mode-multiturn-us-feed-lp-hygiene",
+      "source": "blog.google",
+      "published_at": "2026-10-28T15:00:00Z",
+      "age_hours": 24.2,
+      "supporting": [
+        {
+          "angle": "Search Engine Land扩写10国名单与multiturn含义",
+          "url": "https://searchengineland.com/google-expands-ads-in-ai-mode-to-10-new-markets-with-uk-and-brazil-next-499644"
+        },
+        {
+          "angle": "@supadesignx：10国扩容+CTR接近有机的卖家解读",
+          "url": "https://x.com/supadesignx/status/2115754941230817538"
+        }
+      ]
+    },
+    {
+      "title": "Google Ads API 26.1：PMax可负向排除家庭收入档 + 广告网络两档预算优先级（API向，UI待核）",
+      "event_id": "google-ads-api-261",
+      "summary": "Search Engine Roundtable 10/28：API v26.1新增PMax household income负向CampaignCriterion、网络优先级两档与次级花费上限、PromotionAsset.external_redeem_info、Local Services资格检查。有卖家字段价值但以API为主——今日不作topic脊柱（避免infra配额），进must_reads供工程/代操跟进。",
+      "url": "https://www.seroundtable.com/google-ads-api-version-261-42409.html",
+      "track": "🎨 创意广告",
+      "matched_topic": null,
+      "source": "Search Engine Roundtable",
+      "published_at": "2026-10-28T19:08:00Z",
+      "age_hours": 20.0,
+      "supporting": [
+        {
+          "angle": "developers.google.com release notes（页末更新含10/28）",
+          "url": "https://developers.google.com/google-ads/api/docs/release-notes"
+        }
+      ]
+    },
+    {
+      "title": "Alphabet Q3：Search广告低于预期、股价约-10%，管理层点名AI Mode变现偏低——同日扩AI Mode广告",
+      "event_id": "alphabet-q3-ai-mode-monetization",
+      "summary": "X新闻簇10/29：Alphabet广告/Search增速放缓（Search ads约$63.3B +12% YoY低于共识），盘前约跌10%；高管将部分归因为AI Mode较低变现。与AI Mode广告扩容同日交叉——融资/财报不作topic脊柱，作AI前沿+广告环境awareness。",
+      "url": "https://x.com/i/trending/2115680609225916651",
+      "track": "🤖 AI 前沿",
+      "matched_topic": null,
+      "source": "X News / earnings chatter",
+      "published_at": "2026-10-29T05:46:58Z",
+      "age_hours": 9.4,
+      "supporting": [
+        {
+          "angle": "@ayunonymous：用扩AI Mode广告回应变现缺口的解读",
+          "url": "https://x.com/ayunonymous/status/2115758478312509727"
+        }
+      ]
     }
   ],
   "also_worth_reading": [
@@ -223,7 +312,7 @@
       "url": "https://x.com/i/trending/2115398443367891063",
       "track": "🤖 AI 前沿",
       "published_at": "2026-10-29T06:59:16Z",
-      "age_hours": 4.8,
+      "age_hours": 8.2,
       "note": "融资/估值硬拒topic"
     },
     {
@@ -232,7 +321,7 @@
       "url": "https://x.com/i/trending/2114674813910614239",
       "track": "🎨 创意广告",
       "published_at": "2026-10-28T02:32:35Z",
-      "age_hours": 33.3,
+      "age_hours": 36.6,
       "note": "融资硬拒"
     },
     {
@@ -241,7 +330,7 @@
       "url": "https://x.com/i/trending/2115473669975953897",
       "track": "🎨 创意广告",
       "published_at": "2026-10-28T19:10:23Z",
-      "age_hours": 16.7,
+      "age_hours": 20.0,
       "note": "融资"
     },
     {
@@ -250,7 +339,7 @@
       "url": "https://ppc.land/google-turns-on-pmax-image-extraction-by-default-from-december-4/",
       "track": "🎨 创意广告",
       "published_at": "2026-10-21T16:00:00Z",
-      "age_hours": 187.8,
+      "age_hours": 191.2,
       "note": "硬窗口外延伸参考"
     },
     {
@@ -259,7 +348,7 @@
       "url": "https://support.google.com/google-ads/answer/16294686?hl=en",
       "track": "🎨 创意广告",
       "published_at": "2026-10-23T14:25:00Z",
-      "age_hours": 141.4,
+      "age_hours": 144.8,
       "note": "延伸参考"
     },
     {
@@ -268,7 +357,7 @@
       "url": "https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts",
       "track": "🛒 AI 电商自动化",
       "published_at": "2026-10-28T16:00:00Z",
-      "age_hours": 19.8,
+      "age_hours": 23.2,
       "note": "本环境WebFetch 403，以Newsroom为准"
     },
     {
@@ -277,7 +366,7 @@
       "url": "https://shopify.dev/changelog/posts/add-shopping-and-shop-pay-checkout-to-any-agent-with-shop-mcp",
       "track": "🛒 AI 电商自动化",
       "published_at": "2026-10-13T12:00:00Z",
-      "age_hours": 383.8,
+      "age_hours": 387.2,
       "note": "硬窗口外；Fall'26语境延伸"
     },
     {
@@ -286,7 +375,7 @@
       "url": "https://www.socialsamosa.com/news-2/meta-ads-manager-breakdown-tool-track-individual-creative-performance-12760366",
       "track": "🎨 创意广告",
       "published_at": "2026-10-28T06:57:00Z",
-      "age_hours": 28.9,
+      "age_hours": 32.2,
       "note": "昨spine延伸，不复用topic"
     },
     {
@@ -295,7 +384,7 @@
       "url": "https://searchengineland.com/google-expands-ads-in-ai-mode-to-10-new-markets-with-uk-and-brazil-next-499644",
       "track": "🎨 创意广告",
       "published_at": "2026-10-28T18:00:00Z",
-      "age_hours": 17.8,
+      "age_hours": 21.2,
       "note": "缺Admission a/b/c硬动作"
     },
     {
@@ -304,7 +393,7 @@
       "url": "https://x.com/i/trending/2115451281275777106",
       "track": "🤖 AI 前沿",
       "published_at": "2026-10-28T20:21:49Z",
-      "age_hours": 15.5,
+      "age_hours": 18.8,
       "note": "弱相关"
     },
     {
@@ -313,7 +402,7 @@
       "url": "https://ppc.land/meta-pixel-will-count-more-conversions-from-nov-12-unless-advertisers-opt-out/",
       "track": "🎨 创意广告",
       "published_at": "2026-10-27T08:00:00Z",
-      "age_hours": 51.8,
+      "age_hours": 55.2,
       "note": "延伸"
     },
     {
@@ -322,8 +411,26 @@
       "url": "https://x.com/NiteFinds/status/2115708681660625157",
       "track": "🎨 创意广告",
       "published_at": "2026-10-29T07:33:52Z",
-      "age_hours": 4.3,
+      "age_hours": 7.6,
       "note": "硬拒形态：无广告测试闭环"
+    },
+    {
+      "title": "Meta Commercial/Self-Serve条款再延期（咨询或超11/20）——既有条款仍有效；不作选题脊柱",
+      "summary": "Reuters 10/28：Meta无限期/延后更新商业条款与广告条款，现有条款继续。已有10/26 liability spine，今日仅延期跟进。",
+      "url": "https://www.investing.com/news/stock-market-news/meta-delays-indefinitely-its-rollout-of-new-commercial-terms-after-publishers-concerns-4980457",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-28T18:39:00Z",
+      "age_hours": 20.5,
+      "note": "延期跟进；theme已占10/26"
+    },
+    {
+      "title": "Google Ads API 26.1网络优先级/促销兑换字段细目（工程向延伸）",
+      "summary": "次级网络花费上限与PromotionAsset.external_redeem_info细节，API卖家工程参考。",
+      "url": "https://wearemainstreet.org/world/us/2026/10/28/google-ads-api-update-adds-targeting-reporting",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-28T20:00:00Z",
+      "age_hours": 19.2,
+      "note": "API延伸；主条已在must_reads"
     }
   ],
   "topics": [
@@ -346,7 +453,8 @@
       ],
       "admission": "a+c",
       "reasoning": "命中Admission (a)(c)：可改Admin字段+30分钟动作。配额：非MCP主燃料（KB/Catalog是商家后台字段，非MCP编排选题）；≥1平台可改字段。≠昨VMP/Meta/PMax spines。Fall'26窗内+ PII爆料窗内。",
-      "status": "final"
+      "status": "final",
+      "batch": 1
     },
     {
       "title": "tROAS Exploration升格：PMax/Shopping今天核资格——先10%容差、预算不封顶、别用portfolio（有效目标最多下探30%）",
@@ -368,7 +476,8 @@
       ],
       "admission": "a+b",
       "reasoning": "Oct28 underserved升格。Admission a+b。@Clicked0n窗内+Help。≠PMax Sourced videos/组内A/B spines。非MCP。商家数字配额。",
-      "status": "final"
+      "status": "final",
+      "batch": 1
     },
     {
       "title": "ChatGPT Ads增强前夜：不复用optout spine——若保留On，30分钟洗落地页价格/促销源；若要关，Manage settings今天锁",
@@ -389,7 +498,76 @@
       ],
       "admission": "a+c",
       "reasoning": "OpenAI Help约15h更新。admission a+c。明确≠chatgpt-ads-enhance-optout-1031（新slug=source hygiene）。非MCP。创意广告补位。",
-      "status": "final"
+      "status": "final",
+      "batch": 1
+    },
+    {
+      "title": "Amazon Business Hour Delivery Rate：明天10/30审查——FBM卖家30分钟开齐三件套，别让B2B单被下架",
+      "theme_slug": "amazon-bhdr-90-oct30-fbm-settings",
+      "angle": "30分钟：①Account Health→Eligibilities看BHDR是否≥90%；②下载承运商报告，业务单只走>90%承运商（美区UPS Ground/Ground Saver/FedEx Ground）；③打开Automated Handling Time + Shipping Settings Automation，业务单走Amazon Buy Shipping（三件齐=平台保证达标）；④必要时把稳定B2B SKU转FBA（FBA不受此规则）。≠VMP spine。",
+      "heat": "high",
+      "format": "方法论",
+      "tracks": [
+        "🛒 AI 电商自动化"
+      ],
+      "hooks": [
+        "你的FBM报价对普通买家还在——但明天起可能对Amazon Business买家消失",
+        "大部分人会去改承运商——真正该先开的是Handling Time三件套"
+      ],
+      "tags": [
+        "平台可改字段",
+        "商家数字"
+      ],
+      "admission": "a+c",
+      "reasoning": "命中Admission (a)(c)：Account Health可改字段+承运商/Buy Shipping 30分钟动作；Oct30硬deadline。配额：非MCP；商家数字/平台字段。≠Oct28 VMP spine（配送合格率≠多件装Edit）。窗内：Amazon Brand Guide 10/28 + Seller Central News。batch2 append。",
+      "status": "final",
+      "batch": 2
+    },
+    {
+      "title": "Shopify Campaign Autopilot全量开放：今天Growth设月预算+ROAS护栏——SEO改写只Approve不盲开",
+      "theme_slug": "shopify-campaign-autopilot-ga-guardrails",
+      "angle": "30分钟：①Admin→Growth→Autopilot连好要用的渠道（先Meta或Microsoft，勿一次全开）；②Budget设月广告上限，Guardrails写目标ROAS/地区/语言；③Permissions设「广告/邮件先Approve」；④Pending actions逐条Approve/Dismiss，SEO优化只审标题/描述再放行。≠Fall'26 Agentic KB/PII spine（增长预算轴≠知识库隐私轴）。",
+      "heat": "high",
+      "format": "方法论",
+      "tracks": [
+        "🛒 AI 电商自动化",
+        "🎨 创意广告"
+      ],
+      "hooks": [
+        "Shopify把跨渠道投放交给Autopilot了——但月预算护栏空着等于把卡交出去",
+        "大部分人会去连X Ads预告——真正该先点的是Permissions=需批准"
+      ],
+      "tags": [
+        "商家数字",
+        "平台可改字段"
+      ],
+      "admission": "a+b",
+      "reasoning": "命中Admission (a)(b)：Growth可改预算/ROAS护栏+权限开关；Changelog 10/28 GA。配额：非MCP主燃料；不是A×B×C游行（单平台Autopilot护栏SOP）。≠今日shopify-fall26-agentic-kb-pii-catalog。batch2 append。",
+      "status": "final",
+      "batch": 2
+    },
+    {
+      "title": "Google AI Mode多轮广告美区上线：无新预算开关——30分钟洗Search词/落地页与Shopping feed，跟上追问意图",
+      "theme_slug": "google-ai-mode-multiturn-us-feed-lp-hygiene",
+      "angle": "30分钟：①确认美区Search/Shopping/PMax仍参与AI Mode拍卖（无单独活动类型）；②从Search terms抽Top追问型查询，核对落地页是否回答跟进问题（材质/尺码/场景）；③Shopping/PMax核Merchant feed标题·价格·库存·GTIN一致；④跨境店核10国新市场本地feed语言。≠tROAS Exploration spine（素材/意图卫生≠出价容差）。",
+      "heat": "high",
+      "format": "新闻评论",
+      "tracks": [
+        "🎨 创意广告",
+        "🛒 AI 电商自动化"
+      ],
+      "hooks": [
+        "AI Mode广告开始吃追问了——你的落地页还只答第一句",
+        "Google在用广告补AI Mode变现缺口——卖家动作是洗源不是新建预算"
+      ],
+      "tags": [
+        "商家数字",
+        "平台可改字段"
+      ],
+      "admission": "a+c",
+      "reasoning": "命中Admission (a)(c)：feed/落地页字段卫生+30分钟核验；Google 10/28官方扩10国+美区multiturn。批次1 also曾标缺硬动作→本条补可执行卫生清单。配额：非MCP；≠google-troas-exploration-pmax-shopping。batch2 append。",
+      "status": "final",
+      "batch": 2
     }
   ],
   "drafts": [
@@ -400,7 +578,8 @@
         "🛒 AI 电商自动化"
       ],
       "hook_pattern": "大部分人用 X 的方式是错的",
-      "reasoning": "元模式3；对齐topic shopify-fall26-agentic-kb-pii-catalog；回避失灵的单点复述/融资脊柱"
+      "reasoning": "元模式3；对齐topic shopify-fall26-agentic-kb-pii-catalog；回避失灵的单点复述/融资脊柱",
+      "batch": 1
     },
     {
       "text": "Google把Smart Bidding Exploration扩到了PMax/Shopping。\n\n对你意味着三件事：\n1）有效tROAS最多可比设定再低30%；\n2）预算封顶时系统可能直接停探索；\n3）PMax/Shopping别用portfolio开。\n\n今天：挑1条已稳的tROAS活动，先开10%容差，记下6周复盘日。",
@@ -409,7 +588,8 @@
         "🎨 创意广告"
       ],
       "hook_pattern": "X 刚更新了，对你意味着 N 件事",
-      "reasoning": "元模式2；对齐tROAS Exploration升格；补昨underserved"
+      "reasoning": "元模式2；对齐tROAS Exploration升格；补昨underserved",
+      "batch": 1
     },
     {
       "text": "ChatGPT Ads创意增强明天（10/30）默认开，无逐条预览。\n\n想关：今天Manage settings锁Off（活动级优先于账户）。\n还开着：别再纠结开关新闻——去洗落地页价格/促销/库存，增强会读这些当源。\n\n和「关不关」是两件事。",
@@ -418,7 +598,32 @@
         "🎨 创意广告"
       ],
       "hook_pattern": "X 刚更新了，对你意味着 N 件事",
-      "reasoning": "元模式2；source hygiene新slug，不复述10/25 optout spine"
+      "reasoning": "元模式2；source hygiene新slug，不复述10/25 optout spine",
+      "batch": 1
+    },
+    {
+      "pattern": "X刚更新了，对你意味着N件事",
+      "track": "🛒 AI 电商自动化",
+      "theme_slug": "amazon-bhdr-90-oct30-fbm-settings",
+      "batch": 2,
+      "body": "Amazon Business Hour Delivery Rate明天（10/30）审查：FBM对B2B买家要≥90%。\n\n对你意味着三件事：\n1）普通买家报价可能还在，Business买家端已消失；\n2）只换承运商不够——要开Automated Handling Time + Shipping Settings Automation + Buy Shipping；\n3）FBA不受此规则，稳定B2B SKU可转FBA。\n\n今天30分钟：Account Health→Eligibilities查BHDR，三件套一次开齐。",
+      "reasoning": "元模式2；对齐amazon-bhdr；≠VMP"
+    },
+    {
+      "pattern": "大部分人用X的方式是错的",
+      "track": "🛒 AI 电商自动化",
+      "theme_slug": "shopify-campaign-autopilot-ga-guardrails",
+      "batch": 2,
+      "body": "Shopify把Campaign Autopilot对全量商家开放了。\n\n大部分人会去连下一个渠道——真正该先点的是：\nGrowth → Autopilot → Budget月上限 + Permissions=需批准。\n\nSEO改写也别盲开：Pending actions逐条审标题/描述再Approve。",
+      "reasoning": "元模式3；对齐Autopilot护栏；≠Fall'26 KB"
+    },
+    {
+      "pattern": "X刚更新了，对你意味着N件事",
+      "track": "🎨 创意广告",
+      "theme_slug": "google-ai-mode-multiturn-us-feed-lp-hygiene",
+      "batch": 2,
+      "body": "Google AI Mode广告进了美区多轮追问，并扩到10国。\n\n对你意味着：\n1）没有新的「AI Mode预算」开关——Search/Shopping/PMax资格自动带入；\n2）追问意图要靠落地页与feed答第二问；\n3）Alphabet点名AI Mode变现偏低——广告供给只会更密。\n\n今天：抽Search terms追问型查询，洗feed标题/价格/库存。",
+      "reasoning": "元模式2；对齐AI Mode multiturn；≠tROAS Exploration"
     }
   ],
   "cross_opportunities": [
@@ -742,6 +947,24 @@
           "reason": "从underserved升格且有Help路径",
           "confidence": "high"
         }
+      ],
+      "add_candidates": [],
+      "batch2_suggest_add": [
+        {
+          "theme_slug": "amazon-bhdr-90-oct30-fbm-settings",
+          "title": "Amazon Business Hour Delivery Rate：明天10/30审查——FBM卖家30分钟开齐三件套，别让B2B单被下架",
+          "note": "batch2 FINAL — Star手动采纳进topic_library"
+        },
+        {
+          "theme_slug": "shopify-campaign-autopilot-ga-guardrails",
+          "title": "Shopify Campaign Autopilot全量开放：今天Growth设月预算+ROAS护栏——SEO改写只Approve不盲开",
+          "note": "batch2 FINAL — Star手动采纳进topic_library"
+        },
+        {
+          "theme_slug": "google-ai-mode-multiturn-us-feed-lp-hygiene",
+          "title": "Google AI Mode多轮广告美区上线：无新预算开关——30分钟洗Search词/落地页与Shopping feed，跟上追问意图",
+          "note": "batch2 FINAL — Star手动采纳进topic_library"
+        }
       ]
     },
     "positioning_drift": [
@@ -759,9 +982,12 @@
     "fieldtheory / Obsidian微信收藏本环境不可用",
     "Shopify Help agentic-storefronts WebFetch 403 — 以Newsroom为准",
     "TikTok BF报名主新闻稿10/19出窗 — 用清单/日历作跟进口径",
-    "Dual Listing/VMP/Browsing/Enhance-optout theme已占 — 仅must_reads"
+    "Dual Listing/VMP/Browsing/Enhance-optout theme已占 — 仅must_reads",
+    "batch2: Typefully/Exa/fieldtheory仍跳过",
+    "batch2: Google Ads API 26.1以must_reads收录、未占topic（API/infra）",
+    "batch2: Alphabet财报仅awareness、融资/财报硬拒topic"
   ],
-  "topics_status": "final",
+  "topics_status": "final+batch2",
   "spine_ban_check": {
     "oct28": [
       "amazon-vmp-dc-multipack-edit-1111",
@@ -781,6 +1007,16 @@
       "tiktok-id-dual-listing-1029": "day-of must_reads only",
       "amazon-vmp": "follow must_reads only",
       "meta-product-browsing": "day+1 follow only"
-    }
+    },
+    "batch2_new": [
+      "amazon-bhdr-90-oct30-fbm-settings",
+      "shopify-campaign-autopilot-ga-guardrails",
+      "google-ai-mode-multiturn-us-feed-lp-hygiene"
+    ],
+    "batch1_locked": [
+      "shopify-fall26-agentic-kb-pii-catalog",
+      "google-troas-exploration-pmax-shopping",
+      "chatgpt-ads-source-hygiene-before-enhance-1030"
+    ]
   }
 }

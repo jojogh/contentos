@@ -1,10 +1,10 @@
 # ContentOS Daily Briefing — 2026-10-29 (America/New_York)
 
-- generated_at: `2026-10-29T11:50:00Z` (UTC)
-- pass: **topic-scope-day FINAL**
-- must_reads: 12 | also: 12 | topics: 3 | drafts: 3
+- generated_at: `2026-10-29T15:10:00Z` (UTC) · batch2 append @ ~11:10 America/New_York
+- pass: **topic-scope-day FINAL + batch2 append**
+- must_reads: 17 | also: 14 | topics: 6 (batch1×3 locked + batch2×3) | drafts: 6
 - market: BTC F&G 46 (Neutral), CNN 36 (fear), btcScore 39.5 偏恐慌; NVDA 215.38 (-1.17%), SPX 7743.98, VIX 17.14
-- publishing_note: 周四定稿：脊柱=Shopify Fall'26 Agentic KB/PII/Catalog、tROAS Exploration升格（PMax/Shopping）、ChatGPT Ads增强前夜源卫生（≠optout spine）。Dual Listing/VMP/Product Browsing/BF报名仅must_reads跟进。禁复用Oct28四spine+Oct27五spine+既占enhance-optout。Typefully/Exa跳过。不自动发帖。
+- publishing_note: 周四定稿+第二批追加：batch1脊柱保持（Shopify Fall'26 Agentic KB/PII/Catalog、tROAS Exploration、ChatGPT Ads源卫生）。batch2新增：Amazon BHDR 10/30 FBM三件套、Shopify Campaign Autopilot护栏、Google AI Mode multiturn美区feed/落地页卫生。Dual Listing/VMP/Browsing/Enhance-optout仍禁复用。Typefully/Exa跳过。不自动发帖。
 
 ## Spine 禁复用核对
 
@@ -15,7 +15,7 @@
 - amazon-vmp: follow must_reads only
 - meta-product-browsing: day+1 follow only
 
-## 今日选题（FINAL）
+## 今日选题（FINAL · batch1 locked + batch2 append）
 
 ### 1. Shopify Fall'26 Agentic：30分钟清Knowledge Base默认PII + Catalog资格 + 通道开关——别让Agent先读到店主电话
 - theme_slug: `shopify-fall26-agentic-kb-pii-catalog` | admission: a+c | heat: high
@@ -37,6 +37,28 @@
 - hooks: 10/30起ChatGPT可以改写你的广告——它读的是你现在的落地页 / 想关的人昨天就该关；还开着的人今天该洗源
 - tags: 平台可改字段, 商家数字
 - reasoning: OpenAI Help约15h更新。admission a+c。明确≠chatgpt-ads-enhance-optout-1031（新slug=source hygiene）。非MCP。创意广告补位。
+
+
+### 4. Amazon Business Hour Delivery Rate：明天10/30审查——FBM卖家30分钟开齐三件套，别让B2B单被下架
+- theme_slug: `amazon-bhdr-90-oct30-fbm-settings` | admission: a+c | heat: high | **batch: 2**
+- angle: 30分钟：①Account Health→Eligibilities看BHDR是否≥90%；②下载承运商报告，业务单只走>90%承运商（美区UPS Ground/Ground Saver/FedEx Ground）；③打开Automated Handling Time + Shipping Settings Automation，业务单走Amazon Buy Shipping（三件齐=平台保证达标）；④必要时把稳定B2B SKU转FBA（FBA不受此规则）。≠VMP spine。
+- hooks: 你的FBM报价对普通买家还在——但明天起可能对Amazon Business买家消失 / 大部分人会去改承运商——真正该先开的是Handling Time三件套
+- tags: 平台可改字段, 商家数字
+- reasoning: Admission (a)(c)：Account Health可改字段+承运商/Buy Shipping 30分钟动作；Oct30硬deadline。≠Oct28 VMP。窗内：Amazon Brand Guide 10/28。batch2 append。
+
+### 5. Shopify Campaign Autopilot全量开放：今天Growth设月预算+ROAS护栏——SEO改写只Approve不盲开
+- theme_slug: `shopify-campaign-autopilot-ga-guardrails` | admission: a+b | heat: high | **batch: 2**
+- angle: 30分钟：①Admin→Growth→Autopilot连好要用的渠道（先Meta或Microsoft，勿一次全开）；②Budget设月广告上限，Guardrails写目标ROAS/地区/语言；③Permissions设「广告/邮件先Approve」；④Pending actions逐条Approve/Dismiss，SEO优化只审标题/描述再放行。≠Fall'26 Agentic KB/PII spine。
+- hooks: Shopify把跨渠道投放交给Autopilot了——但月预算护栏空着等于把卡交出去 / 大部分人会去连X Ads预告——真正该先点的是Permissions=需批准
+- tags: 商家数字, 平台可改字段
+- reasoning: Admission (a)(b)：Growth可改预算/ROAS护栏+权限开关；Changelog 10/28 GA。不是A×B×C游行。≠今日shopify-fall26-agentic-kb-pii-catalog。batch2 append。
+
+### 6. Google AI Mode多轮广告美区上线：无新预算开关——30分钟洗Search词/落地页与Shopping feed，跟上追问意图
+- theme_slug: `google-ai-mode-multiturn-us-feed-lp-hygiene` | admission: a+c | heat: high | **batch: 2**
+- angle: 30分钟：①确认美区Search/Shopping/PMax仍参与AI Mode拍卖（无单独活动类型）；②从Search terms抽Top追问型查询，核对落地页是否回答跟进问题（材质/尺码/场景）；③Shopping/PMax核Merchant feed标题·价格·库存·GTIN一致；④跨境店核10国新市场本地feed语言。≠tROAS Exploration spine。
+- hooks: AI Mode广告开始吃追问了——你的落地页还只答第一句 / Google在用广告补AI Mode变现缺口——卖家动作是洗源不是新建预算
+- tags: 商家数字, 平台可改字段
+- reasoning: Admission (a)(c)：feed/落地页字段卫生+30分钟核验；Google 10/28官方扩10国+美区multiturn。批次1 also曾标缺硬动作→本条补可执行卫生清单。≠google-troas-exploration-pmax-shopping。batch2 append。
 
 ## 今日必看
 
@@ -114,6 +136,38 @@
 - source: AI Brief Oct 28 | published_at: 2026-10-28T05:21:00Z
 - AI Brief 10/28汇总：Terra $1/$5 per 1M，偏计算机使用速度/成本。无卖家字段级动作，放AI前沿awareness。
 
+
+### 13. [明天截止：Amazon Business Hour Delivery Rate≥90%——FBM未达标或对B2B买家下架（开齐Handling Time三件套可保证）](https://amazonbrandguide.com/)
+- track: 🛒 AI 电商自动化 | age_h: 28.2 | event_id: `amazon-bhdr-90-oct30` | **batch2**
+- source: Amazon Brand Guide (Seller Central News) | published_at: 2026-10-28T11:00:00Z
+- 美区卖家自配送至Amazon Business客户，滚动14天BHDR须≥90%。10/30复审，未改善则seller-fulfilled报价可能对Business买家停用（普通买家与FBA不受影响）。30分钟动作并入topic #4。
+  - supporting: [Seller Forums讨论串：BHDR要求与业务时段送达定义](https://sellercentral.amazon.com/seller-forums/discussions/t/57222b70-40df-4574-aa0f-9f815c197987)
+
+### 14. [Shopify Campaign Autopilot对全量商家开放：Meta/Microsoft/Snap/Shop/Messaging+SEO建议——先设月预算与Approve权限](https://changelog.shopify.com/posts/more-channels-and-features-now-available-in-campaign-autopilot)
+- track: 🛒 AI 电商自动化 | age_h: 23.2 | event_id: `shopify-campaign-autopilot-ga` | **batch2**
+- source: Shopify Changelog | published_at: 2026-10-28T16:00:00Z
+- Changelog 10/28：Autopilot全面可用；Help路径Growth→Autopilot设monthly budget、ROAS/地区/语言护栏、Permissions。30分钟动作并入topic #5。
+  - supporting: [Help：Setting up Autopilot](https://help.shopify.com/en/manual/promoting-marketing/autopilot/setting-up-autopilot)
+
+### 15. [Google AI Mode广告扩至10国 + 美区multiturn：追问轮次也可出赞助结果——沿用Search/Shopping/PMax资格](https://blog.google/products/ads-commerce/ads-in-ai-mode-global/)
+- track: 🎨 创意广告 | age_h: 24.2 | event_id: `google-ai-mode-ads-10markets-multiturn` | **batch2**
+- source: blog.google | published_at: 2026-10-28T15:00:00Z
+- 10/28：扩澳加印等10国；Q4还将扩巴西/墨西哥/英国；美区multiturn ads。无单独新预算类型——动作是feed/落地页卫生。升格为topic #6。
+  - supporting: [Search Engine Land扩写](https://searchengineland.com/google-expands-ads-in-ai-mode-to-10-new-markets-with-uk-and-brazil-next-499644)
+  - supporting: [@supadesignx：10国扩容+CTR接近有机](https://x.com/supadesignx/status/2115754941230817538)
+
+### 16. [Google Ads API 26.1：PMax可负向排除家庭收入档 + 广告网络两档预算优先级（API向，UI待核）](https://www.seroundtable.com/google-ads-api-version-261-42409.html)
+- track: 🎨 创意广告 | age_h: 20.0 | event_id: `google-ads-api-261` | **batch2**
+- source: Search Engine Roundtable | published_at: 2026-10-28T19:08:00Z
+- API v26.1新增PMax HHI负向、网络优先级两档与次级花费上限等。以API为主——今日不作topic脊柱，进must_reads供工程/代操跟进。
+  - supporting: [developers.google.com release notes](https://developers.google.com/google-ads/api/docs/release-notes)
+
+### 17. [Alphabet Q3：Search广告低于预期、股价约-10%，管理层点名AI Mode变现偏低——同日扩AI Mode广告](https://x.com/i/trending/2115680609225916651)
+- track: 🤖 AI 前沿 | age_h: 9.4 | event_id: `alphabet-q3-ai-mode-monetization` | **batch2**
+- source: X News / earnings chatter | published_at: 2026-10-29T05:46:58Z
+- Search ads约$63.3B +12% YoY低于共识，盘前约跌10%；高管将部分归因为AI Mode较低变现。融资/财报不作topic脊柱，作AI前沿+广告环境awareness。
+  - supporting: [@ayunonymous：用扩AI Mode广告回应变现缺口](https://x.com/ayunonymous/status/2115758478312509727)
+
 ## Also worth reading
 
 1. [Anthropic S-1/IPO叙事继续发酵（融资脊柱拒进topics）](https://x.com/i/trending/2115398443367891063) — 🤖 AI 前沿 | age_h 4.8 | 融资/估值硬拒topic
@@ -124,10 +178,13 @@
 6. [Shopify agentic storefronts Help（403于本环境，保留官方路径）](https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts) — 🛒 AI 电商自动化 | age_h 19.8 | 本环境WebFetch 403，以Newsroom为准
 7. [Shop MCP changelog：任意Agent接Catalog+Shop Pay](https://shopify.dev/changelog/posts/add-shopping-and-shop-pay-checkout-to-any-agent-with-shop-mcp) — 🛒 AI 电商自动化 | age_h 383.8 | 硬窗口外；Fall'26语境延伸
 8. [Meta Ads Manager Breakdown 英文行业稿（昨已topic，今日延伸）](https://www.socialsamosa.com/news-2/meta-ads-manager-breakdown-tool-track-individual-creative-performance-12760366) — 🎨 创意广告 | age_h 28.9 | 昨spine延伸，不复用topic
-9. [Google AI Mode广告扩市场/标签测试（Search Engine Land）](https://searchengineland.com/google-expands-ads-in-ai-mode-to-10-new-markets-with-uk-and-brazil-next-499644) — 🎨 创意广告 | age_h 17.8 | 缺Admission a/b/c硬动作
+9. [Google AI Mode广告扩市场/标签测试（Search Engine Land）](https://searchengineland.com/google-expands-ads-in-ai-mode-to-10-new-markets-with-uk-and-brazil-next-499644) — 🎨 创意广告 | age_h 24.2 | **已升格为batch2 topic #6**；本条保留作延伸
 10. [Amazon新Echo硬件日——非核心赛道](https://x.com/i/trending/2115451281275777106) — 🤖 AI 前沿 | age_h 15.5 | 弱相关
 11. [Meta Pixel 11/12设备侧补转化——对账窗提醒（spine已占）](https://ppc.land/meta-pixel-will-count-more-conversions-from-nov-12-unless-advertisers-opt-out/) — 🎨 创意广告 | age_h 51.8 | 延伸
 12. [Diffusion Studio：开源可被Codex/Claude控制的视频时间线编辑器](https://x.com/NiteFinds/status/2115708681660625157) — 🎨 创意广告 | age_h 4.3 | 硬拒形态：无广告测试闭环
+
+13. [Meta Commercial/Self-Serve条款再延期（咨询或超11/20）——既有条款仍有效；不作选题脊柱](https://www.investing.com/news/stock-market-news/meta-delays-indefinitely-its-rollout-of-new-commercial-terms-after-publishers-concerns-4980457) — 🎨 创意广告 | age_h 20.5 | 延期跟进；theme已占10/26
+14. [Google Ads API 26.1网络优先级/促销兑换字段细目（工程向延伸）](https://wearemainstreet.org/world/us/2026/10/28/google-ads-api-update-adds-targeting-reporting) — 🎨 创意广告 | age_h 19.2 | API延伸；主条已在must_reads
 
 ## 草稿（不自动发帖 / 不创建 Typefully）
 
@@ -170,10 +227,54 @@ ChatGPT Ads创意增强明天（10/30）默认开，无逐条预览。
 ```
 - reasoning: 元模式2；source hygiene新slug，不复述10/25 optout spine
 
+
+### Draft 4 · X 刚更新了，对你意味着 N 件事 · 🛒 AI 电商自动化 · batch2
+
+```
+Amazon Business Hour Delivery Rate明天（10/30）审查：FBM对B2B买家要≥90%。
+
+对你意味着三件事：
+1）普通买家报价可能还在，Business买家端已消失；
+2）只换承运商不够——要开Automated Handling Time + Shipping Settings Automation + Buy Shipping；
+3）FBA不受此规则，稳定B2B SKU可转FBA。
+
+今天30分钟：Account Health→Eligibilities查BHDR，三件套一次开齐。
+```
+- reasoning: 元模式2；对齐amazon-bhdr-90-oct30-fbm-settings；≠VMP
+
+### Draft 5 · 大部分人用 X 的方式是错的 · 🛒 AI 电商自动化 · batch2
+
+```
+Shopify把Campaign Autopilot对全量商家开放了。
+
+大部分人会去连下一个渠道——真正该先点的是：
+Growth → Autopilot → Budget月上限 + Permissions=需批准。
+
+SEO改写也别盲开：Pending actions逐条审标题/描述再Approve。
+```
+- reasoning: 元模式3；对齐shopify-campaign-autopilot-ga-guardrails；≠Fall'26 KB spine
+
+### Draft 6 · X 刚更新了，对你意味着 N 件事 · 🎨 创意广告 · batch2
+
+```
+Google AI Mode广告进了美区多轮追问，并扩到10国。
+
+对你意味着：
+1）没有新的「AI Mode预算」开关——Search/Shopping/PMax资格自动带入；
+2）追问意图要靠落地页与feed答第二问；
+3）Alphabet点名AI Mode变现偏低——广告供给只会更密。
+
+今天：抽Search terms追问型查询，洗feed标题/价格/库存。
+```
+- reasoning: 元模式2；对齐google-ai-mode-multiturn-us-feed-lp-hygiene；≠tROAS Exploration
+
 ## Cross opportunities
 
 - **Amazon拦Agent下单 × Shopify Shop Pay进Agent**: 封锁把可结账流量推向开放目录；独立站本周优先Catalog资格+Knowledge Base事实，而不是追融资新闻。
 - **默认开字段日历 × 出价探索**: ChatGPT Enhance 10/30、Pixel 11/12 与 tROAS Exploration同周——先锁创意源与归因口径，再用Exploration扩量。
+- **Amazon BHDR截止 × VMP Edit窗**: 同周配送/包装合规双线——BHDR保B2B可见度，VMP保多件装毛利；勿混成同一选题。
+- **Alphabet AI Mode变现压力 × multiturn ads**: 平台侧用广告补缺口；卖家侧用feed/落地页卫生接追问意图，而不是等新预算类型。
+- **Shopify Autopilot护栏 × Fall'26 Agentic KB**: 增长预算自动化与Agent知识库是两条Admin路径——先护栏再开渠道，先清PII再开Agent。
 
 ## Suggestions（仅建议，未改源文件）
 
@@ -183,7 +284,12 @@ ChatGPT Ads创意增强明天（10/30）默认开，无逐条预览。
 - add @themacrosift: Shop Pay进Agent短讯被多条中文二次传播，可作ecom交叉扫描 (medium)
 - topic_library add: Shopify Agentic Knowledge Base / Catalog eligibility 运营清单 — Fall'26+ PII事件同日出现，卖家JTBD清晰
 - topic_library add: Smart Bidding Exploration tROAS容差操盘 — 从underserved升格且有Help路径
-- positioning: 连续多日平台默认开字段（Meta/Google/OpenAI/Shopify Agent）成为主线，长期定位已覆盖电商自动化×创意广告 → 可在longterm「重点关注」补一句 Agent 分发/结账通道的运营清单，无需改赛道id
+- topic_library add (batch2): Amazon Business Hour Delivery Rate / FBM三件套 — Oct30 deadline，卖家JTBD清晰，建议Star手动入库
+- topic_library add (batch2): Shopify Campaign Autopilot Growth护栏SOP — Changelog GA，单平台护栏≠多厂商游行
+- topic_library add (batch2): Google AI Mode multiturn feed/落地页卫生 — 官方扩容+美区多轮，补Admission硬动作
+- promote @supadesignx: AI Mode 10国+CTR接近有机短讯支撑batch2 #6 (medium)
+- info_sources suggest: Amazon Brand Guide / Seller Central News — BHDR类Account Health通知常先出在此
+- positioning: 连续多日平台默认开字段（Meta/Google/OpenAI/Shopify Agent）成为主线，长期定位已覆盖电商自动化×创意广告 → 可在longterm「重点关注」补一句 Agent 分发/结账通道的运营清单，无需改赛道id；batch2再补「平台配送/增长自动化护栏」一句即可
 
 ## Blockers / skipped
 
@@ -193,5 +299,9 @@ ChatGPT Ads创意增强明天（10/30）默认开，无逐条预览。
 - Shopify Help agentic-storefronts WebFetch 403 — 以Newsroom为准
 - TikTok BF报名主新闻稿10/19出窗 — 用清单/日历作跟进口径
 - Dual Listing/VMP/Browsing/Enhance-optout theme已占 — 仅must_reads
+- batch2: Typefully/Exa/fieldtheory仍跳过
+- batch2: Google Ads API 26.1以must_reads收录、未占topic（API/infra）
+- batch2: Alphabet财报仅awareness、融资/财报硬拒topic
+- batch2: Meta商业条款延期仅also（10/26 spine已占）
 
 *由 ContentOS Daily Briefing 工作流生成 · 数据文件:`daily_data.json` · Dashboard:`daily_briefing.html`*
