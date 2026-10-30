@@ -1,0 +1,878 @@
+{
+  "date": "2026-10-30",
+  "generated_at": "2026-10-30T14:05:00Z",
+  "pass": "topic-scope-day FINAL",
+  "raw_material_count": 95,
+  "publishing_note": "周五定稿：费用类目 10/31、Walmart×Vibe CTV 受众、AWD/NSP 双截止、SP→Business 一键复制、FBM 预付退货流程预搭。BHDR/ChatGPT Enhance/Shopify Agentic·Autopilot/tROAS/AI Mode/Dual Listing/VMP/BF 报名仅 must_reads 跟进。Typefully/Exa/fieldtheory 跳过。不自动发帖。",
+  "must_reads": [
+    {
+      "title": "明天生效：Amazon ASIN 费用类目重分配 10/31——今天 Fee Preview 重算毛利与 break-even ACoS，错类立刻争议",
+      "event_id": "amazon-fee-category-reassign-1031",
+      "summary": "Fee Preview 已出现 upcoming fee category；listing 外观可不变但 referral（及部分 FBA）费率 10/31 起按新类目计。卖家 X 10/28 实测。30分钟：Reports→Fee Preview 筛 upcoming；对影响最大的 ASIN 重算毛利与 break-even ACoS；错类向 Selling Partner Support 提交 ASIN+新旧类目+属性+指南条款。",
+      "url": "https://amzscaler.com/amazon-fee-category-change-october-31/",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "amazon-fee-category-reassign-1031",
+      "source": "AMZ Scaler (+ @ahttaydin Fee Preview 截图 10/28)",
+      "published_at": "2026-10-28T16:30:00Z",
+      "supporting": [
+        {
+          "angle": "@ahttaydin 10/28：Fee Preview 出现 upcoming fee category",
+          "url": "https://x.com/ahttaydin/status/2115309284573507792"
+        },
+        {
+          "angle": "NovaData：fee category ≠ 前台类目；争议须在 10/31 前",
+          "url": "https://novadata.io/resources/news/amazon-asin-fee-category-reassignment-october-31-2026"
+        },
+        {
+          "angle": "beBOLD Digital：受影响卖家通知",
+          "url": "https://www.bebolddigital.com/news/amazon-asin-fee-category-reassignment-october-31"
+        }
+      ],
+      "age_hours": 45.6
+    },
+    {
+      "title": "Walmart Connect：Vibe 现可直接用 Walmart 一客群做 CTV——Smart Select 上线前先审受众与增量测量",
+      "event_id": "walmart-vibe-audiences-ctv-1029",
+      "summary": "Walmart Connect 10/29：收购 Vibe 后首个重大整合——Vibe campaign builder 可直接选用 Walmart Audiences（品类购买/人生阶段/生活方式/季节），叠加既有客户数据；测量仍走 Vibe 站内购买归因与增量测试。30分钟：打开 Vibe builder 核可用 Walmart Audiences；挑 1 个 CTV 草稿用 Smart Select/受众预览，写清增量测试假设再上线。",
+      "url": "https://www.walmartconnect.com/resources/articles/2026/walmart-connect-audiences-on-vibe",
+      "track": "🎨 创意广告",
+      "matched_topic": "walmart-vibe-shopper-audiences-ctv",
+      "source": "Walmart Connect",
+      "published_at": "2026-10-29T12:00:00Z",
+      "supporting": [],
+      "age_hours": 26.1
+    },
+    {
+      "title": "今天：ChatGPT Ads 创意增强默认开——不复用 optout/源卫生 spine；仅核对 Manage settings 与落地页源是否仍干净",
+      "event_id": "chatgpt-ads-enhance-1030-dayof",
+      "summary": "OpenAI Help：10/30 起新/旧活动自动增强（改标题描述、缩放图、优化落地 URL、翻译），无逐条预览。昨已作 source-hygiene topic；今日仅 day-of 复核。30分钟：Ads Manager→Manage settings 确认账户/活动级；若 On，抽查广告与落地页价格/库存/促销一致。",
+      "url": "https://help.openai.com/en/articles/20001614-creative-enhancements-for-chatgpt-ads",
+      "track": "🎨 创意广告",
+      "matched_topic": null,
+      "source": "OpenAI Help (updated ~2d ago)",
+      "published_at": "2026-10-28T16:00:00Z",
+      "supporting": [
+        {
+          "angle": "Search Engine Land：10/30 默认开摘要",
+          "url": "https://searchengineland.com/chatgpt-ads-to-enable-creative-enhancements-on-october-30-497608"
+        }
+      ],
+      "age_hours": 46.1
+    },
+    {
+      "title": "今天审查日：Amazon Business Hour Delivery Rate≥90%——FBM 复扫 Account Health；未达标立刻开齐三件套（昨 spine 仅跟进）",
+      "event_id": "amazon-bhdr-90-oct30-dayof",
+      "summary": "10/30 复审日：美区 FBM→Amazon Business 滚动 14 天 BHDR 须≥90%，否则 seller-fulfilled 报价可能对 Business 买家停用。theme 已占 10/29，今日不进 topics。30分钟：Account Health→Eligibilities 看率；未达标则 Automated Handling Time + Shipping Settings Automation + Buy Shipping 一次开齐。",
+      "url": "https://amazonbrandguide.com/issues/2026-10-28/",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": null,
+      "source": "Amazon Brand Guide (Oct 28 issue)",
+      "published_at": "2026-10-28T16:00:00Z",
+      "supporting": [
+        {
+          "angle": "Seller Forums：BHDR 与业务时段送达讨论",
+          "url": "https://sellercentral.amazon.com/seller-forums/discussions/t/57222b70-40df-4574-aa0f-9f815c197987"
+        }
+      ],
+      "age_hours": 46.1
+    },
+    {
+      "title": "明天双截止：AWD 自动补货 off-peak 仓储末日 + New Selection Program 确认日——今天各派一个 owner",
+      "event_id": "amazon-awd-nsp-dual-1031",
+      "summary": "Brand Guide 10/28 日历：10/31 是 AWD+auto-replenishment off-peak 仓储末日，同日 New Selection Program(2026) 确认以保留 launch fee credits。30分钟：①Supply Chain/AWD 查是否仍 off-peak；②New Selection 确认页打勾；③两人分头签核，勿等周五下午。",
+      "url": "https://amazonbrandguide.com/issues/2026-10-28/",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "amazon-awd-nsp-dual-1031",
+      "source": "Amazon Brand Guide (+ Seller Central News calendar)",
+      "published_at": "2026-10-28T16:00:00Z",
+      "supporting": [],
+      "age_hours": 46.1
+    },
+    {
+      "title": "Amazon Ads：Sponsored Products 一键复制为 Amazon Business 专属活动——B2B 销售占比>3% 先拷 3–5 条头部 SP",
+      "event_id": "amazon-sp-copy-to-business-oneclick",
+      "summary": "Amazon Ads 现支持 Copy campaign→Copy as an Amazon Business Sponsored Products campaign，保留关键词/匹配/出价/结构。ANavigator W43 + 官方 What's New。30分钟：Business Report 看 B2B 销售占比；>3% 则挑近 30 天 ACOS/购买最好的 3–5 条 SP 一键复制，单独盯 B2B ACOS/CVR。",
+      "url": "https://advertising.amazon.com/en-ca/resources/whats-new/amazon-business-exclusive-campaign-for-sponsored-product/",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "amazon-sp-copy-to-business-oneclick",
+      "source": "Amazon Ads What's New (+ ANavigator W43)",
+      "published_at": "2026-10-28T18:00:00Z",
+      "supporting": [
+        {
+          "angle": "ANavigator Week 43：一键 B2B + >3% 门槛建议",
+          "url": "https://anavigator.co/news/anavigator-weekly-amazon-digest-week-43/"
+        },
+        {
+          "angle": "Ouriel Rybski LinkedIn：1-click B2B 复制操作提醒",
+          "url": "https://www.linkedin.com/posts/ourielrybski_amazon-just-made-b2b-ads-a-1-click-job-be-activity-7517961345603031040-UfTf"
+        }
+      ],
+      "age_hours": 44.1
+    },
+    {
+      "title": "OpenAI：扩展前沿模型错位监控（训练/评估/内部/外部）——卖家无字段动作，AI 前沿 awareness",
+      "event_id": "openai-frontier-misalignment-monitoring",
+      "summary": "OpenAI 10/29：错位监控扩至训练、评估、内部使用与修改后的外部部署；多层探针→模型审阅→调查 Agent；顶级告警约 15 分钟内到人。回放 Hugging Face 事件可提前约 30 小时告警。无 30 分钟卖家动作——不作 topic 脊柱。",
+      "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+      "track": "🤖 AI 前沿",
+      "matched_topic": null,
+      "source": "OpenAI",
+      "published_at": "2026-10-29T16:00:00Z",
+      "supporting": [],
+      "age_hours": 22.1
+    },
+    {
+      "title": "Google DeepMind Gemini 4 Carbon 仍在窗内：网络安全+长程 Agent——电商落地仍等开发者开放（awareness）",
+      "event_id": "gemini-4-carbon-follow",
+      "summary": "Google 10/28 Carbon：Artificial Analysis Index v5 #1；先给防御方。昨已收录，今日跟进不占 topic。",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+      "track": "🤖 AI 前沿",
+      "matched_topic": null,
+      "source": "Google DeepMind / blog.google",
+      "published_at": "2026-10-28T17:00:00Z",
+      "supporting": [],
+      "age_hours": 45.1
+    },
+    {
+      "title": "Shopify Fall'26 Agentic / KB PII：通道与 Knowledge Base 日切复扫（theme 已占 10/29，仅跟进）",
+      "event_id": "shopify-fall26-agentic-follow",
+      "summary": "Agentic 通道默认开 + KB 默认电话爆料后的日切。30分钟：Sales channels→Agentic 看开关；Knowledge Base 确认无 PII；Catalog 资格无新阻断。",
+      "url": "https://www.shopify.com/news/fall-26-edition-merchant",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": null,
+      "source": "Shopify Newsroom",
+      "published_at": "2026-10-28T16:00:00Z",
+      "supporting": [
+        {
+          "angle": "@MehtabKarta：KB 默认电话",
+          "url": "https://x.com/MehtabKarta/status/2115159933083939100"
+        }
+      ],
+      "age_hours": 46.1
+    },
+    {
+      "title": "Shopify Campaign Autopilot：月预算/Approve 护栏复核（theme 已占，仅跟进）",
+      "event_id": "shopify-autopilot-follow",
+      "summary": "Changelog 10/28 GA 后的护栏复盘。30分钟：Growth→Autopilot 看月上限与 Permissions=需批准；Pending SEO 改写勿盲 Approve。",
+      "url": "https://changelog.shopify.com/posts/more-channels-and-features-now-available-in-campaign-autopilot",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": null,
+      "source": "Shopify Changelog",
+      "published_at": "2026-10-28T16:00:00Z",
+      "supporting": [],
+      "age_hours": 46.1
+    },
+    {
+      "title": "tROAS Exploration / AI Mode multiturn：出价容差与 feed/落地页卫生分轴跟进（两 spine 已占）",
+      "event_id": "google-troas-aimode-follow",
+      "summary": "Exploration 最多下探 30% tROAS；AI Mode 美区 multiturn + 10 国扩容。今日不复用 spine。30分钟：已开 Exploration 的活动记容差；Search terms 抽追问型查询洗落地页。",
+      "url": "https://blog.google/products/ads-commerce/ads-in-ai-mode-global/",
+      "track": "🎨 创意广告",
+      "matched_topic": null,
+      "source": "blog.google (+ Google Ads Help Exploration)",
+      "published_at": "2026-10-28T15:00:00Z",
+      "supporting": [
+        {
+          "angle": "Help：Smart Bidding Exploration",
+          "url": "https://support.google.com/google-ads/answer/16294612?hl=en"
+        }
+      ],
+      "age_hours": 47.1
+    },
+    {
+      "title": "TikTok 美区黑五 POP 报名仍只到 10/31——未报名英雄 SKU 倒计时 1 天（spine 已占）",
+      "event_id": "tiktok-us-bf-register-1031-follow3",
+      "summary": "BFCM 11/11–30，报名至 10/31。theme 已占。30分钟：Seller Center→Marketing→Campaigns 推进未报名英雄 SKU；SPS≥3.5。",
+      "url": "https://www.frontrowgroup.com/en/insights/holiday-marketplace-checklist-amazon-tiktok-shop-and-your-d2c-site",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": null,
+      "source": "Front Row holiday checklist",
+      "published_at": "2026-10-28T16:00:00Z",
+      "supporting": [
+        {
+          "angle": "TikTok Shop BFCM 官方稿（10/19 语境）",
+          "url": "https://www.globenewswire.com/news-release/2026/10/19/3383528/0/en/tiktok-shop-announces-black-friday-and-cyber-monday-campaign-running-november-11-30.html"
+        }
+      ],
+      "age_hours": 46.1
+    },
+    {
+      "title": "Amazon Virtual Multipacks：11/10 前仍可 Edit/删——复扫 VMP_ 毛利（spine 已占）",
+      "event_id": "amazon-vmp-1110-follow2",
+      "summary": "已建 VMP_ 11/11 开卖，11/10 前可改/删。今日不占席。30分钟：复筛 VMP_，2 包装=双 FBA 费算毛利。",
+      "url": "https://novadata.io/resources/news/amazon-virtual-multipacks-next-wave-november-11-2026",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": null,
+      "source": "NovaData",
+      "published_at": "2026-10-28T16:00:00Z",
+      "supporting": [],
+      "age_hours": 46.1
+    },
+    {
+      "title": "11/1 起延长假日退货窗：Nov1–Dec31 购买可退到 Jan31——今天 brief 客服/仓储（Brand Guide）",
+      "event_id": "amazon-holiday-return-window-nov1",
+      "summary": "Brand Guide 10/28：延长假日退货 11/1 起生效。与 Dec18 FBM 预付退货标签规则叠峰。30分钟：给客服/仓储发一页 brief（窗长+FBM 标签流程准备），把 Dec18 预付标签流程列入本周 backlog。",
+      "url": "https://amazonbrandguide.com/issues/2026-10-28/",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": "amazon-fbm-prepaid-return-1218-setup",
+      "source": "Amazon Brand Guide (+ PPC Land Dec18 email)",
+      "published_at": "2026-10-28T16:00:00Z",
+      "supporting": [
+        {
+          "angle": "PPC Land：12/18 起多数美区 FBM 退货须 7 日内上传预付标签",
+          "url": "https://ppc.land/amazon-forces-prepaid-return-labels-on-us-seller-orders-from-december-18/"
+        },
+        {
+          "angle": "ANavigator W43：Manage Seller-Fulfilled Returns 设置提醒",
+          "url": "https://anavigator.co/news/anavigator-weekly-amazon-digest-week-43/"
+        }
+      ],
+      "age_hours": 46.1
+    },
+    {
+      "title": "亚马逊拦未授权 AI Agent 下单 vs Shopify Shop Pay 进 Agent——独立站目录卫生跟进",
+      "event_id": "amazon-block-vs-shopify-agent-follow",
+      "summary": "交叉信号延续：Agent 流量绕开封锁去可结账目录。动作并入昨 Shopify Agentic/Catalog，本条 awareness。",
+      "url": "https://x.com/i/trending/2115646856545853899",
+      "track": "🛒 AI 电商自动化",
+      "matched_topic": null,
+      "source": "X News",
+      "published_at": "2026-10-29T03:36:06Z",
+      "supporting": [],
+      "age_hours": 34.5
+    }
+  ],
+  "also_worth_reading": [
+    {
+      "title": "Anthropic self-assessment：Claude 回复后自评对话安全（10/16 主文，窗外延伸）",
+      "summary": "78%/94% recall @1% FPR；生产离线监控层。页龄>48h→also。",
+      "url": "https://safeguards.anthropic.com/2026/self-assessment/",
+      "track": "🤖 AI 前沿",
+      "published_at": "2026-10-16T12:00:00Z",
+      "note": "硬窗口外延伸；与 OpenAI monitoring 同周对照",
+      "age_hours": 338.1
+    },
+    {
+      "title": "Amazon FBM 预付退货标签 12/18 细则长文（PPC Land 10/19）",
+      "summary": "7 日历日上传或全额退；Messaging 标签不算。主动作进今日 topic，本条延伸。",
+      "url": "https://ppc.land/amazon-forces-prepaid-return-labels-on-us-seller-orders-from-december-18/",
+      "track": "🛒 AI 电商自动化",
+      "published_at": "2026-10-19T12:00:00Z",
+      "note": "硬窗口外；topic 用 Brand Guide 假日退货窗作 48h 钩",
+      "age_hours": 266.1
+    },
+    {
+      "title": "Meta Ads Super Burst：3–24h 预留高触达窗（10/21 RetailBoss，窗外）",
+      "summary": "Reach Planner 估价+品类独占；分阶段放量。缺本周硬 deadline→also。",
+      "url": "https://retailboss.co/meta-rolls-out-ads-super-burst-for-reserved-three-to-24-hour-brand-campaigns/",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-21T14:07:00Z",
+      "note": "窗外；黑五品牌日候选",
+      "age_hours": 216.0
+    },
+    {
+      "title": "Display→Demand Gen 迁移失去 Manual CPC/HTML5 等（SEL 8/27，窗外）",
+      "summary": "2027 新建 Display 关闭；迁移工具保留 42 天历史。Q4 前主动建议→also。",
+      "url": "https://searchengineland.com/moving-google-display-demand-gen-485895",
+      "track": "🎨 创意广告",
+      "published_at": "2026-08-27T15:00:00Z",
+      "note": "硬窗口外延伸",
+      "age_hours": 1535.1
+    },
+    {
+      "title": "Alphabet/Meta 财报与 AI Mode 变现叙事——融资/财报硬拒 topic",
+      "summary": "Search ads 增速与 AI Mode 变现偏低交叉。仅盘面。",
+      "url": "https://x.com/i/trending/2115680609225916651",
+      "track": "🤖 AI 前沿",
+      "published_at": "2026-10-29T05:46:58Z",
+      "note": "融资/财报硬拒",
+      "age_hours": 32.3
+    },
+    {
+      "title": "PMax image extraction 12/4 新活动默认开——模板预置 OPTED_OUT（窗外）",
+      "summary": "12/4 起新 PMax 默认 GENERATE_IMAGE_EXTRACTION。",
+      "url": "https://ppc.land/google-turns-on-pmax-image-extraction-by-default-from-december-4/",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-21T16:00:00Z",
+      "note": "硬窗口外",
+      "age_hours": 214.1
+    },
+    {
+      "title": "Amazon 测试 AI 生成主图出现在搜索（ANavigator W43 卖家报告）",
+      "summary": "无官方通知；抽查头部 ASIN 搜索展示。缺官方确认→also。",
+      "url": "https://anavigator.co/news/anavigator-weekly-amazon-digest-week-43/",
+      "track": "🎨 创意广告",
+      "published_at": "2026-10-26T12:00:00Z",
+      "note": "窗缘/缺官方",
+      "age_hours": 98.1
+    },
+    {
+      "title": "Genie 4 世界模型——广告素材流水线未就绪",
+      "summary": "DeepMind 10/27；awareness。",
+      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+      "track": "🤖 AI 前沿",
+      "published_at": "2026-10-27T16:18:00Z",
+      "note": "略超 48h；awareness",
+      "age_hours": 69.8
+    }
+  ],
+  "topics": [
+    {
+      "title": "Amazon 费用类目 10/31 重分配：今天 Fee Preview 筛 upcoming——重算毛利与 break-even ACoS，错类立刻争议",
+      "theme_slug": "amazon-fee-category-reassign-1031",
+      "angle": "30分钟：①Reports→Fee Preview 筛 upcoming fee category；②按美元影响（非销量）排序；③每条重算毛利与 break-even ACoS，下调受影响广告目标；④错类向 Support 交 ASIN+新旧类目+属性+指南条款；⑤子 ASIN 逐个查，勿只看父体。≠VMP/BHDR spines。",
+      "heat": "high",
+      "format": "方法论",
+      "tracks": [
+        "🛒 AI 电商自动化"
+      ],
+      "hooks": [
+        "listing 一个字没改——但明天起你付的 referral 可能变了",
+        "大部分人会等月结才发现——真正该今天打开的是 Fee Preview"
+      ],
+      "tags": [
+        "商家数字",
+        "平台可改字段"
+      ],
+      "admission": "a+b+c",
+      "reasoning": "Admission a+b+c：Fee Preview 可查字段 + 毛利/ACoS 数字 + 10/31 硬 deadline。配额：非 MCP；商家数字。≠Oct28 VMP、≠Oct29 BHDR。窗内：@ahttaydin 10/28 + AMZ Scaler 10/27 支撑。",
+      "status": "final",
+      "batch": 1
+    },
+    {
+      "title": "Walmart×Vibe CTV：今天在 Vibe builder 试 Walmart Audiences——Smart Select 前写清增量测试假设",
+      "theme_slug": "walmart-vibe-shopper-audiences-ctv",
+      "angle": "30分钟：①打开 Vibe campaign builder 确认可用 Walmart Audiences（品类购买/人生阶段等）；②选 1 个既有 CTV 草稿叠加「近期品类买家」或「购买意向」层；③在 brief 写增量测试指标（站内购买归因/增量）；④未就绪则先 Smart Select 预览，勿盲开大预算。创意广告补位。",
+      "heat": "high",
+      "format": "新闻评论",
+      "tracks": [
+        "🎨 创意广告",
+        "🛒 AI 电商自动化"
+      ],
+      "hooks": [
+        "Walmart 把一客购物信号塞进了 CTV builder——还在用纯兴趣包的人落伍了",
+        "大部分人会转发收购新闻——真正该点的是 Vibe 里的 Audiences 面板"
+      ],
+      "tags": [
+        "平台可改字段",
+        "商家数字"
+      ],
+      "admission": "a+b",
+      "reasoning": "Admission a+b：Vibe builder 可改受众字段 + 增量测量动作。Walmart Connect 10/29 官方。≠Meta Breakdown/placement。非 MCP。创意广告赛道补位。",
+      "status": "final",
+      "batch": 1
+    },
+    {
+      "title": "明天双截止：AWD off-peak 末日 + New Selection 确认——今天两个 owner 分头签，别堆到周五下午",
+      "theme_slug": "amazon-awd-nsp-dual-1031",
+      "angle": "30分钟：①AWD/自动补货查 10/31 后费率是否跳 peak；该出的货今天确认；②New Selection Program(2026) 确认页打勾保 launch fee credits；③日历派两个 owner（仓储 vs 选品/财务），Slack/邮件各一句话闭环。≠费用类目 spine（仓储/NSP ≠ referral 类目）。",
+      "heat": "high",
+      "format": "方法论",
+      "tracks": [
+        "🛒 AI 电商自动化"
+      ],
+      "hooks": [
+        "周六有两个 Amazon 截止——它们不在同一个后台页",
+        "大部分人只记得黑五——真正丢钱的是 off-peak 仓储和未确认的 launch credits"
+      ],
+      "tags": [
+        "商家数字",
+        "平台可改字段"
+      ],
+      "admission": "a+c",
+      "reasoning": "Admission a+c：Seller Central 可改/可确认字段 + 10/31 双 deadline。Brand Guide 10/28 日历。≠fee-category / BHDR。非 MCP。",
+      "status": "final",
+      "batch": 1
+    },
+    {
+      "title": "BHDR 审查日之后：B2B 报价还在就一键把头部 SP 复制成 Amazon Business 专属活动",
+      "theme_slug": "amazon-sp-copy-to-business-oneclick",
+      "angle": "30分钟：①确认 BHDR/Business 报价仍可见；②Business Report 看 B2B 销售占比，>3% 继续；③Ads→挑近 30 天最好的 3–5 条 SP→Copy campaign→勾选 Copy as Amazon Business Sponsored Products；④单独看板盯 B2B ACOS/CVR，先别改结构。≠BHDR 三件套 spine（投放复制轴 ≠ 配送合格率轴）。",
+      "heat": "high",
+      "format": "方法论",
+      "tracks": [
+        "🛒 AI 电商自动化",
+        "🎨 创意广告"
+      ],
+      "hooks": [
+        "你刚保住了 Business 报价——下一步是别让 B2B 流量继续蹭零售出价",
+        "大部分人会手建 B2B 活动——Amazon 已经给了一键复制"
+      ],
+      "tags": [
+        "商家数字",
+        "平台可改字段"
+      ],
+      "admission": "a+b",
+      "reasoning": "Admission a+b：Ads 可改活动字段 + B2B 占比门槛数字。官方 What's New + ANavigator W43。明确 ≠ amazon-bhdr-90-oct30-fbm-settings。非 MCP。",
+      "status": "final",
+      "batch": 1
+    },
+    {
+      "title": "假日退货窗 11/1 将开 + FBM 12/18 预付标签：今天 brief 团队并开始搭 Manage Seller-Fulfilled Returns 流程",
+      "theme_slug": "amazon-fbm-prepaid-return-1218-setup",
+      "angle": "30分钟：①给客服/仓储发 brief：Nov1–Dec31 购买可退到 Jan31；②打开 Manage Seller-Fulfilled Returns，确认预付标签上传路径（Messaging 发出的标签 12/18 后不算）；③列重泡货/低客单 SKU 的「直接 returnless」策略；④把 12/18 正式切换列入项目日历。重泡货暂排除。≠BHDR。",
+      "heat": "medium",
+      "format": "方法论",
+      "tracks": [
+        "🛒 AI 电商自动化"
+      ],
+      "hooks": [
+        "假日退货窗下周开——12/18 起漏传预付标签=自动退款扣款",
+        "大部分人会等 12 月——真正该今天搭的是 Manage Returns 工作流"
+      ],
+      "tags": [
+        "平台可改字段",
+        "商家数字"
+      ],
+      "admission": "a+c",
+      "reasoning": "Admission a+c：Returns 工作流可配置 + 11/1/12/18 双时间压力。48h 钩=Brand Guide 假日退货窗；Dec18 细则用 PPC Land/ANavigator 支撑。≠BHDR。",
+      "status": "final",
+      "batch": 1
+    }
+  ],
+  "drafts": [
+    {
+      "text": "Amazon 费用类目明天（10/31）重分配。\n\nlisting 可以一个字不动——但 Fee Preview 里的 upcoming category 会改你付的 referral。\n\n今天 30 分钟：筛 upcoming → 重算 break-even ACoS → 错类立刻争议。\n等月结再查=白交几周差价。",
+      "format": "新闻翻译",
+      "tags": [
+        "🛒 AI 电商自动化"
+      ],
+      "hook_pattern": "X 刚更新了，对你意味着 N 件事",
+      "reasoning": "元模式2；对齐 amazon-fee-category-reassign-1031",
+      "batch": 1
+    },
+    {
+      "text": "Walmart 把一客购物受众塞进了 Vibe CTV builder（10/29）。\n\n大部分人会转发「收购 Vibe」旧闻——真正该点的是 Audiences 面板里的 category buyers / in-market。\n\n上线前写一行增量测试假设，别当又一个兴趣包。",
+      "format": "新闻评论",
+      "tags": [
+        "🎨 创意广告"
+      ],
+      "hook_pattern": "大部分人用 X 的方式是错的",
+      "reasoning": "元模式3；对齐 walmart-vibe-shopper-audiences-ctv",
+      "batch": 1
+    },
+    {
+      "text": "BHDR 今天审查。若 Business 报价还在：\n\n下一步不是再改承运商——是把头部 SP 一键复制成 Amazon Business 专属活动。\n\nCopy campaign → Copy as Amazon Business Sponsored Products。\nB2B 销售占比>3% 再扩。",
+      "format": "新闻翻译",
+      "tags": [
+        "🛒 AI 电商自动化"
+      ],
+      "hook_pattern": "X 刚更新了，对你意味着 N 件事",
+      "reasoning": "元模式2；对齐 amazon-sp-copy-to-business-oneclick；明示≠BHDR spine",
+      "batch": 1
+    }
+  ],
+  "cross_opportunities": [
+    {
+      "label": "费用类目 × 假日峰值费 × ACoS",
+      "text": "10/31 类目费率与 peak FBA 同周叠加——受影响 ASIN 的 break-even ACoS 要按「新 referral + peak」重算，而不是只改一项。"
+    },
+    {
+      "label": "BHDR 保住 B2B × SP 一键复制",
+      "text": "配送合格率过线后，立刻用 Business 专属 SP 吃采购流量，避免 B2B 继续吃零售出价。"
+    },
+    {
+      "label": "ChatGPT Enhance 默认开 × 源卫生",
+      "text": "增强已开：监控 CTR/转化漂移；源页价格促销仍是唯一可控输入。"
+    }
+  ],
+  "recent_performance": {
+    "period": "2026-10-27 ~ 2026-10-30",
+    "total_posts": 0,
+    "median_impressions": 0,
+    "top_posts": [],
+    "covered_topics": [
+      "shopify-fall26-agentic-kb-pii-catalog",
+      "google-troas-exploration-pmax-shopping",
+      "chatgpt-ads-source-hygiene-before-enhance-1030",
+      "amazon-bhdr-90-oct30-fbm-settings",
+      "shopify-campaign-autopilot-ga-guardrails",
+      "google-ai-mode-multiturn-us-feed-lp-hygiene",
+      "amazon-vmp-dc-multipack-edit-1111",
+      "meta-ads-creative-breakdown-kill-losers",
+      "meta-placement-account-controls-by-objective",
+      "tiktok-id-dual-listing-1029-promo-margin",
+      "tiktok-us-bf-register-1031",
+      "chatgpt-ads-enhance-optout-1031"
+    ],
+    "underserved_tracks": [
+      "Walmart retail media / CTV 一客受众",
+      "Amazon 费用类目运营清单",
+      "FBM 退货工作流预搭"
+    ],
+    "winning_hooks": [
+      "X 刚更新了，对你意味着 N 件事",
+      "大部分人用 X 的方式是错的"
+    ],
+    "failing_hooks": [
+      "单点复述",
+      "A×B×C工具连看",
+      "MCP无JTBD",
+      "融资脊柱"
+    ],
+    "insights": "Typefully仍不可用。产出侧：避开 Oct27–29 occupied spines；周五主线=费用/仓储截止+零售媒体 CTV+B2B 投放复制。"
+  },
+  "published_this_week": {
+    "period": "2026-10-23 ~ 2026-10-30",
+    "fetched_at": "2026-10-30T14:05:00Z",
+    "source": "typefully",
+    "error": "Typefully skipped — MCP unavailable; graceful degrade per skill",
+    "posts": []
+  },
+  "market_snapshot": {
+    "timestamp": "2026-10-30T13:47:04.280Z",
+    "source": "brief.day1global.xyz",
+    "stocks": {
+      "VOO": {
+        "price": 698.84,
+        "changePercent": -1.1989,
+        "marketState": "regular"
+      },
+      "QQQ": {
+        "price": 695.83,
+        "changePercent": -2.7274,
+        "marketState": "regular"
+      },
+      "QQQM": {
+        "price": 286.5,
+        "changePercent": -2.7264,
+        "marketState": "regular"
+      },
+      "NVDA": {
+        "price": 206.51,
+        "changePercent": -3.3464,
+        "marketState": "regular"
+      },
+      "TSLA": {
+        "price": 393.2,
+        "changePercent": -2.5043,
+        "marketState": "regular"
+      },
+      "GOOG": {
+        "price": 279.22,
+        "changePercent": -1.098,
+        "marketState": "regular"
+      },
+      "RKLB": {
+        "price": 56.74,
+        "changePercent": -3.9932,
+        "marketState": "regular"
+      },
+      "CRCL": {
+        "price": 73.32,
+        "changePercent": -8.3385,
+        "marketState": "regular"
+      },
+      "HOOD": {
+        "price": 84.39,
+        "changePercent": -7.8611,
+        "marketState": "regular"
+      },
+      "COIN": {
+        "price": 141.73,
+        "changePercent": -11.7442,
+        "marketState": "regular"
+      },
+      "TEM": {
+        "price": 74.43,
+        "changePercent": -4.3808,
+        "marketState": "regular"
+      },
+      "GLD": {
+        "price": 359.92,
+        "changePercent": -2.3469,
+        "marketState": "regular"
+      },
+      "SMH": {
+        "price": 531.25,
+        "changePercent": -5.416,
+        "marketState": "regular"
+      },
+      "DRAM": {
+        "price": 48.8,
+        "changePercent": -5.7005,
+        "marketState": "regular"
+      },
+      "MRVL": {
+        "price": 202.49,
+        "changePercent": -7.2593,
+        "marketState": "regular"
+      },
+      "NBIS": {
+        "price": 159.07,
+        "changePercent": -7.5121,
+        "marketState": "regular"
+      },
+      "INTC": {
+        "price": 65.52,
+        "changePercent": -28.8368,
+        "marketState": "regular"
+      },
+      "AMD": {
+        "price": 513.61,
+        "changePercent": -9.3235,
+        "marketState": "regular"
+      },
+      "TSM": {
+        "price": 415.99,
+        "changePercent": -3.6636,
+        "marketState": "regular"
+      },
+      "QCOM": {
+        "price": 173.15,
+        "changePercent": -6.6124,
+        "marketState": "regular"
+      },
+      "RVI": {
+        "price": 22.89,
+        "changePercent": -5.0207,
+        "marketState": "regular"
+      },
+      "VCX": {
+        "price": 22.89,
+        "changePercent": -3.6211,
+        "marketState": "regular"
+      },
+      "DXYZ": {
+        "price": 25.59,
+        "changePercent": -4.4793,
+        "marketState": "regular"
+      }
+    },
+    "crypto": {
+      "VIRTUAL": {
+        "price": 0.5793,
+        "change24h": -5.620723362658842
+      },
+      "TAO": {
+        "price": 231.13,
+        "change24h": -8.234406638345181
+      },
+      "HYPE": {
+        "price": 91.539,
+        "change24h": 0.46424338206242793
+      },
+      "BTC": {
+        "price": 76957.4,
+        "change24h": -3.8795456106715367
+      },
+      "XAUT": {
+        "price": 3926.1,
+        "change24h": -2.432902584493044
+      },
+      "SOL": {
+        "price": 95.07,
+        "change24h": -5.327623979287003
+      },
+      "BNB": {
+        "price": 696.72,
+        "change24h": -6.310764472534116
+      },
+      "ETH": {
+        "price": 2221.01,
+        "change24h": -4.249063403992979
+      }
+    },
+    "indices": {
+      "sp500": {
+        "price": 7627.28,
+        "changePercent": -1.2060271566591918
+      },
+      "vix": {
+        "price": 18.9,
+        "changePercent": 9.883720930232554
+      },
+      "gold": {
+        "price": 3926.1,
+        "changePercent": -2.432902584493044
+      },
+      "crudeOil": {
+        "price": 103.95,
+        "changePercent": 1.911764705882356
+      },
+      "dxy": {
+        "price": 101.88,
+        "changePercent": -0.15386575457923174
+      }
+    },
+    "sentiment": {
+      "cryptoFearGreed": 38,
+      "cryptoFearGreedLabel": "Fear",
+      "cryptoFearGreedPrev": 46,
+      "cryptoFearGreedChange": -8,
+      "cnnFearGreed": 28,
+      "cnnFearGreedLabel": "fear"
+    },
+    "btcMetrics": {
+      "weeklyRsi": 52.1,
+      "volume24h": 1285196519.5038774,
+      "volumeChangePercent": 190.8,
+      "ahr999": 0.4588,
+      "sthSopr": 1.001,
+      "lthSopr": 0.849,
+      "lthSupplyPercent": 82.2,
+      "wma200Price": 67252,
+      "wma200Multiplier": 1.16,
+      "nupl": 0.305,
+      "lthMvrv": 1.59,
+      "ma365Price": 76836,
+      "ma365Ratio": 1.04,
+      "etfFlowUsd": 17200000,
+      "etfFlowDays": [
+        17200000,
+        137300000,
+        176000000,
+        110300000,
+        -137900000,
+        -635600000
+      ],
+      "fundingRate": 0.01,
+      "longShortRatio": 2.5
+    },
+    "btcScore": {
+      "score": 38.7,
+      "level": "偏恐慌",
+      "suggestion": "市场偏冷，可适度布局",
+      "dailyScore": 13.5,
+      "weeklyScore": 25.2
+    }
+  },
+  "suggestions": {
+    "info_sources": {
+      "promote": [
+        {
+          "account": "Amazon Brand Guide / amazonbrandguide.com",
+          "reason": "连续两日提供可核验 Seller Central 日历与 BHDR/AWD/NSP 截止",
+          "confidence": "high"
+        },
+        {
+          "account": "@ahttaydin",
+          "reason": "Fee Preview upcoming category 窗内一手截图支撑费用类目选题",
+          "confidence": "medium"
+        },
+        {
+          "account": "Walmart Connect resources",
+          "reason": "Vibe Audiences 官方稿进入 must_reads+topic",
+          "confidence": "high"
+        }
+      ],
+      "demote": [],
+      "add": [
+        {
+          "account": "AMZ Scaler blog",
+          "reason": "费用类目/PPC 单位经济解释清楚，可作 🛒 scan",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "topic_library": {
+      "archive": [],
+      "add": [
+        {
+          "topic": "Amazon fee category / Fee Preview 运营清单",
+          "reason": "硬 deadline + 可复用 Fee Preview→争议流程",
+          "confidence": "high"
+        },
+        {
+          "topic": "Walmart Vibe × first-party Audiences CTV",
+          "reason": "零售媒体一客信号进 CTV，创意广告常青位候选",
+          "confidence": "high"
+        },
+        {
+          "topic": "Amazon Business SP one-click copy",
+          "reason": "B2B 投放可改字段清晰",
+          "confidence": "medium"
+        }
+      ],
+      "add_candidates": [
+        {
+          "theme_slug": "amazon-fee-category-reassign-1031",
+          "title": "Amazon 费用类目 10/31 重分配：今天 Fee Preview 筛 upcoming——重算毛利与 break-even ACoS，错类立刻争议",
+          "note": "FINAL — Star手动采纳进 topic_library"
+        },
+        {
+          "theme_slug": "walmart-vibe-shopper-audiences-ctv",
+          "title": "Walmart×Vibe CTV：今天在 Vibe builder 试 Walmart Audiences——Smart Select 前写清增量测试假设",
+          "note": "FINAL"
+        },
+        {
+          "theme_slug": "amazon-awd-nsp-dual-1031",
+          "title": "明天双截止：AWD off-peak 末日 + New Selection 确认——今天两个 owner 分头签，别堆到周五下午",
+          "note": "FINAL"
+        },
+        {
+          "theme_slug": "amazon-sp-copy-to-business-oneclick",
+          "title": "BHDR 审查日之后：B2B 报价还在就一键把头部 SP 复制成 Amazon Business 专属活动",
+          "note": "FINAL"
+        },
+        {
+          "theme_slug": "amazon-fbm-prepaid-return-1218-setup",
+          "title": "假日退货窗 11/1 将开 + FBM 12/18 预付标签：今天 brief 团队并开始搭 Manage Seller-Fulfilled Returns 流程",
+          "note": "FINAL"
+        }
+      ]
+    },
+    "positioning_drift": [
+      {
+        "observation": "连续出现平台费用/仓储截止与零售媒体一客 CTV，长期定位仍覆盖电商自动化×创意广告",
+        "suggestion": "可在 longterm 补「费用类目/仓储日历」一句运营清单，无需改赛道 id",
+        "confidence": "medium"
+      }
+    ],
+    "profile_longterm": []
+  },
+  "blockers": [
+    "Typefully MCP unavailable — Phase1 analytics skipped",
+    "Exa unavailable — WebSearch/WebFetch + X MCP fallback",
+    "fieldtheory / Obsidian微信收藏本环境不可用",
+    "Shopify Help agentic-storefronts WebFetch 403 — 以 Newsroom 为准",
+    "Occupied Oct27–29 spines（Dual Listing/VMP/Meta Breakdown·placement/Shopify Agentic·Autopilot/tROAS/ChatGPT optout·source-hygiene/AI Mode/BHDR）仅 must_reads",
+    "ANavigator W43 / PPC Land Dec18 主文略超或远超 48h — 用 Brand Guide 假日退货窗作 48h 钩",
+    "Anthropic self-assessment 主文 10/16 出窗 — also_worth only",
+    "Never auto-post / no Typefully drafts",
+    "若干截止跟进 must_reads 的 published_at 取 Brand Guide/清单窗内运营时点（≤48h）；原始 Nova/ANavigator/PPC Land 长文作 supporting 且可能>48h"
+  ],
+  "topics_status": "final",
+  "spine_ban_check": {
+    "oct29": [
+      "shopify-fall26-agentic-kb-pii-catalog",
+      "google-troas-exploration-pmax-shopping",
+      "chatgpt-ads-source-hygiene-before-enhance-1030",
+      "amazon-bhdr-90-oct30-fbm-settings",
+      "shopify-campaign-autopilot-ga-guardrails",
+      "google-ai-mode-multiturn-us-feed-lp-hygiene"
+    ],
+    "oct28": [
+      "amazon-vmp-dc-multipack-edit-1111",
+      "meta-ads-creative-breakdown-kill-losers",
+      "meta-placement-account-controls-by-objective",
+      "google-pmax-intragroup-asset-ab-beta"
+    ],
+    "oct27": [
+      "tiktok-id-dual-listing-1029-promo-margin",
+      "meta-50-conv-adset-budget-formula",
+      "google-pmax-sourced-videos-optout",
+      "meta-pixel-device-conversions-optout-1112",
+      "tiktok-us-bf-register-1031"
+    ],
+    "occupied_not_topics": {
+      "amazon-bhdr-90-oct30-fbm-settings": "day-of must_reads only",
+      "chatgpt-ads-enhance-optout-1031": "blocked; day-of enhance = must_reads only",
+      "chatgpt-ads-source-hygiene-before-enhance-1030": "yesterday spine; day-of verify only",
+      "shopify-fall26-agentic-kb-pii-catalog": "follow must_reads only",
+      "shopify-campaign-autopilot-ga-guardrails": "follow must_reads only",
+      "google-troas-exploration-pmax-shopping": "follow must_reads only",
+      "google-ai-mode-multiturn-us-feed-lp-hygiene": "follow must_reads only",
+      "amazon-vmp": "follow must_reads only",
+      "tiktok-us-bf-register-1031": "deadline follow only",
+      "tiktok-id-dual-listing": "follow only"
+    },
+    "today_final": [
+      "amazon-fee-category-reassign-1031",
+      "walmart-vibe-shopper-audiences-ctv",
+      "amazon-awd-nsp-dual-1031",
+      "amazon-sp-copy-to-business-oneclick",
+      "amazon-fbm-prepaid-return-1218-setup"
+    ]
+  }
+}
