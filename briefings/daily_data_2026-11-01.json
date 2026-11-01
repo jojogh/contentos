@@ -1,9 +1,9 @@
 {
   "date": "2026-11-01",
-  "generated_at": "2026-11-01T12:20:00Z",
-  "pass": "topic-scope-day FINAL",
+  "generated_at": "2026-11-01T12:35:00Z",
+  "pass": "topic-scope-day D4-reselect",
   "raw_material_count": 96,
-  "publishing_note": "周日定稿：假日退货窗 day-of 现金、EU FBA 燃油附加费 11/2、Enhanced Safety 保险 11/2、Glif AI Modeling Agency A/B、Grok Bot outbound skill。Channel D 刷新 matched=56（≤48h 书签进 must_reads）。费用类目/BF 报名/BHDR/PMax/AHR 长文仅跟进或 also。Typefully/Exa/fieldtheory/微信收藏跳过。不自动发帖。",
+  "publishing_note": "周日定稿·D4 重选：假日退货窗 day-of 现金、EU FBA 燃油附加费 11/2、Enhanced Safety 保险 11/2、Glif AI Modeling Agency A/B；Grok Bot 槽位改为①基础概念（Chat/Agent/Skill/MCP+额度）②配置×卖家政策情报 Bot。原 topic#5 grokbot-outbound-skill-reuse 降级（must_read 保留）。Channel D matched=56；生活 MCP/排行 soft-demote。Typefully/Exa/fieldtheory/微信收藏跳过。不自动发帖。",
   "must_reads": [
     {
       "title": "今天生效：Amazon 假日延长退货窗已开——Nov1–Dec31 购买可退到 Jan31；今天算现金储备与 returnless 名单",
@@ -88,10 +88,10 @@
     {
       "title": "Grok Bot 出海增长：可一键复用的 outbound skill——今天装 skill 并跑 30 分钟外联清单",
       "event_id": "xbm-2116726197111648426",
-      "summary": "收藏夹 11/1：@kkkeric_ai 分享 Grok Bot 做 AI 产品出海增长的实操文，文末附可复用 skill。对齐一人公司·AI 工具 JTBD。30分钟：①装/导入 skill；②选定 1 个 ICP；③生成 10 条个性化外联草稿；④人工审 3 条再发；⑤把通过的话术回写进 skill。",
+      "summary": "收藏夹 11/1：@kkkeric_ai 分享 Grok Bot 做 AI 产品出海增长的实操文，文末附可复用 skill。对齐一人公司·AI 工具 JTBD。30分钟：①装/导入 skill；②选定 1 个 ICP；③生成 10 条个性化外联草稿；④人工审 3 条再发；⑤把通过的话术回写进 skill。 【D4 重选：已从 topics 降级，仅 must_read / awareness；今日 Grok 配额让位基础概念+卖家情报配置。】",
       "url": "https://x.com/kkkeric_ai/status/2116726197111648426",
       "track": "🤖 AI 前沿",
-      "matched_topic": "grokbot-outbound-skill-reuse",
+      "matched_topic": null,
       "source": "X 收藏·Grok Bot (@kkkeric_ai)",
       "published_at": "2026-11-01T00:00:00Z",
       "supporting": [],
@@ -100,7 +100,7 @@
     {
       "title": "Grok Bot 国内生态 MCP/Skill 清单（点咖啡/外卖/叫车）——先当能力雷达，缺卖家 JTBD 不升 topic",
       "event_id": "xbm-2116690552188260496",
-      "summary": "收藏夹 11/1：@xiaomovps 整理国内大厂开放的 MCP/Skill（生活服务向）。缺电商卖家可改字段与硬 deadline → 今日不占 topics 配额（≤1 MCP）。30分钟：扫一眼清单，标出与客服/履约可能交叉的 1 项，其余归档。",
+      "summary": "收藏夹 11/1：@xiaomovps 整理国内大厂开放的 MCP/Skill（生活服务向）。缺电商卖家可改字段与硬 deadline → 今日不占 topics（D4 soft-demote 生活 MCP 观光）。30分钟：扫一眼清单，标出与客服/履约可能交叉的 1 项，其余归档。",
       "url": "https://x.com/xiaomovps/status/2116690552188260496",
       "track": "🤖 AI 前沿",
       "matched_topic": null,
@@ -112,10 +112,10 @@
     {
       "title": "Grok Bot 官方 5 篇实战指南（办公/多 Bot 调度）——今天只照抄搭 1 个情报 Bot",
       "event_id": "xbm-2116452246431150121",
-      "summary": "收藏夹 10/31：@xiaomovps 汇总官方 for Work 等 5 篇指南（含提示词）。30分钟：按「情报收集」那篇搭 1 个 Bot，订阅 Amazon Seller Central/广告政策关键词，输出进今日 briefing 素材箱。",
+      "summary": "收藏夹 10/31：@xiaomovps 汇总官方 for Work 等 5 篇指南（含提示词）。对齐 D4·配置×电商：30分钟按「情报收集」搭 1 个只读卖家政策 Bot，订阅 holiday returns / EU FBA fuel / Enhanced Safety / fee category，输出进今日 briefing 素材箱；禁止自动发帖连接器。",
       "url": "https://x.com/xiaomovps/status/2116452246431150121",
       "track": "🤖 AI 前沿",
-      "matched_topic": "grokbot-outbound-skill-reuse",
+      "matched_topic": "grokbot-seller-policy-intel-bot-config-1101",
       "source": "X 收藏·Grok Bot (@xiaomovps)",
       "published_at": "2026-10-31T00:00:00Z",
       "supporting": [],
@@ -127,7 +127,7 @@
       "summary": "收藏夹 10/31：@milesdeutscher 汇总 Elon/SpaceX 公开 tips。30分钟：挑 5 条与「少而精 Bot + skill 沉淀」相关的 tips，写进自己的 Bot 系统提示，勿再开新 Bot。",
       "url": "https://x.com/milesdeutscher/status/2116384680245387724",
       "track": "🤖 AI 前沿",
-      "matched_topic": null,
+      "matched_topic": "grokbot-basics-quota-nouns-1101",
       "source": "X 收藏·Grok Bot (@milesdeutscher)",
       "published_at": "2026-10-31T00:00:00Z",
       "supporting": [],
@@ -136,10 +136,10 @@
     {
       "title": "把 X 收藏丢给 Grok Bot → 生成 Obsidian 第二大脑（免费模板）——对齐 Bookmark Debt 工作流",
       "event_id": "xbm-2116605275125710925",
-      "summary": "收藏夹 10/31：用 Grok Bot 把书签批量摘要进 Obsidian。与今日 Channel D 刷新同向。30分钟：对「未读收藏」跑一次摘要→笔记模板；高信号条目标 next_action。",
+      "summary": "收藏夹 10/31：用 Grok Bot 把书签批量摘要进 Obsidian。对齐 Channel D / 常规流程旁路。支撑今日基础概念 topic（Skill vs 临时 Chat）。30分钟：对未读收藏跑一次摘要→笔记模板；高信号条目标 next_action；勿新开 Bot。",
       "url": "https://x.com/1920web1080/status/2116605275125710925",
       "track": "🤖 AI 前沿",
-      "matched_topic": null,
+      "matched_topic": "grokbot-basics-quota-nouns-1101",
       "source": "X 收藏·Grok Bot (@1920web1080)",
       "published_at": "2026-10-31T00:00:00Z",
       "supporting": [],
@@ -266,11 +266,23 @@
       "track": "🤖 AI 前沿",
       "source": "X 收藏·Grok Bot (@leaf_sanren)",
       "published_at": "2026-10-29T00:00:00Z",
-      "summary": "额度按实际干活扣。对多 Bot 运营有成本含义。",
-      "note": "X 收藏·Grok Bot",
+      "summary": "额度按实际干活扣（模型/上下文/工具调用）。对单 vs 多 Bot 成本有硬含义；作今日基础概念 topic 的延伸证据。",
+      "note": "X 收藏·Grok Bot；支撑 topic grokbot-basics-quota-nouns-1101（>48h 不作 must_read）",
       "event_id": "",
       "supporting": [],
       "age_hours": 84.3
+    },
+    {
+      "title": "Grok Bot × 跨境电商：1+N 架构拆 Bot 职责（选品/listing/客服）——今天只映射 1 条卖家 JTBD",
+      "url": "https://x.com/1999Zach22/status/2110078772225667115",
+      "track": "🛒 AI 电商自动化",
+      "source": "X 收藏·Grok Bot (@1999Zach22)",
+      "published_at": "2026-10-13T00:00:00Z",
+      "summary": "跨境电商场景下为何选 Grok Bot、1+N 架构与各 Bot 职责拆解。窗外常青；今日动作并入 seller-policy intel 配置 topic，不占 topics 第三席。",
+      "note": "X 收藏·Grok Bot；硬窗口外延伸 · D4×电商",
+      "event_id": "",
+      "supporting": [],
+      "age_hours": 468.3
     }
   ],
   "topics": [
@@ -363,24 +375,50 @@
       "batch": 1
     },
     {
-      "title": "Grok Bot 出海增长 skill：装上就跑——1 个 ICP × 10 条外联草稿（人工审 3）",
-      "theme_slug": "grokbot-outbound-skill-reuse",
-      "angle": "30分钟：导入 skill→选 ICP→生成 10 稿→人工留 3→话术回写 skill。占本期唯一 MCP/Bot 向 topic。国内生活 MCP 清单仅 must_reads。",
+      "title": "Grok Bot 基础概念：Chat / Agent / Skill / MCP + 额度按干活扣——先弄清再开第二个 Bot",
+      "theme_slug": "grokbot-basics-quota-nouns-1101",
+      "angle": "30分钟：①一页纸写清 Chat vs Agent vs Skill vs MCP；②对照额度机制（模型调用/上下文体积/工具调用计费，不是按消息条数）；③盘点现有 Bot 数与本周最费工具调用的 1 个；④写下「第二个 Bot」准入条件（职责无法合并才开）。官方 tips/排行榜不占 spine。",
       "heat": "medium",
-      "format": "工具分享",
+      "format": "方法论",
       "tracks": [
         "🤖 AI 前沿"
       ],
       "hooks": [
-        "别再收藏 Grok Bot 教程——把 outbound skill 跑一遍",
-        "额度按工具调用扣——少开 Bot，多沉淀 skill"
+        "别再开第三个 Bot——你还没分清 Chat / Agent / Skill / MCP",
+        "额度按干活扣：最忙的 Bot 每步重读整段历史，不是「多聊几句」那么便宜"
       ],
       "tags": [
         "Grok Bot",
-        "一人公司"
+        "基础概念",
+        "额度"
       ],
       "admission": "a",
-      "reasoning": "Admission a：可执行 skill 导入+外联草稿。Channel D 11/1 书签。配额：≤1 MCP/Bot topic。",
+      "reasoning": "D4·基础概念。Admission a：30分钟可执行名词卡+额度自检+单/多 Bot 准入。主链：官方 5 指南（≤48h must_read）+ 额度帖（>48h also/supporting）。Soft-demote 排行/生活 MCP。配额占 1/2。",
+      "status": "final",
+      "batch": 1
+    },
+    {
+      "title": "Grok Bot 配置：照官方「情报收集」搭 1 个只读卖家政策 Bot——SC/广告关键词进今日 briefing",
+      "theme_slug": "grokbot-seller-policy-intel-bot-config-1101",
+      "angle": "30分钟：①新建 Bot（只读，不接自动发帖连接器）；②粘贴 for Work「情报收集」提示词并收窄到 Amazon/TikTok 卖家政策；③订阅关键词：holiday returns / EU FBA fuel / Enhanced Safety / fee category / AHR；④输出进 ContentOS 素材箱；⑤权限清单：禁止发帖/下单，只读 Seller Central 公开页与收藏。对齐今日 topics 1–3 截止日。",
+      "heat": "high",
+      "format": "工具分享",
+      "tracks": [
+        "🤖 AI 前沿",
+        "🛒 AI 电商自动化"
+      ],
+      "hooks": [
+        "官方指南别收藏——今天照抄搭 1 个卖家政策情报 Bot",
+        "连接器先加只读：自动发帖门永远关着"
+      ],
+      "tags": [
+        "Grok Bot",
+        "配置",
+        "电商运营",
+        "情报 Bot"
+      ],
+      "admission": "a+c",
+      "reasoning": "D4·配置 × 电商运营。Admission a+c：30分钟可完成 Bot 配置+权限最小化，并挂钩今日假日退货/EU fuel/保险截止。主链：官方 5 指南 must_read。跨境电商 1+N 长文>48h→also 延伸。配额占 2/2。Never auto-post。",
       "status": "final",
       "batch": 1
     }
@@ -534,8 +572,12 @@
       "amazon-eu-fba-fuel-surcharge-1102",
       "amazon-cli-enhanced-safety-insurance-1102",
       "glif-ai-modeling-agency-ugc-ab",
-      "grokbot-outbound-skill-reuse"
-    ]
+      "grokbot-basics-quota-nouns-1101",
+      "grokbot-seller-policy-intel-bot-config-1101"
+    ],
+    "demoted_today": {
+      "grokbot-outbound-skill-reuse": "D4 soft-demote: outbound skill 无卖家/团队配置 SOP；保留 must_read，不占 ≤2 Grok 配额"
+    }
   },
   "published_this_week": {
     "period": "2026-10-25 ~ 2026-11-01",
