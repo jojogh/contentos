@@ -7,20 +7,20 @@ note: 本文件由 agent 每周 prepend 更新(Step 3),滚动保留 8 期,最老
 
 > agent 在每次 daily briefing 的 Step 3 把最新一期 prepend 到本说明之下。
 
-## 2026-11-03（evening-style second pass · America/New_York）
+## 2026-11-03（daily-briefing-9am-ET · America/New_York）
 
-- **选题主轴：** D4×2（Skills 资产化 ContentOS；cold email KPI）+ VMP 按件履约费闸 + Shopify WebMCP 官方字段审计 + BFCM 11/13 Deal 截止×cohort ACoS。
-- **燃料：** Scout 5 outliers 全并；BDC pulled_at=2026-11-03 matched=89（未再 SendToAgent）；Day1 BTC≈77430 / F&G=33 / btcScore=33.5。
-- **增量：** BFCM Deal 提交窗延至 11/13（库存 cutoff 不跟延）；WebMCP 换 Shopify.dev 文档；Meta Pixel follow + 额度 tips demote 腾席；must≤20。
-- **跳过：** Typefully/Exa；目录观光 soft-demote；未自动发帖 / 无 xhs·x·wechat notify。
+- **选题主轴：** D4×2（Skills 资产化 ContentOS；cold email KPI cost-math）+ VMP 按件履约费闸 + Shopify WebMCP×Chrome 预览字段审计 + BFCM 11/13 Deal×3×流速补货日×cohort ACoS。
+- **燃料：** Scout 5 outliers 全并；BDC pulled_at=2026-11-03 matched=89（9am 无 live SendToAgent，用同日磁盘）；Day1 BTC≈77211 / F&G=33 / btcScore=33.6。
+- **增量（相对 07:42）：** BFCM 库存 3× 流速补货日；Chrome WebMCP 加固 Shopify 字段审；Amazon MCS/Seller Assistant 审批门；>48h pending 冷邮 must→also；nestymee demote 腾席。
+- **跳过：** Typefully/Exa；目录/生活 MCP 观光 soft-demote；未自动发帖 / 无 xhs·x·wechat notify。
 - **建议：** watchlist 死号 Mind_Boticni / xiaoxiaodong01；voice.md 仍 DRAFT。
 
 ### 概览
 
 - 本周发布量 / 总曝光 / 单条中位数 / 单条最高：**全部待补 —— Typefully跳过**
 - 本期简报产出：must_reads **20** / also **20** / 选题 **5 FINAL** / 草稿 3
-- 赛道：🤖 D4 Skills+冷邮 KPI；🛒 VMP fee×N + WebMCP 字段 + BFCM 11/13；🎨 Pixel demote 为 also
-- **主线：** 同日第二遍 overwrite；禁复用 11-02 spines；D4=2/2。
+- 赛道：🤖 D4 Skills+冷邮 KPI；🛒 VMP fee×N + WebMCP 字段 + BFCM 补货/ACoS + MCS；🎨 Pixel 仍 also
+- **主线：** 9am official overwrite；禁复用 11-02 spines；D4=2/2；Phase1 无新 analytics 故不深改 Hook。
 
 ## 2026-11-03（morning · America/New_York）
 
