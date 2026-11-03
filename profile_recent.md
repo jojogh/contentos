@@ -7,6 +7,35 @@ note: 本文件由 agent 每周 prepend 更新(Step 3),滚动保留 8 期,最老
 
 > agent 在每次 daily briefing 的 Step 3 把最新一期 prepend 到本说明之下。
 
+## 2026-11-03（evening-style second pass · America/New_York）
+
+- **选题主轴：** D4×2（Skills 资产化 ContentOS；cold email KPI）+ VMP 按件履约费闸 + Shopify WebMCP 官方字段审计 + BFCM 11/13 Deal 截止×cohort ACoS。
+- **燃料：** Scout 5 outliers 全并；BDC pulled_at=2026-11-03 matched=89（未再 SendToAgent）；Day1 BTC≈77430 / F&G=33 / btcScore=33.5。
+- **增量：** BFCM Deal 提交窗延至 11/13（库存 cutoff 不跟延）；WebMCP 换 Shopify.dev 文档；Meta Pixel follow + 额度 tips demote 腾席；must≤20。
+- **跳过：** Typefully/Exa；目录观光 soft-demote；未自动发帖 / 无 xhs·x·wechat notify。
+- **建议：** watchlist 死号 Mind_Boticni / xiaoxiaodong01；voice.md 仍 DRAFT。
+
+### 概览
+
+- 本周发布量 / 总曝光 / 单条中位数 / 单条最高：**全部待补 —— Typefully跳过**
+- 本期简报产出：must_reads **20** / also **20** / 选题 **5 FINAL** / 草稿 3
+- 赛道：🤖 D4 Skills+冷邮 KPI；🛒 VMP fee×N + WebMCP 字段 + BFCM 11/13；🎨 Pixel demote 为 also
+- **主线：** 同日第二遍 overwrite；禁复用 11-02 spines；D4=2/2。
+
+## 2026-11-03（morning · America/New_York）
+
+- **选题主轴：** D4×2（Skills 资产化 ContentOS；cold email KPI 账 reuse cost-math）+ VMP 按件履约费闸 + Shopify WebMCP 字段审计 + BFCM cohort ACoS。
+- **燃料：** Scout 5 outliers 全并；BDC 磁盘 pulled_at=2026-11-02 matched=72（窗内约 4 条）；Day1 市场 F&G=33 / btcScore=33.4。
+- **跳过：** Typefully/Exa；目录观光 soft-demote；未自动发帖。
+- **建议：** watchlist 死号 Mind_Boticni / xiaoxiaodong01；voice.md 仍 DRAFT；BDC 等 11-03 刷新。
+
+### 概览
+
+- 本周发布量 / 总曝光 / 单条中位数 / 单条最高：**全部待补 —— Typefully跳过**
+- 本期简报产出：must_reads **18** / also **12** / 选题 **5 FINAL** / 草稿 3
+- 赛道：🤖 D4 Skills+冷邮 KPI；🛒 VMP fee×N + WebMCP 字段 + BFCM ACoS 闸；🎨 Pixel follow（非 spine）
+- **主线**：Scout 5 全并；pending cold email 用 cost-math 新 class；VMP 日历升 topic。禁复用 11-02 五 spines。Channel D 仍 11-02 磁盘。
+
 ## 2026-11-02（窗口：2026-10-31 ~ 2026-11-02）
 
 ### 概览
