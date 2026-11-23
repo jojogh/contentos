@@ -7,432 +7,123 @@ note: 本文件由 agent 每周 prepend 更新(Step 3),滚动保留 8 期,最老
 
 > agent 在每次 daily briefing 的 Step 3 把最新一期 prepend 到本说明之下。
 
-## 2026-11-03（daily-briefing-9am-ET · America/New_York）
+## 2026-11-23（monday-9am-ET-refresh-no-BDC-post-researchy · America/New_York）
 
-- **选题主轴：** D4×2（Skills 资产化 ContentOS；cold email KPI cost-math）+ VMP 按件履约费闸 + Shopify WebMCP×Chrome 预览字段审计 + BFCM 11/13 Deal×3×流速补货日×cohort ACoS。
-- **燃料：** Scout 5 outliers 全并；BDC pulled_at=2026-11-03 matched=89（9am 无 live SendToAgent，用同日磁盘）；Day1 BTC≈77211 / F&G=33 / btcScore=33.6。
-- **增量（相对 07:42）：** BFCM 库存 3× 流速补货日；Chrome WebMCP 加固 Shopify 字段审；Amazon MCS/Seller Assistant 审批门；>48h pending 冷邮 must→also；nestymee demote 腾席。
-- **跳过：** Typefully/Exa；目录/生活 MCP 观光 soft-demote；未自动发帖 / 无 xhs·x·wechat notify。
-- **建议：** watchlist 死号 Mind_Boticni / xiaoxiaodong01；voice.md 仍 DRAFT。
-
-### 概览
-
-- 本周发布量 / 总曝光 / 单条中位数 / 单条最高：**全部待补 —— Typefully跳过**
-- 本期简报产出：must_reads **20** / also **20** / 选题 **5 FINAL** / 草稿 3
-- 赛道：🤖 D4 Skills+冷邮 KPI；🛒 VMP fee×N + WebMCP 字段 + BFCM 补货/ACoS + MCS；🎨 Pixel 仍 also
-- **主线：** 9am official overwrite；禁复用 11-02 spines；D4=2/2；Phase1 无新 analytics 故不深改 Hook。
-
-## 2026-11-03（morning · America/New_York）
-
-- **选题主轴：** D4×2（Skills 资产化 ContentOS；cold email KPI 账 reuse cost-math）+ VMP 按件履约费闸 + Shopify WebMCP 字段审计 + BFCM cohort ACoS。
-- **燃料：** Scout 5 outliers 全并；BDC 磁盘 pulled_at=2026-11-02 matched=72（窗内约 4 条）；Day1 市场 F&G=33 / btcScore=33.4。
-- **跳过：** Typefully/Exa；目录观光 soft-demote；未自动发帖。
-- **建议：** watchlist 死号 Mind_Boticni / xiaoxiaodong01；voice.md 仍 DRAFT；BDC 等 11-03 刷新。
+- **选题主轴：** Google Ads 官方帮助页确认 2027-01-01 起法国 Regulatory Operating Cost 2%→3%、意大利 2.5%→3%、土耳其 4.5%→2.25%，按广告展示地计费且写明不退款 + Merchant Center 官方页确认 consumer_notice 最多 7 条、第 8 条覆盖第 1 条（帮助页写 Optional，UCP 指南对 Prop 65 等写 mandatory，必须并陈）+ Amazon Attribution 加 ASIN 据报会重述 28 天（PPC Land 摘录；官方帮助页正文本轮为空，先导出报表并在后台复核，不把二手摘录写成已确认规则）+ Brand Store 新建页据报先弹出 Builder Agent、All Deals 可能自动填最多 30 个折扣商品（同样为二手候选，先找退出入口并在后台核对）。Google 2/2、Amazon 2/2 满额；D4=0（changelog 仍为 11/18 v1.2.3，不复用昨日退款对账脊柱）；未为凑 5 条加弱题。
+- **燃料：** 9am 新鲜 RSS（44 feeds ok / 60 err / 窗内 147 个去重 URL）+ 官方页 12 + 打开文章/帮助页 26（其中 3 个 Amazon 帮助页正文为空）+ X 公开读取（search_news 3 次、search_posts_all 2 次，返回约 105 条含查询重叠）= 290 条采集输入（含重叠，不是 290 个已核独立事件）；Day1 周一快照 BTC≈63326（24h +4.25%） / Crypto F&G=8 / CNN F&G=11 / btcScore=24.1 / ETF 每日净流入约 -6.692 亿；美股抓取时仍为 marketState=closed，NVDA 125.53 / SHOP 123.72 视为周五收盘/开盘前，不是周一开盘价；**Channel D 停用**；冷邮 archive 跳过；pending 根目录旧条目未自动升题。x.ai/changelog/bot 仍为 11/18 v1.2.3。
+- **相对 11-22 9am 稿：** 不复用 sale_price 30 天、Shorts EVC、Grok Bot 退款对账 SOP、ShipBob 断货预测四个 spine；其中仍在 48h 的前三条留 must_read，ShipBob 已出窗迁 also。未把昨日和解截止日期作为本轮已重核事实。日历：黑五周第五天、周一，距黑五 4 天。
+- **跳过：** Typefully/Exa；BDC；The Batch/Anthropic/xAI/Cursor/Runway RSS 404；Reddit RSS 429/404（0 条）；中文卖家源 RSS 失败；Writer 全流水线；未自动发帖 / 无 xhs·x·wechat notify；clone 已 ff-only 快进至 origin/main（原落后 25，HEAD 为 2026-11-03 简报），本轮提交并尝试 push 仅今日稿；11/4–22 仍为 vault-only。
+- **建议：** promote PPC Land 与 Google 官方帮助页/开发者文档；add 司法管辖区附加费帮助页、consumer_notice + UCP 指南、Google-Agent 文档；demote 404 RSS 组、Reddit RSS、Amazon Ads 帮助页（正文抓取为空）；topic_library add「按展示地附加费」「Checkout 法律提示字段」。
 
 ### 概览
 
-- 本周发布量 / 总曝光 / 单条中位数 / 单条最高：**全部待补 —— Typefully跳过**
-- 本期简报产出：must_reads **18** / also **12** / 选题 **5 FINAL** / 草稿 3
-- 赛道：🤖 D4 Skills+冷邮 KPI；🛒 VMP fee×N + WebMCP 字段 + BFCM ACoS 闸；🎨 Pixel follow（非 spine）
-- **主线**：Scout 5 全并；pending cold email 用 cost-math 新 class；VMP 日历升 topic。禁复用 11-02 五 spines。Channel D 仍 11-02 磁盘。
+- 本周发布量 / 总曝光 / 单推中位数 / 单推最高：**全部待补 —— Typefully跳过**
+- 本期简报产出：must_reads **16** / also **14** / 选题 **4 FINAL** / 草稿 3 / D4 **0**
+- 赛道：🎨 Google Ads 法/意附加费 + Brand Store Agent（二手候选）；🛒 consumer_notice 7 条上限 + Attribution 28 天重述（二手候选）；🤖 AI 前沿仅 must_reads（Google-Agent 指南、Walmart×Muse、Decart 技术协议、Import AI 482）
+- **主线：** Monday 9am refresh · **no-BDC** · **post-Researchy info_sources** · **黑五周周一**；Phase1 无 analytics；Bingge 评分≥70 topics，不跑 Writer 全流水线。
 
-## 2026-11-02（窗口：2026-10-31 ~ 2026-11-02）
+## 2026-11-22（sunday-9am-ET-refresh-no-BDC-post-researchy · America/New_York）
 
-### 概览
-
-- 本周发布量 / 总曝光 / 单条中位数 / 单条最高：**全部待补 —— Typefully跳过**
-- 本期简报产出：must_reads **15** / also **14** / 选题 **5 FINAL** / 草稿 3
-- 赛道：🛒 保险生效日合规 + EU 附加费成本账；🎨 Meta Pixel 基线 + Fable5.5 验收；🤖 Grok Bot×cold email（D4=1，Channel D 磁盘快照 matched=71）
-- **主线**：11/02 双生效日用 compliance/cost-math 新 class 承接昨日预告；pending cold email 升 topic；VMP 主文>48h 仅 also 日历。禁复用 11-01 evening 五 spines（除非新 class）。
-
-### 🔥 本周表现亮点（Top 5）
-
-无数据。
-
-### 📈 本周擅长方向
-
-无曝光数据。产出侧：生效日写成「今晚对表/Fee Preview」动作句；D4 优先常规流程×获客而非 Bot 目录。
-
-### 🎯 本周有效 Hook 模式
-
-沿用元模式2 / 元模式3；强调审批门与「基数是履约费」。
-
-### ⚠️ 本周失灵 Hook 模式
-
-继续回避无卖家 JTBD 的 MCP 目录、融资脊柱、已占 spine 换皮。
-
-### 🕳️ 本周覆盖不足赛道
-
-- 🚀 太空经济 / 纯加密深度仍薄（仅市场快照草稿）
-- Typefully / Exa / live BDC 刷新不可用
-- VMP 11/10 待窗内一手源升格
-
-### 🚫 已占用 theme_slug（勿复用）
-
-grokbot-cold-email-ops-sop-1102 · amazon-enhanced-safety-insurance-dayof-compliance-1102 · amazon-eu-fba-fuel-surcharge-dayof-costmath-1102 · meta-pixel-ondevice-cv-baseline-before-1112 · fable55-max-ad-acceptance-checklist-1102；以及 11-01 evening 五 spines + Oct27–30 occupied。
-
-### 其他笔记
-
-- Channel D：磁盘 pulled_at 2026-11-01 matched 71；blockers.bookmark_debt_collector 记 live 不可用
-- Never auto-post
-
-
-## 2026-11-01（窗口：2026-10-30 ~ 2026-11-01）
+- **选题主轴：** Merchant Center《About sale price annotations》新增「sale_price 持续时间不应超过 30 天」提示（PPC Land 11/22 拆解，用词 should 非 must；黑五 11/27 前查 10/28 前开始的促销）+ YouTube Shorts EVC/TrueView view 计入 like/comment/share（帮助页无生效日期）+ D4：@cstanley 自述 Grok Bot 找回 $590.62 Amazon 退款（回执 $589.62；@grok 说明需在 Bot 电脑内自行登录；Amazon 退货和解 Subclass B 12/1 截止，官方网站已核）→ 退款对账 SOP + ShipBob 11/20 peak prompt 包的 SKU 断货预测（28 天数据须加 buffer）。Google 2/2 满额，Grok Bot 1/2，MCP 1/1；未为凑 5 条加第三条 Google 题或 AWS Quick×Meta 连接器。
+- **燃料：** 9am 新鲜 RSS（44 feeds ok / 60 err / 窗内 149 个去重 URL）+ 官方页 15 + 打开文章 23 + X 公开读取（search_news 4 次、search_posts 3 次，共约 46 条）≈ 233 条原始素材；Day1 周日快照 BTC≈60700 / Crypto F&G=8 / CNN F&G=10 / btcScore=23.9 / ETF≈-1.245 亿（与昨日同值）；美股为周五收盘；**Channel D 停用**；冷邮 archive 跳过；pending 根目录旧条目未自动升题。x.ai/changelog/bot 仍为 11/18 v1.2.3。
+- **相对 11-21 9am 稿：** 不复用 Shopify Flow updated 触发器、Amazon Live beta 两个 spine；今日 must_reads 无 11/21 event_id 重复（Meta 商业条款后续只进 also）。日历：黑五周第四天、周日休市，距黑五 5 天，Amazon 和解截止 12/1。
+- **跳过：** Typefully/Exa；BDC；The Batch/Anthropic/xAI/Cursor/Runway RSS 404；Reddit RSS 429/404（0 条）；中文卖家源 RSS 失败；Writer 全流水线；未自动发帖 / 无 xhs·x·wechat notify；clone 落后 origin 25 → vault-only、无 push。
+- **建议：** promote PPC Land、X 公开 search_news；add MC sale price annotations 帮助页、ShipBob Blog 升 must_read、@grok 回复；demote 404 RSS 组、Reddit RSS、中文卖家源 RSS；topic_library add「促销价标注规则」「Agent 售后对账」。
 
 ### 概览
 
-- 本周发布量 / 总曝光 / 单条中位数 / 单条最高：**全部待补 —— Typefully跳过**
-- 本期简报产出：must_reads **11** / also **8** / 选题 **5 FINAL** / 草稿 3
-- 赛道：🛒 假日退货窗 day-of 现金+returnless · EU FBA 燃油附加费 11/2 · Enhanced Safety 保险 11/2；🎨 Glif AI Modeling Agency UGC A/B；🤖 Grok Bot outbound skill（Channel D matched=56，≤48h 书签合并）
-- **主线**：周日运营截止清单（退货现金、EU surcharge、保险）+ 合成模特小测 + Grok Bot skill 实跑。Oct27–30 occupied spines 仅 must_reads 跟进。禁复用费用类目/FBM prepaid/BF 报名/BHDR/Vibe/VMP/Dual Listing 等既有 theme_slug。
+- 本周发布量 / 总曝光 / 单推中位数 / 单推最高：**全部待补 —— Typefully跳过**
+- 本期简报产出：must_reads **17** / also **14** / 选题 **4 FINAL** / 草稿 3 / D4 **1**
+- 赛道：🎨 MC sale_price 30 天 + Shorts EVC 口径；🛒 Grok Bot 退款对账 SOP + SKU 断货预测；🤖 AI 前沿仅 must_reads（OpenAI 研究加速、黎曼猜想、Decart）
+- **主线：** Sunday 9am refresh · **no-BDC** · **post-Researchy info_sources** · **黑五周周日**；Phase1 无 analytics；Bingge 评分≥70 topics，不跑 Writer 全流水线。
 
-### 🔥 本周表现亮点（Top 5）
+## 2026-11-21（saturday-9am-ET-refresh-no-BDC-post-researchy · America/New_York）
 
-无数据。
-
-### 📈 本周擅长方向
-
-无曝光数据。产出侧：退货窗开日改讲现金流而非政策复述；EU 费用与 10/31 类目叠峰做成单位经济重算；Channel D 把 Grok Bot 收藏变成可执行 outbound skill topic（国内生活 MCP 仅 awareness）。
-
-### 🎯 本周有效 Hook 模式
-
-沿用元模式2（X刚更新了，对你意味着N件事）与元模式3（大部分人用X的方式是错的）；强调「打开 Fee Preview / 算现金」动作句。
-
-### ⚠️ 本周失灵 Hook 模式
-
-Typefully 仍不可用；继续回避无卖家 JTBD 的 MCP 目录、融资/财报、敏感内容限流八卦。
-
-### 🕳️ 本周覆盖不足赛道
-
-- PMax image extraction 12/4 模板预置（仍 also，待黑五后升格）
-- TikTok AHR Nov4 主文出窗（仅 post-register 跟进）
-- Walmart/Meta 创意侧本周无新 spine
-
-### 🚫 已占用 theme_slug（勿复用）
-
-amazon-holiday-return-cashflow-dayof-1101 · amazon-eu-fba-fuel-surcharge-1102 · amazon-cli-enhanced-safety-insurance-1102 · glif-ai-modeling-agency-ugc-ab · grokbot-outbound-skill-reuse；以及 Oct27–30 全部 occupied spines。
-
-### 其他笔记
-
-- Channel D READY：pulled_at 2026-11-01 matched 56；无 stale bookmark_debt_collector blocker
-- blockers：Typefully / Exa / fieldtheory / 微信收藏；Never auto-post
-
-
-## 2026-10-29（窗口：2026-10-27 ~ 2026-10-29）
+- **选题主轴：** Shopify 官方 11/20 Changelog 新增 8 个 Flow「已更新」触发器（Customer/Order/Refund/Fulfillment order/Return/Collection/Location/Inventory item updated，每个工作流最多监视 5 个字段；官方例子包括改配送地址通知履约、collection 变更采取动作、库存成本变化更新 metafield；原文已打开）+ Amazon Live 购物测试支持页 11/20 更新（PPC Land 11/21 转述：美国受邀 beta，场地 50 Mbps 上下行、1080p30、货盘最多 10 个且促销放前 4 位，站外靠 SB/Display/DVA+ 指向 Brand Store；两篇官方帮助页本轮返回空正文）。今日 D4=0（Grok Bot changelog 仍为 11/18 v1.2.3）。Shopify / Amazon 各 1 条，未为凑满 5 条加 POS 收据或广告状态页弱题。公开 App IP allowlist 已在昨天 23:59 ET 执行，只留 must_read 作 Settings > Apps 核对，不复用昨日 theme_slug。
+- **燃料：** 无 11-21 scout.json → 9am 新鲜 RSS（43 feeds ok / 61 err / 窗内 244 个去重 URL，另加官方页与 WebSearch/X 补到约 280 条原始素材）；Day1 为周六快照 BTC spot≈60402 / F&G=8 Extreme fear / btcScore=22.9 / ETF≈-1.245 亿（昨日快照约 -5.823 亿）；NVDA 125.53（-14.01%）、SHOP 123.72（-6.25%）为周五收盘，不是周六开盘；**Channel D 停用**；冷邮 archive 跳过；**info_sources=Researchy batch1+2**。本轮做了有限 X search/news，主通道仍是 RSS + 官方页。已打开官方源：x.ai/changelog/bot、Shopify Flow 与 POS 收据 changelog、Shopify 服务像素开发者 changelog、Amazon Ads Review Requests 官方页（日期为 9/29–10/9，未当窗内新功能）、Microsoft Advertising 11/19 月度汇总（刚出 48h，进 also）、Meta 11/18 商业条款暂停说明。Amazon Live 支持页本轮未提取到正文。
+- **相对 11-20 9am 稿：** 禁复用四 spines（公开 App IP allowlist 执行日+12/1 要求 / DVA+ 跨发布商频次 / Google 实验 80%/95% 置信 / CBP 境外进口人 CTPAT）及其 theme_slug；allowlist、DVA+ 频次、Google 实验、GA 来源平台预算仍在 48h，留 must_read。CBP、Gemini 4 Neon、Genie 4、Brand Store Product Selector、Microsoft 出价模型、Grok Bot v1.2.3 已出窗，迁 also。日历：黑五周 11/19–11/30 第三天、周六休市；allowlist 执行日已过，只做核对，不把「截止后检查」再写成选题脊柱。
+- **跳过：** Typefully/Exa；BDC；The Batch RSS 404；Amazon Ads 官方博客 RSS 404；xAI/Anthropic/Cursor RSS 404；Writer 全流水线；未自动发帖 / 无 xhs·x·wechat notify；clone 落后 origin 25 → vault-only、无 push。
+- **建议：** promote Shopify Changelog + Shopify developer changelog / PPC Land；add 11/20 Flow updated triggers、Amazon Support Center Live Shopping 两页（原文未打开）；demote The Batch RSS、Amazon Ads 官方博客 RSS/Support Center 空正文、xAI/Anthropic/Cursor RSS；channel_d: disabled_by_alex_2026-11-03；cold_email archived。
 
 ### 概览
 
-- 本周发布量 / 总曝光 / 单条中位数 / 单条最高：**全部待补 —— Typefully跳过**
-- 本期简报产出：must_reads **12** / also **12** / 选题 **3 FINAL** / 草稿 3
-- 赛道：🛒 Shopify Fall'26 Agentic KB/PII/Catalog；🎨 tROAS Exploration升格 + ChatGPT Ads增强前夜源卫生；🤖 Carbon/Genie awareness
-- **主线**：Agent可结账通道把Catalog/Knowledge Base变成平台可改字段；出价探索与创意增强同周——先锁源与归因，再谈扩量。Dual Listing/VMP/Browsing仅must_reads跟进。禁复用Oct28四spine+Oct27五spine+enhance-optout。
+- 本周发布量 / 总曝光 / 单推中位数 / 单推最高：**全部待补 —— Typefully跳过**
+- 本期简报产出：must_reads **12** / also **13** / 选题 **2 FINAL** / 草稿 3 / D4 **0**
+- 赛道：🛒 Flow 字段级更新触发器 + allowlist 执行后核对；🎨 Amazon Live beta 技术与货盘限制
+- **主线：** Saturday 9am refresh · **no-BDC** · **post-Researchy info_sources** · **黑五周周六**；无早稿；Phase1 无 analytics；Bingge 评分≥70 topics，不跑 Writer 全流水线。
 
-### 🔥 本周表现亮点（Top 5）
+## 2026-11-20（friday-9am-ET-refresh-no-BDC-post-researchy · America/New_York）
 
-无数据。
-
-### 📈 本周擅长方向
-
-无曝光数据。产出侧：Shopify把Agent通道做成可改字段日；tROAS Exploration从also升格；ChatGPT Enhance改写为源卫生（≠optout spine）。
-
-### 🎯 本周有效 Hook 模式
-
-沿用元模式2（对你意味着N件事）与元模式3（大部分人用X的方式是错的）；回避连看/融资/MCP无JTBD。
-
-### ⚠️ 本周失灵 Hook 模式
-
-继续回避单点复述、工具游行、MCP无JTBD、融资脊柱、已占spine换皮。
-
-### 🕳️ 覆盖不足赛道
-
-- Typefully/Exa/fieldtheory/微信收藏不可用
-- PMax image extraction 12/4模板预置仍为also升格候选
-- Shopify Help agentic页本环境403
-
-### 💡 本周涌现的新主题
-
-1. shopify-fall26-agentic-kb-pii-catalog
-2. google-troas-exploration-pmax-shopping
-3. chatgpt-ads-source-hygiene-before-enhance-1030
-
-### 🔧 本期返工与修复记录
-
-1. SEL tROAS长文>48h → must_reads主链改@Clicked0n窗内X + Google Help，SEL仅supporting。
-2. ChatGPT Enhance不复用10/25 optout spine，改source-hygiene新slug。
-3. 未改 profile_longterm / info_sources / topic_library。
-
-### 🔁 下周补位建议
-
-1. 跟进 ChatGPT Enhance 10/30实开后素材/落地页漂移。
-2. Dual Listing 10/29落地后跨站促销预算与限购复盘。
-3. VMP 11/10删除截止与 Pixel 11/12对账窗。
-4. PMax image extraction 12/4模板预置升格评估。
-
-### 🪜 本周 Hook 模式对草稿生成的权重调整
-
-- 元模式2/3保持；元模式4继续下调；融资脊柱继续硬拒。
-
-
-## 2026-10-28（窗口：2026-10-26 ~ 2026-10-28）
+- **选题主轴：** Shopify 官方 11/19 安全博文确认公开 App 的 IP allowlist 今天 23:59 ET 执行（未配会下架并阻止新安装，已有安装在 Settings > Apps 标记，补上后自动重新上架），并公布 12/1 起的 network_access 声明、新建自定义 App 过期 token、abandoned checkout 的 level 2 顾客数据权限等（官方博文与要求页、配置文档均已打开）+ Amazon DVA+ 频次上限按用户跨发布商共用计数，Netflix 与 Prime Video 算在一起，PG 成交不会在本线停投（PPC Land 转述 11/19 支持页，Support Center 原文本轮未打开）+ Google 官方 Ads Decoded：方向性测试 80% 置信、结构性 95%，先跑 4–6 周（官方博文已打开；共享预算进实验仍是播客所称的本月试点）+ CBP 境外进口人 2027-01-05 起须 CTPAT 或改用已认证报关行（联邦公报已打开）。今日 D4=0（Grok Bot changelog 仍为 11/18 v1.2.3）。Shopify / Amazon / Google Ads 各 1 条，海关规则不计平台家族配额，未为凑满 5 条加同家族弱题。
+- **燃料：** 无 11-20 scout.json → 9am 新鲜 RSS（44 feeds ok / 60 err / 窗内 334 个去重 URL，另加官方页与 WebSearch 补到约 360 条原始素材）；Day1 为周五开盘前快照 BTC spot≈61873 / F&G=10 Extreme fear / btcScore=22.6 / ETF≈-5.823 亿（昨日快照约 -3.065 亿）；NVDA 145.98（-3.30%）为周四收盘，不是周五开盘；**Channel D 停用**；冷邮 archive 跳过；**info_sources=Researchy batch1+2**。本轮未做单独的 X search 主通道。已打开官方源：x.ai/changelog/bot、Shopify 11/19 安全博文与 11/5、11/11 要求页、IP allowlist 文档、Google Ads Decoded 博文、GA 跨渠道预算帮助页、Federal Register 境外 IOR 规则。Amazon DVA+ 频次支持页本轮未打开。
+- **相对 11-19 9am 稿：** 禁复用五 spines（自定义应用迁入 Dev Dashboard / 草稿订单折扣权限 / Brand Store Product Selector 限额 / Microsoft 出价模型升级 / Grok Bot v1.2.3 工具权限）及其 theme_slug；Brand Store 测验、Gemini 4 Neon、Genie 4 仍在 48h，留 must_read。昨日 Shopify/Grok/Microsoft 等多数条目已出窗，迁 also。日历：黑五周 11/19–11/30 第二天；公开 App IP allowlist 今天 23:59 ET 执行，升为选题并带上 11/19 新公布的 12/1 要求，不复用 11/13 组织外 allowlist 脊柱。
+- **跳过：** Typefully/Exa；BDC；The Batch RSS 404；Amazon Ads 官方博客 RSS 404；xAI/Anthropic/Cursor RSS 404；Writer 全流水线；未自动发帖 / 无 xhs·x·wechat notify；clone 落后 origin 25 → vault-only、无 push。
+- **建议：** promote Shopify developer blog+changelog / PPC Land / Google Ads & Commerce Blog；add 11/19 Shopify 安全博文、Amazon Support Center「Understand frequency in DVA+ campaigns」（原文未打开）、Federal Register 境外 IOR 规则；demote The Batch RSS、Amazon Ads 官方博客 RSS、xAI/Anthropic/Cursor RSS；channel_d: disabled_by_alex_2026-11-03；cold_email archived。
 
 ### 概览
 
-- 本周发布量 / 总曝光 / 单条中位数 / 单条最高：**全部待补 —— Typefully跳过**
-- 本期简报产出：must_reads **12** / also **12** / 选题 **4 FINAL** / 草稿 3
-- 赛道：🛒 Amazon VMP虚拟多件编辑闸；🎨 Meta Breakdown杀弱素材 + 版位Account controls按目标；PMax组内素材A/B长测；🤖 Genie 4 awareness
-- **主线**：Amazon自动货架字段（VMP）+ Meta可改字段（Breakdown/placement）。Product Browsing今天生效但theme已占10/25→仅must_reads day-of。禁复用Oct27五spine。
+- 本周发布量 / 总曝光 / 单推中位数 / 单推最高：**全部待补 —— Typefully跳过**
+- 本期简报产出：must_reads **12** / also **12** / 选题 **4 FINAL** / 草稿 3 / D4 **0**
+- 赛道：🛒 allowlist 执行日 + 12/1 安全要求 + 境外进口人 CTPAT；🎨 DVA+ 跨发布商频次计数 + Google 实验 80%/95% 置信
+- **主线：** Friday 9am refresh · **no-BDC** · **post-Researchy info_sources** · **allowlist 执行日**；无早稿；Phase1 无 analytics；Bingge 评分≥70 topics，不跑 Writer 全流水线。
 
-### 🔥 本周表现亮点（Top 5）
+## 2026-11-19（thursday-9am-ET-refresh-no-BDC-post-researchy · America/New_York）
 
-无数据。
-
-### 📈 本周擅长方向
-
-无曝光数据。产出侧：平台自动改货架（Amazon VMP）+ 素材级数据（Breakdown）+ 版位闸上移账户级。
-
-### 🎯 本周有效 Hook 模式
-
-沿用元模式2（对你意味着N件事）与元模式3（大部分人用X的方式是错的）；元模式连看用于Breakdown×placement。
-
-### ⚠️ 本周失灵 Hook 模式
-
-继续回避单点复述、工具游行、MCP无JTBD、融资脊柱、已占spine换皮。
-
-### 🕳️ 覆盖不足赛道
-
-- Typefully/Exa/fieldtheory/微信收藏不可用
-- tROAS Exploration仍also，下期可升格
-
-### 💡 本周涌现的新主题
-
-1. amazon-vmp-dc-multipack-edit-1111
-2. meta-ads-creative-breakdown-kill-losers
-3. meta-placement-account-controls-by-objective
-4. google-pmax-intragroup-asset-ab-beta
-
-### 🔧 本期返工与修复记录
-
-1. Product Browsing长文>48h → day-of主链改X+Help，Selzee仅supporting。
-2. 未改 profile_longterm / info_sources / topic_library。
-
-### 🔁 下周补位建议
-
-1. 跟进 VMP 11/11开卖后毛利与删除决策。
-2. ChatGPT Ads Enhance 10/30、Pixel 11/12、Dual Listing 10/29落地复核。
-3. Breakdown实操一周后回收「杀素材」前后CPA。
-
-### 🪜 本周 Hook 模式对草稿生成的权重调整
-
-- 元模式2/3保持；连看用于双字段日；元模式4继续下调。
-
-
-## 2026-10-27（窗口：2026-10-25 ~ 2026-10-27）
+- **选题主轴：** Shopify 后台创建的自定义应用已出现在 Dev Dashboard（现有 token/webhook 继续工作，不会自动打开 IP 限制；本轮已打开官方 changelog）+ Shopify 草稿订单加折扣现要求 apply_discounts_to_draft_orders，无权限时 mutation 整单失败且错误不在 userErrors 里（官方 11/18 breaking change，已打开）+ Amazon Brand Store Product Selector 支持页 11/18 更新限额（50 ASIN / 4 题 / 每题 6 答案，指南未写答题数据；本轮未打开 Support Center 原文）+ Microsoft Advertising 官方称十年最大一次出价模型升级，账户已有 5 个转化的新计划不要从 eCPC 起步、不要保留最高 CPC（官方博文已打开）+ Grok Bot 官方 changelog 现为 v1.2.3（11/18）：连接器页可设 Always allow / Auto-review / Needs approval / Blocked，例程掉线会跳过定时运行。今日 D4=1。Shopify 家族用满 2 条，Amazon / Microsoft / Grok Bot 各 1 条，未为凑数加同家族弱题。
+- **燃料：** 无 11-19 scout.json → 9am 新鲜 RSS（44 feeds ok / 60 err / 窗内 335 个去重 URL，另加官方页与 WebSearch/WebFetch 补到约 350 条原始素材）；Day1 为周四开盘前快照 BTC spot≈63994 / F&G=12 Extreme fear / btcScore=24.8 / ETF≈-3.065 亿（昨日快照约 -2.399 亿）；NVDA 150.96（-2.89%）为周三收盘，不是周四开盘；**Channel D 停用**；冷邮 archive 跳过；**info_sources=Researchy batch1+2**。本轮未做单独的 X search 主通道。已打开官方源：x.ai/changelog/bot、Shopify Dev/商家 changelog（自定义应用、草稿折扣权限、App Events）、Microsoft Advertising 出价模型博文、Gemini 4 Neon 与 Genie 4 官方博客。Amazon Product Selector 支持页本轮未打开。
+- **相对 11-18 9am 稿：** 禁复用五 spines（unified reporting 120 天+SP 视频占位符 / Meta 一广告 5 帖 / Sidekick metafield 分析 / Google 标签/GTM 2027-01 升级 / Grok Bot 官方 v1.2.0）及其 theme_slug；上述仍在 48h 的留 must_read。官方 v1.2.3 用新 slug，不复用昨日 v1.2.0 脊柱。日历：黑五周 11/19–11/30 今天开始；公开 App IP allowlist 11/20 23:59 ET（昨日安全汇总页本轮 404，改用仍有效的 11/5 官方要求页）。
+- **跳过：** Typefully/Exa；BDC；The Batch RSS 404；Amazon Ads 官方博客 RSS 404；xAI/Anthropic/Cursor RSS 404；Writer 全流水线；未自动发帖 / 无 xhs·x·wechat notify；clone 落后 origin 25 → vault-only、无 push。
+- **建议：** promote Shopify Changelog+Dev Changelog / Microsoft Advertising Blog / x.ai/changelog/bot；add Amazon Support Center「Build your quiz with Product Selector」与 Microsoft Ads 官方博文（测验页本轮未打开原文）；demote The Batch RSS、Amazon Ads 官方博客 RSS、xAI/Anthropic/Cursor RSS 以及已 404 的 Shopify 安全汇总旧链；channel_d: disabled_by_alex_2026-11-03；cold_email archived。
 
 ### 概览
 
-- 本周发布量 / 总曝光 / 单条中位数 / 单条最高：**全部待补 —— Typefully跳过**
-- 本期简报产出：must_reads **12** / also **13** / 选题 **5 FINAL** / 草稿 3
-- 赛道：🛒 Dual Listing促销+黑五报名+PDD上门；🎨 Meta 50转化公式+PMax Sourced videos+Pixel 11/12；🤖 Terra awareness
-- **主线（Researchy交叉后定稿）**：dual-listing / meta-50-conv / pmax-sourced-videos(#4合并) / meta-pixel-1112 / bf-register-1031。Researchy#1#2撞spine落选topics；MCP类also。
+- 本周发布量 / 总曝光 / 单推中位数 / 单推最高：**全部待补 —— Typefully跳过**
+- 本期简报产出：must_reads **17** / also **9** / 选题 **5 FINAL** / 草稿 3 / D4 **1**
+- 赛道：🛒 自定义应用进 Dev Dashboard + 草稿订单折扣权限 + Brand Store 测验限额；🎨 Microsoft 出价模型升级；🤖 Grok Bot 官方 v1.2.3 工具权限与例程重连
+- **主线：** Thursday 9am refresh · **no-BDC** · **post-Researchy info_sources** · **黑五周第一天**；无早稿；Phase1 无 analytics；Bingge 评分≥70 topics，不跑 Writer 全流水线。
 
+## 2026-11-18（wednesday-9am-ET-refresh-no-BDC-post-researchy · America/New_York）
 
-### 🔥 本周表现亮点（Top 5）
-
-无数据。
-
-### 📈 本周擅长方向
-
-无曝光数据。产出侧：平台默认开关（Sourced videos / Pixel device）+ 商家数字公式（50转化/周）+ 印尼 Dual Listing 促销共享。
-
-### 🎯 本周有效 Hook 模式
-
-沿用元模式2（对你意味着N件事）与元模式3（大部分人用X的方式是错的）。选题定稿后再调权重。
-
-### ⚠️ 本周失灵 Hook 模式
-
-继续回避单点复述、工具游行、MCP无JTBD、融资脊柱（Anthropic S-1仅also）。
-
-### 🕳️ 覆盖不足赛道
-
-- Typefully/Exa 不可用
-
-### 💡 本周涌现的新主题
-
-1. tiktok-id-dual-listing-1029-promo-margin
-2. meta-50-conv-adset-budget-formula
-3. google-pmax-sourced-videos-optout
-4. tiktok-us-bf-register-1031
-5. meta-pixel-device-conversions-optout-1112（升格入选）
-
-### 🔧 本期返工与修复记录
-
-1. Oct25 PPC Land 正午时间戳触边48h → published_at 调至16:00Z同日。
-2. PDD/达人Agent 换实链（新浪/cifnews）。
-3. Researchy到达后交叉验证 lock topics，准备 commit+push。
-
-### 🔁 下周补位建议
-
-1. 跟进 Dual Listing 10/29 与 Pixel 11/12 / Product Browsing 10/28 落地。
-2. Meta Pixel 11/12 与 Product Browsing 10/28 deadline 跟进。
-
-### 🪜 本周 Hook 模式对草稿生成的权重调整
-
-- 元模式2/3保持；元模式4继续下调。定稿后按 Researchy 再调。
-
-
-## 2026-10-26（窗口：2026-10-24 ~ 2026-10-26）
+- **选题主轴：** Amazon unified reporting 日粒度单次最多拉 120 天（历史 24 个月），Sponsored Products 视频只有 5-second views / rate 是真数据、其余 0 可能是占位符（11/17 支持页，本轮未打开原文；旧报表下线日期 What's New 与转述不一致）+ Meta「使用已有帖子」一个广告最多 5 条、按预测互动选帖（Ads Manager 截图转述，未见官方博文）+ Shopify Sidekick 可用 metafields/metaobjects 做分析（须先打开「在分析中筛选或分组」）+ Google 标签与 Tag Manager 合并已写进 11/17 官方发布说明，不被支持的安装将在 2027-01 升级 + Grok Bot 官方 changelog 现为 v1.2.0（昨日该页仍为 11/11 v1.0.1）：团队 dashboard 可关 Proactive messages、企业连接器 SSO、命令审批 Allow once。今日 D4=1。首次执行 11/18 配额：同家族≤2，最多 5 条不凑满；Amazon 家族只放 1 条硬题。
+- **燃料：** 无 11-18 scout.json → 9am 新鲜 RSS（42 feeds ok / 62 err / 窗内 312 个去重 URL，另加官方页与 WebSearch/WebFetch 补到约 337 条原始素材）；Day1 为周三开盘前快照 BTC spot≈63929 / F&G=13 Extreme fear / btcScore=25.6 / ETF≈-2.399 亿（昨日快照约 +790 万）；NVDA 155.46（-0.44%）为周二收盘，不是周三开盘；**Channel D 停用**；冷邮 archive 跳过；**info_sources=Researchy batch1+2**。本轮未做单独的 X search 主通道。已打开官方源：x.ai/changelog/bot、Google Tag Manager 发布说明、Shopify Sidekick changelog。
+- **相对 11-17 9am 稿：** 禁复用五 spines（Review Requests 7–150 天 / 价格超级用语 / Streaming TV 承诺+费用 / 第三方测量锁定 / Grok Bot proactive 第三方报道）及其 theme_slug；上述仍在 48h 的留 must_read。官方 v1.2.0 用新 slug，不复用昨日第三方脊柱。日历提醒：黑五周 11/19–11/30 明天开始、公开 App IP allowlist 11/20 23:59 ET。
+- **跳过：** Typefully/Exa；BDC；The Batch RSS 404；Amazon Ads 官方博客 RSS 404；xAI/Anthropic/Cursor RSS 404（changelog 页可用）；Writer 全流水线；未自动发帖 / 无 xhs·x·wechat notify；clone 落后 origin 25 → vault-only、无 push。
+- **建议：** promote PPC Land / Google Tag Manager Help 发布说明 / Shopify Changelog / x.ai/changelog/bot；add Amazon Support Center「Data availability in unified reporting」与「Engagement metrics」（本轮未打开原文）；demote The Batch RSS、Amazon Ads 官方博客 RSS、xAI/Anthropic/Cursor RSS；channel_d: disabled_by_alex_2026-11-03；cold_email archived。
 
 ### 概览
 
-- 本周发布量 / 总曝光 / 单条中位数 / 单条最高：**全部待补 —— Typefully跳过，连续无量化窗**
-- 本期简报产出：原始素材约 **72** 条 / must_reads **12** / also **11** / 选题 **4** / 草稿 3 / 跨领域 2
-- 赛道分布（must_reads）：🛒印尼申诉7天窗+开箱SOP、直播Price Cut毛利底；🎨Meta AI责任延至11/20仍审计Adv+、Google Retention/Break-even ROAS；🤖Walmart Agent awareness
-- **主线**：平台可改字段 + 商家数字（印尼TikTok 10/27申诉、Meta条款延期≠免审计、Break-even ROAS分目标、直播降价毛利地板）。10/22–10/25 spines（含tiktok-refund-sla / bfcm-price-tier / chatgpt-ads-enhance / amazon-ai-summary / meta-product-browsing）全部不复用topics。MCP=0。
+- 本周发布量 / 总曝光 / 单推中位数 / 单推最高：**全部待补 —— Typefully跳过**
+- 本期简报产出：must_reads **20** / also **12** / 选题 **5 FINAL** / 草稿 3 / D4 **1**
+- 赛道：🛒 unified reporting 120 天上限 + SP 视频占位符 + Shopify Sidekick metafield 分析；🎨 Meta 一广告 5 帖 + Google 标签/GTM 2027-01 升级；🤖 Grok Bot 官方 v1.2.0 配置清单
+- **主线：** Wednesday 9am refresh · **no-BDC** · **post-Researchy info_sources** · **11/18 家族配额生效**；无早稿；Phase1 无 analytics；Bingge 评分≥70 topics，不跑 Writer 全流水线。
 
-### 🔥 本周表现亮点（Top 5）
 
-无数据。表格留空，不臆造。
+## 2026-11-17（tuesday-9am-ET-refresh-no-BDC-post-researchy · America/New_York）
 
-### 📈 本周擅长方向
-
-无曝光数据。产出侧结构事实：
-1. **跨市场售后字段拆开**：美站退款SLA vs 印尼7天申诉+开箱视频，theme_slug不撞车。
-2. **条款延期≠功能关闭**：Meta AI liability 11/20 与 Advantage+ Creative 审计同题，Admission a+c。
-3. **商家数字账本回填**：Break-even ROAS + 直播毛利底价两档 a+b，满足≥1商家数字配额。
-
-### 🎯 本周有效 Hook 模式
-
-沿用元模式2（对你意味着N件事：申诉窗/条款延期）与元模式3（大部分人用X的方式是错的：用引流价当地板、用同一ROAS打新老客）。元模式4慎用于工具游行。
-
-### ⚠️ 本周失灵 Hook 模式
-
-继续回避单点复述、A×B×C工具连看、MCP无JTBD、融资脊柱。10/25 X drafts仍pending——本期忽略不催发。
-
-### 🕳️ 覆盖不足赛道
-
-- 商家侧自有投放账本仍偏薄；本期用 Break-even ROAS 与直播毛利底价补两档。
-- Typefully/Exa 不可用；微信收藏/fieldtheory 本环境不可用。
-- Reddit ≤48h 可核验仍稀薄——只进 also。
-
-### 💡 本周涌现的新主题
-
-1. **跨境站申诉证据链前置**（tiktok-id-appeal-7d-unbox-1027）——开箱/打包视频SOP钉进发货，比话术更能保利润
-2. **广告平台责任条款 vs 创意增强开关**（meta-ai-liability-nov20-advplus-audit）——延期是解释窗不是免审计
-3. **Retention 名单与 Break-even ROAS 分账**（google-retention-break-even-roas）
-4. **直播 Price Cut 准入门槛+毛利地板**（tiktok-live-price-cut-margin-floor）
-
-### 🔧 本期返工与修复记录
-
-1. Typefully/Exa MCP 不可用 → published_this_week error 降级。
-2. Meta PPC Land 主链 age 62.7h>48 → 换 Mia Oct24（44.7h）作 must_reads 主链，PPC Land 降 also/supporting。
-3. Mazescale/CTC/Niceggie/Review Requests >48h → also only。
-4. Walmart Agent（ebrun）只进 must_reads awareness，不占 topic（防 MCP 配额）。
-5. 未改 profile_longterm / info_sources / topic_library。
-
-### 🔁 下周补位建议
-
-1. 跟进印尼 10/27 申诉窗落地：卖家是否补拍开箱视频、首轮批准后 D+1~D+6 提醒是否生效。
-2. Meta 11/20 条款前再扫一轮 Advantage+ Creative 默认增强开关。
-3. 补一手商家 ROAS/毛利账本案例（微信通道若恢复）。
-4. 发布数据回填：Typefully 恢复前本文件继续只增结构。
-
-### 🪜 本周 Hook 模式对草稿生成的权重调整
-
-- **元模式 2「X 刚发布/更新了 Y」→ 保持**：用于印尼申诉窗与 Meta 条款延期两条时效窗。
-- **元模式 3「大部分人用 X 的方式是错的」→ 保持**：用于 Break-even ROAS 分目标与直播底价误设。
-- **元模式 4 → 权重下调**：本期无 ≥3 独立信号同判工具链，不强制连看。
-- **元模式 1 → 继续下调**：缺一手实测与曝光数。
-
-## 2026-10-25（窗口：2026-10-23 ~ 2026-10-25）
+- **选题主轴：** Amazon Review Requests 支持页写明触达窗口是妥投后 7 到 150 天、不能手工定向（官方产品页未写窗口；计费口径与 CPC 指标尚未对齐）+ Amazon 禁 Best/Top price 等超级用语，站内数字价格须由 Amazon 动态渲染 + DVA+ Streaming TV 预算按承诺花费加最多五类费用计算 + 第三方测量一项研究只能锁定一家供应商、启动后不能换、须在活动开始前建好 + Grok Bot 被第三方报道称会后台访问已连接应用，先在 bot capabilities 里找 proactive messages（官方 changelog 仍为 11/11 v1.0.1）。今日 D4=1。
+- **燃料：** 无 11-17 scout.json → 9am 新鲜 RSS（50 feeds ok / 63 err / 窗内 303 个去重 URL，另加官方页与 WebSearch/WebFetch 补到约 313 条原始素材）；Day1 为周二开盘前快照 BTC spot≈65023 / F&G=13 Extreme fear / btcScore=26 / ETF≈+790万（昨晚快照约 -0.686 亿）；NVDA 156.14（-4.12%）为周一收盘，不是周二开盘；**Channel D 停用**；冷邮 archive 跳过；**info_sources=Researchy batch1+2**。本轮未做单独的 X search 主通道。
+- **相对 11-16 晚间稿：** 禁复用五 spines（Shopify 购物车/结账机器人识别 / {search_term_matchtype} / DVA 2027-01-01 展示口径 / 健康背书 24 个月 / ThruPlay 6 秒）及其 topic slug；上述仍在 48h 的留 must_read。AdSense GPC/RDP 对路易斯安那和佛蒙特的起始日是今天，只作 must_read。日历提醒：黑五周 11/19–11/30、公开 App allowlist 11/20。
+- **跳过：** Typefully/Exa；BDC；The Batch RSS 404；Amazon Ads 官方博客 RSS 404；xAI/Anthropic/Cursor RSS 404；Grok 官方 changelog 无窗内新条目（仍为 11/11 v1.0.1）；Writer 全流水线；未自动发帖 / 无 xhs·x·wechat notify；clone 落后 origin 25 → vault-only、无 push。
+- **建议：** promote PPC Land / Ars Technica / Google AdSense Help+Search Central；add Review Requests、定价宣称、Streaming TV 三份 Amazon Ads Support Center 页（后两份本轮未独立打开原文）；demote The Batch RSS、Amazon Ads 官方博客 RSS、xAI/Anthropic/Cursor RSS；channel_d: disabled_by_alex_2026-11-03；cold_email archived。
 
 ### 概览
 
-- 本周发布量 / 总曝光 / 单条中位数 / 单条最高：**全部待补 —— Typefully跳过，连续无量化窗**
-- 本期简报产出：原始素材约 **88** 条 / must_reads **15** / also **12** / 选题 **4** / 草稿 3 / 跨领域 2
-- 赛道分布（must_reads）：🛒售后SLA+大促价档；🎨Meta/OpenAI/Google默认开关；🤖红队/对齐awareness
-- **主线**：平台默认开关deadline（Meta Product Browsing 10/28、ChatGPT Ads enhance ~10/30–31）+ TikTok售后时效/黑五SKU价档。10/22–10/23八条spine全部不复用topics。10/24无归档briefing。
+- 本周发布量 / 总曝光 / 单推中位数 / 单推最高：**全部待补 —— Typefully跳过**
+- 本期简报产出：must_reads **20** / also **15** / 选题 **5 FINAL** / 草稿 3 / D4 **1**
+- 赛道：🛒 Review Requests 7–150 天窗口 + Shopify 机器人识别/token 过期仍留 must_read；🎨 价格超级用语 + STV 承诺加费用 + 3P 测量锁定；🤖 Grok Bot proactive messages（第三方报道，官方未证实）
+- **主线：** Tuesday 9am refresh · **no-BDC** · **post-Researchy info_sources**；无早稿；Phase1 无 analytics；Bingge 评分≥70 topics，不跑 Writer 全流水线。
 
-### 🔥 本周表现亮点（Top 5）
+## 2026-11-16（monday-late-on-demand-ET-refresh-no-BDC-post-researchy · America/New_York）
 
-无数据。表格留空，不臆造。
-
-### 📈 本周擅长方向
-
-无曝光数据。产出侧结构事实：
-1. **Deadline opt-out选题成型**：Meta browsing + ChatGPT enhance同周，Admission a+c可复用。
-2. **TikTok售后字段与NBFR拆开**：退款SLA自动批准≠90天窗口。
-3. **Reddit≤48h可核验仍稀薄**——继续只进also。
-
-### 🎯 本周有效 Hook 模式
-
-沿用元模式2（对你意味着N件事）与元模式3（大部分人用X的方式是错的）。元模式4慎用于工具游行。
-
-### ⚠️ 本周失灵 Hook 模式
-
-继续回避单点复述、A×B×C工具连看、MCP无JTBD、融资脊柱。
-
-### 🕳️ 覆盖不足赛道
-
-- 商家侧自有投放账本仍缺；本期用退款SLA档位与BFCM价档数字补一档。
-- 微信收藏/fieldtheory本环境不可用。
-
-### 💡 本周涌现的新主题
-
-1. **广告平台默认开启的创意/落地页开关**（meta-product-browsing-optout-1028 / chatgpt-ads-enhance-optout-1031）
-2. **店铺售后处理时效与自动批准**（tiktok-refund-sla-auto-approve）
-3. **大促报名价档/SKU权益联动**（tiktok-bfcm-sku-price-tier）
-
-### 🔧 本期返工与修复记录
-
-1. Typefully/Exa MCP不可用 → published_this_week error降级。
-2. Meta creative audience官方日10/19>48h → 用Ad Test Bench 10/24作must_reads主链。
-3. Amazon Review Requests 10/12>48h → also；不占topic。
-4. Reddit三帖不可核验≤48h → also；must_reads Reddit=0。
-5. 未改 profile_longterm / info_sources / topic_library。
-
-## 2026-10-23（窗口：2026-10-21 ~ 2026-10-23）
+- **选题主轴：** 保留 Shopify Analytics 购物车/结账机器人识别（会话可能小幅下降，订单销售不变）+ Google Ads {search_term_matchtype} 拆 AI Max + Amazon DVA 站内展示 2027-01-01 改为出现在屏幕上才计展示。新换入 Amazon Ads 健康背书/对比证据须在 24 个月内（PPC Land 转述 11/15 支持页，本轮未独立打开原文）+ Meta ThruPlay 6 秒选项（行业转述，无官方公告；先看账户有没有控件，不要对比 6 秒与 15 秒成本）。换出 Audible SP 测试与 PMax 家庭收入排除，二者留 must_reads。今日 D4=0。
+- **燃料：** 无 11-16 scout.json → 晚间新鲜 RSS（52 feeds ok / 61 err / 窗内 298 个去重 URL，另加官方页与 WebSearch 补到 303 条原始素材）；Day1 为周一收盘后快照 BTC spot≈64919 / F&G=13 Extreme fear / btcScore=25.3 / ETF≈-0.686亿；NVDA 156.14（-4.12%），不是 9am 所用周五收盘；**Channel D 停用**；冷邮 archive 跳过；**info_sources=Researchy batch1+2**。本轮未做单独的 X search 主通道。
+- **相对今日 9am：** 禁复用已换出的 Audible / PMax 收入排除作为新脊柱（可留 must_read）；亦避开 11-15 至 11-11 既有 spines。9am 之后官方增量：Shopify Dev Dashboard Admin API token 过期可选开关（16:00 UTC，4/1 截止只针对现有公开 App）、Google Search Central 把品牌查询等三项能力开放给 Search Analytics API、AdSense 帮助页宣布 11/17 起对路易斯安那和佛蒙特的 GPC 触发 RDP——后三条进 must_reads，不作 topic。已出窗的 Ad Tag、审计日志帮助页、DV360 API v5 迁 also。日历提醒仍在：黑五周 11/19–11/30、公开 App IP allowlist 11/20。
+- **跳过：** Typefully/Exa；BDC；The Batch RSS 404；Amazon Ads 官方博客 RSS 404；xAI/Anthropic/Cursor RSS 404；多数 Reddit RSS 429；Grok 官方 changelog 无窗内新条目（仍为 11/11 v1.0.1）；Writer 全流水线；未自动发帖 / 无 xhs·x·wechat notify；clone 落后 origin 25 → vault-only、无 push。
+- **建议：** promote PPC Land / Shopify Developer Changelog / Google Search Central Blog；add AdSense 18818765 与 Amazon Claims and substantiation 页（待人工核对 URL）；demote The Batch RSS、Amazon Ads 官方博客 RSS、xAI/Anthropic/Cursor RSS；channel_d: disabled_by_alex_2026-11-03；cold_email archived。
 
 ### 概览
 
-- 本周发布量 / 总曝光 / 单条中位数 / 单条最高：**全部待补 —— Typefully跳过，连续无量化窗**
-- 本期简报产出（**晚间 refresh + Topic Scope**）：原始素材约 **96** 条 / must_reads **15** / also **12** / 选题 **4** / 草稿 3 / 跨领域 2
-- 赛道分布（must_reads）：🛒偏平台字段与商家数字；🎨含Just Eat失败案例；🤖工具链降为awareness
-- **Refresh主线**：平台可改字段 + 商家数字（亚马逊AI摘要字段、TikTok NBFR 90天、天猫Token额度SKU、Just Eat上架QA）。晨间「权限矩阵 / Craft×Vector×Framer / Sume验证SOP / Skills夜班」四条脊柱按Step6硬规则让出topics席位。
-
-### 🔥 本周表现亮点（Top 5）
-
-无数据。表格留空，不臆造。
-
-### 📈 本周擅长方向
-
-无曝光数据。产出侧结构事实：
-1. **Topic Scope首次全日生效**：Admission/配额/跨日theme_slug/Reddit偏置/硬拒五闸全过。
-2. **卖家运营源加权见效**：AMZ123 10/23 AI摘要 + TikTok Seller University NBFR 进topics。
-3. **Reddit≤48h可核验仍稀薄**——继续只进also，不编造。
-
-### 🎯 本周有效 Hook 模式
-
-沿用元模式2（AI摘要三件事 / NBFR）与元模式3（Just Eat上架闸 / Token环比误读）。元模式4慎用于工具游行。元模式1实测仍0。
-
-### ⚠️ 本周失灵 Hook 模式
-
-继续回避单点复述；**新增回避**：A×B×C工具连看、MCP无JTBD、融资脊柱。
-
-### 🕳️ 覆盖不足赛道
-
-- 商家侧带数字的实操复盘：本期用Token销量/折扣数字与NBFR动作补了一档，仍缺自有投放账本。
-- 微信收藏/fieldtheory本环境不可用。
-
-### 💡 本周涌现的新主题
-
-1. **平台AI摘要/机读Listing字段**（theme_slug: amazon-ai-summary-listing-fields）
-2. **店铺健康指标窗口变更**（tiktok-nbfr-90d）
-3. **订阅算力SKU字段与成本账**（tmall-token-sku-fields）
-4. **AI素材上架QA闸 / failed-test**（ai-menu-photo-qa-gate）
-
-### 🔧 本期返工与修复记录
-
-1. 晨间4选题未过Topic Scope → refresh整批换脊柱。
-2. Walmart/Muse/Whop/Duet/OpenAI-GCP age>48h → also。
-3. Reddit三帖仍不可核验 → also；must_reads Reddit=0。
-4. covered_topics改为theme_slug记录（含晨间四条禁复用slug）。
+- 本周发布量 / 总曝光 / 单推中位数 / 单推最高：**全部待补 —— Typefully跳过**
+- 本期简报产出：must_reads **20** / also **13** / 选题 **5 FINAL** / 草稿 3 / D4 **0**
+- 赛道：🛒 Shopify 会话机器人过滤 + token 过期可选开关 + GSC API 品牌拆分；🎨 健康宣称 24 个月 + ThruPlay 6 秒 + ValueTrack 拆 AI Max + DVA 口径基线；🤖 Import AI 481 + OpenAI×LVMH + SEJ ChatGPT Ads 早期数据（无 D4 脊柱）
+- **主线：** Monday late on-demand refresh · 覆盖 9am 稿 · **no-BDC** · **post-Researchy info_sources**；Phase1 无 analytics；Bingge 评分≥70 topics，不跑 Writer 全流水线。

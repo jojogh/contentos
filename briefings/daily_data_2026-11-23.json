@@ -1,0 +1,811 @@
+{
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23T14:20:15.252037Z",
+  "timezone": "America/New_York",
+  "pass": "monday-9am-ET-refresh-no-BDC-post-researchy",
+  "raw_material_count": 290,
+  "publishing_note": "今日（周一）是黑五周 11/19–11/30 的第五天，距黑五 11/27 还有 4 天，美股常规开盘，但本轮市场快照抓取时（约 9:17am ET）股票字段仍为 marketState=closed，价格应视为上周五收盘/开盘前，不是周一开盘价。优先发 Google Ads 法/意 3% 附加费（有官方费率与地理定向动作），其次 Merchant Center consumer_notice 7 条上限（平台可改字段，且两份官方页对 optional/mandatory 口径不一致，必须并陈），以及 Amazon Attribution 加 ASIN 会重述 28 天（黑五报表稳定性）。Google 与 Amazon 家族今日都已占 2 条；Google-Agent 爬虫指南、Practical Ecommerce AI 访问检查、Adweek shoppable ads、ChatGPT agent 查询不可见只留 must_reads。Grok Bot 官方 changelog 仍为 11/18 v1.2.3，昨日退款对账脊柱不复用，今日 D4=0。Typefully/Exa 仍不可用，无本周曝光可验证；草稿用英文（@jojogh_007），只用 longterm 元 Hook。市场快照里 BTC/F&G 为当日抓取；不做投资建议。Channel D 停用。不要通知 xhs/x/wechat，等待 Alex 确认后再交接。 Amazon 两题仅为二手出处候选，官方帮助页正文未核到；写作前需在登录后台复核，不可当作已确认的新规则。",
+  "channel_d": "disabled_by_alex_2026-11-03",
+  "d4_topics": 0,
+  "must_reads": [
+    {
+      "title": "Google Ads 法国和意大利的监管运营附加费将于 2027-01-01 升至 3%，土耳其从 4.5% 降到 2.25%，按广告展示地计费",
+      "event_id": "google-ads-fr-it-surcharge-3pct-jan2027-1122",
+      "summary": "本轮已打开 PPC Land 11/22 原文，并打开 Google Ads 帮助页《Jurisdiction-specific surcharges》（support.google.com/google-ads/answer/9750227）。官方原文确认：2027-01-01 起，法国 Regulatory Operating Cost 从 2% 升至 3%，意大利从 2.5% 升至 3%，土耳其从 4.5% 降至 2.25%。附加费按广告在该国被展示计，与广告主注册地无关；帮助页写明 Google will not refund 因合法定向产生的这笔费用。附加费在广告出价之外，按国家出现在发票和账户 Transactions。帮助页本身没有发布或更新日期。PPC Land 称 Google Payments 已就法、意上调向广告主发通知。本轮也打开了 Display & Video 360 对应帮助页（answer/13156165），页面有正文，未在本条逐项核对所有 DV360 费率表。",
+      "url": "https://ppc.land/google-ads-surcharges-hit-3-in-france-and-italy-from-january-2027/",
+      "track": "🎨 创意广告",
+      "source": "PPC Land",
+      "published_at": "2026-11-22T19:30:39Z",
+      "matched_topic": "广告成本结构 / 平台规则变更（Google Ads）",
+      "supporting": [
+        {
+          "angle": "官方帮助页原文（本轮已打开，确认法 2%→3%、意 2.5%→3%、土 4.5%→2.25%，按展示地计费且不退款）",
+          "url": "https://support.google.com/google-ads/answer/9750227"
+        },
+        {
+          "angle": "Display & Video 360 司法管辖区附加费帮助页（本轮已打开，未逐项核对全部费率）",
+          "url": "https://support.google.com/displayvideo/answer/13156165"
+        }
+      ],
+      "age_hours": 18.8
+    },
+    {
+      "title": "Merchant Center 新字段 consumer_notice：每个商品最多 7 条法律/安全/Prop 65 提示，提交第 8 条会覆盖第 1 条",
+      "event_id": "google-mc-consumer-notice-7-cap-1122",
+      "summary": "本轮已打开 PPC Land 11/22 原文，并打开两份官方页。Merchant Center 帮助页《Consumer_notice [consumer_notice]》（support.google.com/merchants/answer/17224374）确认：这是可重复字段，最多 7 条；每条 notice_message 最多 1000 字符，notice_type 只能是 legal_disclaimer、safety_warning 或 prop_65。帮助页写：「if you submit 8 notices, the 8th notice will overwrite the 1st, leaving you with notices 2 through 8。」When to use 写的是「Optional for all products」。但 Google 开发者文档《Prepare your Merchant Center account》（本轮已打开）写：「This is mandatory for items with regulatory warning requirements (e.g., California Proposition 65).」两份官方页口径不一致，选题里必须并陈，不能只写「必须」或「可选」。UCP / AI checkout 流程里，带该字段的商品会在结账出现可展开的 Product warning。",
+      "url": "https://ppc.land/merchants-who-send-8-google-checkout-warnings-lose-the-first-one/",
+      "track": "🛒 AI 电商自动化",
+      "source": "PPC Land",
+      "published_at": "2026-11-22T17:24:56Z",
+      "matched_topic": "平台可改字段（Merchant Center / UCP checkout）",
+      "supporting": [
+        {
+          "angle": "官方帮助页（本轮已打开，确认最多 7 条、第 8 条覆盖第 1 条、每条 1000 字符、When to use 写 Optional）",
+          "url": "https://support.google.com/merchants/answer/17224374"
+        },
+        {
+          "angle": "UCP Merchant Center 指南（本轮已打开，写明有监管警示要求的商品此项 mandatory，例如加州 Prop 65）",
+          "url": "https://developers.google.com/merchant/ucp/guides/overview/merchant-center"
+        }
+      ],
+      "age_hours": 20.9
+    },
+    {
+      "title": "往 Amazon Attribution 品牌里加 ASIN：批准需 4–7 个工作日，随后会重述过去 28 天历史数据，修正还要约三周",
+      "event_id": "amazon-attribution-asin-restate-28d-1122",
+      "summary": "本轮已打开 PPC Land 11/22 原文。文章引用 Amazon Ads 帮助页原句：New ASIN additions require 4 to 7 business days for approval；一旦批准，historical data is automatically restated for the previous 28 days, with corrections processed over a 3-week period。批量上传页（PPC Land 称更新于 11/21）可把 Google 搜索关键词和 Facebook/Instagram 广告打进同一文件、约 10 分钟出标签，但找不到商品时会被指到上述品牌管理页。PPC Land 明确写：帮助页没有说被重述的是销量、归因转化还是别的；11/21 的 Updated on 只说明编辑日期，不说明改了哪一句。本轮尝试打开 PPC Land 列出的 Amazon Ads 帮助页（含 GVEZ2EQ2CQZC7WUL），返回的正文几乎为空（约 6 个字符，像是前端渲染页），因此不能声称已直接读到官方帮助页正文，以下引用以 PPC Land 对帮助页的摘录为准。黑五周若现在提交加 ASIN，报告窗口可能波动到 12 月中下旬。",
+      "url": "https://ppc.land/adding-asins-to-an-amazon-brand-restates-the-previous-28-days-of-data/",
+      "track": "🛒 AI 电商自动化",
+      "source": "PPC Land",
+      "published_at": "2026-11-22T18:31:12Z",
+      "matched_topic": "广告测量口径 / Amazon Attribution",
+      "supporting": [
+        {
+          "angle": "Amazon Ads 帮助页（本轮打开但正文为空，不能当作已读官方原文；仅作 PPC Land 引用出处）",
+          "url": "https://advertising.amazon.com/help/GVEZ2EQ2CQZC7WUL"
+        }
+      ],
+      "age_hours": 19.8
+    },
+    {
+      "title": "Amazon Brand Store 点 Add page 会先打开 Builder Agent：可点「Add page without AI assistance」退出；All Deals 标签页默认自动填最多 30 个折扣商品",
+      "event_id": "amazon-brand-store-builder-agent-all-deals-1122",
+      "summary": "本轮已打开 PPC Land 11/22 原文。文章称 Amazon Ads 帮助页（更新戳 11/11）写：在 Store builder 点 Add page，「A new window with Brand Store Builder Agent will open」，可用 6 条预写 prompt 或自己写指令生成页面，再 Save and Continue 后仍要人工 Publish；退出方式是右上角「Add page without AI assistance」或左侧 X。内容「可以任何语言和 agent 聊天，但生成的 Brand Store 内容是该站点的主语言」。页面仍走审核，PPC Land 称可能要 3 个工作日。另一份帮助页（更新戳 11/21）写 All Deals 标签页会按三个主题自动填最多 30 个折扣商品，品牌可以关掉或换成自己的 deals 页。本轮打开其引用的 Amazon Ads 帮助页时正文为空，不能声称已直接核对官方页。这与 11/19 选题里的 Product Selector 测验限额不是同一件事。",
+      "url": "https://ppc.land/amazon-routes-new-brand-store-pages-through-an-ai-agent-first/",
+      "track": "🎨 创意广告",
+      "source": "PPC Land",
+      "published_at": "2026-11-22T18:29:27Z",
+      "matched_topic": "AI 创意广告 / Amazon Brand Store",
+      "supporting": [],
+      "age_hours": 19.8
+    },
+    {
+      "title": "Amazon 官方宣布：已签署协议购买 Decart Optimization Stack（DOS）技术，并引进其联合创始团队",
+      "event_id": "amazon-decart-dos-technology-agreement-1123",
+      "summary": "本轮已打开 About Amazon 官方稿（2026-11-23）。原文说 Today, Amazon announced it has signed an agreement to purchase the proprietary technology behind the Decart Optimization Stack (DOS)，并将联合创始人 Dean Leitersdorf、Moshe Shalev、Orian Leitersdorf 及其研究工程团队引入 Amazon，用于 Trainium 等自研芯片上的 AI 工作负载优化。官方稿未给出交易对价。11/21 The Information 曾报道 Amazon 接近以 75 亿美元收购 Decart（当时未经双方确认）；官方本日稿写的是购买该项专有技术并引进团队，不要把两篇写成已经官宣的同一笔 75 亿美元公司收购。",
+      "url": "https://www.aboutamazon.com/news/company-news/amazon-decart-ai-optimization",
+      "track": "🤖 AI 前沿",
+      "source": "About Amazon",
+      "published_at": "2026-11-23T13:46:59Z",
+      "matched_topic": "AI 基础设施 / 公司动态（非选题脊柱）",
+      "supporting": [
+        {
+          "angle": "The Information 11/21 报道接近 75 亿美元收购（当时未经双方确认，官方本日稿未写对价）",
+          "url": "https://www.theinformation.com/briefings/amazon-nearing-7-5-billion-purchase-decart"
+        }
+      ],
+      "age_hours": 0.6
+    },
+    {
+      "title": "Google 发布 Google-Agent 流量说明：这是用户触发的抓取，一般忽略 robots.txt，站长可在 CDN/WAF 放行",
+      "event_id": "google-agent-crawler-guidance-1123",
+      "summary": "本轮已打开 SEJ 11/23 报道，并打开两份官方开发者文档。Google-Agent 是托管在 Google 基础设施上、按用户请求浏览网页并执行操作的 agent 名称。请求的 User-Agent 含「Google-Agent」，IP 来自 user-triggered-agents.json；作为 user-triggered fetcher，文档写这类抓取 generally ignore robots.txt rules。另有实验性 Web Bot Auth：Signature-Agent 为 g=\"https://agent.bot.goog\"。官方《Allow Google-Agent traffic》建议在 CDN、WAF 或反机器人服务中明确放行，以免把合法请求挡住。这不是新的购物平台字段，但对希望被 Google 侧 agent 访问的独立站/商品页是可执行的 30 分钟检查（查日志与 WAF 规则）。",
+      "url": "https://www.searchenginejournal.com/google-publishes-guidance-for-google-agent-crawler/598526/",
+      "track": "🤖 AI 前沿",
+      "source": "Search Engine Journal",
+      "published_at": "2026-11-23T13:12:32Z",
+      "matched_topic": "Agent 抓取与站点访问",
+      "supporting": [
+        {
+          "angle": "官方：List of Google user-triggered fetchers（含 Google-Agent 及 generally ignore robots.txt）",
+          "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers#google-agent"
+        },
+        {
+          "angle": "官方：Allow Google-Agent traffic（CDN/WAF 放行建议与 Web Bot Auth 实验）",
+          "url": "https://developers.google.com/crawling/docs/crawlers-fetchers/allow-google-agent"
+        }
+      ],
+      "age_hours": 1.1
+    },
+    {
+      "title": "Practical Ecommerce：用三步检查独立站是否被 AI 爬虫挡住（robots.txt + 常见 UA 探测，工具不以官方 IP 复核）",
+      "event_id": "practical-ecommerce-ai-access-test-1123",
+      "summary": "本轮已打开 Practical Ecommerce 11/23 文章。Ann Smarty 给出站点「AI-ready」检查：前 Google 员工 Vanessa Fox 的免费工具会检查 robots.txt 里对 AI 爬虫的规则，并用已知 UA 探测站点响应。文章自己写明局限：测试不用各爬虫公布的 IP，若站点按 IP 验证，真实爬虫的结果可能不同。另外还提到旧式拦截（服务端挡住未知 bot、自动生成的 robots.txt）可能在无意中拒绝 AI 中介。适合作为 30 分钟自查清单，不是平台规则变更。",
+      "url": "https://www.practicalecommerce.com/test-your-ecommerce-site-for-ai-access",
+      "track": "🛒 AI 电商自动化",
+      "source": "Practical Ecommerce",
+      "published_at": "2026-11-23T13:14:40Z",
+      "matched_topic": "独立站 AI 可见性",
+      "supporting": [],
+      "age_hours": 1.1
+    },
+    {
+      "title": "Adweek：Amazon 称黑五体育转播有近 25% 更多广告主，shoppable ads 将出现在超 40% 的库存中",
+      "event_id": "adweek-amazon-shoppable-ads-bf-sports-1123",
+      "summary": "本轮已打开 Adweek 11/23 对 Amazon Ads 的 Alan Moss 访谈。文章给出三个数字：Nearly 25% more advertisers are buying into Prime Video's Black Friday sports slate this year；Shoppable ads will appear in over 40% of inventory during Black Friday Football and the NBA doubleheader；Thursday Night Football 本季场均 17.06 million viewers，同比 +14%。黑五当天有约 15 小时体育编排（PGA、Broncos vs Steelers、NBA 双场等）。这是媒体购买侧数字，不是卖家后台可改字段；对有 Prime Video/流媒体计划的品牌有参考，未作为今日选题脊柱。",
+      "url": "https://www.adweek.com/performance-marketing/amazons-alan-moss-on-how-black-friday-sports-lineup-shoppable-ads-are-winning-advertisers/",
+      "track": "🎨 创意广告",
+      "source": "Adweek",
+      "published_at": "2026-11-23T09:00:00Z",
+      "matched_topic": "零售媒体 / 可购物广告",
+      "supporting": [],
+      "age_hours": 5.3
+    },
+    {
+      "title": "Walmart 将于 11/24 上线 Agent Gateway，并接入 Meta Muse，可用 Agent Profiles 设消费限额后代客购物",
+      "event_id": "verge-walmart-agent-gateway-meta-muse-1123",
+      "summary": "本轮已打开 The Verge 11/23 报道（Jess Weatherbed）。Walmart 将在周二 11/24 推出上月宣布的 Agent Gateway 的 live implementation，并支持 Meta 的 Muse；报道称其他应用和 agent「on the way」。Muse 通过 Walmart 的 Agent Profiles 下单，可设置 spending limits、批准购买并查看该 agent 的购买历史；报道称 Gateway 帮助 agent 找商品而不分享你的购买历史。这是消费者侧购物 agent，不是 Amazon/Shopify 卖家后台变更；计入交叉机会，不作为选题脊柱。",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday",
+      "track": "🤖 AI 前沿",
+      "source": "The Verge",
+      "published_at": "2026-11-23T11:49:21Z",
+      "matched_topic": "Agent 购物 / 电商结账",
+      "supporting": [],
+      "age_hours": 2.5
+    },
+    {
+      "title": "Adweek：ChatGPT 的 agent 会自己写查询再把广告发出去，广告主看不到这些查询",
+      "event_id": "adweek-chatgpt-agent-writes-ad-queries-1123",
+      "summary": "本轮已打开 Adweek 11/23 文章《ChatGPT’s Agent Writes Its Own Queries to Serve Ads. Advertisers Don’t Get to See Them》。核心主张是 ChatGPT agent 为投放广告自行生成查询，广告主无法看到这些 query。这是平台透明度问题，尚无本轮核实的官方帮助页字段或开关可改；只作 must_read，不升选题脊柱（缺少 30 分钟可改字段或可执行投放动作的官方出处）。",
+      "url": "https://www.adweek.com/media/chatgpts-agent-writes-its-own-queries-to-serve-ads-advertisers-dont-get-to-see-them/",
+      "track": "🎨 创意广告",
+      "source": "Adweek",
+      "published_at": "2026-11-23T06:00:00Z",
+      "matched_topic": "AI 广告产品透明度",
+      "supporting": [],
+      "age_hours": 8.3
+    },
+    {
+      "title": "Import AI 482：华为 kernel 基准、空中无人机检测，以及国家实验室的 AI 科学基准",
+      "event_id": "import-ai-482-1123",
+      "summary": "本轮 RSS 收录 Import AI 第 482 期（2026-11-23T14:11:17Z），标题为 Huawei kernel benchmarks; airborne drone detection; and a national lab's AI science benchmark。未把整期正文逐段打开精读，只确认期刊已在 48 小时窗内发布，作 AI 前沿必看，不升选题。",
+      "url": "https://importai.substack.com/p/import-ai-482-huawei-kernel-benchmarks",
+      "track": "🤖 AI 前沿",
+      "source": "Import AI",
+      "published_at": "2026-11-23T14:11:17Z",
+      "matched_topic": "AI 前沿周报",
+      "supporting": [],
+      "age_hours": 0.1
+    },
+    {
+      "title": "Google Merchant Center 帮助页新增一句：sale_price 持续时间「不应超过 30 天」，否则可能拿不到删除线原价和促销标",
+      "event_id": "google-mc-sale-price-30-day-note-1117",
+      "summary": "仍在 48 小时窗内。昨日选题脊柱，今日不再复用为主题。Merchant Center《About sale price annotations》用 should（不是 must）提示 sale_price 持续时间不应超过 30 天。黑五 11/27 前仍应检查 10/28 前开始或没有结束日的促销。详细拆解见 11/22 简报。",
+      "url": "https://ppc.land/merchant-center-sales-running-past-30-days-may-miss-googles-sale-badge/",
+      "track": "🎨 创意广告",
+      "source": "PPC Land",
+      "published_at": "2026-11-22T09:30:00Z",
+      "matched_topic": "平台规则变更（Google Ads / Merchant Center）",
+      "supporting": [],
+      "age_hours": 28.8
+    },
+    {
+      "title": "YouTube Shorts 广告：点赞、评论、分享现在都能算 engaged-view conversion，也算 TrueView view",
+      "event_id": "youtube-shorts-evc-like-comment-share-1121",
+      "summary": "仍在 48 小时窗内。昨日选题脊柱，今日不再复用。Google 帮助页现将 Shorts 上的 like/comment/share 计入 EVC 与 TrueView view；帮助页无生效日期。投放侧仍应把 EVC 与点击转化拆开看。详细拆解见 11/22 简报。",
+      "url": "https://ppc.land/google-lets-a-like-stand-in-for-5-seconds-of-viewing-in-shorts-conversions/",
+      "track": "🎨 创意广告",
+      "source": "PPC Land",
+      "published_at": "2026-11-22T09:15:58Z",
+      "matched_topic": "AI 创意广告 / 平台 AI 广告产品",
+      "supporting": [],
+      "age_hours": 29.1
+    },
+    {
+      "title": "@cstanley on X：让 Grok Bot 翻 Amazon 历史订单，找出 $590.62 未到账退款并在客服聊天里谈成退款（自述，金额未经证实）",
+      "event_id": "grok-bot-amazon-refund-audit-cstanley-1122",
+      "summary": "仍在 48 小时窗内。昨日 D4 选题脊柱，今日不再复用。@cstanley 自述金额 $590.62，回执截图为 $589.62；@grok 说明需在 Bot 电脑内自行登录。和解截止日期本轮未重核，不重复作为本期事实。x.ai/changelog/bot 本轮仍为 11/18 v1.2.3，无新官方版本由头，故今日不新写 Grok Bot 选题。",
+      "url": "https://x.com/cstanley/status/2124314532126323042",
+      "track": "🛒 AI 电商自动化",
+      "source": "@cstanley via X",
+      "published_at": "2026-11-22T01:30:26Z",
+      "matched_topic": "Grok Bot × 电商运营（售后对账）",
+      "supporting": [],
+      "age_hours": 36.8
+    },
+    {
+      "title": "AWS Quick 上线 Meta ads AI 连接器：用自然语言建、管、分析 Meta 广告，并和其他数据源合成看板",
+      "event_id": "aws-quick-meta-ads-connector-1121",
+      "summary": "仍在 48 小时窗内。AWS ML Blog 11/21 宣布 Meta ads 连接器进入 AWS Quick。昨日未升选题（缺足够明确的 30 分钟卖家动作）。本轮不升题，保留 must_read。",
+      "url": "https://aws.amazon.com/blogs/machine-learning/meta-ads-is-now-available-in-aws-quick/",
+      "track": "🎨 创意广告",
+      "source": "AWS Machine Learning Blog",
+      "published_at": "2026-11-22T01:59:13Z",
+      "matched_topic": "广告工具 / 多厂商连接器",
+      "supporting": [],
+      "age_hours": 36.4
+    },
+    {
+      "title": "Amazon 把反对纽约市《Delivery Protection Act》的提示印到快递面单：「市议会可能让每单多 $5」",
+      "event_id": "amazon-nyc-delivery-protection-act-labels-1121",
+      "summary": "仍在 48 小时窗内。The Verge 11/21 报道 Amazon 在纽约包裹面单上印刷反对该法案的提示。属公共政策/物流成本信号，不是卖家后台可改字段，不升选题。",
+      "url": "https://www.theverge.com/tech/1039564/amazon-nyc-council-packages-shipping-label",
+      "track": "🛒 AI 电商自动化",
+      "source": "The Verge",
+      "published_at": "2026-11-21T21:59:31Z",
+      "matched_topic": "物流政策 / 履约成本",
+      "supporting": [],
+      "age_hours": 40.3
+    }
+  ],
+  "also_worth_reading": [
+    {
+      "title": "Grok Bot Changelog：最新仍为 v1.2.3（11/18），本轮无新版本，不写 D4 选题",
+      "url": "https://x.ai/changelog/bot",
+      "source": "x.ai",
+      "published_at": "2026-11-18T00:00:00Z",
+      "age_hours": 134.3,
+      "track": "🤖 AI 前沿",
+      "note": "硬窗口外延伸参考；本轮已打开 https://x.ai/changelog/bot，Latest 仍为 v1.2.3 · Nov 18, 2026（Tool permissions and routine reconnect cards）。公开 X 上仍有大量退款对账讨论，但与昨日脊柱同类，且无新官方版本由头。"
+    },
+    {
+      "title": "ShipBob 公开黑五 prompt 包：SKU 断货预测只用 28 天数据，旺季须加 buffer",
+      "url": "https://www.shipbob.com/blog/peak-season-ai-prompts/",
+      "source": "ShipBob",
+      "published_at": "2026-11-20T20:04:32Z",
+      "age_hours": 66.3,
+      "track": "🛒 AI 电商自动化",
+      "note": "硬窗口外延伸参考（已超过 48 小时）。昨日选题脊柱，今日迁出 must_reads。"
+    },
+    {
+      "title": "Shopify Changelog 最新仍为 11/20：Flow「已更新」触发器、收据样式对齐；窗内无新商家 changelog",
+      "url": "https://changelog.shopify.com/posts/flow-new-updated-triggers-for-orders-customers-and-more",
+      "source": "Shopify Changelog",
+      "published_at": "2026-11-20T20:30:00Z",
+      "age_hours": 65.8,
+      "track": "🛒 AI 电商自动化",
+      "note": "硬窗口外延伸参考。本轮重新拉取 changelog.shopify.com/feed，最新两条仍为 11/20 15:30 ET 与 12:00 ET，48 小时窗内无新条目。"
+    },
+    {
+      "title": "黎曼猜想两份独立「证明」报道（Anthropic 数学家与 Claude 的 Lean 形式化等）",
+      "url": "https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/",
+      "source": "Latent Space",
+      "published_at": "2026-11-21T05:02:13Z",
+      "age_hours": 57.3,
+      "track": "🤖 AI 前沿",
+      "note": "硬窗口外延伸参考（刚出 48 小时窗）。"
+    },
+    {
+      "title": "New Path Digital 字段报告：同一批 phrase match 新匹配搜索单条线索成本高 28%",
+      "url": "https://ppc.land/new-phrase-match-searches-cost-28-more-per-lead-new-path-digital-finds/",
+      "source": "PPC Land",
+      "published_at": "2026-11-22T09:52:25Z",
+      "age_hours": 28.5,
+      "track": "🎨 创意广告",
+      "note": "仍在窗内，但 Google 家族今日选题已满，且为小样本 field report，从 must_reads 下调，避免把昨日次级 Google 题继续堆在必看里。"
+    },
+    {
+      "title": "Google Analytics 11/11 起对 user-provided data 缺失或质量差发两类告警",
+      "url": "https://ppc.land/google-analytics-adds-two-alerts-for-missing-or-malformed-customer-data/",
+      "source": "PPC Land",
+      "published_at": "2026-11-22T09:07:49Z",
+      "age_hours": 29.2,
+      "track": "🎨 创意广告",
+      "note": "仍在窗内，非今日脊柱，从 must_reads 下调。"
+    },
+    {
+      "title": "Google Ads Overview 试点 Customer Journey Insights 卡片：一次品牌搜索就算进入 Consider",
+      "url": "https://ppc.land/google-ads-counts-a-branded-search-as-progress-in-a-new-journey-card/",
+      "source": "PPC Land",
+      "published_at": "2026-11-22T09:22:58Z",
+      "age_hours": 29.0,
+      "track": "🎨 创意广告",
+      "note": "仍在窗内，非今日脊柱，从 must_reads 下调。"
+    },
+    {
+      "title": "Google AI Mode 多轮广告：赞助商品轮播可出现到第 4 个追问，美国广告主无法单独退出",
+      "url": "https://ppc.land/google-ai-mode-ads-appear-as-deep-as-the-fourth-follow-up-question/",
+      "source": "PPC Land",
+      "published_at": "2026-11-22T09:24:44Z",
+      "age_hours": 28.9,
+      "track": "🎨 创意广告",
+      "note": "仍在窗内，非今日脊柱，从 must_reads 下调。"
+    },
+    {
+      "title": "JudeLuxe 案例：ROAS 做高了，客户两个月解约——因为客户要的是清库存和回现金",
+      "url": "https://ppc.land/judeluxe-lost-a-client-two-months-in-despite-higher-roas-avery-says/",
+      "source": "PPC Land",
+      "published_at": "2026-11-22T09:47:55Z",
+      "age_hours": 28.5,
+      "track": "🎨 创意广告",
+      "note": "仍在窗内，属案例而非平台规则，从 must_reads 下调。"
+    },
+    {
+      "title": "PPC Land：站点退出 Google AI Overviews 与 AI Mode 后，点击几乎不怎么动",
+      "url": "https://ppc.land/site-exits-google-ai-overviews-and-ai-mode-clicks-barely-move/",
+      "source": "PPC Land",
+      "published_at": "2026-11-22T18:03:12Z",
+      "age_hours": 20.3,
+      "track": "🎨 创意广告",
+      "note": "窗内新稿，但是观察性流量研究，缺少 30 分钟可改字段，未升 must_reads/选题。"
+    },
+    {
+      "title": "PPC Land：Google 在自己的 Maps robots.txt 里屏蔽了 41 个 AI 爬虫",
+      "url": "https://ppc.land/google-blocks-41-ai-crawlers-from-maps-in-its-own-robots-txt/",
+      "source": "PPC Land",
+      "published_at": "2026-11-22T19:16:58Z",
+      "age_hours": 19.1,
+      "track": "🤖 AI 前沿",
+      "note": "窗内新稿，与 Google-Agent 放行指南对照有趣，但不是卖家后台字段，留作延伸。"
+    },
+    {
+      "title": "Digiday：品牌在黑五加码 CTV、零售媒体和搜索花费",
+      "url": "https://digiday.com/media-buying/brands-boost-black-friday-ctv-retail-and-search-spending/",
+      "source": "Digiday",
+      "published_at": "2026-11-23T05:01:00Z",
+      "age_hours": 9.3,
+      "track": "🎨 创意广告",
+      "note": "本轮已打开文章。行业支出观察，缺少单平台可改字段，不升选题。"
+    },
+    {
+      "title": "OpenAI：Perplexity and Intelligence（11/22 研究/观点稿）",
+      "url": "https://openai.com/index/perplexity-and-intelligence/",
+      "source": "OpenAI",
+      "published_at": "2026-11-22T00:00:00Z",
+      "age_hours": 38.3,
+      "track": "🤖 AI 前沿",
+      "note": "本轮已打开官方页。研究评论，无卖家 30 分钟动作，不升选题。RSS 日期为 2026-11-22T00:00:00Z。"
+    },
+    {
+      "title": "AfterShip 博客：按 1000 个面单价格、承运人和 API 对比 7 个 ShipStation 替代方案",
+      "url": "https://www.aftership.com/blog/shipstation-alternatives-cost-comparison",
+      "source": "AfterShip",
+      "published_at": "2026-11-23T08:27:19Z",
+      "age_hours": 5.9,
+      "track": "🛒 AI 电商自动化",
+      "note": "窗内工具对比，接近多厂商名录，未升选题（硬拒parade 倾向）。"
+    }
+  ],
+  "topics": [
+    {
+      "title": "Google Ads 法国和意大利附加费 2027-01-01 起升到 3%：先按展示地查账单，不是按公司注册地",
+      "theme_slug": "google-ads-fr-it-surcharge-3pct-jan2027-1123",
+      "angle": "本轮已打开 PPC Land 11/22 原文，并打开 Google Ads 官方帮助页 answer/9750227。官方确认三处同一天生效：法国 Regulatory Operating Cost 2%→3%，意大利 2.5%→3%，土耳其 4.5%→2.25%。计费按广告展示地，不按公司注册地；帮助页写明 Google will not refund 因合法定向产生的这笔费用。附加费在出价之外，按国家出现在发票和 Transactions。30 分钟动作：1）打开账户 Transactions / 发票，看现在有没有 France / Italy / Turkey 附加费行，确认你是不是已经在给这些市场付费；2）若并不打算做法、意流量，检查活动地理定向和位置排除，避免「兴趣地点」把广告送到这些国家；3）若本来就做这两个市场，用现在的花费乘上新费率（法 +1.0 个百分点，相对现行 2% 是 +50%；意 +0.5 个百分点）估一版 2027 年 CAC，不要等 1 月才发现发票变了。不要写成「欧盟统一加税 3%」——西班牙已是 3%，英国/奥地利是另一套 DST，土耳其是下调。帮助页无更新日期；PPC Land 称 Payments 通知已发出，本轮未打开那封邮件本身。",
+      "heat": "high",
+      "format": "方法论",
+      "tracks": [
+        "🎨 创意广告",
+        "🛒 AI 电商自动化"
+      ],
+      "hooks": [
+        "X 刚发布/更新了，对你意味着三件事"
+      ],
+      "tags": [
+        "商家数字",
+        "平台可改字段"
+      ],
+      "admission": "b+c",
+      "reasoning": "命中 Admission (b)(c)：有可归因数字（法 2%→3%、意 2.5%→3%、土 4.5%→2.25%）且改变的是发票行与地理定向。platform_family: Google（今日 1/2）。非 MCP、非 D4。官方页已打开，不是只转述 PPC Land。未复用昨日 sale_price / Shorts EVC slug。Bingge 评分≥70。"
+    },
+    {
+      "title": "Merchant Center 的 consumer_notice 最多 7 条：第 8 条会覆盖第 1 条，Prop 65 商品先核对顺序",
+      "theme_slug": "google-mc-consumer-notice-7-cap-eighth-overwrites-1123",
+      "angle": "本轮已打开 PPC Land 11/22 原文，并打开两份官方页。帮助页确认 consumer_notice 是可重复字段，最多 7 条，每条 notice_message ≤1000 字符，类型只能是 legal_disclaimer / safety_warning / prop_65。官方原句：提交 8 条时，第 8 条会覆盖第 1 条，剩下 2–8 条。UCP / AI checkout 里这些提示出现在可展开的 Product warning。必须并陈的口径冲突：帮助页 When to use 写 Optional for all products；UCP 开发者指南写，有监管警示要求的商品（例如加州 Prop 65）此项 mandatory。30 分钟动作：导出或打开含警示的 SKU，数每个商品的 consumer_notice 条数；超过 7 条的先按法律优先级重排，确保 Prop 65 / 安全警示不会落在会被覆盖的第一位；用 supplemental feed 提交，避免弄坏主 feed。不要写成「Google 强制所有商品都要写 7 条警告」，也别忽略两份官方页的 optional / mandatory 分歧。",
+      "heat": "high",
+      "format": "教程",
+      "tracks": [
+        "🛒 AI 电商自动化",
+        "🎨 创意广告"
+      ],
+      "hooks": [
+        "大部分人用 X 的方式是错的"
+      ],
+      "tags": [
+        "平台可改字段"
+      ],
+      "admission": "a+c",
+      "reasoning": "命中 Admission (a)(c)：consumer_notice / notice_type / notice_message 是可改字段，30 分钟可导出核对条数和顺序；第 8 条覆盖第 1 条是官方写明的行为。platform_family: Google（今日 2/2，已满）。Google-Agent 爬虫指南、Practical Ecommerce AI 访问检查因此只留 must_reads。与昨日 sale_price 30 天提示不是同一字段。Bingge 评分≥70。"
+    },
+    {
+      "title": "Amazon Attribution 加 ASIN 据报会重述过去 28 天：黑五前先导出报表并核对后台说明",
+      "theme_slug": "amazon-attribution-asin-restate-28-day-1123",
+      "angle": "本轮已打开 PPC Land 11/22 原文。它摘录的帮助页原句是：新 ASIN 批准要 4–7 个工作日；一旦批准，过去 28 天的 historical data 会自动 restated，corrections 在约 3 周内处理。PPC Land 自己也写：页没有说明被重述的是销量、归因转化还是别的指标；Updated on 11/21 只是编辑日期。本轮打开其引用的 Amazon Ads 帮助页时正文为空，所以角度里所有帮助页原句都标明是「PPC Land 摘录」，不是我直接读到的官方正文。30 分钟动作：若黑五要看站外投放（Google / Meta 等）在 Amazon 站内的归因，先导出当前 Attribution 报表并留存；提交前先在自己的后台核对帮助说明，不能仅凭二手摘录暂停必要的商品变更；若后台确认同一重述规则，再评估 BFCM 报表稳定性；若必须加，记下提交日，不要用批准后三周内的报表做对账或客户汇报。不要写成「Amazon 会清空你所有历史」，原文只说重述过去 28 天。",
+      "heat": "high",
+      "format": "方法论",
+      "tracks": [
+        "🛒 AI 电商自动化",
+        "🎨 创意广告"
+      ],
+      "hooks": [
+        "X 刚发布/更新了，对你意味着三件事"
+      ],
+      "tags": [
+        "商家数字"
+      ],
+      "admission": "a+c",
+      "reasoning": "命中 Admission (a)(c)：品牌 ASIN 列表是可提交的变更，会改变测量口径，黑五前 30 分钟可先导出再决定是否提交。platform_family: Amazon（今日 1/2）。官方帮助页正文未能打开，已在 angle 写明，不把未读原文写成已核。未复用昨日退款对账或 ShipBob 断货预测 slug。Bingge 评分≥70。 来源置信度：中；需登录后台复核后再写成确定性规则，当前为条件性操作候选。"
+    },
+    {
+      "title": "Amazon Brand Store 新建页据报会先弹出 Builder Agent：先找退出入口，并核对 All Deals 是否自动填折扣商品",
+      "theme_slug": "amazon-brand-store-builder-agent-all-deals-1123",
+      "angle": "本轮已打开 PPC Land 11/22 原文。帮助页（PPC Land 称更新于 11/11）把 Brand Store Builder Agent 放在 Add page 的默认路径上：点 Add page 会先打开 agent 窗口，可选 6 条预写 prompt 或自己写指令；生成后仍要人工 Save、编辑、Publish。退出方式是右上角「Add page without AI assistance」或左侧 X。另一条限制：可以任何语言跟 agent 聊，但页面按该 marketplace 主语言生成。审核可能要 3 个工作日，黑五前临时改页要算上这段等待。同一组帮助页（更新戳 11/21）还写 All Deals 标签页会按三个主题自动填最多 30 个折扣商品，品牌可以关掉或换成自己的 deals 页——旺季若不想让平台自动挑选折扣货盘，这是 30 分钟内能查的开关。本轮打开 Amazon Ads 帮助页时正文为空，以上步骤与限额均来自 PPC Land 对帮助页的摘录，不是直接读到的官方正文。这与 11/19 的 Product Selector 测验限额（50 个 ASIN / 4 题）不是同一功能，不复用那条 slug。 在登录后台看到同一入口之前，不要把「点 Add page 必出 Agent」写成已经确认的全量默认路径。",
+      "heat": "medium",
+      "format": "教程",
+      "tracks": [
+        "🎨 创意广告",
+        "🛒 AI 电商自动化"
+      ],
+      "hooks": [
+        "把 X 和 Y 连起来看"
+      ],
+      "tags": [
+        "平台可改字段"
+      ],
+      "admission": "a",
+      "reasoning": "命中 Admission (a)：Store builder 的退出路径和 All Deals 自动填充是 30 分钟可检查的后台动作，尤其在黑五周。platform_family: Amazon（今日 2/2，已满）。官方帮助页正文未能打开，已写明。与 11/19 amazon-brand-store-product-selector-quiz-limits-1118 不同功能，属新角度。未为凑满 5 条再加弱题。Bingge 评分≥70。 来源置信度：中；需登录后台复核后再写成确定性规则，当前为条件性操作候选。"
+    }
+  ],
+  "drafts": [
+    {
+      "text": "Google will raise the Regulatory Operating Cost on ads served in France and Italy to 3% on January 1, 2027.\n\nThat means three things.\n\nFirst, it follows where the ad is served, not where your company is registered. If you reach people in those countries, you pay it.\n\nSecond, it sits outside the bid. Look for a per-country line on the invoice or in Transactions.\n\nThird, Google's help page says it will not refund charges that came from legitimate targeting. If you do not intend to serve France or Italy, check location settings now. If you do, model the new rate into 2027 CAC: France moves from 2% to 3%, Italy from 2.5% to 3%. Turkey, on the same date, falls from 4.5% to 2.25%.\n\nSource: Google Ads help page on jurisdiction-specific surcharges, via PPC Land (Nov 22).",
+      "format": "新闻翻译",
+      "tags": [
+        "🎨 创意广告",
+        "🛒 AI 电商自动化"
+      ],
+      "hook_pattern": "X 刚发布/更新了，对你意味着三件事",
+      "reasoning": "用 longterm 元 Hook「X 刚发布/更新了，对你意味着三件事」。英文草稿（@jojogh_007 发英文）。数字均来自本轮打开的官方帮助页。不用震惊体，无感叹号。Typefully 不可用，无本周 winning/failing hooks，未使用失灵模式。"
+    },
+    {
+      "text": "Most people will treat Google's new consumer_notice field as a place to dump every legal line they have.\n\nThat is the wrong way to use it.\n\nMerchant Center allows up to 7 notices per product, each up to 1,000 characters, typed as legal_disclaimer, safety_warning, or prop_65. If you submit 8, the official help page says the 8th overwrites the 1st, leaving notices 2 through 8.\n\nThere is also a wording split you should not paper over: the help page says the field is optional for all products; Google's UCP Merchant Center guide says it is mandatory for items with regulatory warning requirements, such as California Prop 65.\n\nA 30-minute check: export the SKUs that carry warnings, count the notices, and put the legally required ones where they cannot be overwritten.\n\nSources: Google Merchant Center help on consumer_notice, and the UCP merchant-center guide.",
+      "format": "反常识",
+      "tags": [
+        "🛒 AI 电商自动化",
+        "🎨 创意广告"
+      ],
+      "hook_pattern": "大部分人用 X 的方式是错的",
+      "reasoning": "用 longterm 元 Hook「大部分人用 X 的方式是错的」。英文草稿。并陈 optional/mandatory 分歧，不编造执行后果。无感叹号。补的是可改字段，不是工具安利。"
+    },
+    {
+      "text": "If you add ASINs to an Amazon Attribution brand this week, you may not get a stable Black Friday number until mid-December.\n\nPPC Land quotes Amazon's help page: new ASINs take 4 to 7 business days to approve, then Amazon restates the previous 28 days of historical data, with corrections running about three weeks. The page does not say whether that restatement is sales, attributed conversions, or both.\n\nI could not load the Amazon Ads help page body in this run (the official URL returned an empty document), so this is second-hand from PPC Land's excerpt, not a page I read directly.\n\nThe practical move is simple: export today's Attribution reports first, then check the help text in your own account before changing the ASIN list. Do not pause a necessary catalog update on a secondary-source excerpt alone.\n\nSource: PPC Land, Nov 22.",
+      "format": "实战提醒",
+      "tags": [
+        "🛒 AI 电商自动化",
+        "🎨 创意广告"
+      ],
+      "hook_pattern": "先给结论和方法",
+      "reasoning": "用实战派「先给结论和方法」，补本周相对偏弱的测量/对账动作（underserved 不是创意广告，而是要诚实标注官方页未打开）。英文草稿。明确写明 Amazon 帮助页正文未能加载，不假装已核原文。无感叹号。未引用市场数据作投资建议。"
+    }
+  ],
+  "cross_opportunities": [
+    {
+      "label": "Agent 结账 × 法律提示字段",
+      "text": "同一天出现两条「agent 开始替人下单」的信号：Google UCP / AI checkout 用 consumer_notice 在付款前展示法律和安全提示（最多 7 条，第 8 条覆盖第 1 条）；Walmart 11/24 上线 Agent Gateway 并接入 Meta Muse，用 Agent Profiles 设消费限额。写的时候动作要落在卖家能改的字段或开关上，不要把消费者侧 Muse 购物写成已经可在 Amazon/Shopify 后台配置的功能。"
+    },
+    {
+      "label": "广告平台自动化 × 旺季测量稳定性",
+      "text": "Amazon 一边把 Brand Store 新建页默认推向 Builder Agent，一边在 Attribution 里写明加 ASIN 会重述 28 天数据。黑五周同时改页面和改品牌目录，创意产出变快，报表却可能晃到 12 月。选题上应把「先导出再改」写进动作，而不是只介绍 agent 能生成页面。"
+    }
+  ],
+  "recent_performance": {
+    "period": "2026-11-16 ~ 2026-11-23",
+    "total_posts": null,
+    "median_impressions": null,
+    "top_posts": [],
+    "covered_topics": [
+      "google-mc-sale-price-30-day-annotation-1122",
+      "youtube-shorts-evc-social-taps-count-1122",
+      "grok-bot-amazon-refund-audit-sop-1122",
+      "peak-sku-stockout-forecast-prompt-28-day-buffer-1122",
+      "shopify-flow-field-updated-triggers-1121",
+      "amazon-live-shopping-beta-50mbps-10-products-1121",
+      "shopify-ip-allowlist-enforcement-dec1-requirements-1120",
+      "amazon-dva-plus-cross-publisher-frequency-cap-1119",
+      "google-ads-experiments-80-vs-95-confidence-budget-split-1119",
+      "cbp-foreign-ior-ctpat-broker-requirement-1119",
+      "shopify-admin-custom-apps-dev-dashboard-ip-logs-1119",
+      "shopify-draft-order-discount-permission-1118",
+      "amazon-brand-store-product-selector-quiz-limits-1118",
+      "microsoft-ads-bidding-model-upgrade-ecpc-to-tpa-1118",
+      "grok-bot-1-2-3-tool-permissions-routine-reconnect-1119"
+    ],
+    "underserved_tracks": [
+      "🤖 AI 前沿"
+    ],
+    "winning_hooks": [],
+    "failing_hooks": [],
+    "insights": "Typefully 仍不可用，本周发布表现无法用曝光验证；草稿回退到 longterm 元 Hook，并按账号要求写成英文。今日 4 条选题：Google 2（满额）、Amazon 2（满额），D4=0，没有为凑满 5 条再加弱题。AI 前沿有 Google-Agent 官方指南、Walmart×Muse、Amazon 购买 Decart 技术协议和 Import AI 482，但缺 30 分钟卖家动作或属融资/技术收购，只进 must_reads。x.ai/changelog/bot 仍为 11/18 v1.2.3，昨日退款对账不复用为今日脊柱。"
+  },
+  "published_this_week": {
+    "error": "Typefully MCP 不可用，跳过 Step 1–3 学习阶段",
+    "posts": [],
+    "period": "2026-11-16 ~ 2026-11-23"
+  },
+  "market_snapshot": {
+    "timestamp": "2026-11-23T14:14:14.742Z",
+    "source": "brief.day1global.xyz",
+    "stocks": {
+      "VOO": {
+        "price": 635.54,
+        "changePercent": -3.4148,
+        "marketState": "closed"
+      },
+      "VTI": {
+        "price": 340.02,
+        "changePercent": -3.5158,
+        "marketState": "closed"
+      },
+      "QQQ": {
+        "price": 608.45,
+        "changePercent": -5.6725,
+        "marketState": "closed"
+      },
+      "QQQM": {
+        "price": 251.23,
+        "changePercent": -5.4246,
+        "marketState": "closed"
+      },
+      "NVDA": {
+        "price": 125.53,
+        "changePercent": -14.0088,
+        "marketState": "closed"
+      },
+      "TSLA": {
+        "price": 345.82,
+        "changePercent": -7.636,
+        "marketState": "closed"
+      },
+      "GOOG": {
+        "price": 264,
+        "changePercent": -2.5902,
+        "marketState": "closed"
+      },
+      "RKLB": {
+        "price": 45.42,
+        "changePercent": -10.9237,
+        "marketState": "closed"
+      },
+      "CRCL": {
+        "price": 47.51,
+        "changePercent": -8.4233,
+        "marketState": "closed"
+      },
+      "HOOD": {
+        "price": 62.17,
+        "changePercent": -9.4392,
+        "marketState": "closed"
+      },
+      "COIN": {
+        "price": 101.97,
+        "changePercent": -6.3378,
+        "marketState": "closed"
+      },
+      "TEM": {
+        "price": 54.04,
+        "changePercent": -9.3441,
+        "marketState": "closed"
+      },
+      "GLD": {
+        "price": 322.87,
+        "changePercent": -3.6727,
+        "marketState": "closed"
+      },
+      "SMH": {
+        "price": 400.06,
+        "changePercent": -10.5971,
+        "marketState": "closed"
+      },
+      "TSM": {
+        "price": 318.71,
+        "changePercent": -9.4805,
+        "marketState": "closed"
+      },
+      "STRC": {
+        "price": 93.6,
+        "changePercent": -1.1198,
+        "marketState": "closed"
+      },
+      "PL": {
+        "price": 10.53,
+        "changePercent": -9.4583,
+        "marketState": "closed"
+      },
+      "XBI": {
+        "price": 140.18,
+        "changePercent": -2.7338,
+        "marketState": "closed"
+      },
+      "NET": {
+        "price": 274.96,
+        "changePercent": -9.4573,
+        "marketState": "closed"
+      },
+      "SHOP": {
+        "price": 123.72,
+        "changePercent": -6.2514,
+        "marketState": "closed"
+      },
+      "0700.HK": {
+        "price": 344,
+        "changePercent": 0,
+        "currency": "HKD",
+        "marketState": "unknown"
+      }
+    },
+    "crypto": {
+      "BTC": {
+        "price": 63325.7,
+        "change24h": 4.247214206108416
+      },
+      "ETH": {
+        "price": 1800,
+        "change24h": 5.424685775867111
+      },
+      "SOL": {
+        "price": 76.12,
+        "change24h": 8.18646958499148
+      },
+      "BNB": {
+        "price": 575.81,
+        "change24h": 3.4457359466791133
+      },
+      "XAUT": {
+        "price": 3656.4,
+        "change24h": 3.017496407742369
+      },
+      "HYPE": {
+        "price": 67.133,
+        "change24h": 6.855442014452608
+      }
+    },
+    "indices": {
+      "sp500": {
+        "price": 6910.39,
+        "changePercent": -3.69908428711382
+      },
+      "vix": {
+        "price": 35.08,
+        "changePercent": 23.347398030942323
+      },
+      "gold": {
+        "price": 3656.4,
+        "changePercent": 3.017496407742369
+      },
+      "crudeOil": {
+        "price": 82.08,
+        "changePercent": -1.5945330296127542
+      },
+      "dxy": {
+        "price": 104.145,
+        "changePercent": 0.32560424634176294
+      }
+    },
+    "sentiment": {
+      "cryptoFearGreed": 8,
+      "cryptoFearGreedLabel": "Extreme fear",
+      "cryptoFearGreedPrev": 8,
+      "cryptoFearGreedChange": 0,
+      "cnnFearGreed": 11,
+      "cnnFearGreedLabel": "extreme fear"
+    },
+    "btcMetrics": {
+      "ahr999": 0.28,
+      "sthSopr": 0.996,
+      "lthSopr": 0.851,
+      "lthSupplyPercent": 81.1,
+      "wma200Price": 68140,
+      "wma200Multiplier": 0.9,
+      "nupl": 0.13,
+      "lthMvrv": 1.26,
+      "etfFlowUsd": -669200000,
+      "etfFlowDays": [
+        -669200000,
+        -582300000,
+        -306500000,
+        -239900000,
+        7900000,
+        -185400000
+      ],
+      "fundingRate": 0.007321,
+      "longShortRatio": 2.25,
+      "weeklyRsi": 38.2,
+      "volume24h": 492147515.1056291,
+      "volumeChangePercent": -22.4,
+      "ma120Price": 75374,
+      "ma200Price": 72301,
+      "ma365Price": 75360,
+      "ma365Ratio": 0.84,
+      "ema300WeekPrice": 60006
+    },
+    "btcScore": {
+      "score": 24.1,
+      "level": "恐慌",
+      "suggestion": "市场低估，适合分批建仓或加仓",
+      "dailyScore": 7.3,
+      "weeklyScore": 16.8,
+      "btcPrice": 63248.3
+    },
+    "note": "周一 9am America/New_York 快照，抓取约 9:17am ET（2026-11-23T14:17Z 刷新）。美股字段当时仍为 marketState=closed：NVDA 125.53（-14.01%）、SHOP 123.72（-6.25%）与周日快照相同，应视为周五收盘/开盘前，不是周一开盘价。BTC≈63326（24h +4.25%）、Crypto F&G=8（Extreme fear，与昨日相同）、CNN F&G=11（昨日快照为 10）、btcScore=24.1、ETF 每日净流入约 -6.692 亿（btc-score 指标）。btcScore.suggestion 只作快照字段保留，不写入草稿或建议，也不作为投资建议。"
+  },
+  "suggestions": {
+    "info_sources": {
+      "promote": [
+        {
+          "account": "PPC Land",
+          "reason": "今日 4 条选题脊柱中 4 条由头都来自 PPC Land 11/22 夜间稿，且 Google 两条都能指回已打开的官方帮助页/开发者文档；Amazon 两条官方帮助页正文未能加载，但仍是窗内唯一把帮助页原句拆出来的来源。",
+          "confidence": "high"
+        },
+        {
+          "account": "Google 官方帮助页 / 开发者文档（Ads surcharges、consumer_notice、UCP Merchant Center、Google-Agent）",
+          "reason": "本轮打开后直接确认了费率、7 条上限与第 8 条覆盖第 1 条、以及 optional/mandatory 口径分歧；比只转述二手稿更稳。",
+          "confidence": "high"
+        }
+      ],
+      "demote": [
+        {
+          "account": "The Batch / Anthropic / xAI / Cursor / Runway RSS",
+          "reason": "今日继续 404（与 11/20–11/22 相同），无法作为 must_read 采集源。x.ai changelog 只能靠打开官方页。",
+          "confidence": "high"
+        },
+        {
+          "account": "Reddit RSS（r/shopify、r/PPC、r/n8n、r/AI_Agents、r/mcp、r/TikTokAds、r/AI_UGC_Marketing、r/FacebookAds）",
+          "reason": "今日仍为 429 或 404，Reddit 通道 0 条。",
+          "confidence": "medium"
+        },
+        {
+          "account": "Amazon Ads 官方帮助页（advertising.amazon.com/help/…）",
+          "reason": "本轮对多条帮助页 URL 的抓取只返回约 6 字符空正文（疑似前端渲染），不能作为可核原文的采集通道；What's New / Blog 页面同样很难抽出带日期的条目。",
+          "confidence": "medium"
+        }
+      ],
+      "add": [
+        {
+          "account": "Google Ads Help: Jurisdiction-specific surcharges (answer/9750227)",
+          "reason": "今日成本结构选题的官方页，建议列入官方页必读清单。",
+          "confidence": "high"
+        },
+        {
+          "account": "Merchant Center Help: consumer_notice + UCP Merchant Center guide",
+          "reason": "今日可改字段选题的两份官方出处，且口径不一致，需要并列维护。",
+          "confidence": "high"
+        },
+        {
+          "account": "developers.google.com crawling docs（Google-Agent / Allow Google-Agent traffic）",
+          "reason": "今日窗内新官方指南，独立站/被 agent 访问的商品页会持续相关。",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "topic_library": {
+      "archive": [],
+      "add": [
+        {
+          "topic": "广告司法管辖区附加费 / Regulatory Operating Cost（按展示地计费）",
+          "reason": "出现带官方费率表和发票行的成本结构题；常青库缺「按展示地加收」位。",
+          "confidence": "medium"
+        },
+        {
+          "topic": "Checkout 法律提示字段（consumer_notice、Prop 65、UCP/AI checkout）",
+          "reason": "平台新增可改字段且有条数上限和覆盖规则，agent 结账会把它变成运营动作。",
+          "confidence": "high"
+        }
+      ]
+    },
+    "positioning_drift": []
+  },
+  "collection": {
+    "rss_feeds_ok": 44,
+    "rss_feeds_error": 60,
+    "rss_entries_parsed": 7094,
+    "rss_48h_unique_urls": 147,
+    "index_pages_ok": 12,
+    "index_pages_error": 3,
+    "article_and_help_fetches": 26,
+    "amazon_help_empty_bodies": 3,
+    "x_calls": 5,
+    "x_search_news_calls": 3,
+    "x_search_posts_all_calls": 2,
+    "x_returned_records": 105,
+    "raw_count_method": "147 RSS window URLs + 12 readable index pages + 26 article/help fetches + 105 X records = 290 collection inputs; includes overlap and 3 empty Amazon help bodies, not 290 verified independent events."
+  }
+}
