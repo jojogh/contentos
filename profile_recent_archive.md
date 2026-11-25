@@ -2038,3 +2038,18 @@ grokbot-cold-email-ops-sop-1102 · amazon-enhanced-safety-insurance-dayof-compli
 - 本期简报产出：must_reads **20** / also **13** / 选题 **5 FINAL** / 草稿 3 / D4 **0**
 - 赛道：🛒 Shopify 会话机器人过滤 + token 过期可选开关 + GSC API 品牌拆分；🎨 健康宣称 24 个月 + ThruPlay 6 秒 + ValueTrack 拆 AI Max + DVA 口径基线；🤖 Import AI 481 + OpenAI×LVMH + SEJ ChatGPT Ads 早期数据（无 D4 脊柱）
 - **主线：** Monday late on-demand refresh · 覆盖 9am 稿 · **no-BDC** · **post-Researchy info_sources**；Phase1 无 analytics；Bingge 评分≥70 topics，不跑 Writer 全流水线。
+
+## 2026-11-17（tuesday-9am-ET-refresh-no-BDC-post-researchy · America/New_York）
+
+- **选题主轴：** Amazon Review Requests 支持页写明触达窗口是妥投后 7 到 150 天、不能手工定向（官方产品页未写窗口；计费口径与 CPC 指标尚未对齐）+ Amazon 禁 Best/Top price 等超级用语，站内数字价格须由 Amazon 动态渲染 + DVA+ Streaming TV 预算按承诺花费加最多五类费用计算 + 第三方测量一项研究只能锁定一家供应商、启动后不能换、须在活动开始前建好 + Grok Bot 被第三方报道称会后台访问已连接应用，先在 bot capabilities 里找 proactive messages（官方 changelog 仍为 11/11 v1.0.1）。今日 D4=1。
+- **燃料：** 无 11-17 scout.json → 9am 新鲜 RSS（50 feeds ok / 63 err / 窗内 303 个去重 URL，另加官方页与 WebSearch/WebFetch 补到约 313 条原始素材）；Day1 为周二开盘前快照 BTC spot≈65023 / F&G=13 Extreme fear / btcScore=26 / ETF≈+790万（昨晚快照约 -0.686 亿）；NVDA 156.14（-4.12%）为周一收盘，不是周二开盘；**Channel D 停用**；冷邮 archive 跳过；**info_sources=Researchy batch1+2**。本轮未做单独的 X search 主通道。
+- **相对 11-16 晚间稿：** 禁复用五 spines（Shopify 购物车/结账机器人识别 / {search_term_matchtype} / DVA 2027-01-01 展示口径 / 健康背书 24 个月 / ThruPlay 6 秒）及其 topic slug；上述仍在 48h 的留 must_read。AdSense GPC/RDP 对路易斯安那和佛蒙特的起始日是今天，只作 must_read。日历提醒：黑五周 11/19–11/30、公开 App allowlist 11/20。
+- **跳过：** Typefully/Exa；BDC；The Batch RSS 404；Amazon Ads 官方博客 RSS 404；xAI/Anthropic/Cursor RSS 404；Grok 官方 changelog 无窗内新条目（仍为 11/11 v1.0.1）；Writer 全流水线；未自动发帖 / 无 xhs·x·wechat notify；clone 落后 origin 25 → vault-only、无 push。
+- **建议：** promote PPC Land / Ars Technica / Google AdSense Help+Search Central；add Review Requests、定价宣称、Streaming TV 三份 Amazon Ads Support Center 页（后两份本轮未独立打开原文）；demote The Batch RSS、Amazon Ads 官方博客 RSS、xAI/Anthropic/Cursor RSS；channel_d: disabled_by_alex_2026-11-03；cold_email archived。
+
+### 概览
+
+- 本周发布量 / 总曝光 / 单推中位数 / 单推最高：**全部待补 —— Typefully跳过**
+- 本期简报产出：must_reads **20** / also **15** / 选题 **5 FINAL** / 草稿 3 / D4 **1**
+- 赛道：🛒 Review Requests 7–150 天窗口 + Shopify 机器人识别/token 过期仍留 must_read；🎨 价格超级用语 + STV 承诺加费用 + 3P 测量锁定；🤖 Grok Bot proactive messages（第三方报道，官方未证实）
+- **主线：** Tuesday 9am refresh · **no-BDC** · **post-Researchy info_sources**；无早稿；Phase1 无 analytics；Bingge 评分≥70 topics，不跑 Writer 全流水线。
