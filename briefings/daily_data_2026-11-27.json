@@ -1,0 +1,615 @@
+{
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27T14:26:00Z",
+  "raw_material_count": 442,
+  "publishing_note": "今日是黑五（America/New_York），黑五周 11/19–11/30 的第九天，周一 11/30 是 Cyber Monday。市场快照抓取于约 9:14am ET（2026-11-27T14:14:12.849163+00:00），其时美股字段均为 marketState=closed；NVDA 149.3 / SHOP 133.4 应视为周三（11/25）收盘，不是周五开盘价（周四感恩节休市）。BTC 约 61506（24h +1.07%），Crypto F&G=10（Extreme fear），CNN F&G=20，btcScore=24.8，ETF 每日净流入约 -453000000。优先发 Google Ads 付款到账窗口（官方帮助页 9436113 已核），其次 iPullRank 对 AI 购物答案里 best-of 列表的研究（2025 年模式，带限制条件）。Google 家族今日 1/2，未为凑满再塞 Search Insights 或昨日 AI Max / local promotions 脊柱。Shopify changelog 11/26–11/27 无新帖；Grok Bot changelog 仍为 v1.3.0，D4=0，不复用昨日脊柱。Channel D 停用。不要自动发帖。",
+  "must_reads": [
+    {
+      "title": "Google Ads 帮助页《About payment processing times》现将韩国预付合作方写为 Toss（previously LGU+），并给出各付款方式到账窗口",
+      "event_id": "google-ads-payment-processing-times-toss-lgu-1127",
+      "summary": "本轮已打开官方帮助页 support.google.com/google-ads/answer/9436113。页面标题为 About payment processing times。Toss（previously LGU+）一节写明：预付账户可通过本地信用卡、线上汇款或虚拟账户经 Toss 付款，You should see your payment credited to your Google Ads account within 3 business days；超过 3 个工作日未见到账可联系支持。同行还写：Bank account（direct debit）It can take upto 5 business days（原文拼写）；阿根廷 Banelco / PagoMisCuentas.com 通常 5 个工作日；Money Transfer 通常 5 个工作日、个别情况可到 30 天；NetBanking 通常 24 小时、有时 2–5 个工作日；信用卡通常立即、最多 24 小时。PPC Times 写其于 11/27 监测到该页改句，并称 Toss 预付此前写的是 24 小时——这一「旧句」对比来自 PPC Times，本轮没有打开历史版本，不能当成官方自己宣布的对照。帮助页本身没有上次编辑时间戳。（发布时间近似：监测日为 11/27）",
+      "url": "https://support.google.com/google-ads/answer/9436113?hl=en",
+      "track": "🎨 创意广告",
+      "source": "Google Ads Help",
+      "published_at": "2026-11-27T12:00:00Z",
+      "matched_topic": "广告账户充值与到账窗口",
+      "supporting": [
+        {
+          "angle": "PPC Times 11/27：监测到帮助页改句，并将合作方从 LGU+ 改为 Toss，同时记录银行转账等窗口变化",
+          "url": "https://ppctimes.com/news/google-ads-payment-processing-times-toss-lgu"
+        }
+      ],
+      "age_hours": 2
+    },
+    {
+      "title": "iPullRank：黑五周期间，AI 购物答案里玩具品类的 best-of 列表链接占比曾从 46% 升到 65%，品牌站没有跟着抬升",
+      "event_id": "ipullrank-ai-shopping-answers-bestof-lists-bf-1125",
+      "summary": "PPC Land 11/25 转述 iPullRank 11/24 报告《How Black Friday Changes AI Shopping Answers》（Talya Camacho 等）。他们用 Profound 追踪 416 条购物提问，从 2024-11-14 到 2026-11-10。对 2025 年黑五周：在 ChatGPT 与 Google 三款 AI 产品的答案里，玩具相关链接中出版方 best-of 列表从 46% 升到 65%，超级商店相关从 62% 升到 78%；品牌官网链接没有获得额外提升，答案里被点名的品牌也几乎不变。报告写明无法证明这对点击或销售有影响。2026 年的数据要到 Cyber Monday 之后才公布；文中还说 ChatGPT 今年大约提前两周开始转向这类列表。本轮打开的是 PPC Land 长文，不是 Profound 原始数据后台。",
+      "url": "https://ppc.land/best-of-lists-climb-to-65-of-ai-black-friday-toy-links-ipullrank-finds/",
+      "track": "🛒 AI 电商自动化",
+      "source": "PPC Land / iPullRank",
+      "published_at": "2026-11-25T19:43:35Z",
+      "matched_topic": "AI 购物答案可见度",
+      "age_hours": 43
+    },
+    {
+      "title": "Amazon Ads：MCP Server 将于 12/8 起可选支持 MCP 协议 2026-07-28，旧版本继续可用、无关闭日期",
+      "event_id": "amazon-ads-mcp-protocol-2026-07-28-dec8-1125",
+      "summary": "PPC Land 11/25 报道：Amazon Ads advanced tools release notes 置顶条目写明，2026-12-08 起 Amazon Ads MCP Server 将接受 MCP 协议版本 2026-07-28，且为 optional。文章称该条在 11/23 已出现在 release notes feed。现有连接、地址、工具和登录保持不变，旧协议版本没有结束日期，Agent 搭建方不必在当天采取行动。本轮尝试打开 advertising.amazon.com 的 release notes 页返回 404，以上细节来自已打开的 PPC Land 文章，不是 Amazon 原文页。不要写成强制升级或 12/8 会断连。",
+      "url": "https://ppc.land/ai-agents-linked-to-amazon-ads-get-an-optional-upgrade-on-december-8/",
+      "track": "🛒 AI 电商自动化",
+      "source": "PPC Land",
+      "published_at": "2026-11-25T20:34:12Z",
+      "matched_topic": "Amazon Ads MCP",
+      "age_hours": 42
+    },
+    {
+      "title": "Search Engine Roundtable：Bing AI Mode 里的广告更难与自然结果区分开",
+      "event_id": "bing-ai-mode-ads-blending-organic-1127",
+      "summary": "Barry Schwartz 11/27 7:51am ET 发文。他引用 Khushal Bherwani 在 Search Engine Watch 贴出的截图，称 Bing AI Mode 结果里的广告不再带原来的描边，看起来更混进 AI 回答。文章认为这与微软长期以来弱化广告与自然结果边界的做法一致，并提到 Copilot Search 也可能走类似方向。本轮已打开 SER 原文。这是观察稿，不是微软帮助页改句，也没有给出广告主可改的新开关。",
+      "url": "https://www.seroundtable.com/bing-ai-mode-ads-differentiate-42625.html",
+      "track": "🎨 创意广告",
+      "source": "Search Engine Roundtable",
+      "published_at": "2026-11-27T12:51:00Z",
+      "matched_topic": "微软广告可见度",
+      "age_hours": 2
+    },
+    {
+      "title": "Search Engine Roundtable：Microsoft Advertising 的广告出现在 Copilot 里",
+      "event_id": "microsoft-advertising-ads-in-copilot-1127",
+      "summary": "SER 11/27 7:05am ET 发布《Copilot Has Ads From Microsoft Advertising》。与同日 Bing AI Mode 广告边界变淡是相邻观察，但由头不同：一条讲 AI Mode 结果里广告样式，一条讲 Copilot 界面开始带 Microsoft Advertising 的广告。本轮已打开该文页面。没有官方帮助页或生效日，也没有广告主必须改的字段。不要写成已在所有市场、所有账户默认打开。",
+      "url": "https://www.seroundtable.com/microsoft-advertising-ads-in-copilot-42629.html",
+      "track": "🎨 创意广告",
+      "source": "Search Engine Roundtable",
+      "published_at": "2026-11-27T12:05:00Z",
+      "matched_topic": "微软广告可见度",
+      "age_hours": 2
+    },
+    {
+      "title": "PPC Land：WebMD Ignite 为医院投放 ChatGPT 广告，但谁能进场仍由 OpenAI 决定",
+      "event_id": "chatgpt-ads-webmd-ignite-hospitals-openai-gates-1126",
+      "summary": "PPC Land 11/26 报道 WebMD Ignite 为医院体系提供 ChatGPT 广告托管路径，首个战役是一家学术医学中心的心脏护理广告。文章强调健康类广告仍受 OpenAI 美国健康行业规则约束，资格由 OpenAI 把关，不是代理自己能保证进场。本轮已打开该文。对普通跨境卖家不是可改字段，但是 ChatGPT Ads 品类准入的一个硬例子。",
+      "url": "https://ppc.land/webmd-ignite-runs-chatgpt-ads-for-hospitals-but-openai-decides-who-gets-in/",
+      "track": "🎨 创意广告",
+      "source": "PPC Land",
+      "published_at": "2026-11-26T19:56:05Z",
+      "matched_topic": "ChatGPT Ads 准入",
+      "age_hours": 18
+    },
+    {
+      "title": "The Neuron 11/27：OpenAI 纠正 GPT-6.2 计费错误；Anthropic Messages API 迁 Rust 的二手综述仍在流传",
+      "event_id": "neuron-1127-openai-gpt62-billing-anthropic-rust",
+      "summary": "The Neuron 11/27 早报开头写 OpenAI corrects a GPT-6.2 billing error，同时收录 Tencent 称可把 DeepSeek 处理能力提高最多 81%、Canada 把 AI compute fund 扩到 C$10 亿等条目。Anthropic 用 Rust 重写 Messages API、称 CPU 约降 70% 的说法，昨日已作为二手早报进延伸阅读，今日仍未见本轮打开的官方工程博文。GPT-6.2 计费纠错目前只有这份早报，未打开 OpenAI 官方公告，不能写成已核费用规则或退款范围。（The Neuron 页时间为 Nov 27, 2026）",
+      "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-27-2026/",
+      "track": "🤖 AI 前沿",
+      "source": "The Neuron",
+      "published_at": "2026-11-27T08:00:00Z",
+      "matched_topic": "模型与计费",
+      "age_hours": 6
+    },
+    {
+      "title": "Shopify changelog 在 11/26–11/27 没有新帖，最新仍是 11/25 的拒付四条",
+      "event_id": "shopify-changelog-no-new-posts-1127",
+      "summary": "本轮再次打开 changelog.shopify.com，列表在 November 25 的四条拒付更新之后没有 11/26 或 11/27 条目：Agentic 订单拒付证据、员工拒付通知、未授权拒付自动附支付验证、全原因 AI 书面答辩。昨日已把这组更新做成选题，今日不复用脊柱，只确认黑五当天仍没有更新的 changelog 由头。shopify.dev/changelog 可见的最近条目也不是面向卖家后台的 11/26–27 新能力。",
+      "url": "https://changelog.shopify.com/",
+      "track": "🛒 AI 电商自动化",
+      "source": "Shopify Changelog",
+      "published_at": "2026-11-25T17:00:00Z",
+      "matched_topic": "Shopify 拒付与 Agentic 证据",
+      "age_hours": 45
+    }
+  ],
+  "also_worth_reading": [
+    {
+      "title": "Merchant Center「Deal Ends」倒计时标已不再标 experimental；节日门槛（至 1/5）是至少 9 折、60 天低价、7 天内结束",
+      "summary": "AdShift 将这条记在 11/13，对应官方帮助页 About Deal Ends annotation（answer/17371375），本轮已打开。节日窗口（页上写到 1 月 5 日）要倒计时标，需要至少 10% off、过去 60 天最低有效价、结束日在 7 天内，且距该优惠上次 Deal Ends 标至少 60 天；非节日门槛是 5% off、15 天低价、15 天间隔。EEA+、印度、瑞士等地区排除。今天是黑五，有用，但登录日期在 48h 窗外，只作延伸参考，不占必读、不升选题。",
+      "url": "https://support.google.com/merchants/answer/17371375?hl=en",
+      "track": "🛒 AI 电商自动化",
+      "source": "Google Merchant Center Help / AdShift",
+      "published_at": "2026-11-13T00:00:00Z",
+      "note": "硬窗口外延伸参考；官方页已打开",
+      "age_hours": 350
+    },
+    {
+      "title": "TikTok Shop 美国站 BFCM：符合条件的节日订单退货可延至 2027-02-10",
+      "summary": "EasyTikTok 对美国卖家大学页的综述写明：美国 BFCM 2026 为 11/11–11/30 PT；符合条件的 11/11–12/31 订单，假期退货窗口可到 2027-02-10 23:59:59 PT；本地发货和跨境发货在指定日期带有额外处理时间；店铺要盯 SPS、Late Dispatch Rate≤20%、Account Health。该综述发布于 11/16、更新 11/17，已出 48h 必读窗。不要和欧盟 Pulse「退货可延至 2027-01-31」混用，那是另一市场。只作黑五当天的延伸核对清单。",
+      "url": "https://easytiktok.com/us/news/bfcm-2026-seller-updates",
+      "track": "🛒 AI 电商自动化",
+      "source": "EasyTikTok（转述官方 Seller University）",
+      "published_at": "2026-11-17T00:00:00Z",
+      "note": "硬窗口外延伸参考",
+      "age_hours": 254
+    },
+    {
+      "title": "Google Ads 促销抵扣到账等待由最多 35 天改为最多 42 天（昨日延伸，官方页对比来自 PPC Times）",
+      "summary": "PPC Times 仍把这条列在最新分析里。昨日已作延伸阅读。本轮未再把对应官方帮助页作为新事件打开复核。不要当成今天新改的规则。",
+      "url": "https://ppctimes.com/news/google-ads-promotional-credit-processing-42-days",
+      "track": "🎨 创意广告",
+      "source": "PPC Times",
+      "published_at": "2026-11-26T12:00:00Z",
+      "note": "延续昨日延伸，不升选题",
+      "age_hours": 26
+    },
+    {
+      "title": "Grok Bot 官方 changelog 仍为 11/24 的 v1.3.0，本轮未见更新版本",
+      "summary": "本轮打开 x.ai/changelog/bot，Latest 仍是 v1.3.0（November 24, 2026）：Slack 跨 Bot 回传、售罄商品 Notify me、组织域名限制、移动端 Buy now。昨日已以此做 D4 选题，今日不复用脊柱，只确认没有 v1.3.1 或更新条目。D4=0。",
+      "url": "https://x.ai/changelog/bot",
+      "track": "🤖 AI 前沿",
+      "source": "x.ai changelog/bot",
+      "published_at": "2026-11-24T14:45:00Z",
+      "note": "硬窗口外延伸参考；昨日选题不复用",
+      "age_hours": 72
+    },
+    {
+      "title": "Merchant Center local promotions 必须可在店内核销（昨日选题，今日不复用脊柱）",
+      "summary": "PPC Times 11/26 监测、官方 Promotions policies 已核。仍在讨论，但 theme_slug 昨日已用，今日只保留延伸。",
+      "url": "https://ppctimes.com/news/merchant-center-local-promotions-redeemable-in-store",
+      "track": "🛒 AI 电商自动化",
+      "source": "PPC Times / Merchant Center Help",
+      "published_at": "2026-11-26T11:42:58Z",
+      "note": "延续昨日选题，不复用脊柱",
+      "age_hours": 27
+    },
+    {
+      "title": "Google Ads AI Max for Search 的 text guidelines 与不必关闭即可用的控件（昨日选题，今日不复用脊柱）",
+      "summary": "官方帮助页与 PPC Times 11/26 监测已在昨日选题里打开。黑五当天仍值得按昨日清单抽查节日生成文案，但不另开新 slug。",
+      "url": "https://ppctimes.com/news/google-ads-ai-max-controls-without-turning-off",
+      "track": "🎨 创意广告",
+      "source": "PPC Times / Google Ads Help",
+      "published_at": "2026-11-26T11:41:59Z",
+      "note": "延续昨日选题，不复用脊柱",
+      "age_hours": 27
+    },
+    {
+      "title": "Byte Beaver / SocialBee：Meta 更新后的商业与生成式 AI 广告条款被无限期搁置，文称暂无需操作",
+      "summary": "Byte Beaver 11/27 简报（since Nov 26）写：原定 11/20 生效、覆盖 AI 创意、商品目录和自助广告的修订条款，在出版方反弹后被无限期暂停，没有新日期，No action required now。来源转引 SocialBee。本轮未打开 Meta 官方条款页，不能写成 Meta 自己宣布的政策原文，也不升选题。",
+      "url": "https://bytebeaver.ca/week/",
+      "track": "🎨 创意广告",
+      "source": "The Byte Beaver（转引 SocialBee）",
+      "published_at": "2026-11-26T00:00:00Z",
+      "note": "二手，未打开 Meta 官方页",
+      "age_hours": 38
+    },
+    {
+      "title": "Meta 在 Sales / Leads / Engagement / App Promotion 广告组去掉手动版位排除（自 11/22，已出必读窗）",
+      "summary": "Byte Beaver 11/27 仍把这条列为 act-now，但时间戳是 since Nov 22。账户级版位限制和 value rules 仍可用。已超出 48h 必读窗，只作延伸。本轮未打开 Meta 官方帮助页复核。",
+      "url": "https://bytebeaver.ca/week/",
+      "track": "🎨 创意广告",
+      "source": "The Byte Beaver（转引 Jon Loomer）",
+      "published_at": "2026-11-22T00:00:00Z",
+      "note": "硬窗口外延伸参考；未打开官方帮助页",
+      "age_hours": 134
+    },
+    {
+      "title": "Search Engine Roundtable 介绍 Google Ads Search Insights 工具，作者写明这不一定是新功能",
+      "summary": "Barry Schwartz 11/27 7:21am ET 首次报道该工具，同时写 I don't think this is super new，并引用 2026 年 6 月 Google Ads 博客。它显示搜索如何匹配广告、用户搜了什么、哪些文案/资产展示、落地到哪，以及 Rising/Emerging/Declining 查询。不是今天的新发布，不占选题。",
+      "url": "https://www.seroundtable.com/google-ads-search-insights-42626.html",
+      "track": "🎨 创意广告",
+      "source": "Search Engine Roundtable",
+      "published_at": "2026-11-27T12:21:00Z",
+      "note": "作者标明不一定是新功能",
+      "age_hours": 2
+    },
+    {
+      "title": "Search Engine Roundtable：有广告主在 Merchant Center 看到 Ads opportunities 带 new 标签",
+      "summary": "SER 11/27 7:11am ET 称部分广告主看到 Ads opportunities 的 new 标签。该功能面向代理的帮助页昨日已进必读，今日不把截图变化写成新功能发布，也不复用脊柱。",
+      "url": "https://www.seroundtable.com/google-merchant-center-ads-opportunities-42621.html",
+      "track": "🛒 AI 电商自动化",
+      "source": "Search Engine Roundtable",
+      "published_at": "2026-11-27T12:11:00Z",
+      "note": "延续昨日 Ads opportunities 必读，不升新选题",
+      "age_hours": 2
+    },
+    {
+      "title": "Amazon Ads 定价与宣传页限制零售广告里的数字价格/折扣表述（11 月中旬，已出窗）",
+      "summary": "Digital Influence 11/18 综述：11/13–16 期间 Amazon Ads 更新了 Pricing and Promotions 等页，零售流量上 Numerical prices or savings are only permitted when rendered dynamically in the ad by Amazon。同时还有健康/环保证据 24 个月窗口、以及有报道称 1/1 起按 render 计展示。登录日期在窗外，黑五当天只作延伸核对，不升选题。本轮打开了 Digital Influence 综述，未打开 Amazon 政策原文页。",
+      "url": "https://digitalinfluence.com/news/amazon-tightens-ad-claims-recounts-impressions",
+      "track": "🎨 创意广告",
+      "source": "Digital Influence",
+      "published_at": "2026-11-18T11:07:00Z",
+      "note": "硬窗口外延伸参考；未打开 Amazon 政策原文",
+      "age_hours": 219
+    },
+    {
+      "title": "Google 12 月核心更新仍为预告、尚未开滚（11/25 选题，已出 48h 必读窗）",
+      "summary": "SERoundtable 今日视频回顾仍在讲 12 月核心更新预告与 11 月核心更新结束。昨日已把预告做成选题，今日不复用。预告本身也已出 48h 必读窗。",
+      "url": "https://www.seroundtable.com/google-december-2026-core-update-42615.html",
+      "track": "🤖 AI 前沿",
+      "source": "Search Engine Roundtable",
+      "published_at": "2026-11-24T15:20:00Z",
+      "note": "硬窗口外延伸参考；不复用昨日脊柱",
+      "age_hours": 71
+    }
+  ],
+  "topics": [
+    {
+      "title": "Google Ads 付款到账窗口：黑五当天先核 Billing，Toss 预付按 3 个工作日计，不要默认当天到账",
+      "theme_slug": "google-ads-payment-processing-times-toss-billing-buffer-1127",
+      "angle": "本轮已打开官方帮助页 answer/9436113。黑五流量高峰时，如果账户靠预付或银行转账续费，到账窗口本身就能让广告停掉。官方当前措辞：Toss（previously LGU+）预付应在 3 个工作日内入账，超 3 个工作日未见到账再联系支持；银行账户/direct debit 最多约 5 个工作日（原文 upto）；电汇通常 5 个工作日、个别可到 30 天；NetBanking 通常 24 小时、有时 2–5 个工作日；信用卡通常立即、最多 24 小时。PPC Times 于 11/27 监测到该页改句，并称 Toss 旧句是 24 小时——旧句对比只归 PPC Times，本轮没有历史版本。30 分钟动作：1）打开 Ads 的 Billing summary，看付款方式、未入账付款和可用余额，是否撑得过今天和周末。2）主要靠 Toss、银行扣款或电汇的账户，准备一张能立即入账的信用卡作备用，或确认余额已覆盖高峰消耗。3）韩国账户确认付款页合作方已写 Toss，不再找 LGU+ 旧入口。4）超过官方窗口仍未到账，按帮助页带上付款凭证联系支持。不要把工作日窗口写成「一定今天下午到账」，也不要对所有付款方式宣传同一时限。",
+      "heat": "high",
+      "format": "方法论",
+      "tracks": [
+        "🎨 创意广告",
+        "🛒 AI 电商自动化"
+      ],
+      "hooks": [
+        "X 刚发布/更新了，对你意味着三件事"
+      ],
+      "tags": [
+        "平台可改字段",
+        "商家数字"
+      ],
+      "admission": "a+c",
+      "reasoning": "命中 Admission (a)(c)：Billing 里的付款方式、备用卡和余额是 30 分钟可改动作；官方帮助页给出的到账窗口是账户能继续投放的硬约束。platform_family: Google（今日 1/2，不满额，不另塞 Search Insights 或昨日 AI Max/local promotions 脊柱）。官方页已打开，不是只转述 PPC Times。未出现在昨日 topics[]。非 MCP、非 D4。黑五当天时效强。Bingge 评分≥70。"
+    },
+    {
+      "title": "AI 购物答案在黑五更认出版方 best-of 列表，不要指望品牌站自己被抬上去",
+      "theme_slug": "ipullrank-ai-shopping-answers-bestof-lists-brand-site-no-lift-1127",
+      "angle": "iPullRank 11/24 报告（PPC Land 11/25 转述，本轮已打开长文）看的是 2025 年黑五周，不是今天的 2026 直播数据；2026 数据要到 Cyber Monday 之后。但模式很具体：玩具提问的答案链接里，出版方 best-of 从 46% 升到 65%，超级商店相关从 62% 升到 78%，品牌官网没有获得额外引用，被点名的品牌几乎不变。作者写明不能证明这对点击或销售有影响。文中还说 ChatGPT 今年大约提前两周开始转向这类列表。30 分钟动作：1）用自己类目的「best Black Friday … deals」提问 ChatGPT / Google AI，记下答案实际链接的列表页，而不是只看品牌是否被点名。2）核对这些列表里的价格、库存和跟踪链接是否还是当前成交价。3）如果关键列表还在引用过期折扣或竞品，今天先走更正或下架申请，而不是加急改首页 SEO。不要把 2025 年的百分比写成 2026 年已复现的结果，也不要声称「做了列表就能涨销量」。",
+      "heat": "medium",
+      "format": "案例拆解",
+      "tracks": [
+        "🛒 AI 电商自动化",
+        "🎨 创意广告"
+      ],
+      "hooks": [
+        "大部分人用 X 的方式是错的"
+      ],
+      "tags": [
+        "商家数字"
+      ],
+      "admission": "a",
+      "reasoning": "命中 Admission (a)：30 分钟可执行的是核对自己类目在 AI 答案里出现的 deal list、核对价格/库存链接并申请更正。platform_family: 跨 AI 购物答案 / 内容分发，不计入 Google Ads 家族（主导不是 Google Ads 控件）。有 2025 年可归因数字，但作者否认销售因果，reasoning 里写明。未与昨日 theme_slug 冲突。非 MCP、非 D4。研究日期 11/24–11/25 仍在 48h 窗，刚好落在黑五当天用。Bingge 评分≥70。宁缺毋滥：不为此再凑第 3 条弱题。"
+    }
+  ],
+  "drafts": [
+    {
+      "text": "Google just updated the wording on its payment processing times help page, and it matters today because it is Black Friday.\n\nIf your Google Ads account is on prepay, the page now lists Toss (previously LGU+) and says those payments should land within 3 business days, not the same afternoon. Bank debit is up to 5 business days. A money transfer is typically 5, and in some cases up to 30.\n\nThree things to do before the day gets away from you:\n1) Open Billing summary and check the payment method, pending payments, and remaining balance.\n2) If you rely on Toss, bank transfer, or money transfer, have a credit card ready as backup, or confirm the balance already covers peak spend.\n3) If a payment is past the window on that page, contact support with proof of payment.\n\nPPC Times flagged the help-page change today. I opened the official page (answer/9436113). I have not seen the previous version, so I am not treating the old 24-hour wording as Google's own comparison.",
+      "format": "新闻翻译",
+      "tags": [
+        "🎨 创意广告",
+        "🛒 AI 电商自动化"
+      ],
+      "hook_pattern": "X 刚发布/更新了，对你意味着三件事",
+      "reasoning": "补位黑五当天最硬的官方控件/账单窗口。用了本期有效 Hook「X 刚发布/更新了，对你意味着三件事」。数字都来自已打开的官方帮助页，旧 24 小时对比明确归 PPC Times。与昨日 AI Max/local promotions 草稿不同。无震惊体，最多 0 个感叹号。"
+    },
+    {
+      "text": "Most people will spend Black Friday trying to get their own product page cited by ChatGPT or Google AI. Last year's data says that is the wrong place to look.\n\niPullRank tracked hundreds of shopping prompts through Black Friday week 2025. In toy-related answers, publisher best-of lists rose from 46% to 65% of the links. Superstore questions went from 62% to 78%. Brand websites did not get a lift, and the brands named barely moved. The study does not show an effect on clicks or sales, and the 2026 data is due after Cyber Monday.\n\nThe 30-minute job today is simpler: ask the same \"best Black Friday deals\" queries your category actually uses, write down which listicles the answers link to, and check whether those pages still have your live price and in-stock link.",
+      "format": "案例拆解",
+      "tags": [
+        "🛒 AI 电商自动化"
+      ],
+      "hook_pattern": "大部分人用 X 的方式是错的",
+      "reasoning": "用了本期有效 Hook「大部分人用 X 的方式是错的」。把 iPullRank 的数字和限制条件写清楚，避免把 2025 年模式写成 2026 年已证实复现。提供 30 分钟动作。与昨日 Shopify 拒付草稿不同。"
+    },
+    {
+      "text": "Today is Black Friday in the US, but this morning's market snapshot was taken around 9:14am ET, before the cash session opened. US stock fields are still marked closed: NVDA 149.30 and SHOP 133.40 are Wednesday's close, not Friday's open. Thursday was Thanksgiving, so there was no Thursday session.\n\nThe same snapshot shows BTC around 61,506 (24h +1.07%), Crypto Fear & Greed at 10, CNN Fear & Greed at 20, btcScore 24.8, and ETF daily net flow about -$453 million.\n\nI am not reading that as a trading signal. I am reading it next to the Google Ads billing window: if you top up with a bank transfer that can take several business days, do not assume a same-day credit will be there to catch a Friday traffic spike.",
+      "format": "跨领域连接",
+      "tags": [
+        "💰 加密×美股",
+        "🎨 创意广告"
+      ],
+      "hook_pattern": "把 X 和 Y 连起来看",
+      "reasoning": "按硬约束引用了 market_snapshot 的多个数据点（NVDA/SHOP 收盘、BTC、F&G、btcScore、ETF 流入），并写明这是开盘前、周三收盘，不是周五开盘价。明确不做投资建议，把市场数字接到付款窗口与投放风险。用了有效 Hook「把 X 和 Y 连起来看」。"
+    }
+  ],
+  "cross_opportunities": [
+    {
+      "label": "付款到账窗口 × 黑五消耗峰值",
+      "text": "官方帮助页把 Toss 预付写成 3 个工作日入账，银行扣款和电汇往往按 5 个工作日（电汇个别可到 30 天）。黑五当天若账户余额只够几个小时的消耗，还在等一笔未入账的银行转账，广告可能在高峰停掉。这和创意、出价无关，先核 Billing 和备用付款方式。"
+    },
+    {
+      "label": "AI 购物答案 × 出版方 deal list",
+      "text": "iPullRank 对 2025 年黑五周的追踪显示，AI 答案增加的是出版方 best-of 列表链接，不是品牌官网。今天更值得核对自己类目出现在哪些列表里、价格和库存链是否还对，而不是加急改品牌站 SEO。注意这是去年模式，2026 数据尚未公布，也没有销售因果。"
+    }
+  ],
+  "recent_performance": {
+    "period": "2026-11-20 ~ 2026-11-27",
+    "total_posts": 0,
+    "median_impressions": 0,
+    "top_posts": [],
+    "covered_topics": [
+      "google-ads-aimax-text-guidelines-controls-without-off-1126",
+      "google-mc-local-promotions-redeemable-instore-1126",
+      "shopify-chargeback-ai-defense-all-reasons-staff-notify-1126",
+      "grok-bot-1-3-0-restock-alerts-slack-handoff-domain-controls-1126",
+      "google-mc-sale-annotation-schema-markup-12-markets-1125",
+      "google-search-dec-core-preannounce-ranking-hub-genai-controls-1125",
+      "shopify-chatgpt-agentic-checkout-default-on-1124",
+      "google-back-button-hijacking-faq-ad-code-no-shield-1124",
+      "amazon-vs-nwd-removal-thanksgiving-1126-1124",
+      "google-ads-fr-it-surcharge-3pct-jan2027-1123",
+      "google-mc-consumer-notice-7-cap-eighth-overwrites-1123",
+      "amazon-attribution-asin-restate-28-day-1123",
+      "amazon-brand-store-builder-agent-all-deals-1123",
+      "google-mc-sale-price-30-day-annotation-1122",
+      "youtube-shorts-evc-social-taps-count-1122",
+      "grok-bot-amazon-refund-audit-sop-1122"
+    ],
+    "underserved_tracks": [],
+    "winning_hooks": [
+      "X 刚发布/更新了，对你意味着三件事",
+      "大部分人用 X 的方式是错的",
+      "把 X 和 Y 连起来看"
+    ],
+    "failing_hooks": [],
+    "insights": "Typefully 不可用，本周没有曝光学习。昨日选题（AI Max 控件、local promotions 店内核销、Shopify 拒付包、Grok Bot v1.3.0）均不复用。今日以官方付款窗口和 AI 购物答案引用结构为主，宁缺毋滥只出 2 条选题。"
+  },
+  "published_this_week": {
+    "period": "2026-11-20 ~ 2026-11-27",
+    "fetched_at": "2026-11-27T14:26:00Z",
+    "source": "typefully",
+    "error": "Typefully MCP 不可用，已跳过 Step 1-3 的曝光学习；未改写 profile_recent.md。",
+    "posts": []
+  },
+  "market_snapshot": {
+    "timestamp": "2026-11-27T14:14:14.117Z",
+    "source": "brief.day1global.xyz",
+    "stocks": {
+      "VOO": {
+        "price": 658.87,
+        "changePercent": -0.2785,
+        "marketState": "closed"
+      },
+      "VTI": {
+        "price": 353.2,
+        "changePercent": -0.1809,
+        "marketState": "closed"
+      },
+      "QQQ": {
+        "price": 633.93,
+        "changePercent": -0.6535,
+        "marketState": "closed"
+      },
+      "QQQM": {
+        "price": 261.05,
+        "changePercent": -0.6583,
+        "marketState": "closed"
+      },
+      "NVDA": {
+        "price": 149.3,
+        "changePercent": -3.913,
+        "marketState": "closed"
+      },
+      "TSLA": {
+        "price": 380.14,
+        "changePercent": -1.1802,
+        "marketState": "closed"
+      },
+      "GOOG": {
+        "price": 270.98,
+        "changePercent": -2.0247,
+        "marketState": "closed"
+      },
+      "RKLB": {
+        "price": 47.02,
+        "changePercent": 2.2619,
+        "marketState": "closed"
+      },
+      "CRCL": {
+        "price": 48.27,
+        "changePercent": 1.1526,
+        "marketState": "closed"
+      },
+      "HOOD": {
+        "price": 65.78,
+        "changePercent": 0.198,
+        "marketState": "closed"
+      },
+      "COIN": {
+        "price": 103.72,
+        "changePercent": 1.3435,
+        "marketState": "closed"
+      },
+      "TEM": {
+        "price": 54.74,
+        "changePercent": -0.1641,
+        "marketState": "closed"
+      },
+      "GLD": {
+        "price": 327.45,
+        "changePercent": 0.6145,
+        "marketState": "closed"
+      },
+      "SMH": {
+        "price": 422.46,
+        "changePercent": -1.0053,
+        "marketState": "closed"
+      },
+      "TSM": {
+        "price": 342.34,
+        "changePercent": -1.9645,
+        "marketState": "closed"
+      },
+      "STRC": {
+        "price": 98.04,
+        "changePercent": 0.2762,
+        "marketState": "closed"
+      },
+      "PL": {
+        "price": 10.61,
+        "changePercent": -0.282,
+        "marketState": "closed"
+      },
+      "XBI": {
+        "price": 156.6,
+        "changePercent": -0.1403,
+        "marketState": "closed"
+      },
+      "NET": {
+        "price": 283.3,
+        "changePercent": -1.3888,
+        "marketState": "closed"
+      },
+      "SHOP": {
+        "price": 133.4,
+        "changePercent": 0.8238,
+        "marketState": "closed"
+      },
+      "0700.HK": {
+        "price": 352,
+        "changePercent": 3.225806451612903,
+        "marketState": "unknown"
+      }
+    },
+    "crypto": {
+      "BTC": {
+        "price": 61506,
+        "change24h": 1.0702542285148113
+      },
+      "ETH": {
+        "price": 1725.29,
+        "change24h": 1.2042750885755162
+      },
+      "BNB": {
+        "price": 563.33,
+        "change24h": 1.774132355332343
+      },
+      "XAUT": {
+        "price": 3628.2,
+        "change24h": 1.5733482642777106
+      },
+      "SOL": {
+        "price": 73.26,
+        "change24h": 2.5763091570988568
+      },
+      "HYPE": {
+        "price": 66.225,
+        "change24h": 8.02368446807816
+      }
+    },
+    "indices": {
+      "sp500": {
+        "price": 7182.78,
+        "changePercent": -0.2542670623475113
+      },
+      "vix": {
+        "price": 25.4,
+        "changePercent": -5.223880597014934
+      },
+      "gold": {
+        "price": 3628.2,
+        "changePercent": 1.5733482642777106
+      },
+      "crudeOil": {
+        "price": 84.41,
+        "changePercent": 0.8723709369024734
+      },
+      "dxy": {
+        "price": 103.896,
+        "changePercent": 0.22283316452032464
+      }
+    },
+    "sentiment": {
+      "cryptoFearGreed": 10,
+      "cryptoFearGreedLabel": "Extreme fear",
+      "cryptoFearGreedPrev": 9,
+      "cryptoFearGreedChange": 1,
+      "cnnFearGreed": 20,
+      "cnnFearGreedLabel": "extreme fear"
+    },
+    "btcMetrics": {
+      "weeklyRsi": 35.7,
+      "nupl": 0.122,
+      "lthMvrv": 1.25,
+      "lthSopr": 0.926,
+      "sthSopr": 0.997,
+      "ma365Ratio": 0.82,
+      "wma200Multiplier": 0.89,
+      "etfFlowUsd": -453000000,
+      "etfFlowDays": [
+        -453000000,
+        -231400000,
+        -569700000,
+        -669200000,
+        -582300000,
+        -306500000
+      ],
+      "fundingRate": 0.004375,
+      "longShortRatio": 2.35,
+      "lthSupplyPercent": 80.8
+    },
+    "btcScore": {
+      "score": 24.8,
+      "level": "恐慌",
+      "suggestion": "市场低估，适合分批建仓或加仓",
+      "dailyScore": 8.6,
+      "weeklyScore": 16.2,
+      "btcPrice": 61476.1,
+      "timestamp": "2026-11-27T14:13:30.748Z"
+    }
+  },
+  "suggestions": {
+    "info_sources": {
+      "promote": [
+        {
+          "account": "PPC Times",
+          "reason": "11/27 帮助页监测捕捉到 payment processing times / Toss 改句，且可用官方 answer/9436113 复核",
+          "confidence": "high"
+        },
+        {
+          "account": "Google Ads Help（About payment processing times, answer/9436113）",
+          "reason": "今日唯一 Google 硬题的原文在该页，黑五账单核验应列入固定打开清单",
+          "confidence": "high"
+        },
+        {
+          "account": "Search Engine Roundtable",
+          "reason": "11/27 早间连续发布 Bing AI Mode 广告样式、Copilot 广告、Search Insights 观察，时效好",
+          "confidence": "medium"
+        }
+      ],
+      "demote": [
+        {
+          "account": "Reddit RSS",
+          "reason": "本轮再次超时/SSL/握手失败，连续多日 0 条窗内帖",
+          "confidence": "high"
+        },
+        {
+          "account": "中文卖家源 RSS（雨果/AMZ123/亿邦等）",
+          "reason": "本轮 cifnews/ebrun/amz123 均为 404 或 parse_error，采集仍空",
+          "confidence": "high"
+        },
+        {
+          "account": "Amazon Ads blog RSS / what's-new 直连",
+          "reason": "blog RSS 404；what's-new 与 release notes 出现 SSL 中断或 404，MCP 升级细节只能用 PPC Land 二手",
+          "confidence": "medium"
+        }
+      ],
+      "add": [
+        {
+          "account": "AdShift 变更日志（adshift.co/changes 与 11 月归档）",
+          "reason": "Deal Ends、Promotion Mode、schema.org 等帮助页改句有登录日期和官方深链，适合作为 PPC Times 的补充监测",
+          "confidence": "medium"
+        },
+        {
+          "account": "The Byte Beaver",
+          "reason": "把 Meta 版位排除、条款搁置等条目标成 since Nov 22 / Nov 26，有助于判断是否仍在 48h 窗",
+          "confidence": "medium"
+        },
+        {
+          "account": "iPullRank / Profound 研究方法页",
+          "reason": "黑五 AI 答案引用结构有可复核数字，但 2026 数据要 CM 后才出，值得跟踪原报告而不仅是转述",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "topic_library": {
+      "archive": [],
+      "add": [
+        {
+          "topic": "Google Ads 各付款方式到账窗口（Toss / 银行扣款 / 电汇）",
+          "reason": "官方帮助页 11/27 被监测到改句，黑五当天可执行",
+          "confidence": "high"
+        },
+        {
+          "topic": "黑五期间 AI 购物答案转向出版方 best-of 列表",
+          "reason": "iPullRank 给出 2025 年可复核百分比，且明确限制条件和 2026 数据时点",
+          "confidence": "medium"
+        }
+      ]
+    },
+    "positioning_drift": []
+  },
+  "channel_d": "disabled_by_alex_2026-11-03",
+  "d4_count": 0
+}
